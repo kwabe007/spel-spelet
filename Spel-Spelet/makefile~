@@ -7,11 +7,11 @@ CTESTFLAGS= -Wall -std=c++11
 
 #Header files
 HEADERS= conf.hpp intro.hpp parse.hpp debugmacro.hpp ui.hpp
-TESTHDR=
+TESTHDR= menu.hpp
 
 #Source files
 SOURCES= source.cpp intro.cpp parse.cpp ui.cpp
-TESTSRC= test.cpp
+TESTSRC= test.cpp menu.cpp
 
 #Object files
 OBJECTS= $(SOURCES:.cpp=.o)

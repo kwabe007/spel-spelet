@@ -68,6 +68,7 @@ namespace UI {
         println(menu.get_name());
         println("-----------------------------");
         int curs_pos = 0;
+        char selector = '>';
 
         std::string* inner;
         for (unsigned int i = 0; i < n; ++i) {

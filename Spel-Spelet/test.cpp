@@ -1,5 +1,11 @@
+
 #include <iostream>
 #include "menu.hpp"
+#include "ui.hpp"
+#include "parse.hpp"
+
+int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
+
 
 using namespace std;
 
@@ -10,6 +16,9 @@ using namespace std;
  * ADD THROW IN MENU CLASS (GET_FP)
  * ADD NAMESPACE
  * CREATE A MATRIX CLASS
+ * CREATE MEMBER VARIABLE IN MENU THAT CONTAINS MATRIX
+ * CREATE A PRINT DELIMITER FUNCTION FOR UI
+ * ADD A CHECK FOR STTY
  */
 
 void runnable1(Menu* menu) {
@@ -22,46 +31,22 @@ void runnable3(Menu* menu) {
     cout << "3333333" << endl;
 }
 
-string** create_str_matrix(int n, int m) {
-    string** out_ptr = new string*[n];
-    for (int i = 0; i < n; ++i) {
-        *(out_ptr + i) = new string[m];
-    }
-    return out_ptr;
-}
-
-void deallocate_str_matrix(string** out_ptr, int n) {
-    for (int i = 0; i < n; ++i) {
-        delete[] *(out_ptr + i);
-    }
-    delete[] out_ptr;
-}
 
 int main(int argc, char** argv) {
-    Menu mainmenu(3);
+    Menu mainmenu("Main Menu", 3);
+    int c;
+    /* use system call to make terminal send all keystrokes directly to stdin */
+    system ("/bin/stty raw");
 
     mainmenu.add_item("option 1", "this is option 1", &runnable1);
     mainmenu.add_item("option 2", "this is option 2", &runnable2);
     mainmenu.add_item("option 3", "this is option 3", &runnable3);
+    string test = tools::read_file("test/hh");
+    UI::present_menu(mainmenu);
+    //cout << "\033[F";
 
-
-
-    int choice;
-    string** arr = create_str_matrix(3,2);
-    mainmenu.fill_matrix(arr);
-
-    cout << **arr << "  " << *((*arr) + 1)  << endl;
-    cout << **(arr + 1) << "  " << *(*(arr + 1) +1)  << endl;
-    cout << **(arr + 2) << "  " << *(*(arr + 2) +1)  << endl;
-    cout << "choose" << endl;
-    cin >> choice;
-    Func_Ptr fp2 = mainmenu.get_fp(choice-1);
-    (*fp2)(&mainmenu);
-
-    deallocate_str_matrix(arr,3);
-
-
-
-
+    /* use system call to set terminal behaviour to more normal behaviour */
+    system ("/bin/stty cooked");
+    cout << "\r";
     return 0;
 }

@@ -44,7 +44,7 @@ class Menu {
 
     public:
     Menu();
-    Menu(size_t n);
+    Menu(const std::string nm, size_t n);
     ~Menu();
 
     int add_item(const std::string name, const std::string desc, void (*const fp)(Menu*));
@@ -53,6 +53,7 @@ class Menu {
     std::string get_name() const;
     std::string get_desc() const;
     Func_Ptr get_fp(int index) const;
+    size_t get_size() const;
 
     void fill_matrix(std::string** matrix) const;
 
