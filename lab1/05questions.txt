@@ -1,0 +1,10 @@
+What different constructors are invoked, and when?
+
+- First, the 'some other constructor' gets called since it matches the parameter (char const* s) with
+"my name is a".
+The second one to get called is the copy-constructor since 'A b = a' is a copy initialization, e.g. it
+copies the instance from the right to make a copy of it to the one on the right.
+The third one also calls the copy-constructor, it matches A (A const& src).
+The fourth one calls the default constructor since it has no arguments and it matches A (). NOte that
+A d(); would be a function declaration and not a default initialization depending on c++ version.
+

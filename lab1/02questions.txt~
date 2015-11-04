@@ -1,0 +1,5 @@
+stdout for for your program output
+
+stderr for information and error messages.
+ 
+clog is buffered so it is better for big error outputs like execution logging.

@@ -1,0 +1,8 @@
+Submit three (3) different tests to
+Kattis that test the correct, and incorrect, behavior of count_if_followed_by. The tests shall be presented during your oral presentation.
+
+-Not really a question.
+
+Why is it important to test the boundary conditions of an implementation, especially in the case of count_if_followed_by?
+
+-Don't really know if this is some sort of trick question, seems too obvious.

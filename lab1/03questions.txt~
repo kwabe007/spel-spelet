@@ -1,0 +1,19 @@
+0.3.2 Questions
+Why does not powerof return the expected value (16), when invoked with 2 and 4?
+
+- There is not really any lines of codes encased in the for-statement since the statement is ended
+with an ';' directly after the conditions are set.
+
+
+
+Why does not y compare equal to 3.1415?
+During the assignment 'float y = 3.1415' the number is converted to an float because it is interpreted
+as a double to begin with. When that conversion happens it loses precision since a double is more
+precise than a float. Then when the line 'y == 3.1415' is executed the float y is converted to a double
+but the precision won't be the same. Why? Well, think of it as resizing an image. Scale it down to
+10% of the original resolution, save it and then scale it back up and see what happens.
+
+Is there any difference in behavior if we compare y to 3.1415f, if so; why?
+
+Yes, there is a difference. We are now interpreting the number as a float so it has the same precision
+as y.
