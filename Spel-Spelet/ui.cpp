@@ -26,6 +26,9 @@ void sleep(const std::size_t milliseconds)
 #endif
 
 namespace UI {
+
+    modes MODE = UNKNOWN;
+
     void print(const std::string& text) {
         std::cout << text;
     }
@@ -67,7 +70,7 @@ namespace UI {
         menu.fill_matrix(mtx);
         println(menu.get_name());
         println("-----------------------------");
-        int curs_pos = 0;
+        //int curs_pos = 0;
 
         std::string* inner;
         for (unsigned int i = 0; i < n; ++i) {
@@ -90,9 +93,19 @@ namespace UI {
           }
         }
         std::cout << "You entered: " << myChar << std::endl;
+    }
+
+    void set_buffer_mode(int i) {
+        if (i == 0) {
+            system ("/bin/stty raw");
+            MODE = BUFFERED;
+        }
 
 
-
+        else if (i == 1) {
+            system ("/bin/stty cooked");
+            MODE = UNBUFFERED;
+        }
     }
 
 }

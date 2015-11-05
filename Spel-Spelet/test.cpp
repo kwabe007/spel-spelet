@@ -3,6 +3,7 @@
 #include "menu.hpp"
 #include "ui.hpp"
 #include "parse.hpp"
+#include "matrix.hpp"
 
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
 
@@ -33,20 +34,14 @@ void runnable3(Menu* menu) {
 
 
 int main(int argc, char** argv) {
-    Menu mainmenu("Main Menu", 3);
-    int c;
-    /* use system call to make terminal send all keystrokes directly to stdin */
-    system ("/bin/stty raw");
-
+    /*Menu mainmenu("Main Menu", 3);
     mainmenu.add_item("option 1", "this is option 1", &runnable1);
     mainmenu.add_item("option 2", "this is option 2", &runnable2);
     mainmenu.add_item("option 3", "this is option 3", &runnable3);
-    string test = tools::read_file("test/hh");
-    UI::present_menu(mainmenu);
-    //cout << "\033[F";
-
-    /* use system call to set terminal behaviour to more normal behaviour */
-    system ("/bin/stty cooked");
-    cout << "\r";
+    UI::present_menu(mainmenu);*/
+    Matrix mx(3,3);
+    string hello[] {"1","2","5"};
+    mx.fill_row(0,hello);
+    cout<<mx;
     return 0;
 }
