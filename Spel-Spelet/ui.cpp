@@ -5,6 +5,7 @@
 #include "ui.hpp"
 #include "parse.hpp"
 #include "debugmacro.hpp"
+#include "canvas.hpp"
 
 
 #ifdef _WIN32
@@ -27,14 +28,28 @@ void sleep(const std::size_t milliseconds)
 
 namespace UI {
 
+    Canvas cvs(TERMINAL_COLS, TERMINAL_ROWS);
     modes MODE = UNKNOWN;
+
+    void setup() {
+        for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
+            std::cout << std::endl << "\r";
+        }
+    }
+
+    void finished(unsigned int x) {
+        for (unsigned int i = 0; i < x; ++i)
+        std::cout << ANSI_MOVE_UP;
+    }
 
     void print(const std::string& text) {
         std::cout << text;
     }
+
     void println(const std::string& text) {
         std::cout << text << std::endl << "\r";
 	}
+
     std::string** create_str_matrix(int n, int m) {
         std::string** out_ptr = new std::string*[n];
         for (int i = 0; i < n; ++i) {
@@ -60,51 +75,63 @@ namespace UI {
 			std::cout << *it;
 			sleep(time);
 		}
-		std::cout << std::endl;
+        std::cout << std::endl << "\r";
 	}
 
     void present_menu(const Menu& menu) {
-        unsigned int n = menu.get_size();
-        unsigned int m = ITEM_REPR_STR_COUNT;
-        std::string** mtx = create_str_matrix(n, m);
-        menu.fill_matrix(mtx);
-        println(menu.get_name());
-        println("-----------------------------");
-        //int curs_pos = 0;
+        char choice;
 
-        std::string* inner;
-        for (unsigned int i = 0; i < n; ++i) {
-            inner = *(mtx + i);
-            for (unsigned int j = 0; j < m; ++j) {
-                print("  " + *(inner + j));
+
+        while (true){
+            cvs.apply_menu(menu);
+            print_canvas();
+            choice = std::cin.get();
+            switch(choice){
+                case COMMAND_UP:
+                    menu.move_up();
+                    break; //optional
+                case COMMAND_DOWN:
+                    menu.move_down();
+                    break; //optional
+                case COMMAND_ENTER:
+                    goto EndWhile;
+                    break; //optional
+                case COMMAND_RIGHT:
+                    goto EndWhile;
+                    break; //optional
+                default : //Optional
+                ;
             }
-            print("\n\r");
         }
-        // How to get a single char.
-        char myChar  = {0};
+        EndWhile:
+        //std::cout << "choice " << menu.get_selected();
+        ;
+    }
 
-
-        while (true) {
-          std::cout << "Please enter 1 char: ";
-          myChar = std::cin.get();
-
-          if (myChar == 's') {
-            break;
-          }
+    void print_canvas() {
+        reset_output_marker();
+        for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
+            std::cout << cvs[i];
+            if(i < cvs.get_rows()-1) std::cout << std::endl << "\r";
         }
-        std::cout << "You entered: " << myChar << std::endl;
+        std::cout << ANSI_MOVE_UP;
+    }
+
+    void reset_output_marker() {
+        for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
+            std::cout << ANSI_MOVE_UP;
+        }
     }
 
     void set_buffer_mode(int i) {
         if (i == 0) {
-            system ("/bin/stty raw");
-            MODE = BUFFERED;
+            system ("/bin/stty raw -echo");
+            MODE = UNBUFFERED;
         }
 
-
         else if (i == 1) {
-            system ("/bin/stty cooked");
-            MODE = UNBUFFERED;
+            system ("/bin/stty cooked echo");
+            MODE = BUFFERED;
         }
     }
 

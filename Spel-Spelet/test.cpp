@@ -34,14 +34,15 @@ void runnable3(Menu* menu) {
 
 
 int main(int argc, char** argv) {
-    /*Menu mainmenu("Main Menu", 3);
-    mainmenu.add_item("option 1", "this is option 1", &runnable1);
-    mainmenu.add_item("option 2", "this is option 2", &runnable2);
-    mainmenu.add_item("option 3", "this is option 3", &runnable3);
-    UI::present_menu(mainmenu);*/
-    Matrix mx(3,3);
-    string hello[] {"1","2","5"};
-    mx.fill_row(0,hello);
-    cout<<mx;
+    Menu mainmenu("Main Menu", 4);
+    UI::setup();
+    UI::reset_output_marker();
+    mainmenu.add_item("New Game", "this is option 1", &runnable1);
+    mainmenu.add_item("Load", "this is option 2", &runnable2);
+    mainmenu.add_item("Help", "this is option 3", &runnable3);
+    mainmenu.add_item("Exit", "this is option 3", &runnable3);
+    UI::set_buffer_mode(0);
+    UI::present_menu(mainmenu);
+    UI::set_buffer_mode(1);
     return 0;
 }

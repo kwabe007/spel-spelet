@@ -11,7 +11,7 @@ TESTHDR= menu.hpp
 
 #Source files
 SOURCES= source.cpp intro.cpp parse.cpp ui.cpp
-TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp
+TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp ui.cpp
 
 #Object files
 OBJECTS= $(SOURCES:.cpp=.o)

@@ -25,6 +25,12 @@ class Menu {
      * fp_choice: pointer to the function of the choice.
      * */
     class MenuItem {
+        private:
+        std::string repr_strings[ITEM_REPR_STR_COUNT];
+        void (*fp_choice)(Menu*);
+
+        friend Menu;
+
         public:
         MenuItem(){}
         MenuItem(const std::string name, const std::string desc,  void (*const fp )(Menu*)){
@@ -32,42 +38,45 @@ class Menu {
             repr_strings[1] = desc;
             fp_choice = fp;
         }
-
-
-        private:
-        std::string repr_strings[ITEM_REPR_STR_COUNT];
-
-        void (*fp_choice)(Menu*);
-        friend Menu;
+        std::string get_name() const {
+            return repr_strings[0];
+        }
+        std::string get_desc() const {
+        return repr_strings[1];
+        }
 
     };
 
+    private:
+    std::size_t size;
+    std::size_t capacity;
+    mutable std::size_t selected_item = 0;
+    MenuItem * items;
+
+    std::string name;
+    std::string description;
+
     public:
+
     Menu();
     Menu(const std::string nm, size_t n);
     ~Menu();
 
+    std::string& operator[](int index)const;
+
     int add_item(const std::string name, const std::string desc, void (*const fp)(Menu*));
     int clear();
+    bool move_up() const;
+    bool move_down() const;
 
     std::string get_name() const;
     std::string get_desc() const;
     Func_Ptr get_fp(int index) const;
     size_t get_size() const;
+    bool is_selected(std::size_t index)const;
+    std::size_t get_selected()const;
 
     void fill_matrix(std::string** matrix) const;
-
-
-
-
-    private:
-    size_t size;
-    size_t capacity;
-    MenuItem * items;
-    std::string name;
-    std::string description;
-
-
 
 };
 
