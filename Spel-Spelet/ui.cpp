@@ -65,40 +65,42 @@ namespace UI {
         std::cout << std::endl << "\r";
 	}
     Scene* play_scene(Scene& scene) {
-        if(scene.has_prologue()) present_prologue(scene.get_text());
-        if(scene.has_menu()) present_menu(scene.get_menu());
-        else std::cerr << "no menu" << std::endl << "\r";
+        if(scene.is_set_text()) present_prologue(scene.get_text());
+        if(scene.is_set_menu()) present_menu(scene.get_menu_ptr());
+        if(scene.is_set_area()) {std::cerr << "area" << std::endl; play_area(scene.get_area());}
+
+        else std::cerr << "no menu" << std::endl;
         return &scene;
     }
 
     void present_prologue(const std::string& text) {
     }
 
-    void present_menu(const Menu& menu, bool sub) {
-        std::cerr << "presenting menu " << menu.get_name() << std::endl << "\r";
-        std::cerr << menu.get_size() << " " << menu.get_capacity() << std::endl << "\r";
+    void present_menu(const Menu* menu_ptr, bool sub) {
+        std::cerr << "presenting menu " << menu_ptr->get_name() << std::endl << "\r";
+        std::cerr << menu_ptr->get_size() << " " << menu_ptr->get_capacity() << std::endl << "\r";
         flush_screen();
         cvs.clear_canvas();
         char choice;
         const MenuAction* action_ptr;
         const Menu* m_ptr;
         while (true) {
-            cvs.apply_menu(menu);
+            cvs.apply_menu(*menu_ptr);
             print_canvas();
             choice = std::cin.get();
             switch(choice){
                 case COMMAND_UP:
-                    menu.move_up();
+                    menu_ptr->move_up();
                     break; //optional
                 case COMMAND_DOWN:
-                    menu.move_down();
+                    menu_ptr->move_down();
                     break; //optional
                 case COMMAND_ENTER:
-                    action_ptr = &menu.get_action(menu.get_selected());
+                    action_ptr = &menu_ptr->get_action(menu_ptr->get_selected());
                     m_ptr = (*action_ptr)();
                     if (!m_ptr) goto EndWhile;
-                    else if (m_ptr == &menu) continue;
-                    else present_menu(*m_ptr, true);
+                    else if (m_ptr == menu_ptr) continue;
+                    else present_menu(m_ptr, true);
                     break; //optional
                 case COMMAND_RIGHT:
                     goto EndWhile;
@@ -116,6 +118,15 @@ namespace UI {
         }
         ;
 
+    }
+
+    void play_area(Area& area) {
+        flush_screen();
+        cvs.clear_canvas();
+        cvs.apply_area(area);
+        print_canvas();
+        std::cin.get();
+        std::cin.get();
     }
 
     void print_canvas() {

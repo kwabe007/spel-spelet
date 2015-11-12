@@ -15,7 +15,10 @@ Area& Area::operator=(const Area& ref) {
     return *this;
 }
 
-std::string Area::return_description() const {
+std::string Area::get_description() const {
     return description;
 }
 
+void Area::set_description(const std::string& str) {
+    description = str;
+}

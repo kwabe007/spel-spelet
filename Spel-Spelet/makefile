@@ -12,7 +12,7 @@ TESTHDR= menu.hpp
 
 #Source files
 SOURCES= source.cpp intro.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
-TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp 
+TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp
 DEBUGSRC= err.cpp
 
 #Object files
@@ -50,7 +50,6 @@ clean:
 
 #TEST FILE DEPENDENCIES
 comptest: $(TESTSRC)
-	reset
 	$(CC) $(CTESTFLAGS) $(TESTSRC) -o $(TESTEXE)
 
 alltest: cleantest comptest $(TESTEXE)

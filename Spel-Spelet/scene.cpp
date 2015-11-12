@@ -3,38 +3,53 @@
 #include "scene.hpp"
 #include "menu.hpp"
 
+void Scene::set_text(std::string& txt) {
+    text = txt;
+    text_set = true;
+}
+
 void Scene::set_menu(Menu& mn) {
     menu_ptr = &mn;
-    menu = *menu_ptr;
 }
 
 void Scene::set_area(Area& ar) {
-    area = &ar;
+    area = ar;
+    area_set = true;
 }
 
-std::string* Scene::set_text(std::string& txt) {
-    text = &txt;
-    return text;
+bool Scene::is_set_text() const {
+    return text_set;
 }
 
-bool Scene::has_prologue() const {
-    if (text) return true;
-    return false;
-}
-
-bool Scene::has_menu() const {
+bool Scene::is_set_menu() const {
     if (menu_ptr) return true;
     return false;
 }
 
-Menu& Scene::get_menu() const {
-    return *menu_ptr;
+bool Scene::is_set_area() const {
+    return area_set;
 }
 
-Scene* Scene::get_next_ptr() const {
-    return next_ptr;
+std::string& Scene::get_text(){
+    return text;
 }
 
-std::string& Scene::get_text() const {
-    return *text;
+Menu* Scene::get_menu_ptr() {
+    return menu_ptr;
+}
+
+Area& Scene::get_area(){
+    return area;
+}
+
+const std::string& Scene::get_text() const {
+    return text;
+}
+
+const Menu* Scene::get_menu_ptr() const {
+    return menu_ptr;
+}
+
+const Area& Scene::get_area() const {
+    return area;
 }

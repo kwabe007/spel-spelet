@@ -9,6 +9,7 @@
 #include "parse.hpp"
 #include "matrix.hpp"
 #include "scene.hpp"
+#include "areas/building.hpp"
 
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
 
@@ -59,9 +60,6 @@ signal(SIGSEGV, handler);
 
 
     /*MenuAction action_nothing;
-    Menu secondmenu("Second Menu", 2);
-    secondmenu.add_item("Samla kamrater", "this is option 1");
-    secondmenu.add_item("Jaga kulturberikare", "this is option 2", action_nothing);
 
     Menu helpmenu("Sub-menu", 2);
     helpmenu.add_item("This does nothing", "this is option 1");
@@ -70,24 +68,32 @@ signal(SIGSEGV, handler);
     MenuAction action(&secondmenu);
     MenuAction action_sub_menu(&helpmenu);
     action.add_function(&exit);*/
-    std::cerr << "start" << std::endl;
-    Menu mainmenu("Main Menu", 3);
-    mainmenu.add_item("Hagberg", "this is option 1");
-    mainmenu.add_item("Load", "this is option 2");
-    //mainmenu.add_item("Help", "this is option 3", action_sub_menu);
-    mainmenu.add_item("Exit", "this is option 3");
 
-    std::cerr << "creating scene" << std::endl;
     Scene scene;
-    std::cerr << "setting menu" << std::endl;
+    Menu mainmenu("Main Menu", 4);
+    mainmenu.add_item("New Game", "this is option 1");
+    mainmenu.add_item("Load", "this is option 2");
+    mainmenu.add_item("Help", "this is option 3");
+    mainmenu.add_item("Exit", "this is option 4");
     scene.set_menu(mainmenu);
-    std::cerr << "done setting menu" << std::endl;
-    //Scene scene2;
-    //scene2.set_menu(secondmenu);
+
+    Scene scene2;
+    Building room;
+    //room.set_description("");
+    scene2.set_area(room);
+
+    Scene scene3;
+    Menu secondmenu("Second Menu", 2);
+    secondmenu.add_item("Samla kamrater", "this is option 1");
+    secondmenu.add_item("Jaga kulturberikare", "this is option 2");
+    scene3.set_menu(secondmenu);
+
+
     vector<Scene*> vec;
     std::cerr << "pushing menu" << std::endl;
     vec.push_back(&scene);
-    //vec.push_back(&scene2);
+    vec.push_back(&scene2);
+    vec.push_back(&scene3);
 
     //UI::set_buffer_mode(0);
     vector<Scene*>::iterator it;

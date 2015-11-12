@@ -40,6 +40,11 @@ void Canvas::apply_menu(const Menu& ref) {
     matrix.fill_row(menu_title_y_offset+1,UI::MENU_DELIMITER);
 }
 
+void Canvas::apply_area(const Area& ref) {
+    matrix.fill_row(area_description_y_offset,ref.get_description().c_str(),ref.get_description().size(),area_description_x_offset);
+    matrix.fill_row(rows-1-area_controls_delimiter_offset,UI::CONTROL_DELIMITER);
+}
+
 void Canvas::clear_canvas() {
     for(unsigned int i = 0; i < matrix.get_rows(); ++i) {
         matrix.fill_row(i,'\0');

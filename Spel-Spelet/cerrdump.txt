@@ -1,17 +1,12 @@
-start
-creating scene
-setting menu
-1
-2
-3
-7
-7
-7
-4
-done setting menu
 pushing menu
 going through scenes
 playing scene
 presenting menu Main Menu
-3 3
-
+4 4
+no menu
+playing scene
+area
+playing scene
+presenting menu Second Menu
+2 2
+no menu

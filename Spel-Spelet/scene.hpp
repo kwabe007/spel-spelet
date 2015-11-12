@@ -7,25 +7,28 @@
 
 class Scene {
 private:
-    std::string* text = nullptr;
-    Menu menu;
+    std::string text;
     Menu* menu_ptr = nullptr;
-    Scene* next_ptr = this;
-    Area* area = nullptr;
+    Area area;
+    bool text_set = false;
+    bool area_set = false;
 
 public:
-    std::string* set_text(std::string& txt);
+    void set_text(std::string& txt);
     void set_menu(Menu& mn);
     void set_area(Area& ar);
 
-    bool has_prologue()const;
-    bool has_menu()const;
-    //bool hasArea()const;
+    bool is_set_text()const;
+    bool is_set_menu()const;
+    bool is_set_area()const;
 
-    std::string& get_text()const;
-    Menu& get_menu()const;
-    Scene* get_next_ptr() const;
-    //Area* get_area()const;
+    std::string& get_text();
+    Menu* get_menu_ptr();
+    Area& get_area();
+    const std::string& get_text()const;
+    const Menu* get_menu_ptr()const;
+    const Area& get_area()const;
+
 
 };
 

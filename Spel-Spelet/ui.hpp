@@ -26,6 +26,7 @@ namespace UI  {
 
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
+    static const unsigned char CONTROL_DELIMITER('-');
 
 
     static const unsigned int TERMINAL_COLS = 80;
@@ -49,7 +50,8 @@ namespace UI  {
 
     Scene* play_scene(Scene& scene);
     void present_prologue(const std::string& text);
-    void present_menu(const Menu& menu, bool sub = false);
+    void present_menu(const Menu* menu, bool sub = false);
+    void play_area(Area& area);
 
     void print_canvas();
     void flush_screen();

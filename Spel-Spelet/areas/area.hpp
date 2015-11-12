@@ -26,7 +26,9 @@ public:
     Area();
     Area(const Area& ref);
     Area& operator=(const Area& ref);
-    std::string return_description() const;
+    std::string get_description() const;
+    void set_description(const std::string& str);
+
 
 };
 

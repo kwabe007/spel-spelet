@@ -5,6 +5,7 @@
 #include <iostream>
 #include "matrix.hpp"
 #include "menu.hpp"
+#include "areas/area.hpp"
 
 
 class Canvas {
@@ -20,6 +21,9 @@ private:
     std::size_t option_y_offset = 3;
     std::size_t menu_title_x_offset = 3;
     std::size_t menu_title_y_offset = 2;
+    std::size_t area_description_x_offset = 3;
+    std::size_t area_description_y_offset = 5;
+    std::size_t area_controls_delimiter_offset = 7;
     
     Matrix matrix;
 
@@ -31,6 +35,7 @@ public:
     ~Canvas();
 
     void apply_menu(const Menu& ref);
+    void apply_area(const Area& ref);
     void clear_canvas();
 
     //void fill_row(std::size_t rw, char* ref);
