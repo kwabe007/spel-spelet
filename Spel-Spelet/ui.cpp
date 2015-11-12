@@ -74,8 +74,11 @@ namespace UI {
     void present_prologue(const std::string& text) {
     }
 
-    void present_menu(const Menu& menu) {
+    void present_menu(const Menu& menu, bool sub) {
+        std::cerr << "presenting menu " << menu.get_name() << std::endl << "\r";
+        std::cerr << menu.get_size() << " " << menu.get_capacity() << std::endl << "\r";
         flush_screen();
+        cvs.clear_canvas();
         char choice;
         const MenuAction* action_ptr;
         const Menu* m_ptr;
@@ -95,7 +98,7 @@ namespace UI {
                     m_ptr = (*action_ptr)();
                     if (!m_ptr) goto EndWhile;
                     else if (m_ptr == &menu) continue;
-                    else present_menu(*m_ptr);
+                    else present_menu(*m_ptr, true);
                     break; //optional
                 case COMMAND_RIGHT:
                     goto EndWhile;
@@ -104,9 +107,14 @@ namespace UI {
                 ;
             }
         }
+
         EndWhile:
         //std::cout << "choice " << menu.get_selected();
-        cvs.clear_canvas();
+        if (sub) {
+            flush_screen();
+            cvs.clear_canvas();
+        }
+        ;
 
     }
 

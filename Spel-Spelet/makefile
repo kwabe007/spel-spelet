@@ -1,9 +1,10 @@
+
 #Compiler
 CC= g++
 
 #Compiler flags
 CFLAGS= -c -Wall -std=c++11 
-CTESTFLAGS= -Wall -std=c++11
+CTESTFLAGS= -Wall -std=c++11 -g -rdynamic
 
 #Header files
 HEADERS= conf.hpp intro.hpp parse.hpp debugmacro.hpp ui.hpp
@@ -11,7 +12,7 @@ TESTHDR= menu.hpp
 
 #Source files
 SOURCES= source.cpp intro.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
-TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
+TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp 
 DEBUGSRC= err.cpp
 
 #Object files
@@ -49,6 +50,7 @@ clean:
 
 #TEST FILE DEPENDENCIES
 comptest: $(TESTSRC)
+	reset
 	$(CC) $(CTESTFLAGS) $(TESTSRC) -o $(TESTEXE)
 
 alltest: cleantest comptest $(TESTEXE)

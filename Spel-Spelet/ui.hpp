@@ -21,7 +21,8 @@ namespace UI  {
     static const unsigned char COMMAND_DOWN = 's';
     static const unsigned char COMMAND_LEFT = 'a';
     static const unsigned char COMMAND_RIGHT = 'd';
-    static const unsigned char COMMAND_ENTER = 13;
+    static const unsigned char COMMAND_ENTER = ' ';
+    //static const unsigned char COMMAND_ENTER = 13;
 
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
@@ -48,7 +49,7 @@ namespace UI  {
 
     Scene* play_scene(Scene& scene);
     void present_prologue(const std::string& text);
-    void present_menu(const Menu& menu);
+    void present_menu(const Menu& menu, bool sub = false);
 
     void print_canvas();
     void flush_screen();

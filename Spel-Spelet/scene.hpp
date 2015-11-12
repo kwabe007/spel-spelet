@@ -3,18 +3,20 @@
 
 #include <string>
 #include "menu.hpp"
+#include "areas/area.hpp"
 
 class Scene {
 private:
     std::string* text = nullptr;
-    Menu* menu = nullptr;
+    Menu menu;
+    Menu* menu_ptr = nullptr;
     Scene* next_ptr = this;
-    //Area* area;
-
+    Area* area = nullptr;
 
 public:
     std::string* set_text(std::string& txt);
-    Menu* set_menu(Menu& mn);
+    void set_menu(Menu& mn);
+    void set_area(Area& ar);
 
     bool has_prologue()const;
     bool has_menu()const;

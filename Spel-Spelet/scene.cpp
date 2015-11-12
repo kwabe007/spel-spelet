@@ -1,10 +1,15 @@
 #include <string>
+#include <iostream>
 #include "scene.hpp"
 #include "menu.hpp"
 
-Menu* Scene::set_menu(Menu& mn) {
-    menu = &mn;
-    return menu;
+void Scene::set_menu(Menu& mn) {
+    menu_ptr = &mn;
+    menu = *menu_ptr;
+}
+
+void Scene::set_area(Area& ar) {
+    area = &ar;
 }
 
 std::string* Scene::set_text(std::string& txt) {
@@ -18,12 +23,12 @@ bool Scene::has_prologue() const {
 }
 
 bool Scene::has_menu() const {
-    if (menu) return true;
+    if (menu_ptr) return true;
     return false;
 }
 
 Menu& Scene::get_menu() const {
-    return *menu;
+    return *menu_ptr;
 }
 
 Scene* Scene::get_next_ptr() const {

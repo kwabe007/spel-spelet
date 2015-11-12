@@ -1,5 +1,6 @@
 #include "menu.hpp"
 #include <string>
+#include <stdexcept>
 #include <iostream>
 
 Menu::Menu() {
@@ -15,11 +16,46 @@ Menu::Menu(const std::string nm, size_t n) {
     size = 0;
 }
 
+Menu::Menu(const Menu& ref) : name(ref.name), description(ref.description) {
+    size = ref.size;
+    capacity = ref.capacity;
+    selected_item = ref.selected_item;
+    items = new MenuItem[capacity];
+    for (std::size_t i = 0; i < size ; ++i) {
+        items[i] = ref.items[i];
+    }
+
+}
+
 Menu::~Menu() {
     delete[] items;
 }
 
-std::string& Menu::operator[](int index)const {
+Menu& Menu::operator=(const Menu& ref) {
+    size = ref.size;
+    capacity = ref.capacity;
+    selected_item = ref.selected_item;
+    std::cerr << "1" << std::endl;
+    delete[] items;
+    std::cerr << "2" << std::endl;
+    items = new MenuItem[capacity];
+    std::cerr << "3" << std::endl;
+    for (std::size_t i = 0; i < size ; ++i) {
+        std::cerr << "7" << std::endl;
+        items[i] = ref.items[i];
+        MenuAction ma = ref.items[i].action;
+        if (ma.menu_to == &ref) {
+            items[i].action.menu_to = this;
+        }
+    }
+    std::cerr << "4" << std::endl;
+    name = ref.name;
+    description = ref.description;
+    return *this;
+}
+
+std::string& Menu::operator[](std::size_t index)const {
+    if (index > size) throw std::out_of_range ("unable to access menu item string, out of range");
     return (*(items + index)).repr_strings[0];
 }
 
@@ -33,7 +69,7 @@ int Menu::add_item(const std::string name, const std::string desc){
     return 0;
 }
 
-int Menu::add_item(const std::string name, const std::string desc, MenuAction action){
+int Menu::add_item(const std::string name, const std::string desc, const MenuAction& action){
     MenuItem new_item(name,desc,action);
     if (size < capacity )items[size]= new_item;
     else return -1;
@@ -77,8 +113,12 @@ MenuAction& Menu::get_action(int index) const {
     return items[index].action;
 }
 
-size_t Menu::get_size() const {
+std::size_t Menu::get_size() const {
     return size;
+}
+
+std::size_t Menu::get_capacity() const {
+    return capacity;
 }
 
 bool Menu::is_selected(std::size_t index)const{
