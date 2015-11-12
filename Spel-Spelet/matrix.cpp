@@ -40,7 +40,7 @@ void Matrix::fill_col(std::size_t col, char* ref, std::size_t length){
     }
 }*/
 
-void Matrix::fill_row(std::size_t rw, const char* ref){// CHANGED
+void Matrix::fill_row(std::size_t rw, const char* ref){
     char* in_ptr = *(out_ptr + rw);
     for (unsigned int i = 0; i < cols; ++i) {
         *(in_ptr + i) = *(ref + i);
@@ -61,6 +61,31 @@ void Matrix::fill_row(std::size_t rw, const char* ref, std::size_t length, std::
     }
     for (unsigned int j = 0; j < length; ++j) {
         *(in_ptr + j + offset) = *(ref + j);
+    }
+}
+
+void Matrix::fill_row(std::size_t rw, char ch){
+    char* in_ptr = *(out_ptr + rw);
+    for (unsigned int i = 0; i < cols; ++i) {
+
+        *(in_ptr + i) = ch;
+    }
+}
+
+void Matrix::fill_row(std::size_t rw, char ch, std::size_t length){
+    char* in_ptr = *(out_ptr + rw);
+    for (unsigned int i = 0; i < length; ++i) {
+        *(in_ptr + i) = ch;
+    }
+}
+
+void Matrix::fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset){
+    char* in_ptr = *(out_ptr + rw);
+    for (unsigned int i = 0; i < offset; ++i) {
+        *(in_ptr + i) = ' ';
+    }
+    for (unsigned int j = 0; j < length; ++j) {
+        *(in_ptr + j + offset) = ch;
     }
 }
 

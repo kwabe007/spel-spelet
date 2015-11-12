@@ -23,8 +23,18 @@ std::string& Menu::operator[](int index)const {
     return (*(items + index)).repr_strings[0];
 }
 
-int Menu::add_item(const std::string name, const std::string desc, const Func_Ptr fp){
-    MenuItem new_item(name,desc,fp);
+int Menu::add_item(const std::string name, const std::string desc){
+    MenuAction action (this);
+    MenuItem new_item(name,desc,action);
+    if (size < capacity )items[size]= new_item;
+    else return -1;
+    items[size] = new_item;
+    ++size;
+    return 0;
+}
+
+int Menu::add_item(const std::string name, const std::string desc, MenuAction action){
+    MenuItem new_item(name,desc,action);
     if (size < capacity )items[size]= new_item;
     else return -1;
     items[size] = new_item;
@@ -63,8 +73,8 @@ std::string Menu::get_desc() const{
     return description;
 }
 
-Func_Ptr Menu::get_fp(int index) const {
-    return items[index].fp_choice;
+MenuAction& Menu::get_action(int index) const {
+    return items[index].action;
 }
 
 size_t Menu::get_size() const {

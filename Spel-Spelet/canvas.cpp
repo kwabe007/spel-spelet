@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "canvas.hpp"
+#include "ui.hpp"
 
 
 Canvas::Canvas(): matrix(0, 0){
@@ -35,7 +36,16 @@ void Canvas::apply_menu(const Menu& ref) {
         matrix.fill_row(row,m_item_name_str.c_str(),m_item_name_str.size(),option_x_offset);
         if (ref.is_selected(i)) matrix.fill_row(row,selector.c_str(),selector.size(),option_x_offset-selector_offset);
     }
+    matrix.fill_row(menu_title_y_offset,ref.get_name().c_str(),ref.get_name().size(),menu_title_x_offset);
+    matrix.fill_row(menu_title_y_offset+1,UI::MENU_DELIMITER);
 }
+
+void Canvas::clear_canvas() {
+    for(unsigned int i = 0; i < matrix.get_rows(); ++i) {
+        matrix.fill_row(i,'\0');
+    }
+}
+
 
 std::size_t Canvas::get_rows()const {
     return rows;

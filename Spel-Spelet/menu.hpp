@@ -7,11 +7,60 @@
 class Menu;
 
 //typedef for the function pointers.
-typedef void (*Func_Ptr)(Menu*);
+typedef const Menu* (*Func_Ptr)(const Menu*);
+
+
+//typedef for function in Menufunction
+typedef int (*action_function)();
 
 //Define number of string member variables in class MenuItem that have
 //a representative purpose.
 static const int ITEM_REPR_STR_COUNT = 2;
+
+class MenuAction {
+private:
+    const Menu* menu_to = nullptr;
+    static const std::size_t CAPACITY = 3;
+    std::size_t size = 0;
+    action_function func_arr[CAPACITY];
+
+public:
+    MenuAction() {
+    }
+
+    MenuAction(const Menu* to) {
+        menu_to = to;
+    }
+
+    bool add_function(action_function func) {
+        if (size < CAPACITY) {
+            func_arr[size] = func;
+            ++size;
+            return true;
+        }
+        return false;
+    }
+
+    const Menu* operator()() const {
+        for (std::size_t i = 0; i < size; ++i) {
+            func_arr[i]();
+        }
+        return menu_to;
+    }
+
+    const Menu* operator()(const Menu* from) const {
+        for (std::size_t i = 0; i < size; ++i) {
+            func_arr[i]();
+        }
+        return from;
+    }
+
+    std::size_t get_size() const {
+        return size;
+    }
+
+};
+
 
 /* Contains choices for the user connected
  * to functions.
@@ -27,16 +76,16 @@ class Menu {
     class MenuItem {
         private:
         std::string repr_strings[ITEM_REPR_STR_COUNT];
-        void (*fp_choice)(Menu*);
+        MenuAction action;
 
         friend Menu;
 
         public:
         MenuItem(){}
-        MenuItem(const std::string name, const std::string desc,  void (*const fp )(Menu*)){
+        MenuItem(const std::string name, const std::string desc,  MenuAction act){
             repr_strings[0] = name;
             repr_strings[1] = desc;
-            fp_choice = fp;
+            action = act;
         }
         std::string get_name() const {
             return repr_strings[0];
@@ -64,14 +113,16 @@ class Menu {
 
     std::string& operator[](int index)const;
 
-    int add_item(const std::string name, const std::string desc, void (*const fp)(Menu*));
+    int add_item(const std::string name, const std::string desc);
+    int add_item(const std::string name, const std::string desc, MenuAction action);
+
     int clear();
     bool move_up() const;
     bool move_down() const;
 
     std::string get_name() const;
     std::string get_desc() const;
-    Func_Ptr get_fp(int index) const;
+    MenuAction& get_action(int index) const;
     size_t get_size() const;
     bool is_selected(std::size_t index)const;
     std::size_t get_selected()const;

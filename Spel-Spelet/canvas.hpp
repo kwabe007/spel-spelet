@@ -16,8 +16,10 @@ private:
     int selector_offset = 2;
     std::string selector = ">";
     int option_pad = 1;
-    std::size_t option_y_offset = 3;
     std::size_t option_x_offset = 3;
+    std::size_t option_y_offset = 3;
+    std::size_t menu_title_x_offset = 3;
+    std::size_t menu_title_y_offset = 2;
     
     Matrix matrix;
 
@@ -29,6 +31,7 @@ public:
     ~Canvas();
 
     void apply_menu(const Menu& ref);
+    void clear_canvas();
 
     //void fill_row(std::size_t rw, char* ref);
     std::size_t get_rows()const;

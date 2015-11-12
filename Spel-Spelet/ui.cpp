@@ -1,32 +1,19 @@
 #include <string>
 #include <iostream>
 #include <chrono>
-#include <thread> 
+#include <thread>
+#include <unistd.h>
 #include "ui.hpp"
 #include "parse.hpp"
 #include "debugmacro.hpp"
 #include "canvas.hpp"
+#include "scene.hpp"
 
 
-#ifdef _WIN32
-#include <windows.h>
 namespace UI {
-void sleep(const std::size_t milliseconds)
-{
-	Sleep(milliseconds);
-}
-}
-#else
-#include <unistd.h>
-namespace UI {
-void sleep(const std::size_t milliseconds)
-{
-	usleep(milliseconds * 1000); // takes microseconds
-}
-}
-#endif
-
-namespace UI {
+    void sleep(const std::size_t milliseconds) {
+        usleep(milliseconds * 1000); // takes microseconds
+    }
 
     Canvas cvs(TERMINAL_COLS, TERMINAL_ROWS);
     modes MODE = UNKNOWN;
@@ -77,12 +64,22 @@ namespace UI {
 		}
         std::cout << std::endl << "\r";
 	}
+    Scene* play_scene(Scene& scene) {
+        if(scene.has_prologue()) present_prologue(scene.get_text());
+        if(scene.has_menu()) present_menu(scene.get_menu());
+        else std::cerr << "no menu" << std::endl << "\r";
+        return &scene;
+    }
+
+    void present_prologue(const std::string& text) {
+    }
 
     void present_menu(const Menu& menu) {
+        flush_screen();
         char choice;
-
-
-        while (true){
+        const MenuAction* action_ptr;
+        const Menu* m_ptr;
+        while (true) {
             cvs.apply_menu(menu);
             print_canvas();
             choice = std::cin.get();
@@ -94,7 +91,11 @@ namespace UI {
                     menu.move_down();
                     break; //optional
                 case COMMAND_ENTER:
-                    goto EndWhile;
+                    action_ptr = &menu.get_action(menu.get_selected());
+                    m_ptr = (*action_ptr)();
+                    if (!m_ptr) goto EndWhile;
+                    else if (m_ptr == &menu) continue;
+                    else present_menu(*m_ptr);
                     break; //optional
                 case COMMAND_RIGHT:
                     goto EndWhile;
@@ -105,7 +106,8 @@ namespace UI {
         }
         EndWhile:
         //std::cout << "choice " << menu.get_selected();
-        ;
+        cvs.clear_canvas();
+
     }
 
     void print_canvas() {
@@ -117,10 +119,25 @@ namespace UI {
         std::cout << ANSI_MOVE_UP;
     }
 
+    void flush_screen(){
+        reset_output_marker();
+        for (unsigned int i = 0; i < TERMINAL_ROWS; ++i) {
+            std::string empty(TERMINAL_COLS, ' ');
+            std::cout << empty.c_str();
+            if(i < TERMINAL_ROWS-1) std::cout << std::endl << "\r";
+        }
+        std::cout << ANSI_MOVE_UP;
+    }
+
     void reset_output_marker() {
         for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
             std::cout << ANSI_MOVE_UP;
         }
+    }
+
+    bool is_unbuffered() {
+        if (MODE == UNBUFFERED) return true;
+        return false;
     }
 
     void set_buffer_mode(int i) {

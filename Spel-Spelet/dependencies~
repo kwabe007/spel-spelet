@@ -1,3 +1,3 @@
 changing buffer mode for terminal relies on stty
 
-"\e[A" is ansi escape sequence
+"\e[A" is ansi escape sequence, terminal needs to be ansi-compatible

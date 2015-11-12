@@ -10,8 +10,9 @@ HEADERS= conf.hpp intro.hpp parse.hpp debugmacro.hpp ui.hpp
 TESTHDR= menu.hpp
 
 #Source files
-SOURCES= source.cpp intro.cpp parse.cpp ui.cpp
-TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp
+SOURCES= source.cpp intro.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
+TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
+DEBUGSRC= err.cpp
 
 #Object files
 OBJECTS= $(SOURCES:.cpp=.o)
@@ -22,6 +23,12 @@ TESTEXE= virus.dll
 
 #Execution command
 EXE= ./
+
+#FIFO file
+FIFOPATH= /tmp/fifo
+
+#cerr dump file
+CERRDUMP= cerrdump.txt
 
 #Dependencies for creating objects
 $(OBJECTS): $(SOURCES)
@@ -47,7 +54,18 @@ comptest: $(TESTSRC)
 alltest: cleantest comptest $(TESTEXE)
 
 runtest: alltest
-	$(EXE)$(TESTEXE)
+	$(EXE)$(TESTEXE) 2> $(CERRDUMP)
+
+runtest_d: alltest
+	$(EXE)$(TESTEXE) 2> $(FIFOPATH)
 	
 cleantest:
 	rm -f $(TESTEXE)
+
+#DEBUG
+compdebug: $(DEBUGSRC)
+	$(CC) $(DEBUGSRC) -o debug
+crfile:
+	mkfifo $(FIFOPATH)
+rundebug: debug
+	./debug < $(FIFOPATH)
