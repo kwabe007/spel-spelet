@@ -52,6 +52,7 @@ const Menu* runnable3(const Menu* menu) {
     return nullptr;
 }
 
+
 int main(int argc, char** argv) {
 signal(SIGSEGV, handler);
 
@@ -78,8 +79,7 @@ signal(SIGSEGV, handler);
     scene.set_menu(mainmenu);
 
     Scene scene2;
-    Building room;
-    //room.set_description("");
+    Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
     scene2.set_area(room);
 
     Scene scene3;
@@ -95,7 +95,7 @@ signal(SIGSEGV, handler);
     vec.push_back(&scene2);
     vec.push_back(&scene3);
 
-    //UI::set_buffer_mode(0);
+    UI::set_buffer_mode(0);
     vector<Scene*>::iterator it;
     std::cerr << "going through scenes" << std::endl;
     for(it = vec.begin();it < vec.end();++it) {

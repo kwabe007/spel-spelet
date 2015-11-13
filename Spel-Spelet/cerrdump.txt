@@ -1,3 +1,7 @@
+area default ctor
+area default ctor
+str ctor
+area default ctor
 pushing menu
 going through scenes
 playing scene

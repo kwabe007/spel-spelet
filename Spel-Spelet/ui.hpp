@@ -24,6 +24,13 @@ namespace UI  {
     static const unsigned char COMMAND_ENTER = ' ';
     //static const unsigned char COMMAND_ENTER = 13;
 
+    static const std::string CONTROL_NORTH ("go N");
+    static const std::string CONTROL_EAST ("go E");
+    static const std::string CONTROL_SOUTH ("go S");
+    static const std::string CONTROL_WEST ("go W");
+
+
+
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
     static const unsigned char CONTROL_DELIMITER('-');

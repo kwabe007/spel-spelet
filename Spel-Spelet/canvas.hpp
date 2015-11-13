@@ -24,8 +24,13 @@ private:
     std::size_t area_description_x_offset = 3;
     std::size_t area_description_y_offset = 5;
     std::size_t area_controls_delimiter_offset = 7;
+    std::size_t area_controls_x_offset = 3;
+    std::size_t area_controls_y_offset = 1;
+    std::size_t area_name_y_offset = 1;
     
     Matrix matrix;
+
+    std::size_t calculate_x_middle(std::size_t len);
 
 public:
     Canvas();

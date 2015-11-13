@@ -123,10 +123,34 @@ namespace UI {
     void play_area(Area& area) {
         flush_screen();
         cvs.clear_canvas();
+
+        char choice;
+        while (true) {
         cvs.apply_area(area);
         print_canvas();
-        std::cin.get();
-        std::cin.get();
+        choice = std::cin.get();
+        switch(choice){
+            case COMMAND_UP:
+                area.selected_direction = DIRECTION_NORTH;
+                break; //optional
+            case COMMAND_DOWN:
+                area.selected_direction = DIRECTION_SOUTH;
+                break; //optional
+            case COMMAND_LEFT:
+                area.selected_direction = DIRECTION_WEST;
+                break; //optional
+            case COMMAND_RIGHT:
+                area.selected_direction = DIRECTION_EAST;
+                break; //optional
+            case COMMAND_ENTER:
+                 goto EndWhileArea;
+                break; //optional
+            default : //Optional
+            ;
+        }
+        }
+    EndWhileArea:
+    ;
     }
 
     void print_canvas() {

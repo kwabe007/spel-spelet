@@ -57,11 +57,13 @@ void Matrix::fill_row(std::size_t rw, const char* ref, std::size_t length){
     }
 }
 
-void Matrix::fill_row(std::size_t rw, const char* ref, std::size_t length, std::size_t offset){
+void Matrix::fill_row(std::size_t rw, const char* ref, std::size_t length, std::size_t offset, bool prefill){
     if (rw > rows) throw std::out_of_range ("row index out of range");
     char* in_ptr = *(out_ptr + rw);
-    for (unsigned int i = 0; i < offset; ++i) {
-        *(in_ptr + i) = ' ';
+    if (prefill) {
+        for (unsigned int i = 0; i < offset; ++i) {
+            *(in_ptr + i) = ' ';
+        }
     }
     for (unsigned int j = 0; j < length; ++j) {
         *(in_ptr + j + offset) = *(ref + j);
@@ -85,11 +87,13 @@ void Matrix::fill_row(std::size_t rw, char ch, std::size_t length){
     }
 }
 
-void Matrix::fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset){
+void Matrix::fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset, bool prefill){
     if (rw > rows) throw std::out_of_range ("row index out of range");
     char* in_ptr = *(out_ptr + rw);
-    for (unsigned int i = 0; i < offset; ++i) {
-        *(in_ptr + i) = ' ';
+    if (prefill) {
+        for (unsigned int i = 0; i < offset; ++i) {
+            *(in_ptr + i) = ' ';
+        }
     }
     for (unsigned int j = 0; j < length; ++j) {
         *(in_ptr + j + offset) = ch;

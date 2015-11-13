@@ -25,10 +25,10 @@ public:
     //void fill_col(std::size_t col, char* ref, std::size_t length);
     void fill_row(std::size_t rw, const char* ref);
     void fill_row(std::size_t rw, const char* ref, std::size_t length);
-    void fill_row(std::size_t rw, const char* ref, std::size_t length, std::size_t offset);
+    void fill_row(std::size_t rw, const char* ref, std::size_t length, std::size_t offset, bool prefill = true);
     void fill_row(std::size_t rw, char ch);
     void fill_row(std::size_t rw, char ch, std::size_t length);
-    void fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset);
+    void fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset, bool prefill = true);
     std::size_t get_rows()const;
     std::size_t get_cols()const;
 

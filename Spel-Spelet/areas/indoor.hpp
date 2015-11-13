@@ -3,7 +3,7 @@
 #include "area.hpp"
 
 class Indoor : public Area  {
-
+    using Area::Area;
 };
 
 #endif

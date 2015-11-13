@@ -26,6 +26,11 @@ Canvas::~Canvas() {
 
 }
 
+std::size_t Canvas::calculate_x_middle(std::size_t len) {
+    size_t middle = (cols/2)-(len/2)-1;
+    return middle;
+}
+
 void Canvas::apply_menu(const Menu& ref) {
     int size = (int)ref.get_size();
     std::string m_item_name_str;
@@ -41,8 +46,39 @@ void Canvas::apply_menu(const Menu& ref) {
 }
 
 void Canvas::apply_area(const Area& ref) {
+    matrix.fill_row(area_name_y_offset,ref.get_name().c_str(),ref.get_name().size(),calculate_x_middle(ref.get_name().size()));
     matrix.fill_row(area_description_y_offset,ref.get_description().c_str(),ref.get_description().size(),area_description_x_offset);
     matrix.fill_row(rows-1-area_controls_delimiter_offset,UI::CONTROL_DELIMITER);
+
+    std::size_t north_y = rows-1-area_controls_y_offset-4;
+    std::size_t north_x = area_controls_x_offset+UI::CONTROL_WEST.size();
+    std::size_t east_y = rows-1-area_controls_y_offset-2;
+    std::size_t east_x = area_controls_x_offset+UI::CONTROL_WEST.size()*2;
+    std::size_t south_y = rows-1-area_controls_y_offset;
+    std::size_t south_x = area_controls_x_offset+UI::CONTROL_WEST.size();
+    std::size_t west_y = rows-1-area_controls_y_offset-2;
+    std::size_t west_x = area_controls_x_offset;
+
+    matrix.fill_row(north_y, UI::CONTROL_NORTH.c_str(), UI::CONTROL_NORTH.size(),north_x);
+    matrix.fill_row(east_y, UI::CONTROL_EAST.c_str(), UI::CONTROL_EAST.size(), east_x);
+    matrix.fill_row(south_y, UI::CONTROL_SOUTH.c_str(), UI::CONTROL_SOUTH.size(), south_x);
+    matrix.fill_row(west_y, UI::CONTROL_WEST.c_str(), UI::CONTROL_WEST.size(), west_x);
+
+    switch (ref.selected_direction) {
+        case DIRECTION_NORTH:
+        matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
+        break;
+        case DIRECTION_EAST:
+        matrix.fill_row(east_y,selector.c_str(),selector.size(),east_x-2,false);
+        break;
+        case DIRECTION_SOUTH:
+        matrix.fill_row(south_y,selector.c_str(),selector.size(),south_x-2,false);
+        break;
+        case DIRECTION_WEST:
+        matrix.fill_row(west_y,selector.c_str(),selector.size(),west_x-2,false);
+        break;
+    }
+
 }
 
 void Canvas::clear_canvas() {
