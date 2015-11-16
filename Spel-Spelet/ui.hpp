@@ -21,8 +21,10 @@ namespace UI  {
     static const unsigned char COMMAND_DOWN = 's';
     static const unsigned char COMMAND_LEFT = 'a';
     static const unsigned char COMMAND_RIGHT = 'd';
-    static const unsigned char COMMAND_ENTER = ' ';
-    //static const unsigned char COMMAND_ENTER = 13;
+    //static const unsigned char COMMAND_ENTER = ' ';
+    static const unsigned char COMMAND_FIGHT = 'f';
+    static const unsigned char COMMAND_ENTER = 13;
+    static const unsigned char COMMAND_TERMINATE = 3;
 
     static const std::string CONTROL_NORTH ("go N");
     static const std::string CONTROL_EAST ("go E");
@@ -30,7 +32,7 @@ namespace UI  {
     static const std::string CONTROL_WEST ("go W");
 
 
-
+    static const std::string FIGHT_HINT("F = Fight");
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
     static const unsigned char CONTROL_DELIMITER('-');
@@ -54,6 +56,8 @@ namespace UI  {
      *If time is not specified, it defaults to 10
      */
 	void time_print(const std::string& text, const size_t = 10);
+
+    char get_char();
 
     Scene* play_scene(Scene& scene);
     void present_prologue(const std::string& text);

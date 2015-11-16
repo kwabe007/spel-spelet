@@ -2,6 +2,7 @@
 #define AREA_HPP
 #include <string>
 #include <vector>
+#include "../entities/entity.hpp"
 
 enum Direction {
     DIRECTION_NORTH,
@@ -22,7 +23,7 @@ private:
     std::string name;
     std::string description;
 
-    //std::vector<Entity> extra_area_vec;
+    std::vector<Entity> entity_vec;
     //std::vector<Objects> extra_area_vec;
 
 public:
@@ -30,12 +31,16 @@ public:
     Area(const std::string nm, const std::string desc);
     //Area(const Area& ref);
     //Area& operator=(const Area& ref);
-    std::size_t selected_direction = DIRECTION_NORTH;
+    int selected_direction = DIRECTION_NORTH;
     const std::string get_name() const;
     const std::string get_description() const;
 
     void set_name(const std::string& str);
     void set_description(const std::string& str);
+
+    void add_entity(const Entity& ent);
+
+    //void initiate_fight();
 
 };
 

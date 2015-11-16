@@ -27,6 +27,9 @@ private:
     std::size_t area_controls_x_offset = 3;
     std::size_t area_controls_y_offset = 1;
     std::size_t area_name_y_offset = 1;
+    std::size_t fight_hint_x_offset = 1;
+    std::size_t fight_hint_y_offset = 1;
+
     
     Matrix matrix;
 

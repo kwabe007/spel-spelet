@@ -1,0 +1,11 @@
+#ifndef __DEBUG_BITS__
+#define __DEBUG_BITS__
+#define BIT1 0x1
+#define BIT2 0x2
+#define BIT3 0x4
+#define BIT4 0x8
+#define BIT5 0x10
+#define BIT6 0x20
+#define BIT7 0x40
+#define BIT8 0x80
+#endif

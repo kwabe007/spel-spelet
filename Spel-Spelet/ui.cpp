@@ -5,9 +5,11 @@
 #include <unistd.h>
 #include "ui.hpp"
 #include "parse.hpp"
-#include "debugmacro.hpp"
+//#include "debugmacro.hpp"
 #include "canvas.hpp"
 #include "scene.hpp"
+#include "debug_test_macros/debugmacro.h"
+#include "debug_bits.h"
 
 
 namespace UI {
@@ -37,6 +39,18 @@ namespace UI {
         std::cout << text << std::endl << "\r";
 	}
 
+    char get_char() {
+        char input;
+        input = std::cin.get();
+        debug_print(BIT0,("Pressed key: %d\n",input));
+        if (input == COMMAND_TERMINATE) {
+            if (is_unbuffered())
+                set_buffer_mode(1);
+            std::exit(EXIT_SUCCESS);
+        }
+        return input;
+    }
+
     std::string** create_str_matrix(int n, int m) {
         std::string** out_ptr = new std::string*[n];
         for (int i = 0; i < n; ++i) {
@@ -57,7 +71,7 @@ namespace UI {
 		std::this_thread::sleep_for(timespan);*/
 		std::string out_text = tools::replace_coding(text);
 		std::string::const_iterator it;
-		debug(2, "String to time_print is %s", out_text.c_str());
+        //debug(2, "String to time_print is %s", out_text.c_str());
 		for (it = out_text.begin(); it != out_text.end(); ++it) {
 			std::cout << *it;
 			sleep(time);
@@ -87,7 +101,7 @@ namespace UI {
         while (true) {
             cvs.apply_menu(*menu_ptr);
             print_canvas();
-            choice = std::cin.get();
+            choice = get_char();
             switch(choice){
                 case COMMAND_UP:
                     menu_ptr->move_up();
@@ -117,7 +131,6 @@ namespace UI {
             cvs.clear_canvas();
         }
         ;
-
     }
 
     void play_area(Area& area) {
@@ -128,7 +141,7 @@ namespace UI {
         while (true) {
         cvs.apply_area(area);
         print_canvas();
-        choice = std::cin.get();
+        choice = get_char();
         switch(choice){
             case COMMAND_UP:
                 area.selected_direction = DIRECTION_NORTH;

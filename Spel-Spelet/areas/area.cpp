@@ -38,3 +38,7 @@ void Area::set_name(const std::string& str) {
 void Area::set_description(const std::string& str) {
     description = str;
 }
+
+void Area::add_entity(const Entity& ent) {
+    entity_vec.push_back(ent);
+}

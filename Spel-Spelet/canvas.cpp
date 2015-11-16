@@ -50,6 +50,7 @@ void Canvas::apply_area(const Area& ref) {
     matrix.fill_row(area_description_y_offset,ref.get_description().c_str(),ref.get_description().size(),area_description_x_offset);
     matrix.fill_row(rows-1-area_controls_delimiter_offset,UI::CONTROL_DELIMITER);
 
+    //Getting area controls positions
     std::size_t north_y = rows-1-area_controls_y_offset-4;
     std::size_t north_x = area_controls_x_offset+UI::CONTROL_WEST.size();
     std::size_t east_y = rows-1-area_controls_y_offset-2;
@@ -59,10 +60,17 @@ void Canvas::apply_area(const Area& ref) {
     std::size_t west_y = rows-1-area_controls_y_offset-2;
     std::size_t west_x = area_controls_x_offset;
 
+    //Fill in fight hint
+    matrix.fill_row(rows-1-fight_hint_y_offset,UI::FIGHT_HINT.c_str(),UI::FIGHT_HINT.size(),cols-1-fight_hint_x_offset-UI::FIGHT_HINT.size());
+
+    //Filling in area controls with given positions
     matrix.fill_row(north_y, UI::CONTROL_NORTH.c_str(), UI::CONTROL_NORTH.size(),north_x);
     matrix.fill_row(east_y, UI::CONTROL_EAST.c_str(), UI::CONTROL_EAST.size(), east_x);
     matrix.fill_row(south_y, UI::CONTROL_SOUTH.c_str(), UI::CONTROL_SOUTH.size(), south_x);
     matrix.fill_row(west_y, UI::CONTROL_WEST.c_str(), UI::CONTROL_WEST.size(), west_x);
+
+
+    //Fill in selector depending on which direction is selected
 
     switch (ref.selected_direction) {
         case DIRECTION_NORTH:
@@ -78,6 +86,8 @@ void Canvas::apply_area(const Area& ref) {
         matrix.fill_row(west_y,selector.c_str(),selector.size(),west_x-2,false);
         break;
     }
+    //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
+
 
 }
 

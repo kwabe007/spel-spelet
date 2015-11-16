@@ -10,15 +10,16 @@
 #include "matrix.hpp"
 #include "scene.hpp"
 #include "areas/building.hpp"
+#include "entities/human.hpp"
+
 
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-
+unsigned int GLOBAL_DEBUG_BITS = 1;
 
 using namespace std;
 
 /* TODO:
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
- * CREATE VIRTUAL CLASS SCENE
  * ADD AUTOMATIC REALLOCATION TO MENU
  * ADD COPY CTOR AND ASS OPERATOR TO MENU
  * ADD THROW IN MENU CLASS (GET_FP)
@@ -37,6 +38,8 @@ void handler(int sig) {
   backtrace_symbols_fd(array, size, STDERR_FILENO);
   exit(1);
 }
+
+
 
 int exit() {
     if (UI::is_unbuffered())
@@ -59,7 +62,6 @@ signal(SIGSEGV, handler);
     UI::setup();
     UI::reset_output_marker();
 
-
     /*MenuAction action_nothing;
 
     Menu helpmenu("Sub-menu", 2);
@@ -79,6 +81,7 @@ signal(SIGSEGV, handler);
     scene.set_menu(mainmenu);
 
     Scene scene2;
+    Human luffare();
     Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
     scene2.set_area(room);
 
