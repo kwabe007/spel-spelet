@@ -12,7 +12,7 @@ TESTHDR= menu.hpp
 
 #Source files
 SOURCES= source.cpp intro.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
-TESTSRC= test.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp
+TESTSRC= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.hpp
 DEBUGSRC= err.cpp
 
 #Object files

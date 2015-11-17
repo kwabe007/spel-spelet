@@ -2,7 +2,7 @@
 #define SCENE_HPP
 
 #include <string>
-#include "menu.hpp"
+#include "menus/menu.hpp"
 #include "areas/area.hpp"
 
 class Scene {

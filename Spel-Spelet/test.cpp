@@ -4,7 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <unistd.h>
-#include "menu.hpp"
+#include "menus/menu.hpp"
 #include "ui.hpp"
 #include "parse.hpp"
 #include "matrix.hpp"
@@ -19,6 +19,7 @@ unsigned int GLOBAL_DEBUG_BITS = 1;
 using namespace std;
 
 /* TODO:
+ * CREATE FUNCTIONING BATTLE FIGHT
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
  * ADD AUTOMATIC REALLOCATION TO MENU
  * ADD COPY CTOR AND ASS OPERATOR TO MENU
@@ -81,8 +82,11 @@ signal(SIGSEGV, handler);
     scene.set_menu(mainmenu);
 
     Scene scene2;
-    Human luffare();
+    Human luffare;
+    Human horunge("Horunge", "Största pungkulan", "SUCK MY BALLZ!!");
     Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
+    room.add_entity(luffare);
+    room.add_entity(horunge);
     scene2.set_area(room);
 
     Scene scene3;

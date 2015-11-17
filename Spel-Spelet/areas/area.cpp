@@ -23,13 +23,24 @@ Area& Area::operator=(const Area& ref) {
 }*/
 
 
-const std::string Area::get_name() const {
+std::string Area::get_name() const {
     return name;
 }
-const std::string Area::get_description() const {
+std::string Area::get_description() const {
     return description;
 }
 
+std::size_t Area::get_entity_size() const {
+    return entity_vec.size();
+}
+
+Entity& Area::get_entity(std::size_t index) {
+    return entity_vec[index];
+}
+
+const Entity& Area::get_entity(std::size_t index) const {
+    return entity_vec[index];
+}
 
 void Area::set_name(const std::string& str) {
     name = str;

@@ -80,7 +80,7 @@ namespace tools{
 	std::string read_file(char const* const filename) {
 		std::string text;
 		char filepath[120];
-		strncpy(filepath, conf::PATH, 100);
+        strncpy(filepath, RES_PATH, 100);
 		strncat(filepath, filename, 100);
 		debug(1, "Reading file %s", filepath);
 		std::ifstream file(filepath);

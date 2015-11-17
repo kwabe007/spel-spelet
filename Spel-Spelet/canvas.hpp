@@ -4,8 +4,9 @@
 #include <string>
 #include <iostream>
 #include "matrix.hpp"
-#include "menu.hpp"
+#include "menus/menu.hpp"
 #include "areas/area.hpp"
+#include "battle.hpp"
 
 
 class Canvas {
@@ -29,11 +30,15 @@ private:
     std::size_t area_name_y_offset = 1;
     std::size_t fight_hint_x_offset = 1;
     std::size_t fight_hint_y_offset = 1;
-
+    std::size_t player_trash_talk_x_offset = 3;
+    std::size_t player_trash_talk_y_offset = 3;
+    std::size_t enemy_trash_talk_x_offset = 3;
+    std::size_t enemy_trash_talk_y_offset = 3;
     
     Matrix matrix;
 
     std::size_t calculate_x_middle(std::size_t len);
+    std::size_t calculate_y_middle(std::size_t len = 0);
 
 public:
     Canvas();
@@ -44,6 +49,8 @@ public:
 
     void apply_menu(const Menu& ref);
     void apply_area(const Area& ref);
+    void apply_battle_intro(const Battle& battle);
+    void apply_battle_fight(const Battle& battle);
     void clear_canvas();
 
     //void fill_row(std::size_t rw, char* ref);

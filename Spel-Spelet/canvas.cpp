@@ -31,6 +31,11 @@ std::size_t Canvas::calculate_x_middle(std::size_t len) {
     return middle;
 }
 
+std::size_t Canvas::calculate_y_middle(std::size_t len) {
+    size_t middle = (rows/2)-(len/2)-1;
+    return middle;
+}
+
 void Canvas::apply_menu(const Menu& ref) {
     int size = (int)ref.get_size();
     std::string m_item_name_str;
@@ -88,6 +93,23 @@ void Canvas::apply_area(const Area& ref) {
     }
     //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
 
+
+}
+
+void Canvas::apply_battle_intro(const Battle& battle) {
+    const Entity& ally = battle.get_enemy_entity(0);
+    const Entity& enemy = battle.get_party_entity(0);
+    matrix.fill_row(player_trash_talk_y_offset,ally.get_name().c_str(),ally.get_name().size(),player_trash_talk_x_offset);
+    matrix.fill_row(player_trash_talk_y_offset+1,("\""+ally.get_trash_talk()+"\"").c_str(),ally.get_trash_talk().size()+2,player_trash_talk_x_offset);
+    matrix.fill_row(calculate_y_middle(),"VS",2,calculate_x_middle(2));
+    matrix.fill_row(rows-2,"Press ENTER to continue",23,calculate_x_middle(23));
+    matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name().c_str(),enemy.get_name().size(),cols-1-enemy_trash_talk_x_offset-enemy.get_name().size());
+    matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\"").c_str(),enemy.get_trash_talk().size()+2,cols-1-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
+
+}
+
+
+void Canvas::apply_battle_fight(const Battle& battle) {
 
 }
 

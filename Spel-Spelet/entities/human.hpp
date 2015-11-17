@@ -3,8 +3,10 @@
 
 #include "organic.hpp"
 
-class Human : Organic {
+class Human : public Organic {
     using Organic::Organic;
 };
+
+extern Human PLAYER;
 
 #endif

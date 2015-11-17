@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
 #include "scene.hpp"
-#include "menu.hpp"
 
 void Scene::set_text(std::string& txt) {
     text = txt;

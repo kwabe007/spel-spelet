@@ -10,6 +10,8 @@
 #include "scene.hpp"
 #include "debug_test_macros/debugmacro.h"
 #include "debug_bits.h"
+#include "entities/human.hpp"
+#include "battle.hpp"
 
 
 namespace UI {
@@ -103,23 +105,24 @@ namespace UI {
             print_canvas();
             choice = get_char();
             switch(choice){
-                case COMMAND_UP:
-                    menu_ptr->move_up();
-                    break; //optional
-                case COMMAND_DOWN:
-                    menu_ptr->move_down();
-                    break; //optional
-                case COMMAND_ENTER:
-                    action_ptr = &menu_ptr->get_action(menu_ptr->get_selected());
-                    m_ptr = (*action_ptr)();
-                    if (!m_ptr) goto EndWhile;
-                    else if (m_ptr == menu_ptr) continue;
-                    else present_menu(m_ptr, true);
-                    break; //optional
-                case COMMAND_RIGHT:
-                    goto EndWhile;
-                    break; //optional
-                default : //Optional
+            case COMMAND_UP:
+                menu_ptr->move_up();
+                break; //optional
+            case COMMAND_DOWN:
+                menu_ptr->move_down();
+                break; //optional
+            case COMMAND_ENTER:
+            case COMMAND_SPACE:
+                action_ptr = &menu_ptr->get_action(menu_ptr->get_selected());
+                m_ptr = (*action_ptr)();
+                if (!m_ptr) goto EndWhile;
+                else if (m_ptr == menu_ptr) continue;
+                else present_menu(m_ptr, true);
+                break; //optional
+            case COMMAND_RIGHT:
+                goto EndWhile;
+                break; //optional
+            default : //Optional
                 ;
             }
         }
@@ -139,10 +142,10 @@ namespace UI {
 
         char choice;
         while (true) {
-        cvs.apply_area(area);
-        print_canvas();
-        choice = get_char();
-        switch(choice){
+            cvs.apply_area(area);
+            print_canvas();
+            choice = get_char();
+            switch(choice){
             case COMMAND_UP:
                 area.selected_direction = DIRECTION_NORTH;
                 break; //optional
@@ -156,14 +159,59 @@ namespace UI {
                 area.selected_direction = DIRECTION_EAST;
                 break; //optional
             case COMMAND_ENTER:
+            case COMMAND_SPACE:
                  goto EndWhileArea;
                 break; //optional
+            case COMMAND_FIGHT:
+            {
+                Menu fightmenu("Who do you want to fight?",area.get_entity_size());
+
+                for (std::size_t i = 0; i < area.get_entity_size(); ++i) {
+                    Entity& entity(area.get_entity(i));
+                    fightmenu.add_item(entity.get_name(), entity.get_description());
+                }
+                Menu* m_ptr = &fightmenu;
+                present_menu(m_ptr, true);
+                //extern Entity PLAYER;
+                Entity& chosen_entity(area.get_entity(m_ptr->get_selected()));
+                std::cerr << chosen_entity.get_name() << std::endl;
+                Battle battle(chosen_entity);
+                battle_intro(battle);
+                play_battle(battle);
+                goto EndWhileArea;
+            }
+
             default : //Optional
-            ;
-        }
+                ;
+            }
         }
     EndWhileArea:
     ;
+    }
+    void battle_intro(Battle& battle) {
+        flush_screen();
+        cvs.clear_canvas();
+
+        char choice;
+        while (true) {
+            cvs.apply_battle_intro(battle);
+            print_canvas();
+            choice = get_char();
+            switch(choice){
+            case COMMAND_ENTER:
+            case COMMAND_SPACE:
+                 goto EndWhile;
+                break; //optional
+            default : //Optional
+                ;
+            }
+        }
+        EndWhile:
+        ;
+    }
+
+    void play_battle(Battle& battle) {
+
     }
 
     void print_canvas() {

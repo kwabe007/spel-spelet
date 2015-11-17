@@ -1,4 +1,14 @@
+#include <random>
 #include "entity.hpp"
+#include "../conf.hpp"
+
+
+Entity::Entity() {
+
+}
+
+Entity::Entity(const std::string& nm, const std::string& desc, const std::string& trash) : name{nm}, description{desc}, trash_talk{trash} {
+}
 
 int Entity::get_hp() const {
     return hp;
@@ -14,6 +24,18 @@ int Entity::get_ap() const {
 
 int Entity::get_dp() const {
     return dp;
+}
+
+std::string Entity::get_name() const {
+    return name;
+}
+
+std::string Entity::get_description() const {
+    return description;
+}
+
+std::string Entity::get_trash_talk() const {
+    return trash_talk;
 }
 
 void Entity::set_hp(int val){
@@ -44,7 +66,14 @@ bool Entity::take_damage(int damage) {
 }
 
 int Entity::attack (Entity& other) {
-    other.get_hp();
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(DAMAGE_VAR_LOW,DAMAGE_VAR_HIGH);
+    int var = dis(gen);
+    int damage_deal = 0;
+    if (ap + var >= 0)
+        damage_deal = ap + var;
+    other.take_damage(damage_deal);
     return 0;
 }
 

@@ -32,12 +32,14 @@ public:
     //Area(const Area& ref);
     //Area& operator=(const Area& ref);
     int selected_direction = DIRECTION_NORTH;
-    const std::string get_name() const;
-    const std::string get_description() const;
+    std::string get_name() const;
+    std::string get_description() const;
+    std::size_t get_entity_size() const;
+    Entity& get_entity(std::size_t index);
+    const Entity& get_entity(std::size_t index) const;
 
     void set_name(const std::string& str);
     void set_description(const std::string& str);
-
     void add_entity(const Entity& ent);
 
     //void initiate_fight();
