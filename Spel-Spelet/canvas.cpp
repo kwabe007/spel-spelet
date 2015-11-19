@@ -93,7 +93,6 @@ void Canvas::apply_area(const Area& ref) {
     }
     //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
 
-
 }
 
 void Canvas::apply_battle_intro(const Battle& battle) {
@@ -105,12 +104,29 @@ void Canvas::apply_battle_intro(const Battle& battle) {
     matrix.fill_row(rows-2,"Press ENTER to continue",23,calculate_x_middle(23));
     matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name().c_str(),enemy.get_name().size(),cols-1-enemy_trash_talk_x_offset-enemy.get_name().size());
     matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\"").c_str(),enemy.get_trash_talk().size()+2,cols-1-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
-
 }
 
-
 void Canvas::apply_battle_fight(const Battle& battle) {
+    matrix.fill_row(calculate_y_middle()+ battle_delimiter_y_offset,UI::BATTLE_DELIMITER);
+    std::size_t y_pos = calculate_y_middle()+battle_menu_y_offset;
+    apply_partial_menu(battle.current_menu(),battle_menu_x_offset,y_pos,cols,rows-y_pos);
+}
 
+void Canvas::apply_partial_menu(const Menu& menu, std::size_t x_pos, std::size_t y_pos, std::size_t x_span, std::size_t y_span) {
+    std::size_t size = menu.get_size();
+    std::string m_item_name_str;
+    std::size_t row;
+    std::size_t col;
+    for (std::size_t i = 0; i < size; ++i) {
+        m_item_name_str = menu[i];
+        row = y_pos+y_span-1-partial_option_y_offset-(partial_option_pad+1)*(size-1-i);
+        col = x_pos+partial_option_x_offset;
+        matrix.fill_row(row,"MAX HP[10]",10,col+m_item_name_str.size()+1);
+        matrix.fill_row(row,m_item_name_str.c_str(),m_item_name_str.size(),col);
+
+        if (menu.is_selected(i)) matrix.fill_row(row,selector.c_str(),selector.size(),col-selector_offset);
+    }
+    matrix.fill_row(partial_menu_title_y_offset+y_pos,menu.get_name().c_str(),menu.get_name().size(),partial_menu_title_x_offset+x_pos);
 }
 
 void Canvas::clear_canvas() {
@@ -118,7 +134,6 @@ void Canvas::clear_canvas() {
         matrix.fill_row(i,'\0');
     }
 }
-
 
 std::size_t Canvas::get_rows()const {
     return rows;
