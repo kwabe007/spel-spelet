@@ -11,6 +11,7 @@ presenting menu Main Menu
 no menu
 playing scene
 area
+Pressed key: 115
 Pressed key: 102
 presenting menu Who do you want to fight?
 2 2
@@ -18,8 +19,9 @@ presenting menu Who do you want to fight?
 Pressed key: 13
 Horunge
 Pressed key: 13
-Pressed key: 13
 playing scene
 presenting menu Second Menu
 2 2
-Pressed key: 3
+Pressed key: 115
+Pressed key: 13
+no menu

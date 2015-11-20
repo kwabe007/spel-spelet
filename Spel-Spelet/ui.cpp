@@ -211,30 +211,7 @@ namespace UI {
     }
 
     void play_battle(Battle& battle) {
-        flush_screen();
-        cvs.clear_canvas();
 
-        char choice;
-        while (true) {
-            cvs.apply_battle_fight(battle);
-            print_canvas();
-            choice = get_char();
-            switch(choice){
-            case COMMAND_ENTER:
-            case COMMAND_SPACE:
-                 goto EndWhile;
-                break; //optional
-            default : //Optional
-                ;
-            }
-        }
-        EndWhile:
-        ;
-    }
-
-    std::string get_entity_status_string(const Entity& entity) {
-        std::string status("HP["+std::to_string(entity.get_hp())+"]");
-        return status;
     }
 
     void print_canvas() {
