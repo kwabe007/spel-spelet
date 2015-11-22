@@ -63,15 +63,18 @@ signal(SIGSEGV, handler);
 
     Scene scene;
     Menu mainmenu("Main Menu", 4);
+    size_t test_int(3);
+    cerr <<"test int: " << test_int << std::endl;
     mainmenu.add_item("New Game", "this is option 1");
     mainmenu.add_item("Load", "this is option 2");
-    mainmenu.add_item("Help", "this is option 3");
+    mainmenu.add_item("Help", "this is option 3",&test_int,5);
     mainmenu.add_item("Exit", "this is option 4", FUNCTION_EXIT);
     scene.set_menu(mainmenu);
 
     Scene scene2;
     Human luffare;
     Human horunge("Horunge", "Största pungkulan", "SUCK MY BALLZ!!");
+    horunge.set_hp(30);
     Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
     room.add_entity(luffare);
     room.add_entity(horunge);
@@ -100,6 +103,7 @@ signal(SIGSEGV, handler);
 
     //UI::present_menu(mainmenu);
     UI::set_buffer_mode(1);
+    cerr <<"test int: " << test_int << std::endl;
 
 
     return 0;

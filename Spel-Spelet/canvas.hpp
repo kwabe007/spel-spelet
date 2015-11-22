@@ -20,6 +20,8 @@ private:
     int option_pad = 1;
     std::size_t option_x_offset = 3;
     std::size_t option_y_offset = 3;
+    std::size_t partial_option_x_offset = 3;
+    std::size_t partial_option_y_offset = 3;
     std::size_t menu_title_x_offset = 3;
     std::size_t menu_title_y_offset = 2;
     std::size_t area_description_x_offset = 3;
@@ -34,6 +36,11 @@ private:
     std::size_t player_trash_talk_y_offset = 3;
     std::size_t enemy_trash_talk_x_offset = 3;
     std::size_t enemy_trash_talk_y_offset = 3;
+    std::size_t battle_delimiter_y_offset = 2;
+    std::size_t battle_menu_x_offset = 0;
+    std::size_t battle_menu_y_offset = 1;
+    std::size_t battle_menu_title_x_offset = 1;
+    std::size_t battle_menu_title_y_offset = 0;
     
     Matrix matrix;
 
@@ -48,9 +55,11 @@ public:
     ~Canvas();
 
     void apply_menu(const Menu& ref);
+    void apply_partial_menu(const Menu& ref, std::size_t x_pos, std::size_t y_pos, std::size_t x_span=0, std::size_t y_span=0);
     void apply_area(const Area& ref);
     void apply_battle_intro(const Battle& battle);
     void apply_battle_fight(const Battle& battle);
+    void clear_row(std::size_t row);
     void clear_canvas();
 
     //void fill_row(std::size_t rw, char* ref);

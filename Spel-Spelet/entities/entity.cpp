@@ -65,7 +65,7 @@ bool Entity::take_damage(int damage) {
     }
 }
 
-int Entity::attack (Entity& other) {
+bool Entity::attack (Entity& other) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(DAMAGE_VAR_LOW,DAMAGE_VAR_HIGH);
@@ -73,8 +73,8 @@ int Entity::attack (Entity& other) {
     int damage_deal = 0;
     if (ap + var >= 0)
         damage_deal = ap + var;
-    other.take_damage(damage_deal);
-    return 0;
+    bool dead = other.take_damage(damage_deal);
+    return dead;
 }
 
 

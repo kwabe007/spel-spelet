@@ -1,4 +1,5 @@
 area default ctor
+test int: 3
 area default ctor
 str ctor
 area default ctor
@@ -7,22 +8,42 @@ going through scenes
 playing scene
 presenting menu Main Menu
 4 4
-Pressed key: 115
-Pressed key: 115
-Pressed key: 115
-Pressed key: 119
-Pressed key: 119
-Pressed key: 13
+Pressed key: 13
 no menu
 playing scene
 area
 Pressed key: 102
 presenting menu Who do you want to fight?
 2 2
-Pressed key: 102
+Pressed key: 115
 Pressed key: 13
-Riksluffare
+Horunge
 Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+you got rekt, gg no re
 playing scene
 presenting menu Second Menu
 2 2

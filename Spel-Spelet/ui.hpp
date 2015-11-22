@@ -34,6 +34,7 @@ namespace UI  {
     static const std::string FIGHT_HINT("F = Fight");
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
+    static const unsigned char BATTLE_DELIMITER('_');
     static const unsigned char CONTROL_DELIMITER('-');
 
     static const unsigned int TERMINAL_COLS = 80;
@@ -60,8 +61,8 @@ namespace UI  {
     void present_prologue(const std::string& text);
     void present_menu(const Menu* menu, bool sub = false);
     void play_area(Area& area);
-    void battle_intro(Battle& battle);
-    void play_battle(Battle& battle);
+    void battle_intro(const Battle& battle);
+    int play_battle(Battle& battle);
 
     void print_canvas();
     void flush_screen();

@@ -125,10 +125,14 @@ std::string Menu::get_desc() const{
     return description;
 }
 
-Menu* Menu::run_function(int index) const {
+Menu* Menu::run_function() const {
+    items[selected_item].functionobject();
+    return items->nextmenu;
+}
+
+Menu* Menu::run_function(std::size_t index) const {
     items[index].functionobject();
     return items->nextmenu;
-
 }
 
 std::size_t Menu::get_size() const {

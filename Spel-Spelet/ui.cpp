@@ -174,7 +174,13 @@ namespace UI {
                 std::cerr << chosen_entity.get_name() << std::endl;
                 Battle battle(chosen_entity);
                 battle_intro(battle);
-                play_battle(battle);
+                int outcome = play_battle(battle);
+                if (outcome == -1) {
+                    std::cerr << "you got rekt, gg no re" << std::endl;
+                }
+                if (outcome == 1) {
+                    std::cerr << "great victory" << std::endl;
+                }
                 goto EndWhileArea;
             }
 
@@ -185,7 +191,7 @@ namespace UI {
     EndWhileArea:
     ;
     }
-    void battle_intro(Battle& battle) {
+    void battle_intro(const Battle& battle) {
         flush_screen();
         cvs.clear_canvas();
 
@@ -207,8 +213,47 @@ namespace UI {
         ;
     }
 
-    void play_battle(Battle& battle) {
+    int play_battle(Battle& battle) {
+        flush_screen();
+        cvs.clear_canvas();
+        char choice;
+        Menu* next_menu_ptr;
+        Menu current_menu = battle.get_current_menu();
+        int battlestate = 0;
 
+        while (true) {
+            std::cerr << "battlestate*** " << battlestate << std::endl;
+            cvs.apply_battle_fight(battle);
+            print_canvas();
+            sleep(1000);
+            if (battle.turn == ENEMY_TURN) {
+                battlestate = battle.action();
+                cvs.apply_battle_fight(battle);
+                print_canvas();
+            } else if (battle.turn == PARTY_TURN) {
+                choice = get_char();
+                switch(choice){
+                case COMMAND_ENTER:
+                case COMMAND_SPACE:
+                    next_menu_ptr = current_menu.run_function();
+                    if (!next_menu_ptr) {
+                    battle.back_to_main_menu();
+                    battlestate = battle.action();
+                    }
+                    else if (next_menu_ptr == &current_menu) continue;
+                    else
+                    goto EndWhile;
+                    break; //optional
+                default : //Optional
+                    ;
+                }
+            }
+            if (battlestate != 0) {
+                goto EndWhile;
+            }
+        }
+        EndWhile:
+        return battlestate;
     }
 
     void print_canvas() {

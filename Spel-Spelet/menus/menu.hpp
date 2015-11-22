@@ -163,7 +163,8 @@ class Menu {
 
     std::string get_name() const;
     std::string get_desc() const;
-    Menu* run_function(int index) const;
+    Menu* run_function() const;
+    Menu* run_function(std::size_t index) const;
     size_t get_size() const;
     size_t get_capacity() const;
     bool is_selected(std::size_t index)const;

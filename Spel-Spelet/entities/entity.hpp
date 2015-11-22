@@ -5,8 +5,8 @@
 
 class Entity {
 private:
-    int hp = 10; //Health Points
-    int ap = 10; //Attack Points
+    int hp = 20; //Health Points
+    int ap = 5; //Attack Points
     int dp = 10; //Defense Points
     int mp = 10; //Magic Points
     std::string name = "Riksluffare";
@@ -30,7 +30,7 @@ public:
     void set_ap(int val);
     void set_dp(int val);
     bool take_damage(int damage);
-    int attack(Entity& other);
+    bool attack(Entity& other);
 
 };
 

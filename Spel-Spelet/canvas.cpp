@@ -50,6 +50,20 @@ void Canvas::apply_menu(const Menu& ref) {
     matrix.fill_row(menu_title_y_offset+1,UI::MENU_DELIMITER);
 }
 
+void Canvas::apply_partial_menu(const Menu& menu, std::size_t x_pos, std::size_t y_pos, std::size_t x_span, std::size_t y_span) {
+    std::string item_name;
+    std::size_t top_row = y_pos;
+    std::size_t row;
+    for (std::size_t i = 0; i < menu.get_size(); ++i) {
+        item_name = menu[i];
+        std::cerr << "top row " << top_row << std::endl;
+        row = top_row+partial_option_y_offset+(option_pad+1)*i;
+        matrix.fill_row(row,item_name.c_str(),item_name.size(),partial_option_x_offset+x_pos);
+        if (menu.is_selected(i)) matrix.fill_row(row,selector.c_str(),selector.size(),partial_option_x_offset+x_pos-selector_offset);
+    }
+    matrix.fill_row(top_row+battle_menu_title_y_offset,menu.get_name().c_str(),menu.get_name().size(),battle_menu_title_x_offset+x_pos);
+}
+
 void Canvas::apply_area(const Area& ref) {
     matrix.fill_row(area_name_y_offset,ref.get_name().c_str(),ref.get_name().size(),calculate_x_middle(ref.get_name().size()));
     matrix.fill_row(area_description_y_offset,ref.get_description().c_str(),ref.get_description().size(),area_description_x_offset);
@@ -92,8 +106,6 @@ void Canvas::apply_area(const Area& ref) {
         break;
     }
     //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
-
-
 }
 
 void Canvas::apply_battle_intro(const Battle& battle) {
@@ -105,12 +117,26 @@ void Canvas::apply_battle_intro(const Battle& battle) {
     matrix.fill_row(rows-2,"Press ENTER to continue",23,calculate_x_middle(23));
     matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name().c_str(),enemy.get_name().size(),cols-1-enemy_trash_talk_x_offset-enemy.get_name().size());
     matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\"").c_str(),enemy.get_trash_talk().size()+2,cols-1-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
-
 }
 
-
 void Canvas::apply_battle_fight(const Battle& battle) {
+    std::size_t delim_row = calculate_y_middle()+battle_delimiter_y_offset;
+    matrix.fill_row(delim_row,UI::BATTLE_DELIMITER,cols);
+    const Entity& enemy = battle.get_enemy_entity(0);
+    const Entity& player = battle.get_party_entity(0);
 
+    std::string enemy_str = (enemy.get_name() + "HP["+std::to_string(enemy.get_hp())+"]");
+    matrix.fill_row(4,' ');
+    matrix.fill_row(4,enemy_str.c_str(),enemy_str.size(),30);
+    std::string player_str = (player.get_name() + "HP["+std::to_string(player.get_hp())+"]");
+    matrix.fill_row(2,' ');
+    matrix.fill_row(2,player_str.c_str(),player_str.size(),10);
+
+    apply_partial_menu(battle.get_current_menu(),battle_menu_x_offset,battle_menu_y_offset+delim_row);
+}
+
+void Canvas::clear_row(std::size_t row) {
+    matrix.fill_row(row,'\0');
 }
 
 void Canvas::clear_canvas() {
