@@ -30,7 +30,7 @@ Menu::~Menu() {
     delete[] items;
 }
 
-Menu& Menu::operator=(const Menu& ref) {
+/*Menu& Menu::operator=(const Menu& ref) {
     size = ref.size;
     capacity = ref.capacity;
     selected_item = ref.selected_item;
@@ -42,7 +42,6 @@ Menu& Menu::operator=(const Menu& ref) {
     for (std::size_t i = 0; i < size ; ++i) {
         std::cerr << "7" << std::endl;
         items[i] = ref.items[i];
-        MenuAction ma = ref.items[i].action;
         if (ma.menu_to == &ref) {
             items[i].action.menu_to = this;
         }
@@ -51,7 +50,7 @@ Menu& Menu::operator=(const Menu& ref) {
     name = ref.name;
     description = ref.description;
     return *this;
-}
+}*/
 
 std::string& Menu::operator[](std::size_t index)const {
     if (index > size) throw std::out_of_range ("unable to access menu item string, out of range");
@@ -59,8 +58,7 @@ std::string& Menu::operator[](std::size_t index)const {
 }
 
 int Menu::add_item(const std::string name, const std::string desc){
-    MenuAction action (this);
-    MenuItem new_item(name,desc,action);
+    MenuItem new_item(name,desc);
     if (size < capacity )items[size]= new_item;
     else return -1;
     items[size] = new_item;
@@ -68,14 +66,33 @@ int Menu::add_item(const std::string name, const std::string desc){
     return 0;
 }
 
-int Menu::add_item(const std::string name, const std::string desc, const MenuAction& action){
-    MenuItem new_item(name,desc,action);
+int Menu::add_item(const std::string name, const std::string desc, Menu& submenu){
+    MenuItem new_item(name,desc,submenu);
     if (size < capacity )items[size]= new_item;
     else return -1;
     items[size] = new_item;
     ++size;
     return 0;
 }
+
+int Menu::add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to){
+    MenuItem new_item(name,desc,target_val,set_to);
+    if (size < capacity )items[size]= new_item;
+    else return -1;
+    items[size] = new_item;
+    ++size;
+    return 0;
+}
+
+int Menu::add_item(const std::string name, const std::string desc, FunctionType type) {
+    MenuItem new_item(name,desc,type);
+    if (size < capacity )items[size]= new_item;
+    else return -1;
+    items[size] = new_item;
+    ++size;
+    return 0;
+}
+
 
 int Menu::clear(){
     size = 0;
@@ -108,8 +125,10 @@ std::string Menu::get_desc() const{
     return description;
 }
 
-MenuAction& Menu::get_action(int index) const {
-    return items[index].action;
+Menu* Menu::run_function(int index) const {
+    items[index].functionobject();
+    return items->nextmenu;
+
 }
 
 std::size_t Menu::get_size() const {

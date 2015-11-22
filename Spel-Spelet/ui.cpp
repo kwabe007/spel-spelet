@@ -23,9 +23,11 @@ namespace UI {
     modes MODE = UNKNOWN;
 
     void setup() {
-        for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
-            std::cout << std::endl << "\r";
+        for (unsigned int i = 0; i < cvs.get_rows()-1; ++i) {
+           std::cout << i << std::endl << "\r";
         }
+        //std::cout << ANSI_MOVE_UP;
+        reset_output_marker();
     }
 
     void finished(unsigned int x) {
@@ -98,8 +100,7 @@ namespace UI {
         flush_screen();
         cvs.clear_canvas();
         char choice;
-        const MenuAction* action_ptr;
-        const Menu* m_ptr;
+        const Menu* next_menu_ptr;
         while (true) {
             cvs.apply_menu(*menu_ptr);
             print_canvas();
@@ -113,14 +114,10 @@ namespace UI {
                 break; //optional
             case COMMAND_ENTER:
             case COMMAND_SPACE:
-                action_ptr = &menu_ptr->get_action(menu_ptr->get_selected());
-                m_ptr = (*action_ptr)();
-                if (!m_ptr) goto EndWhile;
-                else if (m_ptr == menu_ptr) continue;
-                else present_menu(m_ptr, true);
-                break; //optional
-            case COMMAND_RIGHT:
-                goto EndWhile;
+                next_menu_ptr = menu_ptr->run_function(menu_ptr->get_selected());
+                if (!next_menu_ptr) goto EndWhile;
+                else if (next_menu_ptr == menu_ptr) continue;
+                else present_menu(next_menu_ptr, true);
                 break; //optional
             default : //Optional
                 ;
@@ -220,7 +217,7 @@ namespace UI {
             std::cout << cvs[i];
             if(i < cvs.get_rows()-1) std::cout << std::endl << "\r";
         }
-        std::cout << ANSI_MOVE_UP;
+        //std::cout << ANSI_MOVE_UP;
     }
 
     void flush_screen(){
@@ -230,13 +227,14 @@ namespace UI {
             std::cout << empty.c_str();
             if(i < TERMINAL_ROWS-1) std::cout << std::endl << "\r";
         }
-        std::cout << ANSI_MOVE_UP;
+        //std::cout << ANSI_MOVE_UP;
     }
 
     void reset_output_marker() {
-        for (unsigned int i = 0; i < cvs.get_rows(); ++i) {
+        for (unsigned int i = 0; i < cvs.get_rows()-1; ++i) {
             std::cout << ANSI_MOVE_UP;
         }
+        std::cout << "\r";
     }
 
     bool is_unbuffered() {

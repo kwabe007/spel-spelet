@@ -3,6 +3,7 @@
 
 #include <string>
 #include <array>
+#include "../funcobj/funcobj.hpp"
 
 //Forward declaration of Menu for use in typedef.
 class Menu;
@@ -17,7 +18,7 @@ typedef int (*action_function)();
 //a representative purpose.
 static const int ITEM_REPR_STR_COUNT = 2;
 
-class MenuAction {
+/*class MenuAction {
 private:
     const Menu* menu_to = nullptr;
     static const std::size_t CAPACITY = 3;
@@ -70,12 +71,15 @@ public:
         return size;
     }
 
-};
+};*/
 
 
 /* Contains choices for the user connected
  * to functions.
  * */
+
+
+
 class Menu {
 
     /* Used in the Menu class as a representation of the
@@ -87,24 +91,37 @@ class Menu {
     class MenuItem {
         private:
         std::string repr_strings[ITEM_REPR_STR_COUNT];
-        MenuAction action;
+        FunctionObject functionobject;
+        Menu* nextmenu = nullptr;
 
         friend Menu;
 
         public:
         MenuItem(){}
-        MenuItem(const std::string name, const std::string desc, const MenuAction& act){
+        MenuItem(const std::string name, const std::string desc) : functionobject{FUNCTION_NONE} {
             repr_strings[0] = name;
             repr_strings[1] = desc;
-            action = act;
         }
-        MenuItem& operator=(const MenuItem& ref) {
+        MenuItem(const std::string name, const std::string desc, std::size_t* init_val, std::size_t set_val) : functionobject{init_val,set_val} {
+            repr_strings[0] = name;
+            repr_strings[1] = desc;
+        }
+        MenuItem(const std::string name, const std::string desc, FunctionType type) : functionobject{type} {
+            repr_strings[0] = name;
+            repr_strings[1] = desc;
+        }
+        MenuItem(const std::string name, const std::string desc, Menu& submenu) : functionobject{}{
+            repr_strings[0] = name;
+            repr_strings[1] = desc;
+            nextmenu = &submenu;
+        }
+        /*MenuItem& operator=(const MenuItem& ref) {
             for (std::size_t i = 0; i < ITEM_REPR_STR_COUNT; ++i) {
                 repr_strings[i] = ref.repr_strings[i];
             }
             action = ref.action;
             return *this;
-        }
+        }*/
         std::string get_name() const {
             return repr_strings[0];
         }
@@ -136,7 +153,9 @@ class Menu {
     std::string& operator[](std::size_t index)const;
 
     int add_item(const std::string name, const std::string desc);
-    int add_item(const std::string name, const std::string desc, const MenuAction& action);
+    int add_item(const std::string name, const std::string desc, Menu& submenu);
+    int add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to);
+    int add_item(const std::string name, const std::string desc, FunctionType type);
 
     int clear();
     bool move_up() const;
@@ -144,7 +163,7 @@ class Menu {
 
     std::string get_name() const;
     std::string get_desc() const;
-    MenuAction& get_action(int index) const;
+    Menu* run_function(int index) const;
     size_t get_size() const;
     size_t get_capacity() const;
     bool is_selected(std::size_t index)const;

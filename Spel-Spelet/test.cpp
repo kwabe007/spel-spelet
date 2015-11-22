@@ -59,26 +59,14 @@ const Menu* runnable3(const Menu* menu) {
 
 int main(int argc, char** argv) {
 signal(SIGSEGV, handler);
-
     UI::setup();
-    UI::reset_output_marker();
-
-    /*MenuAction action_nothing;
-
-    Menu helpmenu("Sub-menu", 2);
-    helpmenu.add_item("This does nothing", "this is option 1");
-    helpmenu.add_item("Back", "this is option 2", action_nothing);
-
-    MenuAction action(&secondmenu);
-    MenuAction action_sub_menu(&helpmenu);
-    action.add_function(&exit);*/
 
     Scene scene;
     Menu mainmenu("Main Menu", 4);
     mainmenu.add_item("New Game", "this is option 1");
     mainmenu.add_item("Load", "this is option 2");
     mainmenu.add_item("Help", "this is option 3");
-    mainmenu.add_item("Exit", "this is option 4");
+    mainmenu.add_item("Exit", "this is option 4", FUNCTION_EXIT);
     scene.set_menu(mainmenu);
 
     Scene scene2;
