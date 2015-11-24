@@ -53,7 +53,13 @@ const Area& World::get_area(std::size_t index) const{
 void World::set_current_area(int x,int y) {
     std::pair<int,int> new_val(x,y);
     if(index_map.find(new_val) == index_map.end()) {
-        std::string str("Cannot set current area of world '"+name+"' to coordinate ("+std::to_string(new_val.first)+","+std::to_string(new_val.second)+"), area does not exist");
+        std::string cs;
+        for (std::pair< const std::pair<int,int>, std::size_t> i :index_map) {
+            cs = cs + std::to_string(i.second) + ":";
+            cs = cs + std::to_string(i.first.first) + ",";
+            cs = cs + std::to_string(i.first.second) + " ";
+        }
+        std::string str("Cannot set current area of world '"+name+"' to coordinate ("+std::to_string(new_val.first)+","+std::to_string(new_val.second)+"), area does not exist: " +cs);
         throw std::out_of_range(str);
     }
     current_area_coord = new_val;
@@ -62,8 +68,7 @@ void World::set_current_area(int x,int y) {
 bool World::move_current_area(Direction dir) {
     std::pair<int,int> new_val = transform_coordinates(current_area_coord,dir);
     if(index_map.find(new_val) == index_map.end()) {
-        std::string str("Cannot set current area of world '"+name+"' to coordinate ("+std::to_string(new_val.first)+","+std::to_string(new_val.second)+"), area does not exist");
-        throw std::out_of_range(str);
+        return false;
     }
     current_area_coord = new_val;
     return true;

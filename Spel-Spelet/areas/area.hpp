@@ -31,8 +31,8 @@ public:
     Area(const std::string nm, const std::string desc);
     Area(const Area& ref) = delete;
     //Area& operator=(const Area& ref);
-
-    Direction selected_direction = DIRECTION_NORTH;
+    const Direction default_direction = DIRECTION_NORTH;
+    Direction selected_direction = default_direction;
     std::string get_name() const;
     std::string get_description() const;
     std::size_t get_entity_size() const;
@@ -42,6 +42,8 @@ public:
     void set_name(const std::string& str);
     void set_description(const std::string& str);
     void add_entity(const Entity& ent);
+
+    void reset_direction();
 
     ~Area();
     //void initiate_fight();

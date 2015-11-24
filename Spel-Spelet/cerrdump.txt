@@ -5,24 +5,98 @@ pushing menu
 going through scenes
 playing scene
 presenting menu Main Menu
-4 4
+4 5
 Pressed key: 115
-Pressed key: 119
-Pressed key: 115
-Pressed key: 119
-Pressed key: 115
-Pressed key: 115
 Pressed key: 115
 Pressed key: 119
 Pressed key: 119
+Pressed key: 115
+Pressed key: 115
+Pressed key: 119
+Pressed key: 119
+Pressed key: 115
 Pressed key: 119
 Pressed key: 13
 no menu
 playing scene
-playing scene
-presenting menu Second Menu
-2 2
-Pressed key: 115
+Pressed key: 115
+Pressed key: 119
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Riksluffare
 Pressed key: 13
-no menu
-test int: 3
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+you got rekt, gg no re
+Pressed key: 115
+Pressed key: 13
+Pressed key: 119
+Pressed key: 13
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Meskin
+Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+battlestate*** 0
+top row 14
+top row 14
+you got rekt, gg no re
+Pressed key: 115
+Pressed key: 13
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Riksluffare
+Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+great victory
+Pressed key: 119
+Pressed key: 115
+Pressed key: 100
+Pressed key: 13
+Pressed key: 97
+Pressed key: 13
+Pressed key: 119
+Pressed key: 13
+Pressed key: 115
+Pressed key: 13
+Pressed key: 119
+Pressed key: 13
+Pressed key: 115
+Pressed key: 13
+Pressed key: 119
+Pressed key: 13
+Pressed key: 115
+Pressed key: 13
+Pressed key: 3

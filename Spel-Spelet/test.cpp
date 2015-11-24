@@ -21,6 +21,7 @@ using namespace std;
 
 /* TODO:
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
+ * DESTRUCTORS FOR SCENE(WORLD,MAP,TEXT), WORLD(AREA), AREA (ENTITIES,OBJECTS)
  * ADD AUTOMATIC REALLOCATION TO MENU
  * ADD COPY CTOR AND ASS OPERATOR TO MENU
  * ADD THROW IN MENU CLASS (GET_FP)
@@ -60,7 +61,7 @@ signal(SIGSEGV, handler);
     UI::setup();
 
     Scene scene;
-    Menu mainmenu("Main Menu", 4);
+    Menu mainmenu("Main Menu", 5);
     size_t test_int(3);
     cerr <<"test int: " << test_int << std::endl;
     mainmenu.add_item("New Game", "this is option 1");
@@ -77,8 +78,10 @@ signal(SIGSEGV, handler);
             Building secondroom("Kitchen", "Smells like shit in here");
                 Human horunge("Meskin", "Största pungkulan", "bror");
                 horunge.set_hp(30);
-            room.add_entity(horunge);
+            secondroom.add_entity(horunge);
         firstworld.add_area(room);
+        firstworld.add_area(secondroom);
+        firstworld.set_start_area(0,0);
     scene2.set_world(firstworld);
 
     Scene scene3;

@@ -59,3 +59,7 @@ void Area::set_description(const std::string& str) {
 void Area::add_entity(const Entity& ent) {
     entity_vec.push_back(ent);
 }
+
+void Area::reset_direction() {
+    selected_direction = default_direction;
+}

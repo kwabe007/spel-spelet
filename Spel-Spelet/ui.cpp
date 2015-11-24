@@ -140,7 +140,9 @@ namespace UI {
             while (true) {
                 Area& area = world.current_area();
                 play_area(area);
-                world.move_current_area(area.selected_direction);
+                if (world.move_current_area(area.selected_direction)) {
+                    world.current_area().selected_direction = area.selected_direction;
+                }
             }
         }
     }
