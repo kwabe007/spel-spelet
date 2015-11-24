@@ -24,13 +24,14 @@ private:
     std::string description;
 
     std::vector<Entity> entity_vec;
-    //std::vector<Objects> extra_area_vec;
+    //std::vector<Objects*> stuff;
 
 public:
     Area();
     Area(const std::string nm, const std::string desc);
-    //Area(const Area& ref);
+    Area(const Area& ref) = delete;
     //Area& operator=(const Area& ref);
+
     int selected_direction = DIRECTION_NORTH;
     std::string get_name() const;
     std::string get_description() const;
@@ -42,6 +43,7 @@ public:
     void set_description(const std::string& str);
     void add_entity(const Entity& ent);
 
+    ~Area();
     //void initiate_fight();
 
 };

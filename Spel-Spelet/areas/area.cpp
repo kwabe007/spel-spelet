@@ -10,6 +10,12 @@ Area::Area(const std::string nm, const std::string desc) : name{nm}, description
     std::cerr << "str ctor" << std::endl;
 }
 
+Area::~Area(){
+    /*for (Object* o : stuff){
+        delete o;
+    }*/
+}
+
 /*Area::Area(const Area& ref) : next_area_vec{ref.next_area_vec},
 extra_area_vec{ref.extra_area_vec}, name{ref.name}, description{ref.description} {
 }
