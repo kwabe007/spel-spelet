@@ -111,8 +111,8 @@ void Canvas::apply_area(const Area& ref) {
 }
 
 void Canvas::apply_battle_intro(const Battle& battle) {
-    const Entity& ally = battle.get_enemy_entity(0);
-    const Entity& enemy = battle.get_party_entity(0);
+    const Entity& ally = battle.get_party_entity(0);
+    const Entity& enemy = battle.get_enemy_entity(0);
     matrix.fill_row(player_trash_talk_y_offset,ally.get_name().c_str(),ally.get_name().size(),player_trash_talk_x_offset);
     matrix.fill_row(player_trash_talk_y_offset+1,("\""+ally.get_trash_talk()+"\"").c_str(),ally.get_trash_talk().size()+2,player_trash_talk_x_offset);
     matrix.fill_row(calculate_y_middle(),"VS",2,calculate_x_middle(2));
