@@ -60,6 +60,7 @@ namespace UI  {
     Scene* play_scene(Scene& scene);
     void present_prologue(const std::string& text);
     void present_menu(const Menu* menu, bool sub = false);
+    void play_world(World& area);
     void play_area(Area& area);
     void battle_intro(const Battle& battle);
     int play_battle(Battle& battle);

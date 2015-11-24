@@ -11,6 +11,7 @@
 #include "scene.hpp"
 #include "areas/building.hpp"
 #include "entities/human.hpp"
+#include "areas/world.hpp"
 
 
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
@@ -38,8 +39,6 @@ void handler(int sig) {
   backtrace_symbols_fd(array, size, STDERR_FILENO);
   exit(1);
 }
-
-
 
 int exit() {
     if (UI::is_unbuffered())
@@ -71,12 +70,15 @@ signal(SIGSEGV, handler);
     scene.set_menu(mainmenu);
 
     Scene scene2;
-    Human luffare;
-    Human horunge("Horunge", "Största pungkulan", "SUCK MY BALLZ!!");
-    horunge.set_hp(30);
-    Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
-    room.add_entity(luffare);
-    room.add_entity(horunge);
+        World firstworld("Kvarnamala");
+            Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
+                Human luffare;
+            room.add_entity(luffare);
+            Building secondroom("Kitchen", "Smells like shit in here");
+                Human horunge("Meskin", "Största pungkulan", "bror");
+                horunge.set_hp(30);
+            room.add_entity(horunge);
+        firstworld.add_area(room);
     scene2.set_area(room);
 
     Scene scene3;
@@ -84,7 +86,6 @@ signal(SIGSEGV, handler);
     secondmenu.add_item("Samla kamrater", "this is option 1");
     secondmenu.add_item("Jaga kulturberikare", "this is option 2");
     scene3.set_menu(secondmenu);
-
 
     vector<Scene*> vec;
     std::cerr << "pushing menu" << std::endl;

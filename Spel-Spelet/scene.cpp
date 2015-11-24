@@ -1,5 +1,3 @@
-#include <string>
-#include <iostream>
 #include "scene.hpp"
 
 void Scene::set_text(std::string& txt) {
@@ -37,7 +35,7 @@ Menu* Scene::get_menu_ptr() {
     return menu_ptr;
 }
 
-Area& Scene::get_area(){
+World& Scene::get_world(){
     return area;
 }
 
@@ -49,6 +47,6 @@ const Menu* Scene::get_menu_ptr() const {
     return menu_ptr;
 }
 
-const Area& Scene::get_area() const {
+const World& Scene::get_world() const {
     return area;
 }

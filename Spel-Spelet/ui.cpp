@@ -82,10 +82,11 @@ namespace UI {
 		}
         std::cout << std::endl << "\r";
 	}
+
     Scene* play_scene(Scene& scene) {
         if(scene.is_set_text()) present_prologue(scene.get_text());
         if(scene.is_set_menu()) present_menu(scene.get_menu_ptr());
-        if(scene.is_set_area()) {std::cerr << "area" << std::endl; play_area(scene.get_area());}
+        if(scene.is_set_area()) {play_world(scene.get_area());}
 
         else std::cerr << "no menu" << std::endl;
         return &scene;
@@ -131,6 +132,17 @@ namespace UI {
             cvs.clear_canvas();
         }
         ;
+    }
+
+    void play_world(World& world) {
+
+        if (world.start_is_set()) {
+            while (true) {
+                Area& area = world.get_area();
+                play_area(area);
+                world.set_current_area(area.selected_direction);
+            }
+        }
     }
 
     void play_area(Area& area) {
@@ -191,6 +203,7 @@ namespace UI {
     EndWhileArea:
     ;
     }
+
     void battle_intro(const Battle& battle) {
         flush_screen();
         cvs.clear_canvas();

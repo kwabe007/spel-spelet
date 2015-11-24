@@ -3,7 +3,7 @@
 
 #include <string>
 #include "menus/menu.hpp"
-#include "areas/area.hpp"
+#include "areas/world.hpp"
 
 class Scene {
 private:
@@ -24,10 +24,10 @@ public:
 
     std::string& get_text();
     Menu* get_menu_ptr();
-    Area& get_area();
+    World& get_world();
     const std::string& get_text()const;
     const Menu* get_menu_ptr()const;
-    const Area& get_area()const;
+    const World& get_world()const;
 
 
 };
