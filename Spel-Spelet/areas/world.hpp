@@ -2,12 +2,13 @@
 #define WORLD_HPP
 
 #include <unordered_map>
+#include <boost/functional/hash.hpp>
 #include "area.hpp"
 
 class World {
 private:
     std::string name;
-    std::unordered_map<std::pair<int,int>, std::size_t> index_map;
+    std::unordered_map<std::pair<int,int>, std::size_t, boost::hash<std::pair<int, int>> > index_map;
     std::vector<Area*> areas;
     bool start_area_is_set = false;
     std::pair<int,int> starting_area_coord;
@@ -28,7 +29,7 @@ public:
 
     void add_area(Area& ar);
     void map_area(std::pair<int,int> coordinates, std::size_t index);
-    void set_start_area(std::size_t index);
+    void set_start_area(int x, int y);
 
     Area& current_area();
     const Area& current_area() const;

@@ -9,24 +9,24 @@ class Scene {
 private:
     std::string text;
     Menu* menu_ptr = nullptr;
-    Area area;
+    World* world_ptr = nullptr;
     bool text_set = false;
-    bool area_set = false;
+    bool world_set = false;
 
 public:
     void set_text(std::string& txt);
     void set_menu(Menu& mn);
-    void set_area(Area& ar);
+    void set_world(World& wd);
 
     bool is_set_text()const;
     bool is_set_menu()const;
-    bool is_set_area()const;
+    bool is_set_world()const;
 
     std::string& get_text();
-    Menu* get_menu_ptr();
-    World& get_world();
     const std::string& get_text()const;
+    Menu* get_menu_ptr();
     const Menu* get_menu_ptr()const;
+    World& get_world();
     const World& get_world()const;
 
 

@@ -32,7 +32,7 @@ public:
     Area(const Area& ref) = delete;
     //Area& operator=(const Area& ref);
 
-    int selected_direction = DIRECTION_NORTH;
+    Direction selected_direction = DIRECTION_NORTH;
     std::string get_name() const;
     std::string get_description() const;
     std::size_t get_entity_size() const;

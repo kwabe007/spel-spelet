@@ -104,6 +104,8 @@ void Canvas::apply_area(const Area& ref) {
         case DIRECTION_WEST:
         matrix.fill_row(west_y,selector.c_str(),selector.size(),west_x-2,false);
         break;
+    default:
+        break;
     }
     //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
 }

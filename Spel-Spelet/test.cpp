@@ -79,7 +79,7 @@ signal(SIGSEGV, handler);
                 horunge.set_hp(30);
             room.add_entity(horunge);
         firstworld.add_area(room);
-    scene2.set_area(room);
+    scene2.set_world(firstworld);
 
     Scene scene3;
     Menu secondmenu("Second Menu", 2);

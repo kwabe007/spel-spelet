@@ -86,7 +86,7 @@ namespace UI {
     Scene* play_scene(Scene& scene) {
         if(scene.is_set_text()) present_prologue(scene.get_text());
         if(scene.is_set_menu()) present_menu(scene.get_menu_ptr());
-        if(scene.is_set_area()) {play_world(scene.get_area());}
+        if(scene.is_set_world()) {play_world(scene.get_world());}
 
         else std::cerr << "no menu" << std::endl;
         return &scene;
@@ -138,9 +138,9 @@ namespace UI {
 
         if (world.start_is_set()) {
             while (true) {
-                Area& area = world.get_area();
+                Area& area = world.current_area();
                 play_area(area);
-                world.set_current_area(area.selected_direction);
+                world.move_current_area(area.selected_direction);
             }
         }
     }

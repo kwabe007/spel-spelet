@@ -9,9 +9,8 @@ void Scene::set_menu(Menu& mn) {
     menu_ptr = &mn;
 }
 
-void Scene::set_area(Area& ar) {
-    area = ar;
-    area_set = true;
+void Scene::set_world(World& wd) {
+    world_ptr = &wd;
 }
 
 bool Scene::is_set_text() const {
@@ -23,30 +22,31 @@ bool Scene::is_set_menu() const {
     return false;
 }
 
-bool Scene::is_set_area() const {
-    return area_set;
-}
-
-std::string& Scene::get_text(){
-    return text;
+bool Scene::is_set_world() const {
+    if (world_ptr) return true;
+    return false;
 }
 
 Menu* Scene::get_menu_ptr() {
     return menu_ptr;
 }
 
-World& Scene::get_world(){
-    return area;
+const Menu* Scene::get_menu_ptr() const {
+    return menu_ptr;
+}
+
+std::string& Scene::get_text(){
+    return text;
 }
 
 const std::string& Scene::get_text() const {
     return text;
 }
 
-const Menu* Scene::get_menu_ptr() const {
-    return menu_ptr;
+World& Scene::get_world(){
+    return *world_ptr;
 }
 
 const World& Scene::get_world() const {
-    return area;
+    return *world_ptr;
 }
