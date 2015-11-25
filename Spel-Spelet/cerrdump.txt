@@ -10,26 +10,53 @@ presenting menu Main Menu
 no menu
 playing scene
 Pressed key: 115
-Pressed key: 119
 Pressed key: 100
+Pressed key: 13
+Pressed key: 97
+Pressed key: 13
+Pressed key: 115
+Pressed key: 13
+Pressed key: 119
+Pressed key: 13
+Pressed key: 115
+Pressed key: 13
 Pressed key: 102
 presenting menu Who do you want to fight?
-1 1
+3 3
+Pressed key: 115
+Pressed key: 115
+Pressed key: 119
+Pressed key: 119
+Pressed key: 115
+Pressed key: 119
+Pressed key: 13
+Riksluffare
+Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+great victory
+Pressed key: 102
+presenting menu Who do you want to fight?
+3 3
 Pressed key: 13
 Riksluffare
 Pressed key: 13
 battlestate*** 0
 top row 14
 Pressed key: 13
-battlestate*** 0
-top row 14
-top row 14
-battlestate*** 0
-top row 14
+great victory
+Pressed key: 119
+Pressed key: 115
+Pressed key: 100
+Pressed key: 119
 Pressed key: 13
-battlestate*** 0
-top row 14
-top row 14
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Pundare
+Pressed key: 13
 battlestate*** 0
 top row 14
 Pressed key: 13
@@ -40,13 +67,14 @@ battlestate*** 0
 top row 14
 Pressed key: 13
 great victory
-Pressed key: 119
+Pressed key: 115
 Pressed key: 13
 Pressed key: 102
 presenting menu Who do you want to fight?
-1 1
-Pressed key: 13
-Meskin
+3 3
+Pressed key: 115
+Pressed key: 13
+Babbe#1
 Pressed key: 13
 battlestate*** 0
 top row 14
@@ -54,24 +82,8 @@ Pressed key: 13
 battlestate*** 0
 top row 14
 top row 14
-you got rekt, gg no re
-Pressed key: 13
-Pressed key: 102
-presenting menu Who do you want to fight?
-1 1
-Pressed key: 13
-Meskin
-Pressed key: 13
 battlestate*** 0
 top row 14
 Pressed key: 13
-battlestate*** 0
-top row 14
-top row 14
-you got rekt, gg no re
-Pressed key: 113
-Pressed key: 99
-Pressed key: 115
-Pressed key: 115
-Pressed key: 97
+great victory
 Pressed key: 3

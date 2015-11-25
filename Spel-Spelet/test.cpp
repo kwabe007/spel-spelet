@@ -70,13 +70,20 @@ signal(SIGSEGV, handler);
     mainmenu.add_item("Exit", "this is option 4", FUNCTION_EXIT);
     scene.set_menu(mainmenu);
 
+    PLAYER.set_hp(50);
+    PLAYER.set_ap(20);
+
     Scene scene2;
         World firstworld("Kvarnamala");
-            Building room("Your Room", "Wake up, WAKE THE FUCK UP!");
+            Building room("Plattan", "Smells like shit here");
                 Human luffare;
+                Human babbe("Babbe#1", "Största pungkulan", "bror");
+                Human babbe2("Babbe#2", "Största pungkulan", "bror");
             room.add_entity(luffare);
-            Building secondroom("Kitchen", "Smells like shit in here");
-                Human horunge("Meskin", "Största pungkulan", "bror");
+            room.add_entity(babbe);
+            room.add_entity(babbe2);
+            Building secondroom("Hötorget", "You're at the marketplace but watch out for junkies");
+                Human horunge("Pundare", "Största pungkulan", "...");
                 horunge.set_hp(30);
             secondroom.add_entity(horunge);
         firstworld.add_area(room);

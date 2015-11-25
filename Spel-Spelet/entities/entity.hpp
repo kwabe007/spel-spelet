@@ -16,6 +16,7 @@ private:
     //std::vector<Objects> inventory;
 public:
     Entity();
+    Entity(const std::string& nm);
     Entity(const std::string& nm, const std::string& desc, const std::string& trash);
 
     int get_hp() const;
