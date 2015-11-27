@@ -6,16 +6,16 @@
 
 namespace lab2 {
 
-lab2::Julian::Julian() : WesternDate() {
+Julian::Julian() : WesternDate() {
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1]-1;
     dy = date[2]-1;
     setup_ly_cond();
 }
-lab2::Julian::Julian(const int mjd){
+Julian::Julian(const int mjd){
     if (mjd < -101127 || mjd >416755) {
-        throw std::out_of_range("Out of range!");
+        throw std::invalid_argument("Out of range!");
     }
     from_julian_day(mjd, date);
     yr = date[0];
@@ -23,76 +23,68 @@ lab2::Julian::Julian(const int mjd){
     dy = date[2]-1;
     setup_ly_cond();
 }
-lab2::Julian::Julian(const int yr_in, const int mth_in, const int dy_in) : WesternDate(yr_in,mth_in,dy_in) {
+Julian::Julian(const int yr_in, const int mth_in, const int dy_in) : WesternDate(yr_in,mth_in,dy_in) {
     setup_ly_cond();
-    if (0 >= mth_in || mth_in > mpy || 0 >= dy_in || dy_in > current_dpm) {
-        throw std::out_of_range ("Out of range");
+    if (0 >= mth_in || mth_in > mpy || 0 >= dy_in || dy_in > current_dpm()) {
+        throw std::invalid_argument ("Out of range");
     }
 }
-lab2::Julian::Julian(const Date& ref) : WesternDate(ref) {
+Julian::Julian(const Date& ref) : WesternDate(ref) {
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1]-1;
     dy = date[2]-1;
     setup_ly_cond();
 }
-lab2::Julian::Julian(const Date* ref_ptr) : WesternDate(ref_ptr) {
+Julian::Julian(const Date* ref_ptr) : WesternDate(ref_ptr) {
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1]-1;
     dy = date[2]-1;
     setup_ly_cond();
 }
-lab2::Julian::Julian(const WesternDate& ref) : WesternDate(ref) {
-    //std::cerr << "mod " << mjd_create << " ";
-    from_julian_day(mjd_create, date);
-    yr = date[0];
-    mth = date[1]-1;
-    dy = date[2]-1;
-    //std::cerr << yr << " " << mth << " " << dy << std::endl;
-    setup_ly_cond();
-}
-lab2::Julian::Julian(const Julian& ref) : WesternDate(ref) {
+Julian::Julian(const WesternDate& ref) : WesternDate(ref) {
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1]-1;
     dy = date[2]-1;
     setup_ly_cond();
 }
-lab2::Julian::~Julian(){
-    delete[] months;
+Julian::Julian(const Julian& ref) : WesternDate(ref) {
+    from_julian_day(mjd_create, date);
+    yr = date[0];
+    mth = date[1]-1;
+    dy = date[2]-1;
+    setup_ly_cond();
 }
-void lab2::Julian::setup_ly_cond() {
-    leap_year = is_leap_year(yr);
-    months[ly_month] = ly_default+leap_year;
-    current_dpm = *(months + mth);
-    //std::cerr << yr << " " << mth << " " << dy << std::endl;
+
+void Julian::setup_ly_cond() {
 }
-Julian& lab2::Julian::operator ++ () {
+Julian& Julian::operator ++ () {
     add_d();
     return *this;
 }
-Julian lab2::Julian::operator ++ (int) {
+Julian Julian::operator ++ (int) {
     Julian temp(*this);
     add_d();
     return temp;
 }
-Julian& lab2::Julian::operator -- () {
+Julian& Julian::operator -- () {
     rem_d();
     return *this;
 }
-Julian lab2::Julian::operator -- (int) {
+Julian Julian::operator -- (int) {
     Julian temp(*this);
     rem_d();
     return temp;
 }
-int lab2::Julian::mod_julian_day() const {
+int Julian::mod_julian_day() const {
     // http://quasar.as.utexas.edu/BillInfo/JulianDatesG.html
     int year = yr;
     int month = mth + 1;
     int day = dy + 1;
-    if (mth <= 2) {
-        month = mth + 12;
+    if (month <= 2) {
+        month += 12;
         --year;
     }
     int d = 365.25*(year+4716);
@@ -101,7 +93,7 @@ int lab2::Julian::mod_julian_day() const {
     return mjd;
 }
 
-void lab2::Julian::from_julian_day(const int mjd, int* date)const {
+void Julian::from_julian_day(const int mjd, int* date)const {
     int Q = mjd + 2400000.5 + 0.5;
     int Z = (int)Q;
     int A = Z;
@@ -124,12 +116,23 @@ void lab2::Julian::from_julian_day(const int mjd, int* date)const {
         date[0] = C-4716;
     }
 }
-bool lab2::Julian::is_leap_year(const int year) const {
+
+bool Julian::leap_year() const {
+    if (yr % 4 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool Julian::calculate_if_leap_year(const int year) const {
     if (year % 4 == 0) {
         return true;
     } else {
         return false;
     }
 }
+
+
 
 }

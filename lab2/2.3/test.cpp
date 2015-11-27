@@ -10,6 +10,10 @@ using namespace lab2;
 
 int main() {
 
+    time_t tp;
+    time(&tp);
+    set_k_time(tp);
+
     cout << "*******************TEST STARTED*******************\n";
     Calendar<Gregorian> default_calendar;
     cout << "Calendar successfully default-constucted\n";
@@ -21,14 +25,20 @@ int main() {
     bool success;
     success = greg_calendar.set_date(2000,2,29);
 
+
     assert(success);
 
     cout << "greg_calendar's date successfully set: " << greg_calendar.get_date_str() << endl;
 
-    success = greg_calendar.set_date(2100,2,29);
+    try {
+        greg_calendar.set_date(2100,2,29);
+        success = true;
+    }
+    catch (invalid_argument) {
+        success = false;
+    }
 
     assert(!success);
-
     cout << "greg_calendar's date unsuccessfully set (according to plan): " << greg_calendar.get_date_str() << endl;
 
     Calendar<Julian> juli_calendar(greg_calendar);
@@ -59,7 +69,11 @@ int main() {
 
     success = greg_calendar.add_event("Upper body day yet again", 2015,12,2);
     assert(!success);
-    cout << "did not add 'Upper body day yet again (2000,12,2) (according to keikakku), TL: keikakku means plan" << endl;
+    cout << "did not add 'Upper body day yet again (2000,12,2) (according to keikakku), TL Note: keikakku means plan" << endl;
+
+    success = greg_calendar.add_event("ABS day!", 2015,12,2);
+    assert(success);
+    cout << "added 'ABS day!' (2015,12,2) (those six packs won't wait for anybody)" << endl;
 
     success = greg_calendar.add_event("Leg day", 2000,12,1);
     assert(!success);

@@ -1,0 +1,27 @@
+
+#Compiler
+CC= g++
+
+#Compiler flags
+CFLAGS= -c -Wall -std=c++11
+
+#Source files
+SOURCES= calendar.cpp date.cpp julian.cpp gregorian.cpp westerndate.cpp
+TESTSRC= test.cpp kattistime.cpp
+
+#Object files
+OBJSRC= $(SOURCES:.cpp=.o)
+OBJTEST= $(TESTSRC:.cpp=.o)
+
+compsrc: $(SOURCES)
+	$(CC) $(CFLAGS) $(SOURCES)
+
+ctest: $(TESTSRC)
+	$(CC) $(CFLAGS) $(TESTSRC)
+
+linkmytest:
+	$(CC) $(OBJSRC) $(OBJTEST) -o malware.exe
+
+all: compsrc ctest linkmytest
+
+

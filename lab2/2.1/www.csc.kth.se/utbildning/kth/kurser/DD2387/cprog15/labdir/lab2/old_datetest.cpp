@@ -1,7 +1,11 @@
+// NOTE:
+//   This file might not be 100% in sync with `lab2.pdf` (cprog14)
+//   2014-10-11, <filip.roseen@gmail.com>
+
 // projektlokala headerfiler
 #include "kattistime.h"     
-#include "julian.hpp"
-#include "gregorian.hpp"
+#include "julian.h"         
+#include "gregorian.h"      
 
 // STL headerfiler
 #include <iostream>
@@ -16,7 +20,7 @@
 
 int main()
 {
-    //using namespace lab2;        // Exponera funktionalitet i namnrymden lab2
+    using namespace lab2;        // Exponera funktionalitet i namnrymden lab2
 
     ////////////////////////////////////////////////////////////
     // Sätt tiden. OBS skicka inte nedanstående kod till kattis
@@ -31,8 +35,7 @@ int main()
     std::cout << "Idag är det " << gtoday << std::endl;
     assert(tj - gtoday == 0);
     Gregorian tg(2006, 10, 31); // ok: sätt datum explicit
-                                // följande fungerar också:
-                                // Gregorian(2000, Gregorian::October, 31)
+
     Date &j = tj;               // åtkomst av funktioner genom Dates interface
     Date &g = tg;       
     Date &today = gtoday;

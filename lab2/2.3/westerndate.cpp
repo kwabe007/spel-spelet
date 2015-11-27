@@ -21,10 +21,11 @@ lab2::WesternDate::~WesternDate(){}
 void lab2::WesternDate::setup(){
     mpy = 12;
     ly_month = 1;
-    months = new int[12]{31,28,31,30,31,30,31,31,30,31,30,31};
+    leap_days = 1;
+    months = std::vector<int>({31,28,31,30,31,30,31,31,30,31,30,31});
     ly_default = 28;
     wkds = {"monday","tuesday","wednesday","thursday","friday","saturday","sunday"};
-    month_names = {"january","february","mars","april","may","june","july","august","september","october","november","december"};
+    month_names = {"january","february","march","april","may","june","july","august","september","october","november","december"};
 }
 int lab2::WesternDate::week_day() const {
     int wd = (mod_julian_day()+ 2) % wkds.size();

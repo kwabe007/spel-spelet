@@ -7,90 +7,91 @@
 
 namespace lab2 {
 
-lab2::Date::Date(){
+Date::Date(){
     time_t mytime;
-    time(&mytime);
+    k_time(&mytime);
     struct tm *t = gmtime(&mytime);
     int year  = t->tm_year + 1900;
     int month = t->tm_mon + 1;      // månaderna och dagarna
     int day   = t->tm_mday;
     mjd_create = mjd_setup(year, month, day);
 }
-lab2::Date::Date(const int mjd){
+Date::Date(const int mjd){
     if (mjd < -101127 || mjd > 416787) {
-        throw std::out_of_range ("Out of range");
+        throw std::invalid_argument ("Out of range");
     }
     mjd_create = mjd;
 }
-lab2::Date::Date(const int yr_in,const int mth_in,const int dy_in){
+Date::Date(const int yr_in,const int mth_in,const int dy_in){
     yr = yr_in;
     mth = mth_in-1;
     dy = dy_in-1;
 }
-lab2::Date::Date(const Date& ref){
+Date::Date(const Date& ref){
     mjd_create = ref.mod_julian_day();
 }
-lab2::Date::Date(const Date* ref_ptr){
+Date::Date(const Date* ref_ptr){
     mjd_create = ref_ptr->mod_julian_day();
 }
-lab2::Date::~Date(){}
-int lab2::Date::day() const {
+Date::~Date(){}
+int Date::day() const {
     return dy + 1;
 }
-int lab2::Date::month() const {
+int Date::month() const {
     return mth + 1;
 }
-int lab2::Date::year() const {
+int Date::year() const {
     return yr;
 }
-void lab2::Date::add_d() {
-    if (++dy >= current_dpm) {
+void Date::add_d() {
+    if (++dy >= current_dpm()) {
         dy = 0;
         add_m();
     }
 }
-void lab2::Date::add_m() {
+void Date::add_m() {
     ++mth;
     if (mth >= mpy) {
         mth = 0;
         add_y();
     }
-    current_dpm = *(months + mth);
 }
-void lab2::Date::add_y() {
+void Date::add_y() {
     ++yr;
-    leap_year = is_leap_year(yr);
-    months[ly_month] = ly_default+leap_year;
 }
-void lab2::Date::rem_d() {
+void Date::rem_d() {
     if (--dy < 0) {
         rem_m();
-        dy = current_dpm-1;
+        dy = current_dpm()-1;
     }
 }
-void lab2::Date::rem_m() {
+void Date::rem_m() {
     --mth;
     if (mth < 0) {
         mth = mpy-1;
         rem_y();
     }
-    current_dpm = *(months + mth);
 }
-void lab2::Date::rem_y() {
+void Date::rem_y() {
     --yr;
-    leap_year = is_leap_year(yr);
-    months[ly_month] = ly_default+leap_year;
 }
-int lab2::Date::days_this_month() const {
-    return current_dpm;
+
+int Date::current_dpm() const {
+    if (leap_year() && mth == ly_month)
+    return months[mth] + leap_days;
+    return months[mth];
 }
-int lab2::Date::months_per_year() const {
+
+int Date::days_this_month() const {
+    return current_dpm();
+}
+int Date::months_per_year() const {
     return mpy;
 }
-int lab2::Date::days_per_week() const {
+int Date::days_per_week() const {
     return wkds.size();
 }
-Date& lab2::Date::operator = (const Date& ref){
+Date& Date::operator = (const Date& ref){
     if (this != &ref) {
         int mjd = ref.mod_julian_day();
         from_julian_day(mjd,date);
@@ -101,69 +102,72 @@ Date& lab2::Date::operator = (const Date& ref){
     }
     return *this;
 }
-int lab2::Date::operator + (const Date& ref) const {
+int Date::operator + (const Date& ref) const {
     int sum = this->mod_julian_day() + ref.mod_julian_day();
     return sum;
 }
-int lab2::Date::operator - (const Date& ref) const {
+int Date::operator - (const Date& ref) const {
     int difference = this->mod_julian_day() - ref.mod_julian_day();
     return difference;
 }
-Date& lab2::Date::operator ++ () {
+Date& Date::operator ++ () {
     add_d();
     return *this;
     }
-Date& lab2::Date::operator -- () {
+Date& Date::operator -- () {
     rem_d();
     return *this;
     }
-Date& lab2::Date::operator += (const int incr){
-    for (int i = 0; i < incr; ++i) {
-        add_d();
-    }
-    return *this;
-}
-Date& lab2::Date::operator -= (const int decr){
-    for (int i = 0; i < decr; ++i) {
-        rem_d();
-    }
-    return *this;
-}
-void lab2::Date::add_year(const int incr) {
-    if (is_leap_year(yr) && mth == ly_month && dy + 1 == months[mth]){
-        yr+=incr;
-        if (is_leap_year(yr) == false) {
-            months[ly_month] = ly_default;
-            current_dpm = months[mth];
-            dy = current_dpm-1;
-        }
-    }
-}
-void lab2::Date::add_month(const int incr) {
+Date& Date::operator += (const int incr){
     if (incr >= 0) {
         for (int i = 0; i < incr; ++i) {
-            if (dy >= months[mth+1%mpy] ) {
-                for (int j = 0; j < 30; ++j) {
-                    add_d();
-                }
-            } else {
-                add_m();
-            }
+            add_d();
         }
     } else {
-        for (int i = 0; i < incr*(-1); ++i) {
-            if (dy >= months[mth-1%mpy] ) {
-                for (int j = 0; j < 30; ++j) {
-                    rem_d();
-                }
-            } else {
-                rem_m();
-            }
+        int rev = incr * (-1);
+        for (int i = 0; i < rev; ++i) {
+            rem_d();
         }
     }
+    return *this;
+}
+Date& Date::operator -= (const int decr){
+    if (decr >= 0) {
+        for (int i = 0; i < decr; ++i) {
+            rem_d();
+        }
+    } else {
+        int rev = decr * (-1);
+        for (int i = 0; i < rev; ++i) {
+            add_d();
+        }
+    }
+
+    return *this;
+}
+void Date::add_year(const int incr) {
+    //std::cerr << (int)is_(yr) << std::endl;
+    yr += incr;
+    if (dy >= current_dpm()) {
+        dy = current_dpm()-1;
+    }
+}
+void Date::add_month(const int incr) {
+    if(incr >= 0) {
+        yr += (incr+mth)/mpy;
+        mth = (mth+incr)%mpy;
+    } else {
+        int decr = incr * (-1);
+        yr -= (mth < decr) ? 1 + (decr-(mth+1))/mpy : 0;
+        int decr_mod = decr%mpy;
+        mth = (mth < decr_mod) ? mth-decr_mod+mpy : mth-decr_mod;
+
+    }
+    if (dy >= current_dpm())
+    dy = current_dpm()-1;
 }
 
-bool lab2::Date::operator == (const Date& ref) const {
+bool Date::operator == (const Date& ref) const {
     if (this->mod_julian_day() == ref.mod_julian_day()) {
         return true;
     }
@@ -171,7 +175,7 @@ bool lab2::Date::operator == (const Date& ref) const {
         return false;
     }
 }
-bool lab2::Date::operator <= (const Date& ref) const{
+bool Date::operator <= (const Date& ref) const{
     if (this->mod_julian_day() <= ref.mod_julian_day()) {
         return true;
     }
@@ -179,7 +183,7 @@ bool lab2::Date::operator <= (const Date& ref) const{
         return false;
     }
 }
-bool lab2::Date::operator >= (const Date& ref) const {
+bool Date::operator >= (const Date& ref) const {
     if (this->mod_julian_day() >= ref.mod_julian_day()) {
         return true;
     }
@@ -187,7 +191,7 @@ bool lab2::Date::operator >= (const Date& ref) const {
         return false;
     }
 }
-bool lab2::Date::operator > (const Date& ref) const {
+bool Date::operator > (const Date& ref) const {
     if (this->mod_julian_day() > ref.mod_julian_day()) {
         return true;
     }
@@ -195,7 +199,7 @@ bool lab2::Date::operator > (const Date& ref) const {
         return false;
     }
 }
-bool lab2::Date::operator < (const Date& ref) const {
+bool Date::operator < (const Date& ref) const {
     if (this->mod_julian_day() < ref.mod_julian_day()) {
         return true;
     }
@@ -203,7 +207,7 @@ bool lab2::Date::operator < (const Date& ref) const {
         return false;
     }
 }
-bool lab2::Date::operator != (const Date& ref) const {
+bool Date::operator != (const Date& ref) const {
     if (this->mod_julian_day() != ref.mod_julian_day()) {
         return true;
     }
@@ -211,7 +215,7 @@ bool lab2::Date::operator != (const Date& ref) const {
         return false;
     }
 }
-int lab2::Date::mjd_setup(const int y,const int m, const int d){
+int Date::mjd_setup(const int y,const int m, const int d){
         int year = y;
         int month = m;
         int day = d;
@@ -220,6 +224,15 @@ int lab2::Date::mjd_setup(const int y,const int m, const int d){
         return (year*365) +(year/4) -(year/100) +(year/400) -1200820
                 +(month*153+3)/5-92
                 +day-1 - 2400000.5;
+}
+std::string Date::get_date() const {
+    std::string day = std::to_string(dy);
+    std::string month = std::to_string(mth);
+    std::string year = std::to_string(yr);
+    month.size() == 1 ? month.insert(+,"0") :;
+    day.size() == 1 ? month.insert(+,"0") :;
+    std::string final(year+"-"+month+"-"+year);
+    return final;
 }
 std::ostream& operator<<(std::ostream& out, const Date& ref) {
     std::string out_string;

@@ -16,14 +16,13 @@ protected:
     int mth;
     int dy;
     int mpy;
-    int current_dpm;
     int ly_interval;
     int ly_month;
     int ly_default;
-    int* months;
-    bool leap_year;
+    std::vector<int> months;
     int date[3];
     int mjd_create;
+    int leap_days;
     std::string current_wd;
     std::vector<std::string> wkds;
     std::vector<std::string> month_names;
@@ -34,10 +33,13 @@ protected:
     void rem_d();
     void rem_m();
     void rem_y();
-    virtual bool is_leap_year(const int year) const=0;
+    int current_dpm() const;
+
+    virtual bool leap_year() const=0;
+    virtual bool calculate_if_leap_year(const int year) const=0;
     void set_date(const int year,const int month,const int day);
     virtual void setup_ly_cond()=0;
-    virtual int mod_julian_day()const=0;
+
     virtual void from_julian_day(const int mjd, int* date)const=0;
     int mjd_setup(const int year,const int month, const int day);
 
@@ -51,6 +53,7 @@ public:
 
     virtual ~Date()=0;
 
+    virtual int mod_julian_day()const=0;
     //Public access functions
     int year()const;
     int month()const;
@@ -85,6 +88,8 @@ public:
     bool operator > (const Date& ref)const;
     bool operator != (const Date& ref)const;
 
+    //Printing and stuff such as that
+    std::string get_date() const;
     friend std::ostream& operator<<(std::ostream& out, const Date& ref);
 
 };

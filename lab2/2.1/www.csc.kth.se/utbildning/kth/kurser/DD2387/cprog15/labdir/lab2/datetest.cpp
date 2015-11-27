@@ -1,7 +1,7 @@
 // projektlokala headerfiler
 #include "kattistime.h"     
-#include "julian.hpp"
-#include "gregorian.hpp"
+#include "julian.h"         
+#include "gregorian.h"      
 
 // STL headerfiler
 #include <iostream>
@@ -16,7 +16,7 @@
 
 int main()
 {
-    //using namespace lab2;        // Exponera funktionalitet i namnrymden lab2
+    using namespace lab2;        // Exponera funktionalitet i namnrymden lab2
 
     ////////////////////////////////////////////////////////////
     // Sätt tiden. OBS skicka inte nedanstående kod till kattis

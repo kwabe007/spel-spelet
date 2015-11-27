@@ -7,7 +7,7 @@
 
 namespace lab2 {
 
-lab2::Gregorian::Gregorian() : WesternDate() {
+Gregorian::Gregorian() : WesternDate() {
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1]-1;
@@ -15,21 +15,21 @@ lab2::Gregorian::Gregorian() : WesternDate() {
     setup_ly_cond();
 }
 
-lab2::Gregorian::Gregorian(const int yr_in, const int mth_in, const int dy_in) : WesternDate(yr_in,mth_in,dy_in) {
+Gregorian::Gregorian(const int yr_in, const int mth_in, const int dy_in) : WesternDate(yr_in,mth_in,dy_in) {
     setup_ly_cond();
-    if (0 >= mth_in || mth_in > mpy || 0 >= dy_in || dy_in > current_dpm) {
-        throw std::out_of_range ("Out of range");
+    if (0 >= mth_in || mth_in > mpy || 0 >= dy_in || dy_in > current_dpm()) {
+        throw std::invalid_argument("Out of range");
     }
 }
 
-lab2::Gregorian::Gregorian(const Gregorian& ref) : WesternDate(ref){
+Gregorian::Gregorian(const Gregorian& ref) : WesternDate(ref){
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1] - 1;
     dy = date[2] - 1;
     setup_ly_cond();
 }
-lab2::Gregorian::Gregorian(const Date& ref) : WesternDate(ref){
+Gregorian::Gregorian(const Date& ref) : WesternDate(ref){
     from_julian_day(mjd_create, date);
     yr = date[0];
     mth = date[1] - 1;
@@ -37,42 +37,36 @@ lab2::Gregorian::Gregorian(const Date& ref) : WesternDate(ref){
     setup_ly_cond();
 }
 
-lab2::Gregorian::Gregorian(int mjd){
+Gregorian::Gregorian(int mjd){
     from_julian_day(mjd, date);
     yr = date[0];
     mth = date[1] - 1;
     dy = date[2] - 1;
     setup_ly_cond();
 }
-lab2::Gregorian::~Gregorian(){
-    delete[] months;
-}
 
-void lab2::Gregorian::setup_ly_cond() {
-    leap_year = is_leap_year(yr);
-    months[ly_month] = ly_default+leap_year;
-    current_dpm = *(months + mth);
+void Gregorian::setup_ly_cond() {
 }
-Gregorian& lab2::Gregorian::operator ++ () {
+Gregorian& Gregorian::operator ++ () {
     add_d();
     return *this;
 }
-Gregorian lab2::Gregorian::operator ++ (int) {
+Gregorian Gregorian::operator ++ (int) {
     Gregorian temp(*this);
     add_d();
     return temp;
 }
-Gregorian& lab2::Gregorian::operator -- () {
+Gregorian& Gregorian::operator -- () {
     rem_d();
     return *this;
 }
-Gregorian lab2::Gregorian::operator -- (int) {
+Gregorian Gregorian::operator -- (int) {
     Gregorian temp(*this);
     rem_d();
     return temp;
 }
 
-int lab2::Gregorian::mod_julian_day() const {
+int Gregorian::mod_julian_day() const {
         int year = yr;
         int month = mth+1;
         int day = dy+1;
@@ -83,7 +77,7 @@ int lab2::Gregorian::mod_julian_day() const {
                 +day-1 - 2400000.5;
 }
 
-void lab2::Gregorian::from_julian_day(const int mjd, int* date)const {
+void Gregorian::from_julian_day(const int mjd, int* date)const {
     int Q = mjd + 2400000.5 + 0.5;
     int Z = (int)Q;
     int W = (Z - 1867216.25)/36524.25;
@@ -108,7 +102,21 @@ void lab2::Gregorian::from_julian_day(const int mjd, int* date)const {
         date[0] = C-4716;
     }
 }
-bool lab2::Gregorian::is_leap_year(const int year) const {
+
+bool Gregorian::leap_year() const {
+    if (yr % 400 == 0) {
+        return true;
+    } else if (yr % 100 == 0) {
+        return false;
+    } else {
+        if (yr % 4 == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Gregorian::calculate_if_leap_year(const int year) const {
     if (year % 400 == 0) {
         return true;
     } else if (year % 100 == 0) {

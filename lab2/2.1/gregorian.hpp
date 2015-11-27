@@ -11,8 +11,9 @@ namespace lab2 {
 class Gregorian: public WesternDate{
     protected:
     void setup_ly_cond();
-    bool is_leap_year(const int year)const;
-    int mod_julian_day()const;
+    bool leap_year()const;
+    bool calculate_if_leap_year(const int year)const;
+
     void from_julian_day(const int mjd, int* date)const;
 
     public:
@@ -22,8 +23,7 @@ class Gregorian: public WesternDate{
     explicit Gregorian(const int mjd);
     explicit Gregorian(const int yr_in, const int mth_in, const int dy_in);
 
-    ~Gregorian();
-
+    int mod_julian_day()const;
     Gregorian& operator ++ ();
     Gregorian& operator -- ();
     Gregorian operator ++ (int);

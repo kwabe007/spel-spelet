@@ -11,9 +11,10 @@ namespace lab2 {
 class Julian: public WesternDate{
     private:
         void initialize();
-        bool is_leap_year(const int year)const;
+        bool leap_year()const;
+        bool calculate_if_leap_year(const int year)const;
         void setup_ly_cond();
-        int mod_julian_day()const;
+
         void from_julian_day(const int mjd, int* date)const;
 
     public:
@@ -25,7 +26,8 @@ class Julian: public WesternDate{
         explicit Julian(const int mjd);
         explicit Julian(const int yr_in, const int mth_in, const int dy_in);
 
-        ~Julian();
+
+        int mod_julian_day()const;
 
         Julian& operator ++ ();
         Julian& operator -- ();
