@@ -1,0 +1,8 @@
+var=area/areas.cpp
+
+mid:= $(notdir $(var))
+new:= $(patsubst %.cpp,%.o, $(mid))
+out:
+	echo $(var)
+	echo $(mid)
+	echo $(new)

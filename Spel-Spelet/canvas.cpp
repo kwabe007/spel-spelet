@@ -56,7 +56,6 @@ void Canvas::apply_partial_menu(const Menu& menu, std::size_t x_pos, std::size_t
     std::size_t row;
     for (std::size_t i = 0; i < menu.get_size(); ++i) {
         item_name = menu[i];
-        std::cerr << "top row " << top_row << std::endl;
         row = top_row+partial_option_y_offset+(option_pad+1)*i;
         matrix.fill_row(row,item_name.c_str(),item_name.size(),partial_option_x_offset+x_pos);
         if (menu.is_selected(i)) matrix.fill_row(row,selector.c_str(),selector.size(),partial_option_x_offset+x_pos-selector_offset);

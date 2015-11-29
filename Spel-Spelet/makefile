@@ -3,20 +3,25 @@
 CC= g++
 
 #Compiler flags
-CFLAGS= -c -Wall -std=c++11 
-CTESTFLAGS= -Wall -std=c++11 -g -rdynamic
-
-#Header files
-HEADERS= conf.hpp intro.hpp parse.hpp debugmacro.hpp ui.hpp
-TESTHDR= menu.hpp
+CFLAGS= -c -Wall -std=c++11 -g -rdynamic
 
 #Source files
-SOURCES= source.cpp intro.cpp menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp
-TESTSRC= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp
-DEBUGSRC= err.cpp
+AREAS= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/world.cpp
+MENUS= menus/menu.cpp
+ENTITIES= entities/entity.cpp entities/organic.cpp entities/human.cpp
+FUNCTIONS= funcobj/funcobj.cpp
+UNSORTED= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
+TESTSRC= test.cpp
+SOURCE= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp
 
 #Object files
-OBJECTS= $(SOURCES:.cpp=.o)
+AREAOBJ= $(AREAS:.cpp=.o)
+MENUOBJ= $(MENUS:.cpp=.o)
+ENTOBJ=  $(ENTITIES:.cpp=.o)
+FUNCOBJ=  $(FUNCTIONS:.cpp=.o)
+UNSOBJ= $(UNSORTED:.cpp=.o)
+TESTOBJ= $(TESTSRC:.cpp=.o) 
+SOURCEOBJ := $(patsubst %.cpp,%.o, $(notdir $(SOURCE)))
 
 #Name of executable
 EXECUTABLE= run
@@ -31,24 +36,45 @@ FIFOPATH= /tmp/fifo
 #cerr dump file
 CERRDUMP= cerrdump.txt
 
-#Dependencies for creating objects
-$(OBJECTS): $(SOURCES)
-	$(CC) $(CFLAGS) $(SOURCES)
+
+#Create object files for areas
+area: 
+	$(CC) $(CFLAGS) $(AREAS)
+
+#Create object files for menus
+menu: $(MENUS)
+	$(CC) $(CFLAGS) $(MENUS)
+
+#Create object files for entities
+enti: $(ENTITIES)
+	$(CC) $(CFLAGS) $(ENTITIES)
+
+#Create object files for funcobj
+func: $(FUNCTIONS)
+	$(CC) $(CFLAGS) $(FUNCTIONS)
+
+#Create object files for misc
+unso: $(UNSORTED)
+	$(CC) $(CFLAGS) $(UNSORTED)
+
+#Create object files for test
+test: $(TEST)
+	$(CC) $(CFLAGS) $(TEST)
+
+link:	
+	$(CC) $(SOURCEOBJ) -o $(EXECUTABLE)
+
+#Compile and link all
+all: comp link
 	
-$(EXECUTABLE): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $(EXECUTABLE)
-
-#Create only the object files
-objects: $(OBJECTS)
-
-#Create an executable
-all: $(EXECUTABLE) 
+comp: $(SOURCE)
+	$(CC) $(CFLAGS) $(SOURCE)
 
 #Remove objectfiles and the executable
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLE)
+	rm -f $(SOURCEOBJ) $(EXECUTABLE)
 
-#TEST FILE DEPENDENCIES
+#TEST FILE DEPENDENCIES 
 comptest: $(TESTSRC)
 	$(CC) $(CTESTFLAGS) $(TESTSRC) -o $(TESTEXE)
 

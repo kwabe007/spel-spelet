@@ -30,28 +30,6 @@ Menu::~Menu() {
     delete[] items;
 }
 
-/*Menu& Menu::operator=(const Menu& ref) {
-    size = ref.size;
-    capacity = ref.capacity;
-    selected_item = ref.selected_item;
-    std::cerr << "1" << std::endl;
-    delete[] items;
-    std::cerr << "2" << std::endl;
-    items = new MenuItem[capacity];
-    std::cerr << "3" << std::endl;
-    for (std::size_t i = 0; i < size ; ++i) {
-        std::cerr << "7" << std::endl;
-        items[i] = ref.items[i];
-        if (ma.menu_to == &ref) {
-            items[i].action.menu_to = this;
-        }
-    }
-    std::cerr << "4" << std::endl;
-    name = ref.name;
-    description = ref.description;
-    return *this;
-}*/
-
 std::string& Menu::operator[](std::size_t index)const {
     if (index > size) throw std::out_of_range ("unable to access menu item string, out of range");
     return (*(items + index)).repr_strings[0];

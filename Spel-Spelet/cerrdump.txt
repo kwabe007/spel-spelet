@@ -1,73 +1,2 @@
-test int: 3
 str ctor
 str ctor
-pushing menu
-going through scenes
-playing scene
-presenting menu Main Menu
-4 5
-Pressed key: 13
-no menu
-playing scene
-Pressed key: 13
-Pressed key: 102
-presenting menu Who do you want to fight?
-1 1
-Pressed key: 13
-Pundare
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-Pjotr Thorsson attacks Pundare for 21 damage
-Pundare dieded, RIP in peace
-battlestate*** 0
-top row 14
-Pundare attacks Pjotr Thorsson for 7 damage
-Pjotr Thorsson dieded, RIP in peace
-top row 14
-battlestate*** 0
-top row 14
-Pressed key: 13
-Pjotr Thorsson attacks Pundare for 22 damage
-Pundare dieded, RIP in peace
-great victory
-Pressed key: 102
-presenting menu Who do you want to fight?
-1 1
-Pressed key: 13
-Pundare
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-Pjotr Thorsson attacks Pundare for 18 damage
-Pundare dieded, RIP in peace
-great victory
-Pressed key: 115
-Pressed key: 102
-presenting menu Who do you want to fight?
-1 1
-Pressed key: 13
-Pundare
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-Pjotr Thorsson attacks Pundare for 20 damage
-Pundare dieded, RIP in peace
-great victory
-Pressed key: 102
-presenting menu Who do you want to fight?
-3 3
-Pressed key: 115
-Pressed key: 13
-Babbe#1
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-Pjotr Thorsson attacks Babbe#1 for 20 damage
-Babbe#1 dieded, RIP in peace
-great victory
-Pressed key: 3

@@ -82,10 +82,8 @@ bool Entity::attack (Entity& other) {
     int damage_deal = 0;
     if (ap + var >= 0)
         damage_deal = ap + var;
-    std::cerr << name << " attacks " << other.name << " for " << damage_deal << " damage" << std::endl;
 
     bool dead = other.take_damage(damage_deal);
-    if (dead) std::cerr << other.name << " dieded, RIP in peace" << std::endl;
     return dead;
 }
 

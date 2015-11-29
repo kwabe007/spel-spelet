@@ -3,31 +3,37 @@
 #ifndef __DEBUGMACRO_h__
 #define __DEBUGMACRO_h__
 
-#include <stdio.h>
+#include <fstream>
 #include <errno.h>
-#include <string.h>
 #include <stdarg.h>
 
 #ifndef NDEBUG
-#  define debug_print(bit, msg) \
-    if(GLOBAL_DEBUG_BITS&bit) {\
-    stderr_printf msg;}
-void stderr_printf(const char *fmt, ...)
-{
-  va_list ap;
-  va_start(ap, fmt);
-  vfprintf(stderr, fmt, ap);
-  va_end(ap);
-}
-#else
-#  define debug_print(msg)
-#endif
 
+#define BIT0 0x1
+#define BIT1 0x2
+#define BIT2 0x4
+#define BIT3 0x8
+#define BIT4 0x10
+#define BIT5 0x20
+#define BIT6 0x40
+#define BIT7 0x80
+
+#define debug_print(bit, os) \
+    if(GLOBAL_DEBUG_BITS&bit) {\
+    ERR_FS << os;}
+#define debug_println(bit, os) \
+    if(GLOBAL_DEBUG_BITS&bit) {\
+    ERR_FS << os << std::endl;}
+#else
+#define debug_print(bit,os)
+#endif
 
 
 /* declaration of a global variable seen in other files - it has to be defined in one of the .c files (here: module.c)*/ 
 extern unsigned int GLOBAL_DEBUG_BITS;	/* this variable will control the DEBUGGING bits relevant to debug and check_debug macros above.*/
 
+/* Declare extern file stream to file which debug output will be sent to */
+extern std::ofstream ERR_FS;
 
 /* It returns "None" if errno (code error) is 0, and the error message corresponding to the code otherwise. */
 #define clean_errno() (errno == 0 ? "None" : strerror(errno))

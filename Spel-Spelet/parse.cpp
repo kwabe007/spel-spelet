@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include "parse.hpp"
 #include "conf.hpp"
-#include "debugmacro.hpp"
 
 namespace tools{
 
@@ -82,7 +81,6 @@ namespace tools{
 		char filepath[120];
         strncpy(filepath, RES_PATH, 100);
 		strncat(filepath, filename, 100);
-		debug(1, "Reading file %s", filepath);
 		std::ifstream file(filepath);
 
 		if (file.is_open())
@@ -90,10 +88,8 @@ namespace tools{
 			text.assign((std::istreambuf_iterator<char>(file)),
 				std::istreambuf_iterator<char>());
 			file.close();
-			debug(3, "Got string %s", text.c_str());
 		}
 		else {
-			debug(1, "Unable to get string from file %s", filepath);
 			text = "\0";
 		}
 

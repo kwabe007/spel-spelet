@@ -5,11 +5,9 @@
 #include <unistd.h>
 #include "ui.hpp"
 #include "parse.hpp"
-//#include "debugmacro.hpp"
 #include "canvas.hpp"
 #include "scene.hpp"
-#include "debug_test_macros/debugmacro.h"
-#include "debug_bits.h"
+#include "debug/debugmacro.h"
 #include "entities/human.hpp"
 #include "battle.hpp"
 
@@ -46,7 +44,7 @@ namespace UI {
     char get_char() {
         char input;
         input = std::cin.get();
-        debug_print(BIT0,("Pressed key: %d\n",input));
+        debug_print(BIT0,"Pressed key: " << (int)input << std::endl);
         if (input == COMMAND_TERMINATE) {
             if (is_unbuffered())
                 set_buffer_mode(1);
@@ -88,7 +86,6 @@ namespace UI {
         if(scene.is_set_menu()) present_menu(scene.get_menu_ptr());
         if(scene.is_set_world()) {play_world(scene.get_world());}
 
-        else std::cerr << "no menu" << std::endl;
         return &scene;
     }
 
@@ -96,8 +93,6 @@ namespace UI {
     }
 
     void present_menu(const Menu* menu_ptr, bool sub) {
-        std::cerr << "presenting menu " << menu_ptr->get_name() << std::endl << "\r";
-        std::cerr << menu_ptr->get_size() << " " << menu_ptr->get_capacity() << std::endl << "\r";
         flush_screen();
         cvs.clear_canvas();
         char choice;
@@ -185,15 +180,12 @@ namespace UI {
                 present_menu(m_ptr, true);
                 //extern Entity PLAYER;
                 Entity& chosen_entity(area.get_entity(m_ptr->get_selected()));
-                std::cerr << chosen_entity.get_name() << std::endl;
                 Battle battle(chosen_entity);
                 battle_intro(battle);
                 int outcome = play_battle(battle);
                 if (outcome == -1) {
-                    std::cerr << "you got rekt, gg no re" << std::endl;
                 }
                 if (outcome == 1) {
-                    std::cerr << "great victory" << std::endl;
                 }
                 goto EndWhileArea;
             }
@@ -237,7 +229,6 @@ namespace UI {
         int battlestate = 0;
 
         while (true) {
-            std::cerr << "battlestate*** " << battlestate << std::endl;
             cvs.apply_battle_fight(battle);
             print_canvas();
             sleep(1000);
