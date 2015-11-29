@@ -15,25 +15,34 @@ private:
 
     std::vector<Entity*> main_party;
     std::vector<Entity*> enemy_party;
-    Entity* current_entity = &PLAYER;
-    Entity* current_enemy;
+    std::size_t party_turn_index = 0;
+    std::size_t enemy_turn_index = 0;
     Menu select_enemy_menu;
     Menu* current_menu=&select_enemy_menu;
-    std::size_t selected_enemy_index = 0;
-    std::size_t enemies_alive;
-    std::size_t selected_party_index = 0;
-    std::size_t party_members_alive;
+    std::size_t target_enemy_index = 0;
+    std::size_t target_party_index = 0;
     bool victory = false;
+    Entity& get_current_party();
+    const Entity& get_current_party() const;
+    Entity& get_current_enemy();
+    const Entity& get_current_enemy() const;
+    Entity& get_target_party();
+    const Entity& get_target_party() const;
+    Entity& get_target_enemy();
+    const Entity& get_target_enemy() const;
+    void switch_turn();
 
 public:
     BattleState turn = PARTY_TURN;
     Battle(Entity& enemy);
 
-    bool attack(Entity& target);
+    //bool attack(Entity& target);
     bool attack(Entity& attacker, Entity& target);
-    int action();
-    bool party_action();
-    bool enemy_action();
+    //int action();
+    int party_action();
+    int enemy_action();
+    std::size_t partymems_alive() const;
+    std::size_t enemies_alive() const;
 
     void back_to_main_menu();
 

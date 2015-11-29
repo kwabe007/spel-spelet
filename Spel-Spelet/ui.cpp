@@ -242,7 +242,7 @@ namespace UI {
             print_canvas();
             sleep(1000);
             if (battle.turn == ENEMY_TURN) {
-                battlestate = battle.action();
+                battlestate = battle.enemy_action();
                 cvs.apply_battle_fight(battle);
                 print_canvas();
             } else if (battle.turn == PARTY_TURN) {
@@ -252,8 +252,8 @@ namespace UI {
                 case COMMAND_SPACE:
                     next_menu_ptr = current_menu.run_function();
                     if (!next_menu_ptr) {
-                    battle.back_to_main_menu();
-                    battlestate = battle.action();
+                        battle.back_to_main_menu();
+                        battlestate = battle.party_action();
                     }
                     else if (next_menu_ptr == &current_menu) continue;
                     else

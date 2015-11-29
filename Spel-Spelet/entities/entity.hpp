@@ -12,6 +12,7 @@ private:
     std::string name = "Riksluffare";
     std::string description = "Whack";
     std::string trash_talk = "????";
+    bool alive = true;
 
     //std::vector<Objects> inventory;
 public:
@@ -26,6 +27,7 @@ public:
     std::string get_name() const;
     std::string get_description() const;
     std::string get_trash_talk() const;
+    bool is_alive()const;
     void set_hp(int val);
     void set_mp(int val);
     void set_ap(int val);

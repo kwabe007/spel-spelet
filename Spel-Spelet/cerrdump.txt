@@ -9,47 +9,6 @@ presenting menu Main Menu
 Pressed key: 13
 no menu
 playing scene
-Pressed key: 115
-Pressed key: 100
-Pressed key: 13
-Pressed key: 97
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
-Pressed key: 119
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
-Pressed key: 102
-presenting menu Who do you want to fight?
-3 3
-Pressed key: 115
-Pressed key: 115
-Pressed key: 119
-Pressed key: 119
-Pressed key: 115
-Pressed key: 119
-Pressed key: 13
-Riksluffare
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-great victory
-Pressed key: 102
-presenting menu Who do you want to fight?
-3 3
-Pressed key: 13
-Riksluffare
-Pressed key: 13
-battlestate*** 0
-top row 14
-Pressed key: 13
-great victory
-Pressed key: 119
-Pressed key: 115
-Pressed key: 100
-Pressed key: 119
 Pressed key: 13
 Pressed key: 102
 presenting menu Who do you want to fight?
@@ -60,15 +19,44 @@ Pressed key: 13
 battlestate*** 0
 top row 14
 Pressed key: 13
+Pjotr Thorsson attacks Pundare for 21 damage
+Pundare dieded, RIP in peace
 battlestate*** 0
 top row 14
+Pundare attacks Pjotr Thorsson for 7 damage
+Pjotr Thorsson dieded, RIP in peace
 top row 14
 battlestate*** 0
 top row 14
 Pressed key: 13
+Pjotr Thorsson attacks Pundare for 22 damage
+Pundare dieded, RIP in peace
+great victory
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Pundare
+Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+Pjotr Thorsson attacks Pundare for 18 damage
+Pundare dieded, RIP in peace
 great victory
 Pressed key: 115
+Pressed key: 102
+presenting menu Who do you want to fight?
+1 1
+Pressed key: 13
+Pundare
 Pressed key: 13
+battlestate*** 0
+top row 14
+Pressed key: 13
+Pjotr Thorsson attacks Pundare for 20 damage
+Pundare dieded, RIP in peace
+great victory
 Pressed key: 102
 presenting menu Who do you want to fight?
 3 3
@@ -79,11 +67,7 @@ Pressed key: 13
 battlestate*** 0
 top row 14
 Pressed key: 13
-battlestate*** 0
-top row 14
-top row 14
-battlestate*** 0
-top row 14
-Pressed key: 13
+Pjotr Thorsson attacks Babbe#1 for 20 damage
+Babbe#1 dieded, RIP in peace
 great victory
 Pressed key: 3
