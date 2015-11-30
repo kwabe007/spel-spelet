@@ -5,6 +5,7 @@
 #include "../entities/entity.hpp"
 
 enum Direction {
+    DIRECTION_NONE = -1,
     DIRECTION_NORTH,
     DIRECTION_NORTHEAST,
     DIRECTION_EAST,

@@ -187,7 +187,9 @@ namespace UI {
                 }
                 if (outcome == 1) {
                 }
-                goto EndWhileArea;
+                flush_screen();
+                cvs.clear_canvas();
+                break;
             }
 
             default : //Optional
