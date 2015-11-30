@@ -3,7 +3,7 @@
 CC= g++
 
 #Compiler flags
-CFLAGS= -c -Wall -std=c++11 -g -rdynamic
+CFLAGS= -Wall -std=c++11 -g -rdynamic
 
 #Source files
 AREAS= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/world.cpp
@@ -11,7 +11,7 @@ MENUS= menus/menu.cpp
 ENTITIES= entities/entity.cpp entities/organic.cpp entities/human.cpp
 FUNCTIONS= funcobj/funcobj.cpp
 UNSORTED= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
-TESTSRC= test.cpp
+TEST= test.cpp
 SOURCE= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp
 
 #Object files
@@ -21,11 +21,10 @@ ENTOBJ=  $(ENTITIES:.cpp=.o)
 FUNCOBJ=  $(FUNCTIONS:.cpp=.o)
 UNSOBJ= $(UNSORTED:.cpp=.o)
 TESTOBJ= $(TESTSRC:.cpp=.o) 
-SOURCEOBJ := $(patsubst %.cpp,%.o, $(notdir $(SOURCE)))
+OBJECTS := $(patsubst %.cpp,%.o, $(notdir $(SOURCE)))
 
 #Name of executable
-EXECUTABLE= run
-TESTEXE= virus.dll
+EXECUTABLE= virus.dll
 
 #Execution command
 EXE= ./
@@ -37,62 +36,42 @@ FIFOPATH= /tmp/fifo
 CERRDUMP= cerrdump.txt
 
 
+%.o : %.cpp
+	$(CC) -c $(CFLAGS) $< -o $@
+
 #Create object files for areas
 area: 
-	$(CC) $(CFLAGS) $(AREAS)
+	$(CC) -c $(CFLAGS) $(AREAS)
 
 #Create object files for menus
 menu: $(MENUS)
-	$(CC) $(CFLAGS) $(MENUS)
+	$(CC) -c $(CFLAGS) $(MENUS)
 
 #Create object files for entities
 enti: $(ENTITIES)
-	$(CC) $(CFLAGS) $(ENTITIES)
+	$(CC) -c $(CFLAGS) $(ENTITIES)
 
 #Create object files for funcobj
 func: $(FUNCTIONS)
-	$(CC) $(CFLAGS) $(FUNCTIONS)
+	$(CC) -c $(CFLAGS) $(FUNCTIONS)
 
 #Create object files for misc
 unso: $(UNSORTED)
-	$(CC) $(CFLAGS) $(UNSORTED)
+	$(CC) -c $(CFLAGS) $(UNSORTED)
 
 #Create object files for test
 test: $(TEST)
-	$(CC) $(CFLAGS) $(TEST)
+	$(CC) -c $(CFLAGS) $(TEST)
 
 link:	
-	$(CC) $(SOURCEOBJ) -o $(EXECUTABLE)
+	$(CC) $(OBJECTS) -o $(EXECUTABLE)
 
 #Compile and link all
 all: comp link
 	
 comp: $(SOURCE)
-	$(CC) $(CFLAGS) $(SOURCE)
+	$(CC) -c $(CFLAGS) $(SOURCE)
 
 #Remove objectfiles and the executable
 clean:
-	rm -f $(SOURCEOBJ) $(EXECUTABLE)
-
-#TEST FILE DEPENDENCIES 
-comptest: $(TESTSRC)
-	$(CC) $(CTESTFLAGS) $(TESTSRC) -o $(TESTEXE)
-
-alltest: cleantest comptest $(TESTEXE)
-
-runtest: alltest
-	$(EXE)$(TESTEXE) 2> $(CERRDUMP)
-
-runtest_d: alltest
-	$(EXE)$(TESTEXE) 2> $(FIFOPATH)
-	
-cleantest:
-	rm -f $(TESTEXE)
-
-#DEBUG
-compdebug: $(DEBUGSRC)
-	$(CC) $(DEBUGSRC) -o debug
-crfile:
-	mkfifo $(FIFOPATH)
-rundebug: debug
-	./debug < $(FIFOPATH)
+	rm -f $(OBJECTS) $(EXECUTABLE)
