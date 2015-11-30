@@ -11,8 +11,9 @@ MENUS= menus/menu.cpp
 ENTITIES= entities/entity.cpp entities/organic.cpp entities/human.cpp
 FUNCTIONS= funcobj/funcobj.cpp
 UNSORTED= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
+ITEMS= items/item.cpp
 TEST= test.cpp
-SOURCE= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp
+SOURCE= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp items/item.cpp
 
 #Object files
 AREAOBJ= $(AREAS:.cpp=.o)
@@ -20,21 +21,12 @@ MENUOBJ= $(MENUS:.cpp=.o)
 ENTOBJ=  $(ENTITIES:.cpp=.o)
 FUNCOBJ=  $(FUNCTIONS:.cpp=.o)
 UNSOBJ= $(UNSORTED:.cpp=.o)
+ITEMOBJ= $(ITEMS:.cpp=.o)
 TESTOBJ= $(TESTSRC:.cpp=.o) 
 OBJECTS := $(patsubst %.cpp,%.o, $(notdir $(SOURCE)))
 
 #Name of executable
 EXECUTABLE= virus.dll
-
-#Execution command
-EXE= ./
-
-#FIFO file
-FIFOPATH= /tmp/fifo
-
-#cerr dump file
-CERRDUMP= cerrdump.txt
-
 
 %.o : %.cpp
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -58,6 +50,10 @@ func: $(FUNCTIONS)
 #Create object files for misc
 unso: $(UNSORTED)
 	$(CC) -c $(CFLAGS) $(UNSORTED)
+
+#Create object files for items
+item: 
+	$(CC) -c $(CFLAGS) $(ITEMS)
 
 #Create object files for test
 test: $(TEST)

@@ -26,7 +26,8 @@
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
 unsigned int GLOBAL_DEBUG_BITS = 1;
-ofstream ERR_FS("gingervitis");
+ofstream ERR_FS("errlog");
+
 
 void handler(int sig) {
   void *array[10];
@@ -47,11 +48,10 @@ int exit() {
     std::exit(EXIT_SUCCESS);
 }
 
+
 int main(int argc, char** argv) {
 signal(SIGSEGV, handler);
     UI::setup();
-
-
     debug_println(BIT0,"testing1,2");
 
     Scene scene;

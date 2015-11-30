@@ -19,8 +19,6 @@ enum Direction {
 
 class Area {
 private:
-    std::vector<Area*> next_area_vec;
-    std::vector<Area*> extra_area_vec;
     std::string name;
     std::string description;
 

@@ -19,6 +19,11 @@ namespace UI {
 
     Canvas cvs(TERMINAL_COLS, TERMINAL_ROWS);
     modes MODE = UNKNOWN;
+/*    Menu PAUSE_MENU;
+
+    void setup_pause_menu() {
+
+    }*/
 
     void setup() {
         for (unsigned int i = 0; i < cvs.get_rows()-1; ++i) {
@@ -191,6 +196,7 @@ namespace UI {
                 cvs.clear_canvas();
                 break;
             }
+                break;
 
             default : //Optional
                 ;

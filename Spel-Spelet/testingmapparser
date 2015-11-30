@@ -1,0 +1,33 @@
+std::ifstream f0("res/maps/sth");
+std::string buf;
+std::string W("W");
+
+World* read_world() {
+    f0 >> buf;
+    if (buf != W) {
+        debug_println(BIT0,"error reading world at pos " << f0.tellg());
+        return nullptr;
+    }
+    std::string name;
+    std::string description;
+    while(f0.peek() != '\n') {
+        f0 >> buf;
+        if (buf == "-n"){
+            f0 >> name;
+        }
+        else if (buf == "-d") {
+            f0 >> description;
+        }
+        else if (buf == "-a") {
+        }
+        else {
+            debug_println(BIT0,"invalid world argument " << buf << " at pos " << f0.tellg());
+            return nullptr;
+        }
+    }
+    return nullptr;
+}
+
+Area* read_area() {
+    return nullptr;
+}

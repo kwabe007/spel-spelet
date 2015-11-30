@@ -23,6 +23,7 @@ namespace UI  {
     static const unsigned char COMMAND_RIGHT = 'd';
     static const unsigned char COMMAND_SPACE = ' ';
     static const unsigned char COMMAND_FIGHT = 'f';
+    static const unsigned char COMMAND_INVENTORY = 'i';
     static const unsigned char COMMAND_ENTER = 13;
     static const unsigned char COMMAND_TERMINATE = 3;
 

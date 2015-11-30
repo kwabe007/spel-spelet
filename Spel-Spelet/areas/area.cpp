@@ -1,13 +1,12 @@
 #include <iostream>
 #include "area.hpp"
 
-Area::Area() : next_area_vec{DIRECTION_COUNT,nullptr},
-extra_area_vec{0}, name {"none"}, description{"none"}{
-        std::cerr << "area default ctor" << std::endl;
+Area::Area() :name {"none"}, description{"none"}{
+
 }
 
 Area::Area(const std::string nm, const std::string desc) : name{nm}, description{desc} {
-    std::cerr << "str ctor" << std::endl;
+
 }
 
 Area::~Area(){

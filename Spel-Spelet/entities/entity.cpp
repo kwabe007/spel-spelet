@@ -5,13 +5,16 @@
 
 
 Entity::Entity() {
-
 }
 
 Entity::Entity(const std::string& nm) : name{nm} {
 }
 
 Entity::Entity(const std::string& nm, const std::string& desc, const std::string& trash) : name{nm}, description{desc}, trash_talk{trash} {
+}
+
+Entity::~Entity() {
+
 }
 
 int Entity::get_hp() const {

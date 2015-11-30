@@ -2,6 +2,8 @@
 #define ENTITY_HPP
 
 #include <string>
+#include <vector>
+#include "../items/item.hpp"
 
 class Entity {
 private:
@@ -14,11 +16,13 @@ private:
     std::string trash_talk = "????";
     bool alive = true;
 
-    //std::vector<Objects> inventory;
+    std::vector<Item*> inventory;
+
 public:
     Entity();
     Entity(const std::string& nm);
     Entity(const std::string& nm, const std::string& desc, const std::string& trash);
+    ~Entity();
 
     int get_hp() const;
     int get_mp() const;

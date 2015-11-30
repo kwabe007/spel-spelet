@@ -10,14 +10,13 @@
 namespace tools{
 
 
-	tools::Parse::Parse(){
+    Parse::Parse(){
 		strncpy(esc_seq, "/#@", 10);
 		strncpy(end_seq, "/#$", 10);
 		esc_seq_len = strlen(esc_seq);
 		end_seq_len = strlen(end_seq);
 	}
-
-	int tools::Parse::set_esc_seq(const char* seq){
+    int Parse::set_esc_seq(const char* seq){
 		if (strlen(seq) > 9) {						// the literal int here directly depends on size of esc_seq array
 			return 1;
 		}
@@ -26,7 +25,7 @@ namespace tools{
 		return 0;
 	}
 
-	int tools::Parse::set_end_seq(const char* seq){
+    int Parse::set_end_seq(const char* seq){
 		if (strlen(seq) > 9) {						// the literal int here directly depends on size of esc_seq array
 			return 1;
 		}
@@ -35,19 +34,19 @@ namespace tools{
 		return 0;
 	}
 
-	int tools::Parse::add_value(const std::string key, const std::string value) {
+    int Parse::add_value(const std::string key, const std::string value) {
 		if (translate.find(key) != translate.end()) return 1;
 		translate[key] = value;
 		return 0;
 	}
 
-	int tools::Parse::remove_value(const std::string key) {
+    int Parse::remove_value(const std::string key) {
 		if (translate.find(key) == translate.end()) return 1;
 		translate.erase(key);
 		return 0;
 	}
 
-	std::string tools::Parse::read_code(const std::string& text, const unsigned int pos)const {
+    std::string Parse::read_code(const std::string& text, const unsigned int pos)const {
 		std::string::iterator it;
 		std::string code;
 		int end = text.find(end_seq, pos);
@@ -55,7 +54,7 @@ namespace tools{
 		return code;
 	}
 
-	int tools::Parse::insert_names(std::string& text)const {
+    int Parse::insert_names(std::string& text)const {
 		std::string code;					//the code that follows escape sequence
 		std::string::iterator it;
 		std::string::iterator beg_it;
