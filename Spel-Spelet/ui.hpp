@@ -69,6 +69,8 @@ namespace UI  {
     void print_canvas();
     void flush_screen();
 
+    void flush_and_clear();
+
     void reset_output_marker();
 
     /* Changes the buffer mode, NOTE: only works on terminal using stty

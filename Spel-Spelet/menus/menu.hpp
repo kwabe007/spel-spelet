@@ -97,6 +97,7 @@ class Menu {
         private:
         std::string repr_strings[ITEM_REPR_STR_COUNT];
         FunctionObject functionobject;
+        MenuFlow flow = FLOW_FORWARD;
         Menu* nextmenu = nullptr;
 
         friend Menu;
@@ -107,15 +108,18 @@ class Menu {
             repr_strings[0] = name;
             repr_strings[1] = desc;
         }
-        MenuItem(const std::string name, const std::string desc, std::size_t* init_val, std::size_t set_val) : functionobject{init_val,set_val} {
+        MenuItem(const std::string name, const std::string desc, std::size_t* init_val, std::size_t set_val, MenuFlow fl = FLOW_FORWARD) : functionobject{init_val,set_val} {
+            flow = fl;
             repr_strings[0] = name;
             repr_strings[1] = desc;
         }
-        MenuItem(const std::string name, const std::string desc, FunctionType type) : functionobject{type} {
+        MenuItem(const std::string name, const std::string desc, FunctionType type, MenuFlow fl = FLOW_FORWARD) : functionobject{type} {
+            flow = fl;
             repr_strings[0] = name;
             repr_strings[1] = desc;
         }
-        MenuItem(const std::string name, const std::string desc, Menu& submenu) : functionobject{}{
+        MenuItem(const std::string name, const std::string desc, Menu& submenu, MenuFlow fl = FLOW_FORWARD) : functionobject{}{
+            flow = fl;
             repr_strings[0] = name;
             repr_strings[1] = desc;
             nextmenu = &submenu;
@@ -168,13 +172,17 @@ class Menu {
 
     std::string get_name() const;
     std::string get_desc() const;
-    Menu* run_function();
-    const Menu *run_function() const;
+    void run_function();
+    void run_function() const;
     //Menu* run_function(std::size_t index);
     size_t get_size() const;
     //size_t get_capacity() const;
     bool is_selected(std::size_t index)const;
     std::size_t get_selected()const;
+    MenuFlow get_flow_of_selected()const;
+    Menu& get_menu_of_selected();
+    const Menu& get_menu_of_selected() const;
+    bool selected_has_menu() const;
 
     void fill_matrix(std::string** matrix) const;
 

@@ -75,14 +75,12 @@ std::string Menu::get_desc() const{
     return description;
 }
 
-Menu* Menu::run_function() {
+void Menu::run_function() {
     items[selected_item].functionobject();
-    return items[selected_item].nextmenu;
 }
 
-const Menu* Menu::run_function() const {
+void Menu::run_function() const {
     items[selected_item].functionobject();
-    return items[selected_item].nextmenu;
 }
 
 /*Menu* Menu::run_function(std::size_t index){
@@ -100,6 +98,31 @@ bool Menu::is_selected(std::size_t index)const{
 
 std::size_t Menu::get_selected()const{
     return selected_item;
+}
+
+MenuFlow Menu::get_flow_of_selected() const {
+    return items[selected_item].flow;
+}
+
+Menu& Menu::get_menu_of_selected() {
+    MenuItem& item = items[selected_item];
+    if(item.nextmenu == nullptr) {
+        throw std::out_of_range("Can not get menu of item " + item.get_name() + " : it is undefined");
+    }
+    return *item.nextmenu;
+}
+
+const Menu& Menu::get_menu_of_selected() const {
+    const MenuItem& item = items[selected_item];
+    if(item.nextmenu == nullptr) {
+        throw std::out_of_range("Can not get menu of item " + item.get_name() + " : it is undefined");
+    }
+    return *item.nextmenu;
+}
+
+bool Menu::selected_has_menu() const {
+    if(items[selected_item].nextmenu == nullptr) return false;
+    return true;
 }
 
 void Menu::fill_matrix(std::string** outer_array) const {

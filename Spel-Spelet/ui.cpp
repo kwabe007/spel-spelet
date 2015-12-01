@@ -101,7 +101,6 @@ namespace UI {
         flush_screen();
         cvs.clear_canvas();
         char choice;
-        const Menu* next_menu_ptr;
         while (true) {
             cvs.apply_menu(menu);
             print_canvas();
@@ -115,12 +114,19 @@ namespace UI {
                 break; //optional
             case COMMAND_ENTER:
             case COMMAND_SPACE:
-                next_menu_ptr = menu.run_function();
-                if (!next_menu_ptr) goto EndWhile;
-                else if (next_menu_ptr == &menu) continue;
-                else present_menu(*next_menu_ptr, true);
-                break; //optional
-            default : //Optional
+                menu.run_function();
+                switch (menu.get_flow_of_selected()) {
+                case FLOW_STAY:
+                    continue;
+                    break;
+                default:
+                    if (menu.selected_has_menu()) {
+                        const Menu& next_menu = menu.get_menu_of_selected();
+                        present_menu(next_menu);
+                    }
+                    goto EndWhile;
+                }
+            default:
                 ;
             }
         }
@@ -176,13 +182,16 @@ namespace UI {
             case COMMAND_FIGHT:
             {
                 Menu fightmenu("Who do you want to fight?");
-
                 for (std::size_t i = 0; i < area.get_entity_size(); ++i) {
                     Entity& entity(area.get_entity(i));
                     fightmenu.add_item(entity.get_name(), entity.get_description());
                 }
                 //fightmenu.add_back();
                 present_menu(fightmenu, true);
+                if (fightmenu.get_flow_of_selected() == FLOW_BACK){
+                    flush_and_clear();
+                    continue;
+                }
                 //extern Entity PLAYER;
                 Entity& chosen_entity(area.get_entity(fightmenu.get_selected()));
                 Battle battle(chosen_entity);
@@ -232,7 +241,6 @@ namespace UI {
         flush_screen();
         cvs.clear_canvas();
         char choice;
-        Menu* next_menu;
         Menu& current_menu = battle.get_current_menu();
         int battlestate = 0;
 
@@ -249,15 +257,10 @@ namespace UI {
                 switch(choice){
                 case COMMAND_ENTER:
                 case COMMAND_SPACE:
-                    next_menu = current_menu.run_function();
-                    if (!next_menu) {
-                        battle.back_to_main_menu();
-                        battlestate = battle.party_action();
-                    }
-                    else if (next_menu == &current_menu) continue;
-                    else
-                    goto EndWhile;
-                    break; //optional
+                    current_menu.run_function();
+                    battle.back_to_main_menu();
+                    battlestate = battle.party_action();
+                    break;
                 default : //Optional
                     ;
                 }
@@ -287,6 +290,11 @@ namespace UI {
             if(i < TERMINAL_ROWS-1) std::cout << std::endl << "\r";
         }
         //std::cout << ANSI_MOVE_UP;
+    }
+
+    void flush_and_clear() {
+        flush_screen();
+        cvs.clear_canvas();
     }
 
     void reset_output_marker() {
