@@ -104,7 +104,8 @@ class Menu {
 
         public:
         MenuItem(){}
-        MenuItem(const std::string name, const std::string desc) : functionobject{FUNCTION_NONE} {
+        MenuItem(const std::string name, const std::string desc, MenuFlow fl = FLOW_FORWARD) : functionobject{FUNCTION_NONE} {
+            flow = fl;
             repr_strings[0] = name;
             repr_strings[1] = desc;
         }
@@ -159,7 +160,7 @@ class Menu {
     Menu& operator=(const Menu& ref);
     std::string operator[](std::size_t index)const;
 
-    int add_item(const std::string name, const std::string desc);
+    int add_item(const std::string name, const std::string desc, MenuFlow flow = FLOW_FORWARD);
     int add_item(const std::string name, const std::string desc, Menu& submenu);
     int add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to);
     int add_item(const std::string name, const std::string desc, FunctionType type);

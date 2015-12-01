@@ -186,6 +186,7 @@ namespace UI {
                     Entity& entity(area.get_entity(i));
                     fightmenu.add_item(entity.get_name(), entity.get_description());
                 }
+                fightmenu.add_item("Go Back", "Return", FLOW_BACK);
                 //fightmenu.add_back();
                 present_menu(fightmenu, true);
                 if (fightmenu.get_flow_of_selected() == FLOW_BACK){

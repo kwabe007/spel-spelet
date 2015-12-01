@@ -16,8 +16,8 @@ std::string Menu::operator[](std::size_t index)const {
     return items[index].repr_strings[0];
 }
 
-int Menu::add_item(const std::string name, const std::string desc){
-    items.push_back(MenuItem(name,desc));
+int Menu::add_item(const std::string name, const std::string desc, MenuFlow flow){
+    items.push_back(MenuItem(name,desc,flow));
     return 0;
 }
 
