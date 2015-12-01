@@ -79,7 +79,11 @@ public:
  * to functions.
  * */
 
-
+enum MenuFlow {
+    FLOW_FORWARD,
+    FLOW_BACK,
+    FLOW_STAY
+};
 
 class Menu {
 
@@ -156,7 +160,7 @@ class Menu {
     int add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to);
     int add_item(const std::string name, const std::string desc, FunctionType type);
 
-    //int add_back();
+    int add_back();
 
     void clear();
     bool move_up() const;

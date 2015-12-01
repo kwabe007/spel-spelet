@@ -37,14 +37,13 @@ int Menu::add_item(const std::string name, const std::string desc, FunctionType 
 }
 
 /*int Menu::add_back() {
-    MenuItem new_item("Back","Return",&selected_item,-1);
+    MenuItem new_item("Back","Return",&selected_item,);
     if (size < capacity )items[size]= new_item;
     else return -1;
     items[size] = new_item;
     ++size;
     return 0;
 }*/
-
 
 void Menu::clear(){
     items.clear();
