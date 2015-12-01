@@ -13,7 +13,7 @@ FunctionObject::FunctionObject(std::size_t* to_change, std::size_t val_set) : in
 
 }
 
-void FunctionObject::set_integral() {
+void FunctionObject::set_integral() const {
     *init_value_ptr = value_to_set;
 }
 
@@ -24,7 +24,7 @@ void FunctionObject::exit() {
     std::exit(EXIT_SUCCESS);
 }
 
-void FunctionObject::operator()() {
+void FunctionObject::operator()() const {
     if (type == FUNCTION_NONE) return;
     if (type == FUNCTION_EXIT) exit();
     if (type == FUNCTION_INTEGRAL) set_integral();

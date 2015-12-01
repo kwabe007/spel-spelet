@@ -20,9 +20,9 @@ public:
     FunctionObject(FunctionType t);
     FunctionObject(std::size_t* to_change, std::size_t val_set);
 
-    void set_integral();
+    void set_integral() const;
     static void exit();
-    void operator()();
+    void operator()() const;
 
 
 };

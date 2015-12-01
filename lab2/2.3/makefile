@@ -19,6 +19,9 @@ compsrc: $(SOURCES)
 ctest: $(TESTSRC)
 	$(CC) $(CFLAGS) $(TESTSRC)
 
+clean:
+	rm -f $(OBJSRC) $(OBJTEST) malware.exe
+
 linkmytest:
 	$(CC) $(OBJSRC) $(OBJTEST) -o malware.exe
 

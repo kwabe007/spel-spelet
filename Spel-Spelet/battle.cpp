@@ -1,6 +1,6 @@
 #include "battle.hpp"
 
-Battle::Battle(Entity& enemy) : main_party{1,&PLAYER}, enemy_party{1,&enemy},select_enemy_menu{"Who do you want attack?",1} {
+Battle::Battle(Entity& enemy) : main_party{1,&PLAYER}, enemy_party{1,&enemy},select_enemy_menu{"Who do you want attack?"} {
     select_enemy_menu.add_item(enemy.get_name(),"Keff",&target_enemy_index,0);
 }
 

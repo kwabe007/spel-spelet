@@ -11,9 +11,9 @@ TESTSRC= test.cpp kattistime.cpp
 DATETESTSRC= datetest.cpp kattistime.cpp
 
 #Object files
-OBJSRC= $(SOURCES:.cpp=.o)
-OBJTEST= $(TESTSRC:.cpp=.o)
-OBJDATETEST= $(DATETESTSRC:.cpp=.o)
+OBJSRC:= $(SOURCES:.cpp=.o)
+OBJTEST:= $(TESTSRC:.cpp=.o)
+OBJDATETEST:= $(DATETESTSRC:.cpp=.o)
 
 compsrc: $(SOURCES)
 	$(CC) $(CFLAGS) $(SOURCES)
@@ -23,6 +23,9 @@ ctest: $(TESTSRC)
 
 cdatetest: $(DATETESTSRC)
 	$(CC) $(CFLAGS) $(DATETESTSRC)
+
+clean:
+	rm -f $(OBJSRC) $(OBJTEST) $(OBJDATETEST)
 
 linkmytest:
 	$(CC) $(OBJSRC) $(OBJTEST) -o malware.exe

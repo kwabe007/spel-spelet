@@ -2,12 +2,13 @@
 #define CALENDAR_HPP
 
 #include <string>
-#include<vector>
-#include<iostream>
-#include<stdexcept>
+#include <vector>
+#include <iostream>
+#include <stdexcept>
 #include <algorithm>
 #include "date.hpp"
-#include"event.hpp"
+#include "event.hpp"
+#include "debugmacro.h"
 
 namespace lab2 {
 
@@ -24,12 +25,6 @@ public:
     Calendar(const Calendar<T2>& ref);
     explicit Calendar(const int year, const int month, const int day);
 
-    /*template<typename T2>
-    Calendar<T>(const Calendar<T2>& ref);
-    template<typename T2>
-    Calendar<T>& operator=(const Calendar<T2>&);
-    Calendar(const Calendar& ref);*/
-
     ~Calendar();
 
     std::string get_date_str()const;
@@ -39,6 +34,7 @@ public:
     bool add_event(const std::string name, const int year);
     bool add_event(const std::string name, const int year, const int month);
     bool add_event(const std::string name, const int year, const int month, const int day);
+
     bool remove_event(const std::string name);
     bool remove_event(const std::string name, const int year);
     bool remove_event(const std::string name, const int year, const int month);
@@ -133,15 +129,15 @@ bool Calendar<T>::add_event(const std::string name, const int year, const int mo
     } catch (const std::out_of_range& oor) {
         return false;
     }
-    if (temp_date < current_date) {
-        return false;
-    }
+    debug_println(BIT0, "Adding event with name '" << name << "' and date " << temp_date);
+
     Event<T> event(name, temp_date);
     if (std::find(event_vector.begin(),event_vector.end(),event) == event_vector.end()) {
         event_vector.push_back(event);
         std::stable_sort(event_vector.begin(),event_vector.end());
         return true;
     }
+    debug_println(BIT0, "Found event already with name '" << name << "' and date " << temp_date);
     return false;
 }
 
@@ -212,7 +208,7 @@ Calendar<T>& Calendar<T>::operator =(const Calendar<T2>& ref){
             event.name = it->name;
             event.desc = it->desc;
             event_vector.push_back(event);
-            std::cerr << "event added: " << event.name << " " << event.date << std::endl;
+            debug_println(BIT0, "event added: " << event.name << " " << event.date);
         }
     }
     return *this;
@@ -244,16 +240,9 @@ template <class T>
 std::ostream& operator<<(std::ostream& out,const Calendar<T>& ref){
     std::string out_string;
     typename std::vector<Event<T>>::const_iterator it = ref.event_vector.begin();
-    /*for(;it != ref.event_vector.end(); ++it) {
-        if(ref.current_date < it->date) {
-            break;
-        }
-    }*/
-
     for (;it != ref.event_vector.end(); ++it) {
         if (it->date < ref.current_date) continue;
         out_string += it->date.get_date() + " : " + it->name + '\n';
-        //std::cerr << it->date.year() << " " << it->date.month() << " " << it->date.day() << std::endl;
     }
     out << out_string;
 

@@ -24,8 +24,8 @@ public:
 
     std::string& get_text();
     const std::string& get_text()const;
-    Menu* get_menu_ptr();
-    const Menu* get_menu_ptr()const;
+    Menu& get_menu();
+    const Menu& get_menu()const;
     World& get_world();
     const World& get_world()const;
 

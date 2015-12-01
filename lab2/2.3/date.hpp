@@ -53,17 +53,17 @@ public:
 
     virtual ~Date()=0;
 
-    virtual int mod_julian_day()const=0;
     //Public access functions
     int year()const;
-    int month()const;
-    int day()const;
-    virtual int week_day()const=0;
+    unsigned int month()const;
+    unsigned int day()const;
+    virtual unsigned int week_day()const=0;
     virtual std::string week_day_name()const=0;
-    virtual std::string month_name()const=0;
+    virtual std::string month_name()const;
+    virtual int mod_julian_day()const=0;
     int days_this_month()const;
-    int days_per_week() const;
-    int months_per_year()const;
+    unsigned int days_per_week() const;
+    unsigned int months_per_year()const;
 
     //Public mutator functions
     void add_year(const int incr = 1);

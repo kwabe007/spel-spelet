@@ -22,9 +22,8 @@ public:
     WesternDate(const WesternDate& ref);
     ~WesternDate();
 
-    int week_day() const;
+    unsigned int week_day() const;
     std::string week_day_name()const;
-    std::string month_name()const;
 
 };
 }

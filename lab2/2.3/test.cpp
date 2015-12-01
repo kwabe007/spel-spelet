@@ -2,11 +2,16 @@
 #include "kattistime.h"
 #include "julian.hpp"
 #include "gregorian.hpp"
+
 #include <stdexcept>
 #include <cassert>
 
+
 using namespace std;
 using namespace lab2;
+unsigned int GLOBAL_DEBUG_BITS = 3;
+std::ofstream ERR_FS("err");
+
 
 int main() {
 
@@ -37,14 +42,13 @@ int main() {
     catch (invalid_argument) {
         success = false;
     }
-
     assert(!success);
     cout << "greg_calendar's date unsuccessfully set (according to plan): " << greg_calendar.get_date_str() << endl;
 
     Calendar<Julian> juli_calendar(greg_calendar);
-    cout << "juli_calendar created: " << juli_calendar.get_date_str() << endl;
+    cout << "juli_calendar created from greg_calendar: " << juli_calendar.get_date_str() << endl;
 
-    greg_calendar.set_date(2014,12,16);
+    greg_calendar.set_date(2014,11,16);
     cout << "greg_calendar's date set to: " << greg_calendar.get_date_str() << endl;
 
     success = greg_calendar.add_event("End of the world");
@@ -53,36 +57,50 @@ int main() {
 
     success = greg_calendar.add_event("Upper body day", 2015);
     assert(success);
-    cout << "added 'Upper body day' to greg_calendar (2000)" << endl;
+    cout << "added 'Upper body day' to greg_calendar (2015)" << endl;
 
     success = greg_calendar.add_event("Upper body day again", 2014,12);
     assert(success);
-    cout << "added 'Upper body day again' to greg_calendar (2000,2)" << endl;
+    cout << "added 'Upper body day again' to greg_calendar (2014,12)" << endl;
 
-    success = greg_calendar.add_event("Upper body day with Jack3d", 2015,1);
+    success = greg_calendar.add_event("Look in the mirror and admire gains", 2013,12);
     assert(success);
-    cout << "added 'Upper body day with jack3d' to greg_calendar (2000,2)" << endl;
+    cout << "added 'Look in the mirror and admire gains' to greg_calendar (2013,12)" << endl;
+
+    success = greg_calendar.add_event("Buy more Jack3d", 2015,1);
+    assert(success);
+    cout << "added 'Buy more Jack3d' to greg_calendar (2015,1)" << endl;
 
     success = greg_calendar.add_event("Upper body day yet again", 2015,12,2);
     assert(success);
-    cout << "added 'Upper body day yet again (2000,12,2)" << endl;
+    cout << "added 'Upper body day yet again (2015,12,2)" << endl;
 
     success = greg_calendar.add_event("Upper body day yet again", 2015,12,2);
     assert(!success);
-    cout << "did not add 'Upper body day yet again (2000,12,2) (according to keikakku), TL Note: keikakku means plan" << endl;
+    cout << "did not add 'Upper body day yet again (2015,12,2) (according to keikakku), TL Note: keikakku means plan" << endl;
 
     success = greg_calendar.add_event("ABS day!", 2015,12,2);
     assert(success);
     cout << "added 'ABS day!' (2015,12,2) (those six packs won't wait for anybody)" << endl;
 
-    success = greg_calendar.add_event("Leg day", 2000,12,1);
+    try {
+        greg_calendar.add_event("Leg day", 2000,122,1);
+        success = true;
+    }
+    catch (invalid_argument) {
+        success = false;
+    }
     assert(!success);
-    cout << "could not add 'Leg day'; every day is upper body day!" << endl;
+    cout << "could not add 'Leg day' (2000,122,1); every day is upper body day!" << endl;
 
     greg_calendar.set_date(2000,1,2);
     cout << "greg_calendar date set to 2000-01-02" << endl;
 
-    cout << "greg_calendar now contains:\n" << greg_calendar << endl;
+    cout << "greg_calendar now shows:\n" << greg_calendar << endl;
+
+    success = greg_calendar.remove_event("Upper body day again", 2012,12,1);
+    assert(!success);
+    cout << "could not remove 'Upper body day again' from greg_calendar (2012,12,1)" << endl;
 
     success = greg_calendar.remove_event("Upper body day again", 2014,12);
     assert(success);
@@ -92,14 +110,18 @@ int main() {
     assert(success);
     cout << "removed 'Upper body day yet again' from greg_calendar (2015,12,2)" << endl;
 
-    cout << "greg_calendar now contains:\n" << greg_calendar << endl;
+    success = greg_calendar.remove_event("Upper body day yet again", 2015,12,2);
+    assert(!success);
+    cout << "could not remove 'Upper body day yet again' from greg_calendar (2015,12,2)" << endl;
+
+    cout << "greg_calendar now shows:\n" << greg_calendar << endl;
 
     greg_calendar.set_date(2015,3,31);
     cout << "greg_calendar date set to 2015-03-31" << endl;
-    cout << "greg_calendar now contains:\n" << greg_calendar << endl;
+    cout << "greg_calendar now shows:\n" << greg_calendar << endl;
 
     juli_calendar = greg_calendar;
-    cout << "juli_calendar assigned to greg_calendar, it now contains:\n" << juli_calendar << endl;
+    cout << "juli_calendar assigned to greg_calendar, it now shows:\n" << juli_calendar << endl;
 
     cout << "*******************TEST FINISHED*******************\n";
 }

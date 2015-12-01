@@ -55,7 +55,7 @@ signal(SIGSEGV, handler);
     debug_println(BIT0,"testing1,2");
 
     Scene scene;
-    Menu mainmenu("Main Menu", 5);
+    Menu mainmenu("Main Menu");
     mainmenu.add_item("New Game", "this is option 1");
     mainmenu.add_item("Load", "this is option 2");
     mainmenu.add_item("Help", "this is option 3");
@@ -84,7 +84,7 @@ signal(SIGSEGV, handler);
     scene2.set_world(firstworld);
 
     Scene scene3;
-    Menu secondmenu("Second Menu", 2);
+    Menu secondmenu("Second Menu");
     secondmenu.add_item("Samla kamrater", "this is option 1");
     secondmenu.add_item("Jaga kulturberikare", "this is option 2");
     scene3.set_menu(secondmenu);

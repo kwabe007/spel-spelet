@@ -88,7 +88,7 @@ namespace UI {
 
     Scene* play_scene(Scene& scene) {
         if(scene.is_set_text()) present_prologue(scene.get_text());
-        if(scene.is_set_menu()) present_menu(scene.get_menu_ptr());
+        if(scene.is_set_menu()) present_menu(scene.get_menu());
         if(scene.is_set_world()) {play_world(scene.get_world());}
 
         return &scene;
@@ -97,28 +97,28 @@ namespace UI {
     void present_prologue(const std::string& text) {
     }
 
-    void present_menu(const Menu* menu_ptr, bool sub) {
+    void present_menu(const Menu& menu, bool sub) {
         flush_screen();
         cvs.clear_canvas();
         char choice;
         const Menu* next_menu_ptr;
         while (true) {
-            cvs.apply_menu(*menu_ptr);
+            cvs.apply_menu(menu);
             print_canvas();
             choice = get_char();
             switch(choice){
             case COMMAND_UP:
-                menu_ptr->move_up();
+                menu.move_up();
                 break; //optional
             case COMMAND_DOWN:
-                menu_ptr->move_down();
+                menu.move_down();
                 break; //optional
             case COMMAND_ENTER:
             case COMMAND_SPACE:
-                next_menu_ptr = menu_ptr->run_function(menu_ptr->get_selected());
+                next_menu_ptr = menu.run_function();
                 if (!next_menu_ptr) goto EndWhile;
-                else if (next_menu_ptr == menu_ptr) continue;
-                else present_menu(next_menu_ptr, true);
+                else if (next_menu_ptr == &menu) continue;
+                else present_menu(*next_menu_ptr, true);
                 break; //optional
             default : //Optional
                 ;
@@ -175,16 +175,16 @@ namespace UI {
                 break; //optional
             case COMMAND_FIGHT:
             {
-                Menu fightmenu("Who do you want to fight?",area.get_entity_size());
+                Menu fightmenu("Who do you want to fight?");
 
                 for (std::size_t i = 0; i < area.get_entity_size(); ++i) {
                     Entity& entity(area.get_entity(i));
                     fightmenu.add_item(entity.get_name(), entity.get_description());
                 }
-                Menu* m_ptr = &fightmenu;
-                present_menu(m_ptr, true);
+                //fightmenu.add_back();
+                present_menu(fightmenu, true);
                 //extern Entity PLAYER;
-                Entity& chosen_entity(area.get_entity(m_ptr->get_selected()));
+                Entity& chosen_entity(area.get_entity(fightmenu.get_selected()));
                 Battle battle(chosen_entity);
                 battle_intro(battle);
                 int outcome = play_battle(battle);
@@ -232,8 +232,8 @@ namespace UI {
         flush_screen();
         cvs.clear_canvas();
         char choice;
-        Menu* next_menu_ptr;
-        Menu current_menu = battle.get_current_menu();
+        Menu* next_menu;
+        Menu& current_menu = battle.get_current_menu();
         int battlestate = 0;
 
         while (true) {
@@ -249,12 +249,12 @@ namespace UI {
                 switch(choice){
                 case COMMAND_ENTER:
                 case COMMAND_SPACE:
-                    next_menu_ptr = current_menu.run_function();
-                    if (!next_menu_ptr) {
+                    next_menu = current_menu.run_function();
+                    if (!next_menu) {
                         battle.back_to_main_menu();
                         battlestate = battle.party_action();
                     }
-                    else if (next_menu_ptr == &current_menu) continue;
+                    else if (next_menu == &current_menu) continue;
                     else
                     goto EndWhile;
                     break; //optional

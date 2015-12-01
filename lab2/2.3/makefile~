@@ -6,7 +6,7 @@ CC= g++
 CFLAGS= -c -Wall -std=c++11
 
 #Source files
-SOURCES= calendar.cpp date.cpp julian.cpp gregorian.cpp westerndate.cpp
+SOURCES= date.cpp julian.cpp gregorian.cpp westerndate.cpp calendar.cpp
 TESTSRC= test.cpp kattistime.cpp
 
 #Object files
@@ -18,6 +18,9 @@ compsrc: $(SOURCES)
 
 ctest: $(TESTSRC)
 	$(CC) $(CFLAGS) $(TESTSRC)
+
+clean:
+	rm -f $(OBJSRC) $(OBJTEST) malware.exe
 
 linkmytest:
 	$(CC) $(OBJSRC) $(OBJTEST) -o malware.exe

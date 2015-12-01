@@ -2,23 +2,23 @@
 #include<iostream>
 
 namespace lab2 {
-lab2::WesternDate::WesternDate() : Date() {
+WesternDate::WesternDate() : Date() {
     setup();
 }
-lab2::WesternDate::WesternDate(const int yr_in, const int mth_in, const int dy_in):Date(yr_in,mth_in,dy_in) {
+WesternDate::WesternDate(const int yr_in, const int mth_in, const int dy_in):Date(yr_in,mth_in,dy_in) {
     setup();
 }
-lab2::WesternDate::WesternDate(const Date& ref):Date(ref) {
+WesternDate::WesternDate(const Date& ref):Date(ref) {
     setup();
 }
-lab2::WesternDate::WesternDate(const Date* ref_ptr):Date(ref_ptr) {
+WesternDate::WesternDate(const Date* ref_ptr):Date(ref_ptr) {
     setup();
 }
-lab2::WesternDate::WesternDate(const WesternDate& ref):Date(ref) {
+WesternDate::WesternDate(const WesternDate& ref):Date(ref) {
     setup();
 }
-lab2::WesternDate::~WesternDate(){}
-void lab2::WesternDate::setup(){
+WesternDate::~WesternDate(){}
+void WesternDate::setup(){
     mpy = 12;
     ly_month = 1;
     leap_days = 1;
@@ -27,17 +27,14 @@ void lab2::WesternDate::setup(){
     wkds = {"monday","tuesday","wednesday","thursday","friday","saturday","sunday"};
     month_names = {"january","february","march","april","may","june","july","august","september","october","november","december"};
 }
-int lab2::WesternDate::week_day() const {
+unsigned int WesternDate::week_day() const {
     int wd = (mod_julian_day()+ 2) % wkds.size();
     ++wd;
     return wd;
 }
-std::string lab2::WesternDate::week_day_name()const {
+std::string WesternDate::week_day_name()const {
     int wd = week_day();
     return wkds[wd-1];
-}
-std::string lab2::WesternDate::month_name()const {
-    return month_names[mth];
 }
 
 }

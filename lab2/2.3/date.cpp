@@ -12,7 +12,7 @@ Date::Date(){
     k_time(&mytime);
     struct tm *t = gmtime(&mytime);
     int year  = t->tm_year + 1900;
-    int month = t->tm_mon + 1;      // månaderna och dagarna
+    unsigned int month = t->tm_mon + 1;      // månaderna och dagarna
     int day   = t->tm_mday;
     mjd_create = mjd_setup(year, month, day);
 }
@@ -34,14 +34,17 @@ Date::Date(const Date* ref_ptr){
     mjd_create = ref_ptr->mod_julian_day();
 }
 Date::~Date(){}
-int Date::day() const {
+unsigned int Date::day() const {
     return dy + 1;
 }
-int Date::month() const {
+unsigned int Date::month() const {
     return mth + 1;
 }
 int Date::year() const {
     return yr;
+}
+std::string Date::month_name()const {
+    return month_names[mth];
 }
 void Date::add_d() {
     if (++dy >= current_dpm()) {
@@ -85,10 +88,10 @@ int Date::current_dpm() const {
 int Date::days_this_month() const {
     return current_dpm();
 }
-int Date::months_per_year() const {
+unsigned int Date::months_per_year() const {
     return mpy;
 }
-int Date::days_per_week() const {
+unsigned int Date::days_per_week() const {
     return wkds.size();
 }
 Date& Date::operator = (const Date& ref){

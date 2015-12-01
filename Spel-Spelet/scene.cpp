@@ -27,12 +27,12 @@ bool Scene::is_set_world() const {
     return false;
 }
 
-Menu* Scene::get_menu_ptr() {
-    return menu_ptr;
+Menu& Scene::get_menu() {
+    return *menu_ptr;
 }
 
-const Menu* Scene::get_menu_ptr() const {
-    return menu_ptr;
+const Menu& Scene::get_menu() const {
+    return *menu_ptr;
 }
 
 std::string& Scene::get_text(){

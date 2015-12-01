@@ -3,6 +3,7 @@
 
 #include <string>
 #include <array>
+#include <vector>
 #include "../funcobj/funcobj.hpp"
 
 //Forward declaration of Menu for use in typedef.
@@ -132,41 +133,42 @@ class Menu {
     };
 
     private:
-    std::size_t size = 0;
-    std::size_t capacity = 0;
     mutable std::size_t selected_item = 0;
-    MenuItem * items;
-    std::string name;
-    std::string description;
+    std::vector<MenuItem> items;
+    std::string name = "none";
+    std::string description = "nondescript";
     //MenuAction noaction(this);
     //MenuItem none("Back","",noaction);
 
     public:
 
     Menu();
-    Menu(const std::string nm, size_t n);
-    Menu(const Menu& ref);
+    Menu(const std::string nm);
+    Menu(const Menu& ref)=delete;
 
     ~Menu();
 
     Menu& operator=(const Menu& ref);
-    std::string& operator[](std::size_t index)const;
+    std::string operator[](std::size_t index)const;
 
     int add_item(const std::string name, const std::string desc);
     int add_item(const std::string name, const std::string desc, Menu& submenu);
     int add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to);
     int add_item(const std::string name, const std::string desc, FunctionType type);
 
-    int clear();
+    //int add_back();
+
+    void clear();
     bool move_up() const;
     bool move_down() const;
 
     std::string get_name() const;
     std::string get_desc() const;
-    Menu* run_function() const;
-    Menu* run_function(std::size_t index) const;
+    Menu* run_function();
+    const Menu *run_function() const;
+    //Menu* run_function(std::size_t index);
     size_t get_size() const;
-    size_t get_capacity() const;
+    //size_t get_capacity() const;
     bool is_selected(std::size_t index)const;
     std::size_t get_selected()const;
 
