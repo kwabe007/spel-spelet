@@ -125,13 +125,6 @@ class Menu {
             repr_strings[1] = desc;
             nextmenu = &submenu;
         }
-        /*MenuItem& operator=(const MenuItem& ref) {
-            for (std::size_t i = 0; i < ITEM_REPR_STR_COUNT; ++i) {
-                repr_strings[i] = ref.repr_strings[i];
-            }
-            action = ref.action;
-            return *this;
-        }*/
         std::string get_name() const {
             return repr_strings[0];
         }

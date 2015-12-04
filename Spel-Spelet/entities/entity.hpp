@@ -15,7 +15,6 @@ private:
     std::string description = "Whack";
     std::string trash_talk = "????";
     bool alive = true;
-
     std::vector<Item*> inventory;
 
 public:

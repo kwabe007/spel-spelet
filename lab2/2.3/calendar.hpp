@@ -17,9 +17,16 @@ template <class T>
 class Calendar {
 protected:
     T current_date;
-public:
+    std::string get_date_trunc_str(const T& date)const;
+    std::string ical_builder()const;
     std::vector<Event<T>> event_vector;
     int created_events;
+    T get_date()const;
+
+    template<typename T2> friend class Calendar;
+
+public:
+
     Calendar();
     template <class T2>
     Calendar(const Calendar<T2>& ref);
@@ -27,8 +34,8 @@ public:
 
     ~Calendar();
 
-    std::string get_date_str()const;
-    T get_date()const;
+
+
 
     bool add_event(const std::string name);
     bool add_event(const std::string name, const int year);
@@ -41,6 +48,7 @@ public:
     bool remove_event(const std::string name, const int year, const int month, const int day);
     bool set_date(const int year, const int month, const int day);
 
+
     template <class T2>
     Calendar<T>& operator=(const Calendar<T2>&);
     template <class T2>
@@ -49,6 +57,7 @@ public:
     bool operator!=(const Calendar<T2>&)const;
     template<class K>
     friend std::ostream& operator<<(std::ostream& out, const Calendar<K>& ref);
+    std::string get_date_str()const;
 };
 
 template <class T>
@@ -107,7 +116,7 @@ bool Calendar<T>::add_event(const std::string name) {
 }
 
 template <class T>
-bool Calendar<T>::add_event(const std::string name, const int year) {
+bool Calendar<T>::add_event(const std::string name, const int year ) {
     T temp_date;
     int month = temp_date.month();
     int day = temp_date.day();
@@ -123,7 +132,7 @@ bool Calendar<T>::add_event(const std::string name, const int year, const int mo
 
 template <class T>
 bool Calendar<T>::add_event(const std::string name, const int year, const int month, const int day) {
-    T temp_date;
+    T temp_date;,
     try {
         temp_date = T(year,month,day);
     } catch (const std::out_of_range& oor) {
@@ -237,16 +246,54 @@ bool Calendar<T>::operator !=(const Calendar<T2>& ref)const{
 }
 
 template <class T>
+std::string Calendar<T>::ical_builder()const{
+    std::string ical;
+    ical += "BEGIN:VCALENDAR\n";
+    ical += "VERSION:2.0\n";
+    ical += "PRODID://Business Name//Product Name//EN\n";
+    ical += "CALSCALE:"+current_date.ical_type()+"\n";
+    ical += "X-WR-TIMEZONE:Europe/Stockholm\n";
+    debug_print(BIT0, "Going through events");
+    for (Event<T> event:event_vector) {
+        if (event.date < current_date) continue;
+        ical += "BEGIN:VEVENT\n";
+        ical += "DTSTART;VALUE=DATE:"+get_date_trunc_str(event.date)+"\n";
+        ical += "SUMMARY:"+event.name+"\n";
+        ical += "END:VEVENT\n";
+    }
+    ical += "END:VCALENDAR";
+    return ical;
+}
+
+template <class T>
+std::string Calendar<T>::get_date_trunc_str(const T& date)const {
+    std::string out_string;
+    std::string year = std::to_string(date.year());
+    std::string month = std::to_string(date.month());
+    if (month.size() == 1){
+        month.insert(0,"0");
+    }
+    std::string day = std::to_string(date.day());
+    if (day.size() == 1){
+        day.insert(0,"0");
+    }
+    out_string.append(year+month+day);
+    return out_string;
+}
+
+
+template <class T>
 std::ostream& operator<<(std::ostream& out,const Calendar<T>& ref){
     std::string out_string;
-    typename std::vector<Event<T>>::const_iterator it = ref.event_vector.begin();
+    /*typename std::vector<Event<T>>::const_iterator it = ref.event_vector.begin();
     for (;it != ref.event_vector.end(); ++it) {
         if (it->date < ref.current_date) continue;
         out_string += it->date.get_date() + " : " + it->name + '\n';
-    }
+    }*/
+    out_string += ref.ical_builder();
     out << out_string;
 
-    return out;
+    return out ;
 }
 
 }

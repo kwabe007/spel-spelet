@@ -13,6 +13,7 @@
 #include "entities/human.hpp"
 #include "areas/world.hpp"
 #include "debug/debugmacro.h"
+#include "texts/text.hpp"
 
 /* TODO:
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
@@ -54,6 +55,7 @@ signal(SIGSEGV, handler);
     UI::setup();
     debug_println(BIT0,"testing1,2");
 
+
     Scene scene;
     Menu mainmenu("Main Menu");
     mainmenu.add_item("New Game", "this is option 1");
@@ -65,23 +67,28 @@ signal(SIGSEGV, handler);
     PLAYER.set_hp(50);
     PLAYER.set_ap(20);
 
+
+
     Scene scene2;
         World firstworld("Kvarnamala");
             Building room("Plattan", "Smells like shit here");
                 Human luffare;
-                Human babbe("Babbe#1", "Största pungkulan", "bror");
-                Human babbe2("Babbe#2", "Största pungkulan", "bror");
+                Human babbe("Filip", "", "I am a proud orc shaman, lok tar ogar!");
+                Human babbe2("Luffare#2", "Luktar fisk", "Spare some change bro");
             room.add_entity(luffare);
             room.add_entity(babbe);
             room.add_entity(babbe2);
             Building secondroom("Hötorget", "You're at the marketplace but watch out for junkies");
-                Human horunge("Pundare", "Största pungkulan", "...");
+                Human horunge("Pundare", "Fattig", "...");
                 horunge.set_hp(30);
             secondroom.add_entity(horunge);
         firstworld.add_area(room);
         firstworld.add_area(secondroom);
         firstworld.set_start_area(0,0);
     scene2.set_world(firstworld);
+
+    Text text("texts/japan");
+    debug_println(BIT0,text.get_text());
 
     Scene scene3;
     Menu secondmenu("Second Menu");

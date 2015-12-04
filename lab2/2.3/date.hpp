@@ -80,6 +80,8 @@ public:
     Date& operator += (const int incr);
     Date& operator -= (const int incr);
 
+    virtual std::string ical_type()const=0;
+
     //Comparing operator functions
     bool operator == (const Date& ref)const;
     bool operator <= (const Date& ref)const;

@@ -133,6 +133,8 @@ bool Julian::calculate_if_leap_year(const int year) const {
     }
 }
 
-
+std::string Julian::ical_type()const {
+    return "JULIAN";
+}
 
 }

@@ -1,1 +1,25 @@
-http://codereview.stackexchange.com/questions/50975/creating-a-custom-vector-class
+const U
+struct X { int a, b; };
+
+Vector<X>::Vector() {
+
+}
+
+int foo();
+
+int main() {
+    vector<X> x;
+    foo();
+}
+
+----------------------
+
+Const (int,string)
+
+class A
+
+A(int)
+A(string)
+
+const T * begin() const
+T * begin()

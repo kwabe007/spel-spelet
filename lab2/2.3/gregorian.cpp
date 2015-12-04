@@ -129,4 +129,9 @@ bool Gregorian::calculate_if_leap_year(const int year) const {
     return false;
 }
 
+std::string Gregorian::ical_type()const {
+    return "GREGORIAN";
+
+}
+
 }

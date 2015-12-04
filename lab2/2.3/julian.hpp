@@ -34,6 +34,8 @@ class Julian: public WesternDate{
         Julian operator ++ (int);
         Julian operator -- (int);
 
+        virtual std::string ical_type()const;
+
 };
 
 }

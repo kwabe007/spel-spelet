@@ -11,6 +11,7 @@ using namespace std;
 using namespace lab2;
 unsigned int GLOBAL_DEBUG_BITS = 3;
 std::ofstream ERR_FS("err");
+std::ofstream TESTCAL("mycal.ics");
 
 
 int main() {
@@ -22,10 +23,10 @@ int main() {
     cout << "*******************TEST STARTED*******************\n";
     Calendar<Gregorian> default_calendar;
     cout << "Calendar successfully default-constucted\n";
-    cout << "The date of created calendar is " << default_calendar.get_date_str() << endl;
+    cout << "The date of created calendar is " << default_calendar << endl;
 
     Calendar<Gregorian> greg_calendar(2004,5,3);
-    cout << "greg_calendar created: " << greg_calendar.get_date_str() << endl;
+    cout << "greg_calendar created: " << greg_calendar << endl;
 
     bool success;
     success = greg_calendar.set_date(2000,2,29);
@@ -33,7 +34,7 @@ int main() {
 
     assert(success);
 
-    cout << "greg_calendar's date successfully set: " << greg_calendar.get_date_str() << endl;
+    cout << "greg_calendar's date successfully set: " << greg_calendar << endl;
 
     try {
         greg_calendar.set_date(2100,2,29);
@@ -43,13 +44,13 @@ int main() {
         success = false;
     }
     assert(!success);
-    cout << "greg_calendar's date unsuccessfully set (according to plan): " << greg_calendar.get_date_str() << endl;
+    cout << "greg_calendar's date unsuccessfully set (according to plan): " << greg_calendar << endl;
 
     Calendar<Julian> juli_calendar(greg_calendar);
-    cout << "juli_calendar created from greg_calendar: " << juli_calendar.get_date_str() << endl;
+    cout << "juli_calendar created from greg_calendar: " << juli_calendar << endl;
 
     greg_calendar.set_date(2014,11,16);
-    cout << "greg_calendar's date set to: " << greg_calendar.get_date_str() << endl;
+    cout << "greg_calendar's date set to: " << greg_calendar << endl;
 
     success = greg_calendar.add_event("End of the world");
     assert(success);
@@ -120,8 +121,16 @@ int main() {
     cout << "greg_calendar date set to 2015-03-31" << endl;
     cout << "greg_calendar now shows:\n" << greg_calendar << endl;
 
+
     juli_calendar = greg_calendar;
     cout << "juli_calendar assigned to greg_calendar, it now shows:\n" << juli_calendar << endl;
+
+    success = greg_calendar.add_event("Bicep day", 2014,12,2);
+    assert(success);
+    cout << "added 'Bicep day' (2014,12,2) (curl for your life!)" << endl;
+
+    TESTCAL << greg_calendar;
+
 
     cout << "*******************TEST FINISHED*******************\n";
 }

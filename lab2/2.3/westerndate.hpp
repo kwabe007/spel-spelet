@@ -13,6 +13,8 @@ protected:
     virtual int mod_julian_day()const=0;
     virtual void from_julian_day(const int mjd, int* date)const =0;
     void setup();
+    static std::vector<std::string>wkds = {"monday","tuesday","wednesday","thursday","friday","saturday","sunday"};
+    std::vector<std::string> get_wkdy_vector();
 
 public:
     WesternDate();
@@ -22,8 +24,10 @@ public:
     WesternDate(const WesternDate& ref);
     ~WesternDate();
 
+
     unsigned int week_day() const;
     std::string week_day_name()const;
+    virtual std::string ical_type()const=0;
 
 };
 }

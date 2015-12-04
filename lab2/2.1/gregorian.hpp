@@ -28,6 +28,8 @@ class Gregorian: public WesternDate{
     Gregorian& operator -- ();
     Gregorian operator ++ (int);
     Gregorian operator -- (int);
+
+    std::string ical_type()const;
 };
 
 }

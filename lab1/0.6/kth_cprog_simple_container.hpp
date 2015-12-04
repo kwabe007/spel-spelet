@@ -64,7 +64,7 @@ unsigned int& operator[] (const int index) {
         throw std::out_of_range("Index out of range");
     }
 }
- unsigned int& operator[] (const int index) const {
+ const unsigned int& operator[] (const int index) const {
     if (index >= 0 && index < vLength) {
     return vPnData[index];
     }
