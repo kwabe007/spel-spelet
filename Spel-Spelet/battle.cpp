@@ -1,4 +1,5 @@
 #include "battle.hpp"
+#include "parse.hpp"
 
 Battle::Battle(Entity& enemy) : main_party{1,&PLAYER}, enemy_party{1,&enemy},select_enemy_menu{"Who do you want attack?"} {
     select_enemy_menu.add_item(enemy.get_name(),"Keff",&target_enemy_index,0);
@@ -45,27 +46,24 @@ void Battle::switch_turn() {
     else turn = PARTY_TURN;
 }
 
+void Battle::set_latest_action(const Entity& subject,ActionType type, const Entity& object, int damage) {
+    std::string subjectname(subject.get_name());
+    std::string objectname(object.get_name());
+    std::string damage_dealt;
+    switch (type) {
+    case ACTION_TYPE_ATTACK:
+        latest_action = subjectname + " " + tools::read_line("general_interface/attack_action1") + " " + objectname + " " + tools::read_line("general_interface/attack_action2") + " <wpn> " + tools::read_line("general_interface/dealing_damage") + "<dmg>." ;
+    }
+}
+
 bool Battle::attack(Entity& attacker, Entity& target) {
     return attacker.attack(target);
 }
 
-/*int Battle::action() {
-    int vic_flag = 0;
-    switch (turn) {
-    case PARTY_TURN:
-        if(party_action()) vic_flag = 1;
-        turn = ENEMY_TURN;
-        break;
-    case ENEMY_TURN:
-        if(enemy_action()) vic_flag = -1;
-        turn = PARTY_TURN;
-        break;
-    }
-    return vic_flag;
-}*/
-
 int Battle::party_action() {
+    //int enemy_hp = get_target_enemy().get_hp();
     attack(get_current_party(),get_target_enemy());
+    set_latest_action(get_current_party(),ACTION_TYPE_ATTACK,get_target_enemy(),0);
     switch_turn();
     if (enemies_alive() == 0) return true;
     return false;
@@ -73,6 +71,7 @@ int Battle::party_action() {
 
 int Battle::enemy_action() {
     attack(get_current_enemy(),get_target_party());
+    set_latest_action(get_current_enemy(),ACTION_TYPE_ATTACK,get_target_party(),0);
     switch_turn();
     if (partymems_alive() == 0) return true;
     return false;
@@ -124,4 +123,8 @@ Menu& Battle::get_current_menu() {
 
 const Menu& Battle::get_current_menu() const {
     return *current_menu;
+}
+
+std::string Battle::get_last_action() const {
+    return latest_action;
 }

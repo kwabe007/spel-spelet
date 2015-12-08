@@ -11,7 +11,7 @@ private:
 
 public:
     Item();
-    Item(std::string name);
+    Item(std::string filename);
 };
 
 

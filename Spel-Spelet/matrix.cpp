@@ -27,20 +27,6 @@ Matrix::~Matrix() {
     delete[] out_ptr;
 }
 
-/*void Matrix::fill_col(std::size_t col, char* ref){
-    char* col_ptr = *(out_ptr + col);
-    for (unsigned int i = 0; i < rows; ++i) {
-        *(col_ptr + i) = *(ref + i);
-    }
-}
-
-void Matrix::fill_col(std::size_t col, char* ref, std::size_t length){
-    char* col_ptr = *(out_ptr + col);
-    for (unsigned int i = 0; i < length; ++i) {
-        *(col_ptr + i) = *(ref + i);
-    }
-}*/
-
 void Matrix::fill_row(std::size_t rw, const char* ref){
     if (rw > rows) {
 

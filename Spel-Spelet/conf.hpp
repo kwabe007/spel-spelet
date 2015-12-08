@@ -11,7 +11,8 @@
 
 
 /*Path to were the resources are*/
-char const RES_PATH[] = "res/";
+const std::string RES_PATH = "res/eng/";
+
 
 /*Splash screen settings*/
 const bool SHOW_SPLASH = true;
@@ -20,7 +21,7 @@ const int splc = 3; //Amount of splash screens. Note that splash screen files fr
 extern int DAMAGE_VAR_LOW; //Lower bound of variation in damage dealt
 extern int DAMAGE_VAR_HIGH; //Higher bound of variation in damage dealt
 
-		/* declaration of a global variable seen in other files - it has to be defined in one of the .c files (here: module.c)*/
+/* declaration of a global variable seen in other files - it has to be defined in one of the .c files (here: module.c)*/
 
 
 #endif

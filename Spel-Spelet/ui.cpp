@@ -174,8 +174,7 @@ namespace UI {
             case COMMAND_SPACE:
                  goto EndWhileArea;
                 break; //optional
-            case COMMAND_FIGHT:
-            {
+            case COMMAND_FIGHT: {
                 Menu fightmenu("Who do you want to fight?");
                 for (std::size_t i = 0; i < area.get_entity_size(); ++i) {
                     Entity& entity(area.get_entity(i));
@@ -243,10 +242,13 @@ namespace UI {
         while (true) {
             cvs.apply_battle_fight(battle);
             print_canvas();
-            sleep(1000);
+
             if (battle.turn == ENEMY_TURN) {
                 battlestate = battle.enemy_action();
-                cvs.apply_battle_fight(battle);
+                //cvs.apply_battle_fight(battle);
+                //print_canvas();
+                sleep(2000);
+                cvs.apply_battle_action(battle);
                 print_canvas();
             } else if (battle.turn == PARTY_TURN) {
                 choice = get_char();
@@ -256,6 +258,8 @@ namespace UI {
                     current_menu.run_function();
                     battle.back_to_main_menu();
                     battlestate = battle.party_action();
+                    cvs.apply_battle_action(battle);
+                    print_canvas();
                     break;
                 default : //Optional
                     ;
@@ -316,5 +320,6 @@ namespace UI {
             MODE = BUFFERED;
         }
     }
+
 
 }

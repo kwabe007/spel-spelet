@@ -40,11 +40,11 @@ std::size_t Area::get_entity_size() const {
 }
 
 Entity& Area::get_entity(std::size_t index) {
-    return entity_vec[index];
+    return *entity_vec[index];
 }
 
 const Entity& Area::get_entity(std::size_t index) const {
-    return entity_vec[index];
+    return *entity_vec[index];
 }
 
 void Area::set_name(const std::string& str) {
@@ -55,8 +55,8 @@ void Area::set_description(const std::string& str) {
     description = str;
 }
 
-void Area::add_entity(const Entity& ent) {
-    entity_vec.push_back(ent);
+void Area::add_entity(Entity& ent) {
+    entity_vec.push_back(&ent);
 }
 
 void Area::reset_direction() {

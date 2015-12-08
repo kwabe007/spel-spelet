@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "parse.hpp"
 #include "conf.hpp"
+#include "exceptions/fileexcept.hpp"
 
 namespace tools{
 
@@ -75,25 +76,36 @@ namespace tools{
 		return count;
 	}
 
-	std::string read_file(char const* const filename) {
+    std::string read_file(const std::string& filename) {
 		std::string text;
-		char filepath[120];
-        strncpy(filepath, RES_PATH, 100);
-		strncat(filepath, filename, 100);
-		std::ifstream file(filepath);
+        std::ifstream file(RES_PATH + filename);
 
-		if (file.is_open())
-		{
-			text.assign((std::istreambuf_iterator<char>(file)),
-				std::istreambuf_iterator<char>());
-			file.close();
-		}
+        if (!file.good()) {
+            throw FileException("File '" + filename + "' not found or is empty");
+        }
 		else {
-			text = "\0";
+            text.assign((std::istreambuf_iterator<char>(file)),
+                std::istreambuf_iterator<char>());
+            file.close();
 		}
-
 		return text;
 	}
+
+    std::string read_line(const std::string& filename) {
+        std::string text;
+        std::ifstream file(RES_PATH + filename);
+
+        if (!file.good()) {
+            throw FileException("File '" + filename + "' not found or is empty");
+        }
+        else {
+            std::getline(file,text);
+            if (text.back()=='\n')
+                text.pop_back();
+            file.close();
+        }
+        return text;
+    }
 
 	std::string replace_coding(const std::string& subject) {
 		

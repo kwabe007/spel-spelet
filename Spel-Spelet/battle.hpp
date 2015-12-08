@@ -1,8 +1,10 @@
 #ifndef BATTLE_HPP
 #define BATTLE_HPP
 #include <vector>
+#include <string>
 #include "entities/human.hpp"
 #include "menus/menu.hpp"
+
 
 
 enum BattleState {
@@ -22,6 +24,7 @@ private:
     std::size_t target_enemy_index = 0;
     std::size_t target_party_index = 0;
     bool victory = false;
+    std::string latest_action;
     Entity& get_current_party();
     const Entity& get_current_party() const;
     Entity& get_current_enemy();
@@ -31,6 +34,10 @@ private:
     Entity& get_target_enemy();
     const Entity& get_target_enemy() const;
     void switch_turn();
+    enum ActionType {
+        ACTION_TYPE_ATTACK
+    };
+    void set_latest_action(const Entity& subject,ActionType type, const Entity& object, int damage);
 
 public:
     BattleState turn = PARTY_TURN;
@@ -52,6 +59,7 @@ public:
     const Entity& get_enemy_entity(std::size_t index) const;
     Menu& get_current_menu();
     const Menu& get_current_menu() const;
+    std::string get_last_action() const;
 
 
 };

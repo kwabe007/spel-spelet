@@ -34,7 +34,9 @@ namespace tools {
 	};
 
 	
-	std::string read_file(char const* const filename);
+    std::string read_file(const std::string& filename);
+
+    std::string read_line(const std::string& filename);
 
 	std::string replace_coding(const std::string& subject);
 

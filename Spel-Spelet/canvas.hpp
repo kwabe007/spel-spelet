@@ -2,7 +2,6 @@
 #define CANVAS_HPP
 
 #include <string>
-#include <iostream>
 #include "matrix.hpp"
 #include "menus/menu.hpp"
 #include "areas/area.hpp"
@@ -41,6 +40,9 @@ private:
     std::size_t battle_menu_y_offset = 1;
     std::size_t battle_menu_title_x_offset = 1;
     std::size_t battle_menu_title_y_offset = 0;
+    std::size_t party_name_x_offset = 2;
+    std::size_t party_name_y_offset = 2;
+
     
     Matrix matrix;
 
@@ -59,6 +61,7 @@ public:
     void apply_area(const Area& ref);
     void apply_battle_intro(const Battle& battle);
     void apply_battle_fight(const Battle& battle);
+    void apply_battle_action(const Battle& battle);
     void clear_row(std::size_t row);
     void clear_canvas();
 

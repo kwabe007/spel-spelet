@@ -4,7 +4,14 @@
 #include "organic.hpp"
 
 class Human : public Organic {
-    using Organic::Organic;
+protected:
+    Weapon* get_unarmored_weapon();
+public:
+    Human();
+    Human(const std::string& filename);
+    ~Human();
+
+
 };
 
 extern Human PLAYER;

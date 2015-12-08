@@ -2,20 +2,36 @@
 #include "entity.hpp"
 #include "../conf.hpp"
 #include <iostream>
+#include "../exceptions/fileexcept.hpp"
 
 
 Entity::Entity() {
 }
 
-Entity::Entity(const std::string& nm) : name{nm} {
+Entity::Entity(const std::string& filename) : fs{filename} {
+    if (!fs.good()) {
+        throw FileException("File '" + filename + "' not found or is empty");
+    }
+    std::string temp;
+    std::getline(fs, name);
+    std::getline(fs, description);
+    std::getline(fs, trash_talk);
+
+    std::getline(fs, temp);
+    hp = std::stoi(temp);
+    std::getline(fs, temp);
+    ap = std::stoi(temp);
+    std::getline(fs, temp);
+    dp = std::stoi(temp);
+    std::getline(fs, temp);
+    mp = std::stoi(temp);
+
 }
 
 Entity::Entity(const std::string& nm, const std::string& desc, const std::string& trash) : name{nm}, description{desc}, trash_talk{trash} {
 }
 
-Entity::~Entity() {
-
-}
+Entity::~Entity() { };
 
 int Entity::get_hp() const {
     return hp;

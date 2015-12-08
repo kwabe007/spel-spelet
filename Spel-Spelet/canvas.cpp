@@ -1,8 +1,6 @@
-#include <string>
-#include <iostream>
 #include "canvas.hpp"
 #include "ui.hpp"
-
+#include "debug/debugmacro.h"
 
 Canvas::Canvas(): matrix(0, 0){
     rows = 0;
@@ -87,9 +85,7 @@ void Canvas::apply_area(const Area& ref) {
     matrix.fill_row(south_y, UI::CONTROL_SOUTH.c_str(), UI::CONTROL_SOUTH.size(), south_x);
     matrix.fill_row(west_y, UI::CONTROL_WEST.c_str(), UI::CONTROL_WEST.size(), west_x);
 
-
     //Fill in selector depending on which direction is selected
-
     switch (ref.selected_direction) {
         case DIRECTION_NORTH:
         matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
@@ -106,7 +102,6 @@ void Canvas::apply_area(const Area& ref) {
     default:
         break;
     }
-    //matrix.fill_row(north_y,selector.c_str(),selector.size(),north_x-2,false);
 }
 
 void Canvas::apply_battle_intro(const Battle& battle) {
@@ -127,13 +122,23 @@ void Canvas::apply_battle_fight(const Battle& battle) {
     const Entity& player = battle.get_party_entity(0);
 
     std::string enemy_str = (enemy.get_name() + "HP["+std::to_string(enemy.get_hp())+"]");
-    matrix.fill_row(4,' ');
-    matrix.fill_row(4,enemy_str.c_str(),enemy_str.size(),30);
+    matrix.fill_row(party_name_y_offset,' ');
+    matrix.fill_row(party_name_y_offset,enemy_str.c_str(),enemy_str.size(),cols-enemy.get_name().size()-party_name_x_offset-7); // Minus 7 for hp bracket
     std::string player_str = (player.get_name() + "HP["+std::to_string(player.get_hp())+"]");
-    matrix.fill_row(2,' ');
-    matrix.fill_row(2,player_str.c_str(),player_str.size(),10);
+    matrix.fill_row(party_name_y_offset,player_str.c_str(),player_str.size(),party_name_x_offset);
 
     apply_partial_menu(battle.get_current_menu(),battle_menu_x_offset,battle_menu_y_offset+delim_row);
+}
+
+void Canvas::apply_battle_action(const Battle& battle) {
+    std::size_t action_row = calculate_y_middle()+battle_delimiter_y_offset-1;
+    std::string action = battle.get_last_action();
+    debug_println(BIT0, "Action size: " << action.size());
+
+    std::size_t x_col = calculate_x_middle(action.size());
+
+    debug_println(BIT0, "Filling row  with '" << action << "' at row " <<  action_row  << " starting at col " << x_col);
+    matrix.fill_row(action_row,action.c_str(),action.size(),x_col);
 }
 
 void Canvas::clear_row(std::size_t row) {
@@ -145,7 +150,6 @@ void Canvas::clear_canvas() {
         matrix.fill_row(i,'\0');
     }
 }
-
 
 std::size_t Canvas::get_rows()const {
     return rows;

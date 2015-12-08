@@ -14,6 +14,13 @@
 #include "areas/world.hpp"
 #include "debug/debugmacro.h"
 #include "texts/text.hpp"
+#include "conf.hpp"
+
+
+/* BITS
+ * 0 - GENERAL
+ * 1 - ASSIGNMENTS
+ */
 
 /* TODO:
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
@@ -26,7 +33,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 1;
+unsigned int GLOBAL_DEBUG_BITS = 3;
 ofstream ERR_FS("errlog");
 
 
@@ -64,24 +71,14 @@ signal(SIGSEGV, handler);
     mainmenu.add_item("Exit", "this is option 4", FUNCTION_EXIT);
     scene.set_menu(mainmenu);
 
-    PLAYER.set_hp(50);
-    PLAYER.set_ap(20);
-
-
-
     Scene scene2;
         World firstworld("Kvarnamala");
             Building room("Plattan", "Smells like shit here");
                 Human luffare;
-                Human babbe("Filip", "", "I am a proud orc shaman, lok tar ogar!");
-                Human babbe2("Luffare#2", "Luktar fisk", "Spare some change bro");
             room.add_entity(luffare);
-            room.add_entity(babbe);
-            room.add_entity(babbe2);
             Building secondroom("Hötorget", "You're at the marketplace but watch out for junkies");
-                Human horunge("Pundare", "Fattig", "...");
-                horunge.set_hp(30);
-            secondroom.add_entity(horunge);
+                Human pundare(RES_PATH+"units/pundare");
+            secondroom.add_entity(pundare);
         firstworld.add_area(room);
         firstworld.add_area(secondroom);
         firstworld.set_start_area(0,0);

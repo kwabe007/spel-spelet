@@ -22,7 +22,7 @@ private:
     std::string name;
     std::string description;
 
-    std::vector<Entity> entity_vec;
+    std::vector<Entity*> entity_vec;
     //std::vector<Objects*> stuff;
 
 public:
@@ -40,7 +40,7 @@ public:
 
     void set_name(const std::string& str);
     void set_description(const std::string& str);
-    void add_entity(const Entity& ent);
+    void add_entity(Entity& ent);
 
     void reset_direction();
 
