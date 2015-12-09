@@ -1,52 +1,94 @@
-Item created from file 'res/eng/weapons/unarmored' has name set to Fists and description set to Use your strong knuckles!
 Human created from file 'res/eng/units/player' name: Pjotr Thorsson description: Rakad Alban trash_talk: DE E DAGS' ap: 15 dp: 5 hp: 80 mp: 10
 testing1,2
-Item created from file 'res/eng/weapons/unarmored' has name set to Fists and description set to Use your strong knuckles!
 Human created from file 'res/eng/units/pundare' name: Pundare Pundarsson description: Keff trash_talk: bror' ap: 5 dp: 2 hp: 50 mp: 0
 deny warcrime
 
-Pressed key: 13
 Pressed key: 13
 Pressed key: 102
 Pressed key: 13
 Pressed key: 13
 Pressed key: 13
-Action size: 92
+Stats entity attack: 0 16
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 75
 First word from stringstream: 'Pjotr'
-Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty <weapon> Dealing ' to canvas matrix
 End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
-Action size: 92
-First word from stringstream: 'Pundare'
-Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty <weapon> Dealing ' to canvas matrix
+Writing line 'Pjotr Thorsson attacks Riksluffare with the mighty Fists Dealing damage: 16' to canvas matrix
+Stats entity attack: 0 7
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 74
+First word from stringstream: 'Riksluffare'
 End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
+Writing line 'Riksluffare attacks Pjotr Thorsson with the mighty Fists Dealing damage: 7' to canvas matrix
 Pressed key: 13
-Action size: 92
+Stats entity attack: 1 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 75
 First word from stringstream: 'Pjotr'
-Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty <weapon> Dealing ' to canvas matrix
 End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
-Action size: 92
-First word from stringstream: 'Pundare'
-Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty <weapon> Dealing ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
+Writing line 'Pjotr Thorsson attacks Riksluffare with the mighty Fists Dealing damage: 15' to canvas matrix
 Pressed key: 13
-Action size: 92
-First word from stringstream: 'Pjotr'
-Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty <weapon> Dealing ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
-Action size: 92
-First word from stringstream: 'Pundare'
-Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty <weapon> Dealing ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
+Pressed key: 102
 Pressed key: 13
-Action size: 92
+Pressed key: 13
+Pressed key: 13
+Stats entity attack: 0 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 82
 First word from stringstream: 'Pjotr'
-Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty <weapon> Dealing ' to canvas matrix
 End of stringstream reached, delimiter set to blank
-Writing line 'damage: <damage>.' to canvas matrix
+Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '15' to canvas matrix
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 81
+First word from stringstream: 'Pundare'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '3' to canvas matrix
+Pressed key: 13
+Stats entity attack: 0 14
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 82
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '14' to canvas matrix
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 81
+First word from stringstream: 'Pundare'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '3' to canvas matrix
+Pressed key: 13
+Stats entity attack: 0 16
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 82
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '16' to canvas matrix
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 81
+First word from stringstream: 'Pundare'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pundare Pundarsson attacks Pjotr Thorsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '3' to canvas matrix
+Pressed key: 13
+Stats entity attack: 1 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 82
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Pundare Pundarsson with the mighty Fists Dealing damage: ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line '15' to canvas matrix
 Pressed key: 3

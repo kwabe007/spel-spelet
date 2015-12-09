@@ -1,6 +1,7 @@
 #ifndef BATTLE_HPP
 #define BATTLE_HPP
 #include <vector>
+#include <utility>
 #include <string>
 #include "entities/human.hpp"
 #include "menus/menu.hpp"
@@ -37,15 +38,13 @@ private:
     enum ActionType {
         ACTION_TYPE_ATTACK
     };
-    void set_latest_action(const Entity& subject,ActionType type, const Entity& object, int damage);
+    void set_latest_action(const Entity& subject,ActionType type, const Entity& object, std::pair<bool, int> stats);
 
 public:
     BattleState turn = PARTY_TURN;
     Battle(Entity& enemy);
 
-    //bool attack(Entity& target);
-    bool attack(Entity& attacker, Entity& target);
-    //int action();
+    std::pair<bool, int> attack(Entity& attacker, Entity& target);
     int party_action();
     int enemy_action();
     std::size_t partymems_alive() const;

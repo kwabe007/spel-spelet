@@ -21,10 +21,12 @@ public:
 
     char* operator[](size_t pos) const;
 
-    void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0, bool prefill = true, char prefill_char = ' ');
+    void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0,
+                  bool prefill = true, char prefill_char = ' ', bool postfill = false, char postfill_char = ' ');
     /*void fill_row(std::size_t rw, char ch, std::size_t length);*/
     void fill_row(std::size_t rw, char ch);
-    void fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset = 0, bool prefill = true, char prefill_char = ' ');
+    void fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset = 0,
+                  bool prefill = true, char prefill_char = ' ', bool postfill = false, char postfill_char = ' ');
     std::size_t get_rows()const;
     std::size_t get_cols()const;
 

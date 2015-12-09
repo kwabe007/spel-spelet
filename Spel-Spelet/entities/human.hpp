@@ -5,13 +5,11 @@
 
 class Human : public Organic {
 protected:
-    Weapon* get_unarmored_weapon();
+    Weapon get_unarmored_weapon() const;
 public:
     Human();
     Human(const std::string& filename);
     ~Human();
-
-
 };
 
 extern Human PLAYER;

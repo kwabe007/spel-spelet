@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <utility>
 #include "../items/item.hpp"
 #include "../items/weapon.hpp"
 
@@ -21,7 +22,7 @@ protected:
 
     bool alive = true;
     std::vector<Item*> inventory;
-    virtual Weapon* get_unarmored_weapon()=0;
+    virtual Weapon get_unarmored_weapon() const=0;
     std::fstream fs;
 
 public:
@@ -34,17 +35,19 @@ public:
     int get_mp() const;
     int get_ap() const;
     int get_dp() const;
+
     std::string get_name() const;
     std::string get_description() const;
     std::string get_trash_talk() const;
+    Weapon get_weapon() const;
 
     bool is_alive()const;
     void set_hp(int val);
     void set_mp(int val);
     void set_ap(int val);
     void set_dp(int val);
-    bool take_damage(int damage);
-    bool attack(Entity& other);
+    std::pair<bool, int> take_damage(int damage);
+    std::pair<bool, int> attack(Entity& other);
 
 };
 

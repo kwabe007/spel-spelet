@@ -58,7 +58,7 @@ bool Canvas::add_if_fit (const std::string& word, std::string& line, std::size_t
 }
 
 void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
-                      char prefill_char, bool centered, std::size_t rw_span) {
+                      char prefill_char, bool postfill, char postfill_char, bool centered, std::size_t rw_span) {
     std::size_t pos = 0;
     std::string line;
     for (std::size_t i = 0 ; i < rw_span && pos < str.size(); ++i, pos += line.size()) {
@@ -67,14 +67,13 @@ void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset
             offset = calculate_x_middle(line.size()) + offset;
             debug_println(BIT0,"Size of line: " << line.size() << " Calculated middle: " << offset);
         }
-        matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+        matrix.fill_row(rw+i,line,offset,prefill,prefill_char,postfill,postfill_char);
     }
 
 }
 
 void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
-                      char prefill_char, bool centered, std::size_t rw_span) {
-
+                      char prefill_char, bool postfill, char postfill_char, bool centered, std::size_t rw_span) {
     std::stringstream ss_str(str);
     std::string word;
     std::string delim(" ");
@@ -93,14 +92,14 @@ void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std:
                 if (!add_if_fit(word,line,line_max_size,delim)) {
                     if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
                     debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
-                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char,postfill,postfill_char);
                     break;
                 }
                 if (ss_str.good()) {
                     ss_str >> word;
                 } else {
                     if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
-                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char,postfill,postfill_char);
                     debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
                     goto endwhile;
                 }
@@ -213,7 +212,7 @@ void Canvas::apply_battle_action(const Battle& battle) {
     std::string action = battle.get_last_action();
     debug_println(BIT0, "Action size: " << action.size());
     //std::size_t x_col = calculate_x_middle(action.size());
-    fill_row_word_wrapping(action_row,action,0,true,' ',true,battle_action_row_span);
+    fill_row_word_wrapping(action_row,action,0,true,' ',true,' ',false,battle_action_row_span);
 }
 
 void Canvas::clear_row(std::size_t row) {

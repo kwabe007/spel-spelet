@@ -27,38 +27,48 @@ Matrix::~Matrix() {
     delete[] out_ptr;
 }
 
-void Matrix::fill_row(std::size_t rw, const std::string& str, std::size_t offset, bool prefill, char prefill_char){
+void Matrix::fill_row(std::size_t rw, const std::string& str, std::size_t offset,
+                      bool prefill, char prefill_char, bool postfill, char postfill_char){
     if (rw >= rows) throw std::out_of_range ("row index out of range: " + std::to_string(rw) + " outside " + std::to_string(rows));
     else if (offset >= cols) throw std::out_of_range ("offset too large: " + std::to_string(offset) + " outside " + std::to_string(cols));
     char* in_ptr = *(out_ptr + rw);
-    if (prefill) {
-        for (unsigned int i = 0; i < offset; ++i) {
+    unsigned int i = 0;
+    if (prefill)
+        for (; i < offset; ++i) {
             *(in_ptr + i) = prefill_char;
         }
+    for (unsigned int j = 0,i=offset; i < offset+str.size(); ++j,++i) {
+        if (i >= cols) throw std::out_of_range ("col index out of range: " + std::to_string(i) + " outside " + std::to_string(cols) + " when writing from string '" + str + "'");
+        *(in_ptr+i) = str[j];
     }
-    for (unsigned int j = 0; j < str.size(); ++j) {
-        if (j + offset >= cols) throw std::out_of_range ("col index out of range: " + std::to_string(j + offset) + " outside " + std::to_string(cols) + " when writing from string '" + str + "'");
-        *(in_ptr + j + offset) = str[j];
-    }
+    if(postfill)
+        for(i=offset+str.size();i < cols; ++i) {
+            *(in_ptr+i) = postfill_char;
+        }
 }
 
 void Matrix::fill_row(std::size_t rw, char ch){
     fill_row(rw,ch,cols);
 }
 
-void Matrix::fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset, bool prefill, char prefill_char){
+void Matrix::fill_row(std::size_t rw, char ch, std::size_t length, std::size_t offset,
+                      bool prefill, char prefill_char, bool postfill, char postfill_char){
     if (rw > rows) throw std::out_of_range ("row index out of range: " + std::to_string(rw) + " outside " + std::to_string(rows));
     else if (offset >= cols) throw std::out_of_range ("offset too large: " + std::to_string(offset) + " outside " + std::to_string(cols));
     char* in_ptr = *(out_ptr + rw);
-    if (prefill) {
-        for (unsigned int i = 0; i < offset; ++i) {
-            *(in_ptr + i) = ' ';
+    unsigned int i = 0;
+    if (prefill)
+        for (; i < offset; ++i) {
+            *(in_ptr + i) = prefill_char;
         }
+    for (i=offset;i < offset+length; ++i) {
+        if (i >= cols) throw std::out_of_range ("col index out of range: " + std::to_string(i) + " outside columns of size " + std::to_string(cols) + " when writing char: '" + ch + "' " + std::to_string(length) + " times");
+        *(in_ptr+i) = ch;
     }
-    for (unsigned int j = 0; j < length; ++j) {
-        if (j + offset >= cols) throw std::out_of_range ("col index out of range: " + std::to_string(j + offset) + " outside columns of size " + std::to_string(cols) + " when writing char: '" + ch + "' " + std::to_string(length) + " times");
-        *(in_ptr + j + offset) = ch;
-    }
+    if(postfill)
+        for(i=offset+length;i < cols; ++i) {
+            *(in_ptr+i) = postfill_char;
+        }
 }
 
 size_t Matrix::get_rows()const {

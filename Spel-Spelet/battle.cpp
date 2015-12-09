@@ -1,13 +1,11 @@
 #include "battle.hpp"
 #include "parse.hpp"
+#include "debug/debugmacro.h"
+#include "items/weapon.hpp"
 
 Battle::Battle(Entity& enemy) : main_party{1,&PLAYER}, enemy_party{1,&enemy},select_enemy_menu{"Who do you want attack?"} {
     select_enemy_menu.add_item(enemy.get_name(),"Keff",&target_enemy_index,0);
 }
-
-/*bool Battle::attack(Entity& target) {
-    return current_party->attack(target);
-}*/
 
 Entity& Battle::get_current_party() {
     return *main_party[party_turn_index];
@@ -46,34 +44,33 @@ void Battle::switch_turn() {
     else turn = PARTY_TURN;
 }
 
-void Battle::set_latest_action(const Entity& subject,ActionType type, const Entity& object, int damage) {
+void Battle::set_latest_action(const Entity& subject,ActionType type, const Entity& object, std::pair<bool, int> stats) {
     std::string subjectname(subject.get_name());
     std::string objectname(object.get_name());
-    std::string damage_dealt;
+    std::string damage_dealt = std::to_string(stats.second);
     switch (type) {
     case ACTION_TYPE_ATTACK:
         latest_action = subjectname + " " + tools::read_line("general_interface/attack_action1") + " " + objectname + " " +
-                tools::read_line("general_interface/attack_action2") + " <weapon> " + tools::read_line("general_interface/dealing_damage") +
-                "<damage>." ;
+                tools::read_line("general_interface/attack_action2") + " " + subject.get_weapon().get_name() + " " + tools::read_line("general_interface/dealing_damage") +
+                damage_dealt;
     }
 }
 
-bool Battle::attack(Entity& attacker, Entity& target) {
+std::pair<bool, int> Battle::attack(Entity& attacker, Entity& target) {
     return attacker.attack(target);
 }
 
 int Battle::party_action() {
-    //int enemy_hp = get_target_enemy().get_hp();
-    attack(get_current_party(),get_target_enemy());
-    set_latest_action(get_current_party(),ACTION_TYPE_ATTACK,get_target_enemy(),0);
+    std::pair<bool, int> stats = attack(get_current_party(),get_target_enemy());
+    set_latest_action(get_current_party(),ACTION_TYPE_ATTACK,get_target_enemy(),stats);
     switch_turn();
     if (enemies_alive() == 0) return true;
     return false;
 }
 
 int Battle::enemy_action() {
-    attack(get_current_enemy(),get_target_party());
-    set_latest_action(get_current_enemy(),ACTION_TYPE_ATTACK,get_target_party(),0);
+    set_latest_action(get_current_enemy(),ACTION_TYPE_ATTACK,get_target_party(),
+                      attack(get_current_enemy(),get_target_party()));
     switch_turn();
     if (partymems_alive() == 0) return true;
     return false;

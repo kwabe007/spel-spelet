@@ -7,8 +7,7 @@ class Weapon : public Item {
 private:
     using Item::Item;
     unsigned int ap = 0;
-
-
+public:
 };
 
 #endif

@@ -8,10 +8,10 @@ private:
     std::string name;
     std::string description;
 
-
 public:
     Item();
     Item(std::string filename);
+    std::string get_name() const;
 };
 
 

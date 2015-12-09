@@ -3,6 +3,7 @@
 #include "../conf.hpp"
 #include <iostream>
 #include "../exceptions/fileexcept.hpp"
+#include "../debug/debugmacro.h"
 
 
 Entity::Entity() {
@@ -61,6 +62,11 @@ std::string Entity::get_trash_talk() const {
     return trash_talk;
 }
 
+Weapon Entity::get_weapon() const {
+    if (weapon_ptr) return *weapon_ptr;
+    return get_unarmored_weapon();
+}
+
 bool Entity::is_alive() const {
     return alive;
 }
@@ -81,29 +87,28 @@ void Entity::set_dp(int val){
     dp = val;
 }
 
-bool Entity::take_damage(int damage) {
+std::pair<bool, int> Entity::take_damage(int damage) {
     if (hp > damage) {
         hp -= damage;
-        return false;
+        return std::pair<bool, int>(false, damage);
     }
-    else {
-        hp = 0;
-        alive = false;
-        return true;
-    }
+    hp = 0;
+    alive = false;
+    return std::pair<bool, int>(true, damage);
 }
 
-bool Entity::attack (Entity& other) {
+std::pair<bool, int> Entity::attack (Entity& other) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(DAMAGE_VAR_LOW,DAMAGE_VAR_HIGH);
     int var = dis(gen);
-    int damage_deal = 0;
+    int damage = 0;
     if (ap + var >= 0)
-        damage_deal = ap + var;
+        damage = ap + var;
 
-    bool dead = other.take_damage(damage_deal);
-    return dead;
+    std::pair<bool, int> stats = other.take_damage(damage);
+    debug_println(BIT0,"Stats entity attack: " << stats.first << " " << stats.second);
+    return stats;
 }
 
 
