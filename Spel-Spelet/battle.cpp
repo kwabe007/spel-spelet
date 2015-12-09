@@ -52,7 +52,9 @@ void Battle::set_latest_action(const Entity& subject,ActionType type, const Enti
     std::string damage_dealt;
     switch (type) {
     case ACTION_TYPE_ATTACK:
-        latest_action = subjectname + " " + tools::read_line("general_interface/attack_action1") + " " + objectname + " " + tools::read_line("general_interface/attack_action2") + " <wpn> " + tools::read_line("general_interface/dealing_damage") + "<dmg>." ;
+        latest_action = subjectname + " " + tools::read_line("general_interface/attack_action1") + " " + objectname + " " +
+                tools::read_line("general_interface/attack_action2") + " <weapon> " + tools::read_line("general_interface/dealing_damage") +
+                "<damage>." ;
     }
 }
 

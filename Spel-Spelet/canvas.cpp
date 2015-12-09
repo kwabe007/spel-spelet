@@ -1,4 +1,4 @@
-#include "canvas.hpp"
+﻿#include "canvas.hpp"
 #include "ui.hpp"
 #include "debug/debugmacro.h"
 
@@ -25,6 +25,7 @@ Canvas::~Canvas() {
 }
 
 std::size_t Canvas::calculate_x_middle(std::size_t len) {
+    if (len == cols) return 0;
     size_t middle = (cols/2)-(len/2)-1;
     return middle;
 }
@@ -47,6 +48,69 @@ std::size_t Canvas::calculate_y_middle(std::size_t len) {
         matrix.fill_row(i,row_str.c_str());
     }
 }*/
+
+bool Canvas::add_if_fit (const std::string& word, std::string& line, std::size_t line_max_size, const std::string& delim) {
+    if(word.size() + delim.size() + line.size() <= line_max_size) {
+        line.append(word+delim);
+        return true;
+    }
+    return false;
+}
+
+void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
+                      char prefill_char, bool centered, std::size_t rw_span) {
+    std::size_t pos = 0;
+    std::string line;
+    for (std::size_t i = 0 ; i < rw_span && pos < str.size(); ++i, pos += line.size()) {
+        line = str.substr(pos,cols-offset);
+        if (centered){
+            offset = calculate_x_middle(line.size()) + offset;
+            debug_println(BIT0,"Size of line: " << line.size() << " Calculated middle: " << offset);
+        }
+        matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+    }
+
+}
+
+void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
+                      char prefill_char, bool centered, std::size_t rw_span) {
+
+    std::stringstream ss_str(str);
+    std::string word;
+    std::string delim(" ");
+    std::size_t line_max_size = cols-offset;
+
+    if (ss_str.good()) {
+        ss_str >> word;
+        debug_println(BIT0,"First word from stringstream: '" << word << "'");
+        for (std::size_t i = 0 ; i < rw_span; ++i) {
+            std::string line;
+            while(true) {
+                if (ss_str.eof()) {
+                    delim.clear(); //If we're at the last word add no delimiter
+                    debug_println(BIT0,"End of stringstream reached, delimiter set to blank");
+                }
+                if (!add_if_fit(word,line,line_max_size,delim)) {
+                    if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
+                    debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
+                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+                    break;
+                }
+                if (ss_str.good()) {
+                    ss_str >> word;
+                } else {
+                    if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
+                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char);
+                    debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
+                    goto endwhile;
+                }
+            }
+        }
+    } else {
+        debug_println(BIT0,"Stringstream being read with word wrapping is not good");
+    }
+    endwhile:;
+}
 
 void Canvas::apply_menu(const Menu& ref) {
     int size = (int)ref.get_size();
@@ -145,14 +209,11 @@ void Canvas::apply_battle_fight(const Battle& battle) {
 }
 
 void Canvas::apply_battle_action(const Battle& battle) {
-    std::size_t action_row = calculate_y_middle()+battle_delimiter_y_offset-1;
+    std::size_t action_row = calculate_y_middle()+battle_delimiter_y_offset-battle_action_row_span;
     std::string action = battle.get_last_action();
     debug_println(BIT0, "Action size: " << action.size());
-
-    std::size_t x_col = calculate_x_middle(action.size());
-
-    debug_println(BIT0, "Filling row  with '" << action << "' at row " <<  action_row  << " starting at col " << x_col);
-    matrix.fill_row(action_row,action,x_col);
+    //std::size_t x_col = calculate_x_middle(action.size());
+    fill_row_word_wrapping(action_row,action,0,true,' ',true,battle_action_row_span);
 }
 
 void Canvas::clear_row(std::size_t row) {
