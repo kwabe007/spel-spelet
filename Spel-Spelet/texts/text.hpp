@@ -19,9 +19,5 @@ public:
     Text(const std::string& filename);
     bool is_time_printed() const;
     std::string get_text() const;
-
-
-
 };
-
 #endif

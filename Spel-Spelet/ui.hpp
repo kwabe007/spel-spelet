@@ -6,6 +6,7 @@
 #include "menus/menu.hpp"
 #include "canvas.hpp"
 #include "scene.hpp"
+#include "texts/text.hpp"
 
 
 /*Functions and stuff for the text-based User Interface.*/
@@ -59,7 +60,7 @@ namespace UI  {
     char get_char();
 
     Scene* play_scene(Scene& scene);
-    void present_prologue(const std::string& text);
+    void show_text(const Text& text);
     void present_menu(const Menu& menu, bool sub = false);
     void play_world(World& area);
     void play_area(Area& area);

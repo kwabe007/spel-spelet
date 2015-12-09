@@ -56,6 +56,7 @@ public:
     Canvas& operator =(Canvas& ref);
     ~Canvas();
 
+    //void apply_text(const Text& text);
     void apply_menu(const Menu& ref);
     void apply_partial_menu(const Menu& ref, std::size_t x_pos, std::size_t y_pos, std::size_t x_span=0, std::size_t y_span=0);
     void apply_area(const Area& ref);

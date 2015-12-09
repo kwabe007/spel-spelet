@@ -12,6 +12,7 @@
 #include "battle.hpp"
 
 
+
 namespace UI {
     void sleep(const std::size_t milliseconds) {
         usleep(milliseconds * 1000); // takes microseconds
@@ -24,7 +25,6 @@ namespace UI {
         for (unsigned int i = 0; i < cvs.get_rows()-1; ++i) {
            std::cout << i << std::endl << "\r";
         }
-        //std::cout << ANSI_MOVE_UP;
         reset_output_marker();
     }
 
@@ -73,7 +73,6 @@ namespace UI {
 		std::this_thread::sleep_for(timespan);*/
 		std::string out_text = tools::replace_coding(text);
 		std::string::const_iterator it;
-        //debug(2, "String to time_print is %s", out_text.c_str());
 		for (it = out_text.begin(); it != out_text.end(); ++it) {
 			std::cout << *it;
 			sleep(time);
@@ -82,14 +81,30 @@ namespace UI {
 	}
 
     Scene* play_scene(Scene& scene) {
-        if(scene.is_set_text()) present_prologue(scene.get_text());
+        if(scene.is_set_text()) show_text(scene.get_text());
         if(scene.is_set_menu()) present_menu(scene.get_menu());
         if(scene.is_set_world()) {play_world(scene.get_world());}
 
         return &scene;
     }
 
-    void present_prologue(const std::string& text) {
+    void show_text(const Text& text) {
+        flush_and_clear();
+        char choice;
+        while (true) {
+            //cvs.apply_text(text);
+            print_canvas();
+            choice = get_char();
+            switch(choice){
+            case COMMAND_ENTER:
+            case COMMAND_SPACE:
+                goto EndWhile;
+            default:
+                ;
+            }
+        }
+        EndWhile:
+        ;
     }
 
     void present_menu(const Menu& menu, bool sub) {
