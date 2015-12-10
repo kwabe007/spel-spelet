@@ -7,6 +7,11 @@ Text::Text(const std::string& filename) {
                     (std::istreambuf_iterator<char>())); // This should not give error due to most vexing parse
 }
 
+Text::Text(const std::string& str, const std::string& sub) {
+    text = str;
+    subtitle = sub;
+}
+
 bool Text::is_time_printed() const {
     if (time_print == 0) return false;
     return true;
@@ -15,3 +20,8 @@ bool Text::is_time_printed() const {
 std::string Text::get_text() const {
     return text;
 }
+
+std::string Text::get_subtitle() const {
+    return subtitle;
+}
+

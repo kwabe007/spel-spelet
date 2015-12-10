@@ -35,20 +35,6 @@ std::size_t Canvas::calculate_y_middle(std::size_t len) {
     return middle;
 }
 
-/*void Canvas::apply_text(const Text& text) {
-    std::stringstream ss_text(text.get_text(), ios_base::in);
-    std::string row_str;
-    for (std::size_t i = 0; i<rows; ++i) {
-        ss_text.get(row_str,cols);
-        if (ss_text.eof())
-            break;
-        row_str
-        std::size_t row = i/rows;
-        std::size_t col = i%cols;
-        matrix.fill_row(i,row_str.c_str());
-    }
-}*/
-
 bool Canvas::add_if_fit (const std::string& word, std::string& line, std::size_t line_max_size, const std::string& delim) {
     if(word.size() + delim.size() + line.size() <= line_max_size) {
         line.append(word+delim);
@@ -57,8 +43,8 @@ bool Canvas::add_if_fit (const std::string& word, std::string& line, std::size_t
     return false;
 }
 
-void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
-                      char prefill_char, bool postfill, char postfill_char, bool centered, std::size_t rw_span) {
+void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset, bool centered,
+                      bool prefill, char prefill_char, bool postfill, char postfill_char, std::size_t rw_span) {
     std::size_t pos = 0;
     std::string line;
     for (std::size_t i = 0 ; i < rw_span && pos < str.size(); ++i, pos += line.size()) {
@@ -72,8 +58,12 @@ void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset
 
 }
 
-void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset, bool prefill,
-                      char prefill_char, bool postfill, char postfill_char, bool centered, std::size_t rw_span) {
+void Canvas::fill_rowspan_withfill_ww(std::size_t rw, const std::string& str, std::size_t rw_span) {
+    fill_row_word_wrapping(rw,str,0,false,true,' ',true,' ',rw_span);
+}
+
+void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset, bool centered,
+                                    bool prefill, char prefill_char, bool postfill, char postfill_char, std::size_t rw_span) {
     std::stringstream ss_str(str);
     std::string word;
     std::string delim(" ");
@@ -109,6 +99,13 @@ void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std:
         debug_println(BIT0,"Stringstream being read with word wrapping is not good");
     }
     endwhile:;
+}
+
+void Canvas::apply_text(const Text& text) {
+    const std::string& str = text.get_text();
+    fill_rowspan_withfill_ww(0,str,rows);
+    fill_row_word_wrapping(rows-text_subtitle_y_offset,text.get_subtitle(),0,true);
+    fill_row_word_wrapping(rows-text_enter_hint_y_offset,UI::TEXT_ENTER_HINT,0,true);
 }
 
 void Canvas::apply_menu(const Menu& ref) {
@@ -186,7 +183,7 @@ void Canvas::apply_battle_intro(const Battle& battle) {
     const Entity& enemy = battle.get_enemy_entity(0);
     matrix.fill_row(player_trash_talk_y_offset,ally.get_name(),player_trash_talk_x_offset);
     matrix.fill_row(player_trash_talk_y_offset+1,("\""+ally.get_trash_talk()+"\""),player_trash_talk_x_offset);
-    matrix.fill_row(calculate_y_middle(),"VS",2,calculate_x_middle(2));
+    fill_row(calculate_y_middle(),"VS",0,true);
     matrix.fill_row(rows-2,"Press ENTER to continue",23,calculate_x_middle(23));
     matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name(),cols-1-enemy_trash_talk_x_offset-enemy.get_name().size());
     matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\""),cols-1-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
@@ -198,30 +195,52 @@ void Canvas::apply_battle_fight(const Battle& battle) {
     const Entity& enemy = battle.get_enemy_entity(0);
     const Entity& player = battle.get_party_entity(0);
 
+    std::string whosturn = battle.get_current_entity().get_name() + UI::WHOSTURN;
+    fill_row(entity_name_turn_y_offset,whosturn,0,true);
     std::string enemy_str = (enemy.get_name() + "HP["+std::to_string(enemy.get_hp())+"]");
     matrix.fill_row(party_name_y_offset,' ');
     matrix.fill_row(party_name_y_offset,enemy_str,cols-enemy.get_name().size()-party_name_x_offset-7); // Minus 7 for hp bracket
     std::string player_str = (player.get_name() + "HP["+std::to_string(player.get_hp())+"]");
     matrix.fill_row(party_name_y_offset,player_str,party_name_x_offset);
 
-    apply_partial_menu(battle.get_current_menu(),battle_menu_x_offset,battle_menu_y_offset+delim_row);
+    if (battle.turn == PARTY_TURN) {
+        apply_partial_menu(battle.get_current_menu(),battle_menu_x_offset,battle_menu_y_offset+delim_row);
+    }
+    else {
+        set_rows(delim_row+battle_menu_y_offset,rows,' ');
+        fill_row(delim_row+battle_menu_y_offset,UI::ENEMYSTURN);
+    }
 }
 
 void Canvas::apply_battle_action(const Battle& battle) {
     std::size_t action_row = calculate_y_middle()+battle_delimiter_y_offset-battle_action_row_span;
     std::string action = battle.get_last_action();
     debug_println(BIT0, "Action size: " << action.size());
-    //std::size_t x_col = calculate_x_middle(action.size());
-    fill_row_word_wrapping(action_row,action,0,true,' ',true,' ',false,battle_action_row_span);
+    fill_row_word_wrapping(action_row,action,0,false,true,' ',true,' ',battle_action_row_span);
 }
 
 void Canvas::clear_row(std::size_t row) {
-    matrix.fill_row(row,'\0');
+    set_canvas(row,row+1,'\0',0,cols);
 }
 
 void Canvas::clear_canvas() {
-    for(unsigned int i = 0; i < matrix.get_rows(); ++i) {
-        matrix.fill_row(i,'\0');
+    set_canvas(0,rows,'\0',0,cols);
+}
+
+void Canvas::set_rows(std::size_t begin,std::size_t end, char ch) {
+    set_canvas(begin,end,ch,0,cols);
+}
+
+void Canvas::set_canvas(std::size_t begin,std::size_t end, char ch, std::size_t col_begin, std::size_t col_end) {
+    if (begin > end || end > rows)
+        throw std::out_of_range("set_canvas: row_begin " + std::to_string(begin) +
+                                " or row_end " + std::to_string(end) + " is out of range. Total rows in canvas: " + std::to_string(rows));
+    else if (col_begin > col_end || col_end > cols)
+        throw std::out_of_range("set_canvas: col_begin " + std::to_string(begin) +
+                                " or col_end " + std::to_string(end) + " is out of range. Total columns in canvas: " + std::to_string(cols));
+    for(std::size_t i = begin; i < end; ++i) {
+        debug_println(BIT2,"Clearing matrix at row " << i);
+        matrix.fill_row(i,ch,col_end-col_begin,col_begin);
     }
 }
 

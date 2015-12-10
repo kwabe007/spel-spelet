@@ -80,19 +80,22 @@ namespace UI {
         std::cout << std::endl << "\r";
 	}
 
-    Scene* play_scene(Scene& scene) {
+    SceneFlow play_scene(Scene& scene) {
+        debug_println(BIT0,"Playing scene");
+        SceneFlow flow = SCENE_FLOW_NORMAL;
         if(scene.is_set_text()) show_text(scene.get_text());
         if(scene.is_set_menu()) present_menu(scene.get_menu());
-        if(scene.is_set_world()) {play_world(scene.get_world());}
-
-        return &scene;
+        if(scene.is_set_world()) {
+            play_world(scene.get_world());
+        }
+        return flow;
     }
 
     void show_text(const Text& text) {
         flush_and_clear();
         char choice;
         while (true) {
-            //cvs.apply_text(text);
+            cvs.apply_text(text);
             print_canvas();
             choice = get_char();
             switch(choice){
@@ -142,7 +145,6 @@ namespace UI {
         }
 
         EndWhile:
-        //std::cout << "choice " << menu.get_selected();
         if (sub) {
             flush_screen();
             cvs.clear_canvas();
@@ -206,10 +208,10 @@ namespace UI {
                 Entity& chosen_entity(area.get_entity(fightmenu.get_selected()));
                 Battle battle(chosen_entity);
                 battle_intro(battle);
-                int outcome = play_battle(battle);
-                if (outcome == -1) {
+                BattleOutcome outcome = play_battle(battle);
+                if (outcome == BATTLE_OUTCOME_PARTY_WIN) {
                 }
-                if (outcome == 1) {
+                if (outcome == BATTLE_OUTCOME_ENEMY_WIN) {
                 }
                 flush_screen();
                 cvs.clear_canvas();
@@ -247,40 +249,55 @@ namespace UI {
         ;
     }
 
-    int play_battle(Battle& battle) {
-        flush_screen();
-        cvs.clear_canvas();
+    BattleOutcome play_battle(Battle& battle) {
+        flush_and_clear();
         char choice;
         Menu& current_menu = battle.get_current_menu();
-        int battlestate = 0;
+        BattleOutcome battlestate = BATTLE_OUTCOME_UNDECIDED;
 
         while (true) {
             cvs.apply_battle_fight(battle);
             print_canvas();
 
+            choice = get_char();
             if (battle.turn == ENEMY_TURN) {
-                battlestate = battle.enemy_action();
-                //cvs.apply_battle_fight(battle);
-                //print_canvas();
-                sleep(2000);
-                cvs.apply_battle_action(battle);
-                print_canvas();
+                switch(choice){
+                case COMMAND_ENTER:
+                case COMMAND_SPACE:
+                    battlestate = battle.enemy_action();
+                    break;
+                }
             } else if (battle.turn == PARTY_TURN) {
-                choice = get_char();
                 switch(choice){
                 case COMMAND_ENTER:
                 case COMMAND_SPACE:
                     current_menu.run_function();
                     battle.back_to_main_menu();
                     battlestate = battle.party_action();
-                    cvs.apply_battle_action(battle);
-                    print_canvas();
                     break;
                 default : //Optional
                     ;
                 }
             }
-            if (battlestate != 0) {
+            cvs.apply_battle_action(battle);
+            if (battlestate != BATTLE_OUTCOME_UNDECIDED) {
+                std::string outcome_str;
+                cvs.apply_battle_fight(battle);
+                print_canvas();
+                get_char();
+                switch (battlestate) {
+                case BATTLE_OUTCOME_ENEMY_WIN:
+                    outcome_str = UI::TEXT_PARTY_DEFEAT;
+                    break;
+                case BATTLE_OUTCOME_PARTY_WIN:
+                    outcome_str = UI::TEXT_ENEMY_DEFEAT + " " + battle.get_enemy_entity(0).get_name();
+                    break;
+                default:
+                    outcome_str = UI::TEXT_NONE_DEFEAT;
+                    break;
+                }
+                Text outcome_text(outcome_str, "");
+                show_text(outcome_text);
                 goto EndWhile;
             }
         }
@@ -294,7 +311,6 @@ namespace UI {
             std::cout << cvs[i];
             if(i < cvs.get_rows()-1) std::cout << std::endl << "\r";
         }
-        //std::cout << ANSI_MOVE_UP;
     }
 
     void flush_screen(){
@@ -304,7 +320,6 @@ namespace UI {
             std::cout << empty.c_str();
             if(i < TERMINAL_ROWS-1) std::cout << std::endl << "\r";
         }
-        //std::cout << ANSI_MOVE_UP;
     }
 
     void flush_and_clear() {
@@ -326,13 +341,17 @@ namespace UI {
 
     void set_buffer_mode(int i) {
         if (i == 0) {
+            debug_print(BIT0,"Setting buffer mode to raw...");
             system ("/bin/stty raw -echo");
             MODE = UNBUFFERED;
+            debug_println(BIT0," buffer mode set to raw");
         }
 
         else if (i == 1) {
+            debug_print(BIT0,"Setting buffer mode to buffered...");
             system ("/bin/stty cooked echo");
             MODE = BUFFERED;
+            debug_println(BIT0," buffer mode set to buffered");
         }
     }
 

@@ -15,19 +15,6 @@ Area::~Area(){
     }*/
 }
 
-/*Area::Area(const Area& ref) : next_area_vec{ref.next_area_vec},
-extra_area_vec{ref.extra_area_vec}, name{ref.name}, description{ref.description} {
-}
-
-Area& Area::operator=(const Area& ref) {
-    next_area_vec = ref.next_area_vec;
-    extra_area_vec = ref.extra_area_vec;
-    name = ref.name;
-    description = ref.description;
-    return *this;
-}*/
-
-
 std::string Area::get_name() const {
     return name;
 }

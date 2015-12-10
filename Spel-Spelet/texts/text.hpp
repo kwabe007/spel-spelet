@@ -17,7 +17,9 @@ private:
 public:
     Text();
     Text(const std::string& filename);
+    Text(const std::string& str, const std::string& sub);
     bool is_time_printed() const;
     std::string get_text() const;
+    std::string get_subtitle() const;
 };
 #endif

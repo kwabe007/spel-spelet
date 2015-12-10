@@ -19,7 +19,9 @@
 
 /* BITS
  * 0 - GENERAL
- * 1 - ASSIGNMENTS
+ * 1 - UI
+ * 2 - CANVAS
+ *
  */
 
 /* TODO:
@@ -31,7 +33,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 3;
+unsigned int GLOBAL_DEBUG_BITS = 7;
 ofstream ERR_FS("errlog");
 
 
@@ -96,11 +98,17 @@ signal(SIGSEGV, handler);
     vec.push_back(&scene);
     vec.push_back(&scene2);
     vec.push_back(&scene3);
+    debug_println(BIT0,"Pushed back the scenes");
 
     UI::set_buffer_mode(0);
-    vector<Scene*>::iterator it;
-    for(it = vec.begin();it < vec.end();++it) {
-        UI::play_scene(**it);
+    vector<Scene*>::iterator it = vec.begin();
+    while(it < vec.end()) {
+        SceneFlow flow = UI::play_scene(**it);
+        if (flow == SCENE_FLOW_STOP) {
+            it = vec.begin();
+        } else {
+            ++it;
+        }
     }
 
     //UI::present_menu(mainmenu);

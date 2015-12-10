@@ -5,7 +5,13 @@
 #include "menus/menu.hpp"
 #include "areas/world.hpp"
 
+enum SceneFlow {
+    SCENE_FLOW_NORMAL,
+    SCENE_FLOW_STOP,
+};
+
 class Scene {
+
 private:
     std::string text;
     Menu* menu_ptr = nullptr;

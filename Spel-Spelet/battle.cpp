@@ -23,6 +23,18 @@ const Entity& Battle::get_current_enemy() const {
     return *enemy_party[enemy_turn_index];
 }
 
+Entity& Battle::get_current_entity() {
+    if (turn == PARTY_TURN)
+        return *main_party[party_turn_index];
+    return *enemy_party[enemy_turn_index];
+}
+
+const Entity& Battle::get_current_entity() const {
+    if (turn == PARTY_TURN)
+        return *main_party[party_turn_index];
+    return *enemy_party[enemy_turn_index];
+}
+
 Entity& Battle::get_target_party() {
     return *main_party[target_party_index];
 }
@@ -60,20 +72,20 @@ std::pair<bool, int> Battle::attack(Entity& attacker, Entity& target) {
     return attacker.attack(target);
 }
 
-int Battle::party_action() {
+BattleOutcome Battle::party_action() {
     std::pair<bool, int> stats = attack(get_current_party(),get_target_enemy());
     set_latest_action(get_current_party(),ACTION_TYPE_ATTACK,get_target_enemy(),stats);
     switch_turn();
-    if (enemies_alive() == 0) return true;
-    return false;
+    if (enemies_alive() == 0) return BATTLE_OUTCOME_PARTY_WIN;
+    return BATTLE_OUTCOME_UNDECIDED;
 }
 
-int Battle::enemy_action() {
+BattleOutcome Battle::enemy_action() {
     set_latest_action(get_current_enemy(),ACTION_TYPE_ATTACK,get_target_party(),
                       attack(get_current_enemy(),get_target_party()));
     switch_turn();
-    if (partymems_alive() == 0) return true;
-    return false;
+    if (partymems_alive() == 0) return BATTLE_OUTCOME_ENEMY_WIN;
+    return BATTLE_OUTCOME_UNDECIDED;
 }
 
 std::size_t Battle::partymems_alive() const {

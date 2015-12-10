@@ -39,6 +39,13 @@ namespace UI  {
     static const unsigned char BATTLE_DELIMITER('_');
     static const unsigned char CONTROL_DELIMITER('-');
 
+    static const std::string TEXT_ENTER_HINT("Press ENTER");
+    static const std::string TEXT_PARTY_DEFEAT ("YOU DEAD");
+    static const std::string TEXT_ENEMY_DEFEAT("YOU DEFEATED");
+    static const std::string TEXT_NONE_DEFEAT("BATTLE ENDED UNDECIDED");
+    static const std::string WHOSTURN("'s turn");
+    static const std::string ENEMYSTURN("Enemy's turn");
+
     static const unsigned int TERMINAL_COLS = 80;
     static const unsigned int TERMINAL_ROWS = 24;
 
@@ -59,13 +66,13 @@ namespace UI  {
 
     char get_char();
 
-    Scene* play_scene(Scene& scene);
+    SceneFlow play_scene(Scene& scene);
     void show_text(const Text& text);
     void present_menu(const Menu& menu, bool sub = false);
     void play_world(World& area);
     void play_area(Area& area);
     void battle_intro(const Battle& battle);
-    int play_battle(Battle& battle);
+    BattleOutcome play_battle(Battle& battle);
 
     void print_canvas();
     void flush_screen();

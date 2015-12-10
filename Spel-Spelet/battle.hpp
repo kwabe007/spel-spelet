@@ -7,6 +7,11 @@
 #include "menus/menu.hpp"
 
 
+enum BattleOutcome {
+    BATTLE_OUTCOME_UNDECIDED,
+    BATTLE_OUTCOME_PARTY_WIN,
+    BATTLE_OUTCOME_ENEMY_WIN
+};
 
 enum BattleState {
     ENEMY_TURN,
@@ -45,8 +50,8 @@ public:
     Battle(Entity& enemy);
 
     std::pair<bool, int> attack(Entity& attacker, Entity& target);
-    int party_action();
-    int enemy_action();
+    BattleOutcome party_action();
+    BattleOutcome enemy_action();
     std::size_t partymems_alive() const;
     std::size_t enemies_alive() const;
 
@@ -59,6 +64,8 @@ public:
     Menu& get_current_menu();
     const Menu& get_current_menu() const;
     std::string get_last_action() const;
+    Entity& get_current_entity();
+    const Entity& get_current_entity() const;
 
 
 };

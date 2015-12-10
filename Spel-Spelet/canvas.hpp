@@ -6,6 +6,7 @@
 #include "menus/menu.hpp"
 #include "areas/area.hpp"
 #include "battle.hpp"
+#include "texts/text.hpp"
 
 
 class Canvas {
@@ -43,17 +44,26 @@ private:
     std::size_t party_name_x_offset = 2;
     std::size_t party_name_y_offset = 2;
     std::size_t battle_action_row_span = 2;
+    std::size_t entity_name_turn_y_offset = 0;
+    std::size_t text_y_offset = 1;
+    std::size_t text_subtitle_y_offset = 3;
+    std::size_t text_enter_hint_y_offset = 1;
 
     
     Matrix matrix;
 
     std::size_t calculate_x_middle(std::size_t len);
     std::size_t calculate_y_middle(std::size_t len = 0);
-    void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0, bool prefill = true, char prefill_char = ' ',
-                  bool postfill = true, char postfill_char = ' ', bool centered = false, std::size_t rw_span = 1);
-    void fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset = 0, bool prefill = true, char prefill_char = ' ',
-                                bool postfill = true, char postfill_char = ' ', bool centered = false, std::size_t rw_span = 1);
+    void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
+                  char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
+    void fill_rowspan_withfill_ww(std::size_t rw, const std::string& str,std::size_t rw_span);
+    void fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
+                                char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
     bool add_if_fit(const std::string& word, std::string& line, std::size_t line_max_size, const std::string& delim);
+
+    void set_rows(std::size_t begin,std::size_t end, char ch);
+    void clear_row(std::size_t row);
+    void set_canvas(std::size_t begin,std::size_t end, char ch, std::size_t col_begin, std::size_t col_end);
 
 public:
     Canvas();
@@ -63,14 +73,16 @@ public:
     ~Canvas();
 
     //void apply_text(const Text& text);
+    void apply_text (const Text& text);
     void apply_menu(const Menu& ref);
     void apply_partial_menu(const Menu& ref, std::size_t x_pos, std::size_t y_pos, std::size_t x_span=0, std::size_t y_span=0);
     void apply_area(const Area& ref);
     void apply_battle_intro(const Battle& battle);
     void apply_battle_fight(const Battle& battle);
     void apply_battle_action(const Battle& battle);
-    void clear_row(std::size_t row);
+
     void clear_canvas();
+
 
     //void fill_row(std::size_t rw, char* ref);
     std::size_t get_rows()const;
