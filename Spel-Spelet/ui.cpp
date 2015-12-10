@@ -166,8 +166,7 @@ namespace UI {
     }
 
     void play_area(Area& area) {
-        flush_screen();
-        cvs.clear_canvas();
+        flush_and_clear();
 
         char choice;
         while (true) {
@@ -197,14 +196,14 @@ namespace UI {
                     Entity& entity(area.get_entity(i));
                     fightmenu.add_item(entity.get_name(), entity.get_description());
                 }
-                fightmenu.add_item("Go Back", "Return", FLOW_BACK);
-                //fightmenu.add_back();
+                fightmenu.add_back();
                 present_menu(fightmenu, true);
+                debug_println(BIT1,"Selected :" << fightmenu.get_selected() << " flow of selected: " << fightmenu.get_flow_of_selected()
+                              << " flow_back: " << FLOW_BACK);
                 if (fightmenu.get_flow_of_selected() == FLOW_BACK){
                     flush_and_clear();
                     continue;
                 }
-                //extern Entity PLAYER;
                 Entity& chosen_entity(area.get_entity(fightmenu.get_selected()));
                 Battle battle(chosen_entity);
                 battle_intro(battle);
@@ -216,6 +215,11 @@ namespace UI {
                 flush_screen();
                 cvs.clear_canvas();
                 break;
+            }
+            case COMMAND_TALK: {
+                const Menu& talk_menu = area.get_talk_menu();
+                present_menu(talk_menu, true);
+                flush_and_clear();
             }
                 break;
 

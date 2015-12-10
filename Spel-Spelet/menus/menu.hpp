@@ -104,27 +104,23 @@ class Menu {
 
         public:
         MenuItem(){}
-        MenuItem(const std::string name, const std::string desc, MenuFlow fl = FLOW_FORWARD) : functionobject{FUNCTION_NONE} {
-            flow = fl;
+        MenuItem(const std::string& name, const std::string& desc, MenuFlow fl = FLOW_FORWARD,
+                 FunctionType f_type = FUNCTION_NONE, std::size_t* init_val = nullptr, std::size_t set_val = 0,
+                 Menu* submenu = nullptr) {
+            switch (f_type) {
+            case FUNCTION_INTEGRAL:
+                functionobject = FunctionObject(init_val,set_val);
+                break;
+            default:
+                functionobject = FunctionObject(f_type);
+            }
+
             repr_strings[0] = name;
             repr_strings[1] = desc;
-        }
-        MenuItem(const std::string name, const std::string desc, std::size_t* init_val, std::size_t set_val, MenuFlow fl = FLOW_FORWARD) : functionobject{init_val,set_val} {
             flow = fl;
-            repr_strings[0] = name;
-            repr_strings[1] = desc;
+            nextmenu = submenu;
         }
-        MenuItem(const std::string name, const std::string desc, FunctionType type, MenuFlow fl = FLOW_FORWARD) : functionobject{type} {
-            flow = fl;
-            repr_strings[0] = name;
-            repr_strings[1] = desc;
-        }
-        MenuItem(const std::string name, const std::string desc, Menu& submenu, MenuFlow fl = FLOW_FORWARD) : functionobject{}{
-            flow = fl;
-            repr_strings[0] = name;
-            repr_strings[1] = desc;
-            nextmenu = &submenu;
-        }
+
         std::string get_name() const {
             return repr_strings[0];
         }
@@ -139,8 +135,6 @@ class Menu {
     std::vector<MenuItem> items;
     std::string name = "none";
     std::string description = "nondescript";
-    //MenuAction noaction(this);
-    //MenuItem none("Back","",noaction);
 
     public:
 
@@ -153,10 +147,10 @@ class Menu {
     Menu& operator=(const Menu& ref);
     std::string operator[](std::size_t index)const;
 
-    int add_item(const std::string name, const std::string desc, MenuFlow flow = FLOW_FORWARD);
-    int add_item(const std::string name, const std::string desc, Menu& submenu);
-    int add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to);
-    int add_item(const std::string name, const std::string desc, FunctionType type);
+    int add_item(const std::string& name, const std::string& desc, Menu& submenu);
+    int add_item(const std::string& name, const std::string& desc, MenuFlow flow = FLOW_FORWARD,
+                 FunctionType f_type = FUNCTION_NONE, std::size_t* init_val = nullptr, std::size_t set_val = 0,
+                 Menu* submenu = nullptr);
 
     int add_back();
 

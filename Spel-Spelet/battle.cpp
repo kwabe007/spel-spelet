@@ -4,7 +4,7 @@
 #include "items/weapon.hpp"
 
 Battle::Battle(Entity& enemy) : main_party{1,&PLAYER}, enemy_party{1,&enemy},select_enemy_menu{"Who do you want attack?"} {
-    select_enemy_menu.add_item(enemy.get_name(),"Keff",&target_enemy_index,0);
+    select_enemy_menu.add_item(enemy.get_name(),"Enemy",FLOW_FORWARD,FUNCTION_INTEGRAL,&target_enemy_index,0);
 }
 
 Entity& Battle::get_current_party() {

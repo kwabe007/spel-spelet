@@ -33,7 +33,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 7;
+unsigned int GLOBAL_DEBUG_BITS = 3;
 ofstream ERR_FS("errlog");
 
 
@@ -65,10 +65,10 @@ signal(SIGSEGV, handler);
 
     Scene scene;
     Menu mainmenu("Main Menu");
-    mainmenu.add_item("New Game", "this is option 1");
-    mainmenu.add_item("Load", "this is option 2");
-    mainmenu.add_item("Help", "this is option 3");
-    mainmenu.add_item("Exit", "this is option 4", FUNCTION_EXIT);
+    mainmenu.add_item("New Game","this is option 1");
+    mainmenu.add_item("Load","this is option 2");
+    mainmenu.add_item("Help","this is option 3");
+    mainmenu.add_item("Exit","this is option 4",FLOW_BACK,FUNCTION_EXIT);
     scene.set_menu(mainmenu);
 
     Scene scene2;

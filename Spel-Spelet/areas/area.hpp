@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "../entities/entity.hpp"
+#include "../menus/menu.hpp"
 
 enum Direction {
     DIRECTION_NONE = -1,
@@ -21,6 +22,7 @@ class Area {
 private:
     std::string name;
     std::string description;
+    Menu* talk_menu_ptr = nullptr;
 
     std::vector<Entity*> entity_vec;
     //std::vector<Objects*> stuff;
@@ -37,6 +39,7 @@ public:
     std::size_t get_entity_size() const;
     Entity& get_entity(std::size_t index);
     const Entity& get_entity(std::size_t index) const;
+    const Menu& get_talk_menu();
 
     void set_name(const std::string& str);
     void set_description(const std::string& str);
@@ -45,7 +48,6 @@ public:
     void reset_direction();
 
     ~Area();
-    //void initiate_fight();
 
 };
 

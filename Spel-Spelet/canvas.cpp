@@ -151,7 +151,7 @@ void Canvas::apply_area(const Area& ref) {
     std::size_t west_x = area_controls_x_offset;
 
     //Fill in fight hint
-    matrix.fill_row(rows-1-fight_hint_y_offset,UI::FIGHT_HINT,cols-1-fight_hint_x_offset-UI::FIGHT_HINT.size());
+    matrix.fill_row(rows-1-fight_hint_y_offset,UI::HINT_FIGHT,cols-1-fight_hint_x_offset-UI::HINT_FIGHT.size());
 
     //Filling in area controls with given positions
     matrix.fill_row(north_y, UI::CONTROL_NORTH, north_x);
@@ -197,11 +197,12 @@ void Canvas::apply_battle_fight(const Battle& battle) {
 
     std::string whosturn = battle.get_current_entity().get_name() + UI::WHOSTURN;
     fill_row(entity_name_turn_y_offset,whosturn,0,true);
-    std::string enemy_str = (enemy.get_name() + "HP["+std::to_string(enemy.get_hp())+"]");
-    matrix.fill_row(party_name_y_offset,' ');
-    matrix.fill_row(party_name_y_offset,enemy_str,cols-enemy.get_name().size()-party_name_x_offset-7); // Minus 7 for hp bracket
-    std::string player_str = (player.get_name() + "HP["+std::to_string(player.get_hp())+"]");
-    matrix.fill_row(party_name_y_offset,player_str,party_name_x_offset);
+    std::string enemy_str = (enemy.get_name() + " HP["+std::to_string(enemy.get_hp())+"]");
+    std::string player_str = (player.get_name() + " HP["+std::to_string(player.get_hp())+"]");
+    fill_row(party_name_y_offset,player_str,party_name_x_offset);
+    fill_row(party_name_y_offset,enemy_str,cols-enemy.get_name().size()-party_name_x_offset-7,false,false); // Minus 7 for hp bracket
+
+
 
     if (battle.turn == PARTY_TURN) {
         apply_partial_menu(battle.get_current_menu(),battle_menu_x_offset,battle_menu_y_offset+delim_row);

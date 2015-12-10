@@ -24,6 +24,7 @@ namespace UI  {
     static const unsigned char COMMAND_RIGHT = 'd';
     static const unsigned char COMMAND_SPACE = ' ';
     static const unsigned char COMMAND_FIGHT = 'f';
+    static const unsigned char COMMAND_TALK = 't';
     static const unsigned char COMMAND_INVENTORY = 'i';
     static const unsigned char COMMAND_ENTER = 13;
     static const unsigned char COMMAND_TERMINATE = 3;
@@ -33,7 +34,8 @@ namespace UI  {
     static const std::string CONTROL_SOUTH ("go S");
     static const std::string CONTROL_WEST ("go W");
 
-    static const std::string FIGHT_HINT("F = Fight");
+    static const std::string HINT_FIGHT("F = Fight");
+    static const std::string HINT_TALK("T = Talk");
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
     static const unsigned char BATTLE_DELIMITER('_');

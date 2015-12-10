@@ -16,34 +16,22 @@ std::string Menu::operator[](std::size_t index)const {
     return items[index].repr_strings[0];
 }
 
-int Menu::add_item(const std::string name, const std::string desc, MenuFlow flow){
-    items.push_back(MenuItem(name,desc,flow));
+int Menu::add_back() {
+    add_item("Back","Return",FLOW_BACK);
     return 0;
 }
 
-int Menu::add_item(const std::string name, const std::string desc, Menu& submenu){
-    items.push_back(MenuItem(name,desc,submenu));
+int Menu::add_item(const std::string& name, const std::string& desc, Menu& submenu) {
+    add_item(name,desc,FLOW_FORWARD,FUNCTION_NONE,nullptr,0,&submenu);
     return 0;
 }
 
-int Menu::add_item(const std::string name, const std::string desc, std::size_t* target_val, std::size_t set_to){
-    items.push_back(MenuItem(name,desc,target_val,set_to));
+int Menu::add_item(const std::string& name, const std::string& desc, MenuFlow flow,
+                   FunctionType f_type, std::size_t* init_val, std::size_t set_val,
+                   Menu* submenu) {
+    items.push_back(MenuItem(name,desc,flow,f_type,init_val,set_val,submenu));
     return 0;
 }
-
-int Menu::add_item(const std::string name, const std::string desc, FunctionType type) {
-    items.push_back(MenuItem(name,desc,type));
-    return 0;
-}
-
-/*int Menu::add_back() {
-    MenuItem new_item("Back","Return",&selected_item,);
-    if (size < capacity )items[size]= new_item;
-    else return -1;
-    items[size] = new_item;
-    ++size;
-    return 0;
-}*/
 
 void Menu::clear(){
     items.clear();
@@ -82,11 +70,6 @@ void Menu::run_function() {
 void Menu::run_function() const {
     items[selected_item].functionobject();
 }
-
-/*Menu* Menu::run_function(std::size_t index){
-    items[index].functionobject();
-    return items[index].nextmenu;
-}*/
 
 std::size_t Menu::get_size() const {
     return items.size();

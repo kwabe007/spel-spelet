@@ -10,9 +10,9 @@ Area::Area(const std::string nm, const std::string desc) : name{nm}, description
 }
 
 Area::~Area(){
-    /*for (Object* o : stuff){
-        delete o;
-    }*/
+    if (talk_menu_ptr) {
+        delete talk_menu_ptr;
+    }
 }
 
 std::string Area::get_name() const {
@@ -32,6 +32,19 @@ Entity& Area::get_entity(std::size_t index) {
 
 const Entity& Area::get_entity(std::size_t index) const {
     return *entity_vec[index];
+}
+
+const Menu& Area::get_talk_menu() {
+    if (talk_menu_ptr) {
+        delete talk_menu_ptr;
+    }
+    talk_menu_ptr = new Menu("Who do you want to talk to?");
+    for (std::size_t i = 0; i < entity_vec.size();++i) {
+        const Entity& entity = *entity_vec[i];
+        talk_menu_ptr->add_item(entity.get_name(),entity.get_description());
+    }
+    talk_menu_ptr->add_back();
+    return *talk_menu_ptr;
 }
 
 void Area::set_name(const std::string& str) {
