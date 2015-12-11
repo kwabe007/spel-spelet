@@ -77,7 +77,7 @@ signal(SIGSEGV, handler);
                 Human luffare;
             room.add_entity(luffare);
             Building secondroom("Hötorget", "You're at the marketplace but watch out for junkies");
-                Human pundare(RES_PATH+"units/pundare");
+                Human pundare(CONF.get_path_resource("junkie"));
             secondroom.add_entity(pundare);
         firstworld.add_area(room);
         firstworld.add_area(secondroom);

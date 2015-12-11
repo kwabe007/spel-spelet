@@ -1,7 +1,7 @@
 #include "human.hpp"
 #include "../conf.hpp"
 #include "../debug/debugmacro.h"
-Human PLAYER(RES_PATH+"units/player");
+Human PLAYER(CONF.get_path_resource()+"units/player");
 
 Human::Human() {
 }
@@ -12,7 +12,7 @@ Human::Human(const std::string& filename) : Organic(filename) {
 }
 
 Weapon Human::get_unarmored_weapon() const {
-        Weapon unarmored_weapon = Weapon(RES_PATH + "weapons/fists");
+        Weapon unarmored_weapon = Weapon(CONF.get_path_resource("fists"));
         return unarmored_weapon;
 }
 

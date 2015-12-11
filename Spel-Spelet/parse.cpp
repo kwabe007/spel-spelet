@@ -78,7 +78,7 @@ namespace tools{
 
     std::string read_file(const std::string& filename) {
 		std::string text;
-        std::ifstream file(RES_PATH + filename);
+        std::ifstream file(CONF.get_path_resource() + filename);
 
         if (!file.good()) {
             throw FileException("File '" + filename + "' not found or is empty");
@@ -93,7 +93,7 @@ namespace tools{
 
     std::string read_line(const std::string& filename) {
         std::string text;
-        std::ifstream file(RES_PATH + filename);
+        std::ifstream file(CONF.get_path_resource() + filename);
 
         if (!file.good()) {
             throw FileException("File '" + filename + "' not found or is empty");

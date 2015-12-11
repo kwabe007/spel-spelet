@@ -105,7 +105,7 @@ std::pair<bool, int> Entity::take_damage(int damage) {
 std::pair<bool, int> Entity::attack (Entity& other) {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(DAMAGE_VAR_LOW,DAMAGE_VAR_HIGH);
+    std::uniform_int_distribution<> dis(CONF.get_damage_var_low(),CONF.get_damage_var_high());
     int var = dis(gen);
     int damage = 0;
     if (ap + var >= 0)

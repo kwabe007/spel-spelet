@@ -1,6 +1,6 @@
 Human created from file 'res/eng/units/player' name: Pjotr Thorsson description: Rakad Alban trash_talk: DE E DAGS' ap: 15 dp: 5 hp: 80 mp: 10
 testing1,2
-Human created from file 'res/eng/units/pundare' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
 deny warcrime
 
 Pushed back the scenes
@@ -9,72 +9,48 @@ Playing scene
 Size of line: 16 Calculated middle: 31
 Pressed key: 13
 Playing scene
-Pressed key: 116
+Pressed key: 115
+Pressed key: 102
 Size of line: 5 Calculated middle: 37
 Pressed key: 13
-First word from stringstream: 'I'
+Selected :0 flow of selected: 0 flow_back: 1
+Size of line: 2 Calculated middle: 38
+Pressed key: 13
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
 End of stringstream reached, delimiter set to blank
-Writing line 'I have nothing to say' to canvas matrix
+Writing line 'Pjotr Thorsson attacks Riksluffare with Fists Dealing damage: 15' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Pressed key: 13
+Stats entity attack: 0 7
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Riksluffare'
+End of stringstream reached, delimiter set to blank
+Writing line 'Riksluffare attacks Pjotr Thorsson with Fists Dealing damage: 7' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 1 17
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Riksluffare with Fists Dealing damage: 17' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Pressed key: 13
+First word from stringstream: 'YOU'
+End of stringstream reached, delimiter set to blank
+Writing line 'YOU DEFEATED Riksluffare' to canvas matrix
 First word from stringstream: ''
 End of stringstream reached, delimiter set to blank
 Writing line '' to canvas matrix
 First word from stringstream: 'Press'
 End of stringstream reached, delimiter set to blank
 Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-Pressed key: 13
-Pressed key: 116
-Size of line: 70 Calculated middle: 4
-Pressed key: 13
-First word from stringstream: 'Please,'
-Writing line 'Please, spare some change. I promise it won't not go towards stuff that are not ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'non-drug related.' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
-Pressed key: 100
-Pressed key: 13
-Pressed key: 119
-Pressed key: 13
-Pressed key: 102
-Size of line: 70 Calculated middle: 4
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 70 Calculated middle: 4
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 115
-Size of line: 70 Calculated middle: 4
-Pressed key: 119
-Size of line: 6 Calculated middle: 36
-Pressed key: 115
-Size of line: 70 Calculated middle: 4
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-Selected :1 flow of selected: 1 flow_back: 1
-Pressed key: 115
-Pressed key: 119
-Pressed key: 115
-Pressed key: 100
-Pressed key: 13
-Pressed key: 119
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
-Pressed key: 13
-Pressed key: 119
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
 Pressed key: 13
 Pressed key: 119
 Pressed key: 13
@@ -94,28 +70,12 @@ End of stringstream reached, delimiter set to blank
 Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
 Size of line: 18 Calculated middle: 30
 Pressed key: 13
-Stats entity attack: 0 3
+Stats entity attack: 0 2
 Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
 Action size: 63
 First word from stringstream: 'Junkie'
 End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 14
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 14' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 6
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 6' to canvas matrix
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
 Size of line: 21 Calculated middle: 29
 Pressed key: 13
 Stats entity attack: 0 17
@@ -126,20 +86,36 @@ End of stringstream reached, delimiter set to blank
 Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
 Size of line: 18 Calculated middle: 30
 Pressed key: 13
-Stats entity attack: 0 6
+Stats entity attack: 0 2
 Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
 Action size: 63
 First word from stringstream: 'Junkie'
 End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 6' to canvas matrix
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
 Size of line: 21 Calculated middle: 29
 Pressed key: 13
-Stats entity attack: 1 13
+Stats entity attack: 0 13
 Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
 Action size: 64
 First word from stringstream: 'Pjotr'
 End of stringstream reached, delimiter set to blank
 Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Pressed key: 13
+Stats entity attack: 0 4
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 4' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 1 16
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 16' to canvas matrix
 Size of line: 18 Calculated middle: 30
 Pressed key: 13
 First word from stringstream: 'YOU'
@@ -154,18 +130,12 @@ Writing line 'Press ENTER' to canvas matrix
 Pressed key: 13
 Pressed key: 115
 Pressed key: 13
-Pressed key: 116
+Pressed key: 102
 Size of line: 5 Calculated middle: 37
 Pressed key: 13
-First word from stringstream: 'I'
-End of stringstream reached, delimiter set to blank
-Writing line 'I have nothing to say' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
+Selected :0 flow of selected: 0 flow_back: 1
+Size of line: 2 Calculated middle: 38
 Pressed key: 13
+Size of line: 21 Calculated middle: 29
 Pressed key: 3
 Setting buffer mode to buffered... buffer mode set to buffered

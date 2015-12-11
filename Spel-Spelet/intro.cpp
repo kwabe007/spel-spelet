@@ -14,8 +14,8 @@ int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source f
 namespace intro {
 
 int load_splashes(std::vector<std::string>& tgt_vec){
-	debug(0, "conf::splc set to %d", conf::splc);
-	for (int i = 0; i < conf::splc; ++i) {
+    debug(0, "conf::splc set to %d", 0);
+    for (int i = 0; i < 0; ++i) {
 		char filepath[100] = "splash/$";
 		filepath[strlen(filepath) - 1] = '0' + i;
 		strncat(filepath, ".spl", 5);
