@@ -103,7 +103,7 @@ void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std:
 
 void Canvas::apply_text(const Text& text) {
     const std::string& str = text.get_text();
-    fill_rowspan_withfill_ww(0,str,rows);
+    fill_rowspan_withfill_ww(text_y_offset,str,rows);
     fill_row_word_wrapping(rows-text_subtitle_y_offset,text.get_subtitle(),0,true);
     fill_row_word_wrapping(rows-text_enter_hint_y_offset,UI::TEXT_ENTER_HINT,0,true);
 }
@@ -120,6 +120,9 @@ void Canvas::apply_menu(const Menu& ref) {
     }
     matrix.fill_row(menu_title_y_offset,ref.get_name(),menu_title_x_offset);
     matrix.fill_row(menu_title_y_offset+1,UI::MENU_DELIMITER);
+
+    fill_row(rows-menu_item_description_row_span-menu_item_description_y_offset,
+             ref.get_description_of_selected(),0,true,true,' ',true,' ',menu_item_description_row_span);
 }
 
 void Canvas::apply_partial_menu(const Menu& menu, std::size_t x_pos, std::size_t y_pos, std::size_t x_span, std::size_t y_span) {
@@ -150,8 +153,9 @@ void Canvas::apply_area(const Area& ref) {
     std::size_t west_y = rows-1-area_controls_y_offset-2;
     std::size_t west_x = area_controls_x_offset;
 
-    //Fill in fight hint
-    matrix.fill_row(rows-1-fight_hint_y_offset,UI::HINT_FIGHT,cols-1-fight_hint_x_offset-UI::HINT_FIGHT.size());
+    //Fill in fight and talk hints
+    matrix.fill_row(rows-1-hint_fight_y_offset,UI::HINT_FIGHT,cols-hint_fight_x_offset-UI::HINT_FIGHT.size());
+    fill_row(rows-1-hint_talk_y_offset,UI::HINT_TALK,cols-hint_fight_x_offset-UI::HINT_FIGHT.size());
 
     //Filling in area controls with given positions
     matrix.fill_row(north_y, UI::CONTROL_NORTH, north_x);
@@ -185,8 +189,8 @@ void Canvas::apply_battle_intro(const Battle& battle) {
     matrix.fill_row(player_trash_talk_y_offset+1,("\""+ally.get_trash_talk()+"\""),player_trash_talk_x_offset);
     fill_row(calculate_y_middle(),"VS",0,true);
     matrix.fill_row(rows-2,"Press ENTER to continue",23,calculate_x_middle(23));
-    matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name(),cols-1-enemy_trash_talk_x_offset-enemy.get_name().size());
-    matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\""),cols-1-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
+    matrix.fill_row(rows-2-enemy_trash_talk_y_offset,enemy.get_name(),cols-enemy_trash_talk_x_offset-enemy.get_name().size());
+    matrix.fill_row(rows-1-enemy_trash_talk_y_offset,("\""+enemy.get_trash_talk()+"\""),cols-enemy_trash_talk_x_offset-enemy.get_trash_talk().size()-2);
 }
 
 void Canvas::apply_battle_fight(const Battle& battle) {

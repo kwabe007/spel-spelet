@@ -24,14 +24,18 @@ private:
     std::size_t partial_option_y_offset = 3;
     std::size_t menu_title_x_offset = 3;
     std::size_t menu_title_y_offset = 2;
+    std::size_t menu_item_description_y_offset = 0;
+    std::size_t menu_item_description_row_span = 2;
     std::size_t area_description_x_offset = 3;
     std::size_t area_description_y_offset = 5;
     std::size_t area_controls_delimiter_offset = 7;
     std::size_t area_controls_x_offset = 3;
     std::size_t area_controls_y_offset = 1;
     std::size_t area_name_y_offset = 1;
-    std::size_t fight_hint_x_offset = 1;
-    std::size_t fight_hint_y_offset = 1;
+    std::size_t hint_fight_x_offset = 1;
+    std::size_t hint_fight_y_offset = 1;
+    std::size_t hint_talk_x_offset = 1;
+    std::size_t hint_talk_y_offset = 3;
     std::size_t player_trash_talk_x_offset = 3;
     std::size_t player_trash_talk_y_offset = 3;
     std::size_t enemy_trash_talk_x_offset = 3;
@@ -45,7 +49,7 @@ private:
     std::size_t party_name_y_offset = 2;
     std::size_t battle_action_row_span = 2;
     std::size_t entity_name_turn_y_offset = 0;
-    std::size_t text_y_offset = 1;
+    std::size_t text_y_offset = 3;
     std::size_t text_subtitle_y_offset = 3;
     std::size_t text_enter_hint_y_offset = 1;
 

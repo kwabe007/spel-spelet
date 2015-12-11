@@ -17,6 +17,7 @@ protected:
     std::string name = "Riksluffare";
     std::string description = "Whack";
     std::string trash_talk = "????";
+    std::string what_to_say = "I have nothing to say";
     Weapon* weapon_ptr = nullptr;
     Weapon* unarmored_weapon_ptr = nullptr;
 
@@ -39,6 +40,7 @@ public:
     std::string get_name() const;
     std::string get_description() const;
     std::string get_trash_talk() const;
+    std::string get_what_to_say() const;
     Weapon get_weapon() const;
 
     bool is_alive()const;

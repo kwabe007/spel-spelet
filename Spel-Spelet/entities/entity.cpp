@@ -17,6 +17,7 @@ Entity::Entity(const std::string& filename) : fs{filename} {
     std::getline(fs, name);
     std::getline(fs, description);
     std::getline(fs, trash_talk);
+    std::getline(fs, what_to_say);
 
     std::getline(fs, temp);
     hp = std::stoi(temp);
@@ -60,6 +61,10 @@ std::string Entity::get_description() const {
 
 std::string Entity::get_trash_talk() const {
     return trash_talk;
+}
+
+std::string Entity::get_what_to_say() const {
+    return what_to_say;
 }
 
 Weapon Entity::get_weapon() const {

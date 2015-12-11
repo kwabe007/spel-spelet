@@ -103,6 +103,11 @@ const Menu& Menu::get_menu_of_selected() const {
     return *item.nextmenu;
 }
 
+std::string Menu::get_description_of_selected() const {
+    return items[selected_item].repr_strings[1];
+}
+
+
 bool Menu::selected_has_menu() const {
     if(items[selected_item].nextmenu == nullptr) return false;
     return true;

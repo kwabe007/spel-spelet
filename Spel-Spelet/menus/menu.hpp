@@ -19,62 +19,6 @@ typedef int (*action_function)();
 //a representative purpose.
 static const int ITEM_REPR_STR_COUNT = 2;
 
-/*class MenuAction {
-private:
-    const Menu* menu_to = nullptr;
-    static const std::size_t CAPACITY = 3;
-    std::size_t size = 0;
-    action_function func_arr[CAPACITY];
-    friend Menu;
-
-public:
-    MenuAction() {
-    }
-
-    MenuAction(const Menu* to) {
-        menu_to = to;
-    }
-
-    bool add_function(action_function func) {
-        if (size < CAPACITY) {
-            func_arr[size] = func;
-            ++size;
-            return true;
-        }
-        return false;
-    }
-
-    MenuAction& operator=(const MenuAction& ref) {
-        menu_to = nullptr;
-        size = ref.size;
-        for (std::size_t i = 0; i < size; ++i) {
-            func_arr[i] = ref.func_arr[i];
-        }
-
-        return *this;
-    }
-
-    const Menu* operator()() const {
-        for (std::size_t i = 0; i < size; ++i) {
-            func_arr[i]();
-        }
-        return menu_to;
-    }
-
-    const Menu* operator()(const Menu* from) const {
-        for (std::size_t i = 0; i < size; ++i) {
-            func_arr[i]();
-        }
-        return from;
-    }
-
-    std::size_t get_size() const {
-        return size;
-    }
-
-};*/
-
-
 /* Contains choices for the user connected
  * to functions.
  * */
@@ -162,14 +106,13 @@ class Menu {
     std::string get_desc() const;
     void run_function();
     void run_function() const;
-    //Menu* run_function(std::size_t index);
     size_t get_size() const;
-    //size_t get_capacity() const;
-    bool is_selected(std::size_t index)const;
-    std::size_t get_selected()const;
-    MenuFlow get_flow_of_selected()const;
+    bool is_selected(std::size_t index) const;
+    std::size_t get_selected() const;
+    MenuFlow get_flow_of_selected() const;
     Menu& get_menu_of_selected();
     const Menu& get_menu_of_selected() const;
+    std::string get_description_of_selected() const;
     bool selected_has_menu() const;
 
     void fill_matrix(std::string** matrix) const;
