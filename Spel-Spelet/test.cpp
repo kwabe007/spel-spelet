@@ -25,10 +25,9 @@
  */
 
 /* TODO:
- * Check EXIT CODE AFTER SYSTEM CALL TO STTY
  * DESTRUCTORS FOR SCENE(WORLD,MAP,TEXT), WORLD(AREA), AREA (ENTITIES,OBJECTS)
- * ADD THROW IN MENU CLASS (GET_FP)
  * ADD NAMESPACE
+ * Check EXIT CODE AFTER SYSTEM CALL TO STTY
  */
 
 using namespace std;
@@ -73,12 +72,8 @@ signal(SIGSEGV, handler);
 
     Scene scene2;
         World firstworld("Kvarnamala");
-            Building room("Plattan", "Smells like shit here");
-                Human luffare;
-            room.add_entity(luffare);
-            Building secondroom("Hötorget", "You're at the marketplace but watch out for junkies");
-                Human pundare(CONF.get_path_resource("junkie"));
-            secondroom.add_entity(pundare);
+            Building room(CONF.get_path_resource("spybar"));
+            Building secondroom(CONF.get_path_resource("soapbar"));
         firstworld.add_area(room);
         firstworld.add_area(secondroom);
         firstworld.set_start_area(0,0);

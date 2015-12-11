@@ -2,6 +2,7 @@
 #define AREA_HPP
 #include <string>
 #include <vector>
+#include <fstream>
 #include "../entities/entity.hpp"
 #include "../menus/menu.hpp"
 
@@ -19,17 +20,19 @@ enum Direction {
 };
 
 class Area {
-private:
+protected:
     std::string name;
     std::string description;
     Menu* talk_menu_ptr = nullptr;
+    std::fstream fs;
 
     std::vector<Entity*> entity_vec;
     //std::vector<Objects*> stuff;
 
 public:
     Area();
-    Area(const std::string nm, const std::string desc);
+    Area(const std::string& filename);
+    Area(const std::string& nm, const std::string& desc);
     Area(const Area& ref) = delete;
     //Area& operator=(const Area& ref);
     const Direction default_direction = DIRECTION_NORTH;
@@ -47,7 +50,7 @@ public:
 
     void reset_direction();
 
-    ~Area();
+    virtual ~Area();
 
 };
 

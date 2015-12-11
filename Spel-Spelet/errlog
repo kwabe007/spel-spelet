@@ -1,6 +1,10 @@
 Human created from file 'res/eng/units/player' name: Pjotr Thorsson description: Rakad Alban trash_talk: DE E DAGS' ap: 15 dp: 5 hp: 80 mp: 10
 testing1,2
 Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Human created from file 'res/eng/units/micke_p' name: Mikael Persbrandt description: The one and only Mikael 'Gunvald Larsson' Persbrandt trash_talk: When I'm done with you, you'll be buried neck-deep in a horse's arse.' ap: 25 dp: 20 hp: 150 mp: 20
+Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
 deny warcrime
 
 Pushed back the scenes
@@ -9,133 +13,55 @@ Playing scene
 Size of line: 16 Calculated middle: 31
 Pressed key: 13
 Playing scene
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 115
-Pressed key: 102
-Size of line: 5 Calculated middle: 37
-Pressed key: 13
-Selected :0 flow of selected: 0 flow_back: 1
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
+First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Riksluffare with Fists Dealing damage: 15' to canvas matrix
-Size of line: 18 Calculated middle: 30
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 13
-Stats entity attack: 0 7
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 63
-First word from stringstream: 'Riksluffare'
+First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
-Writing line 'Riksluffare attacks Pjotr Thorsson with Fists Dealing damage: 7' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 1 17
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Riksluffare with Fists Dealing damage: 17' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEFEATED Riksluffare' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 119
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 13
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Pressed key: 13
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Pressed key: 100
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Pressed key: 13
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Pressed key: 97
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Pressed key: 13
+First word from stringstream: 'The'
+Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
 Pressed key: 102
-Size of line: 70 Calculated middle: 4
+Size of line: 52 Calculated middle: 13
 Pressed key: 13
 Selected :0 flow of selected: 0 flow_back: 1
 Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 17
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 2
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 17
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 2
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 13
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 4
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 4' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 1 16
-Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 16' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEFEATED Junkie Chan' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-Pressed key: 115
-Pressed key: 13
-Pressed key: 102
-Size of line: 5 Calculated middle: 37
-Pressed key: 13
-Selected :0 flow of selected: 0 flow_back: 1
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
 Pressed key: 3
 Setting buffer mode to buffered... buffer mode set to buffered

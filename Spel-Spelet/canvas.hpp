@@ -60,7 +60,7 @@ private:
     std::size_t calculate_y_middle(std::size_t len = 0);
     void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
                   char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
-    void fill_rowspan_withfill_ww(std::size_t rw, const std::string& str,std::size_t rw_span);
+    void fill_rowspan_withfill_ww(std::size_t rw, const std::string& str,std::size_t rw_span, std::size_t x_offset = 0);
     void fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
                                 char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
     bool add_if_fit(const std::string& word, std::string& line, std::size_t line_max_size, const std::string& delim);

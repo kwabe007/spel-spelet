@@ -33,6 +33,9 @@ struct EnumClassHash
 
 std::unordered_map<std::string, ResourceType> RES_FILE_TYPE_LOOKUP = {
         {"junkie", TYPE_UNIT},
+        {"micke_p", TYPE_UNIT},
+        {"soapbar", TYPE_MAP},
+        {"spybar", TYPE_MAP},
         {"fists", TYPE_WEAPON},
     };
 

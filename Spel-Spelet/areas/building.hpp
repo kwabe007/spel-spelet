@@ -4,9 +4,9 @@
 
 class Building : public Indoor  {
 public:
-
-    //Building(const std::string name, const std::string desc){}
     using Indoor::Indoor;
+    Building(const std::string& filename);
+
 
 };
 

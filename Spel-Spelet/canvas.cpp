@@ -58,7 +58,7 @@ void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset
 
 }
 
-void Canvas::fill_rowspan_withfill_ww(std::size_t rw, const std::string& str, std::size_t rw_span) {
+void Canvas::fill_rowspan_withfill_ww(std::size_t rw, const std::string& str, std::size_t rw_span, std::size_t x_offset) {
     fill_row_word_wrapping(rw,str,0,false,true,' ',true,' ',rw_span);
 }
 
@@ -140,7 +140,8 @@ void Canvas::apply_partial_menu(const Menu& menu, std::size_t x_pos, std::size_t
 
 void Canvas::apply_area(const Area& ref) {
     matrix.fill_row(area_name_y_offset,ref.get_name(),calculate_x_middle(ref.get_name().size()));
-    matrix.fill_row(area_description_y_offset,ref.get_description(),area_description_x_offset);
+    std::size_t desc_row_span = rows-area_controls_delimiter_offset-area_description_y_offset;
+    fill_rowspan_withfill_ww(area_description_y_offset,ref.get_description(),desc_row_span,area_description_x_offset);
     matrix.fill_row(rows-1-area_controls_delimiter_offset,UI::CONTROL_DELIMITER);
 
     //Getting area controls positions
