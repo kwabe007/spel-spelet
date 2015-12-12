@@ -43,6 +43,8 @@ namespace tools {
 
     void* parse_entity_from_file(const std::string& filename);
 
+    void* parse_item_from_file(const std::string& filename);
+
     int parse_int(const std::string& str);
 
 	static std::map<char, char> unicode{

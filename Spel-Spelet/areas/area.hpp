@@ -24,6 +24,7 @@ protected:
     std::string name;
     std::string description;
     Menu* talk_menu_ptr = nullptr;
+    Menu* game_menu_ptr = nullptr;
     std::fstream fs;
 
     std::vector<Entity*> entity_vec;
@@ -43,6 +44,7 @@ public:
     Entity& get_entity(std::size_t index);
     const Entity& get_entity(std::size_t index) const;
     const Menu& get_talk_menu();
+    const Menu& get_game_menu();
 
     void set_name(const std::string& str);
     void set_description(const std::string& str);

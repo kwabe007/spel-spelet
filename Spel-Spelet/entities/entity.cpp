@@ -22,7 +22,6 @@ Entity::Entity(const std::string& filename) : fs{filename} {
     std::getline(fs, description);
     std::getline(fs, trash_talk);
     std::getline(fs, what_to_say);
-
     std::string temp;
     std::getline(fs, temp);
     hp = tools::parse_int(temp);
@@ -36,10 +35,11 @@ Entity::Entity(const std::string& filename) : fs{filename} {
 }
 
 Entity::Entity(std::stringstream& ss) {
-    debug_print(BIT3, "Reading entity from string stream... " << ss);
+    debug_println(BIT3, "Constructing entity from string stream... " << ss);
     if (!ss.good()) {
         throw FileException("String stream is empty");
     }
+
     std::getline(ss, name);
     std::getline(ss, description);
     std::getline(ss, trash_talk);
@@ -54,7 +54,16 @@ Entity::Entity(std::stringstream& ss) {
     dp = std::stoi(temp);
     std::getline(ss, temp);
     mp = std::stoi(temp);
-    debug_println(BIT3, " read complete" << ss);
+
+    std::getline(ss, temp);
+    if (temp.compare("-") != 0) {
+        Item* itm_ptr = static_cast<Item*> (tools::parse_item_from_file(temp));
+        weapon_ptr = dynamic_cast<Weapon*> (itm_ptr);
+    }
+
+
+
+    debug_println(BIT3, "Entity construction complete" << ss);
 }
 
 Entity::Entity(const std::string& nm, const std::string& desc, const std::string& trash) : name{nm}, description{desc}, trash_talk{trash} {
@@ -137,8 +146,11 @@ std::pair<bool, int> Entity::attack (Entity& other) {
     std::uniform_int_distribution<> dis(CONF.get_damage_var_low(),CONF.get_damage_var_high());
     int var = dis(gen);
     int damage = 0;
-    if (ap + var >= 0)
-        damage = ap + var;
+    int weapon_damage = 0;
+    if (weapon_ptr)
+        weapon_damage = weapon_ptr->get_ap();
+    if (ap + weapon_damage + var >= 0)
+        damage = ap + weapon_damage + var;
 
     std::pair<bool, int> stats = other.take_damage(damage);
     debug_println(BIT0,"Stats entity attack: " << stats.first << " " << stats.second);

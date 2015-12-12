@@ -11,6 +11,7 @@ public:
     Human();
     Human(std::stringstream& ss);
     Human(const std::string& filename);
+    Human& operator=(const Human& );
     ~Human();
 };
 

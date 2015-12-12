@@ -18,6 +18,12 @@ namespace UI  {
       UNKNOWN,
     };
 
+    enum InterfaceFlow {
+      INTERFACE_FLOW_FORWARD,
+      INTERFACE_FLOW_BACK,
+      INTERFACE_FLOW_END,
+    };
+
     static const unsigned char COMMAND_UP = 'w';
     static const unsigned char COMMAND_DOWN = 's';
     static const unsigned char COMMAND_LEFT = 'a';
@@ -25,6 +31,7 @@ namespace UI  {
     static const unsigned char COMMAND_SPACE = ' ';
     static const unsigned char COMMAND_FIGHT = 'f';
     static const unsigned char COMMAND_TALK = 't';
+    static const unsigned char COMMAND_PAUSE = 'p';
     static const unsigned char COMMAND_INVENTORY = 'i';
     static const unsigned char COMMAND_ENTER = 13;
     static const unsigned char COMMAND_TERMINATE = 3;
@@ -71,8 +78,8 @@ namespace UI  {
     SceneFlow play_scene(Scene& scene);
     void show_text(const Text& text);
     void present_menu(const Menu& menu, bool sub = false);
-    void play_world(World& area);
-    void play_area(Area& area);
+    bool play_world(World& area);
+    bool play_area(Area& area);
     void battle_intro(const Battle& battle);
     BattleOutcome play_battle(Battle& battle);
 

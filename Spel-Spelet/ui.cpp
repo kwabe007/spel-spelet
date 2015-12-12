@@ -86,7 +86,8 @@ namespace UI {
         if(scene.is_set_text()) show_text(scene.get_text());
         if(scene.is_set_menu()) present_menu(scene.get_menu());
         if(scene.is_set_world()) {
-            play_world(scene.get_world());
+            bool cont = play_world(scene.get_world());
+            if(!cont) flow = SCENE_FLOW_STOP;
         }
         return flow;
     }
@@ -152,20 +153,21 @@ namespace UI {
         ;
     }
 
-    void play_world(World& world) {
-
+    bool play_world(World& world) {
         if (world.start_is_set()) {
             while (true) {
                 Area& area = world.current_area();
-                play_area(area);
+                if(!play_area(area))
+                    return false;
                 if (world.move_current_area(area.selected_direction)) {
                     world.current_area().selected_direction = area.selected_direction;
                 }
             }
         }
+        return true;
     }
 
-    void play_area(Area& area) {
+    bool play_area(Area& area) {
         char choice;
         while (true) {
             flush_and_clear();
@@ -204,6 +206,7 @@ namespace UI {
                 Battle battle(chosen_entity);
                 battle_intro(battle);
                 BattleOutcome outcome = play_battle(battle);
+                if (outcome == BATTLE_OUTCOME_ENEMY_WIN) return false;
                 break;
             }
             case COMMAND_TALK: {
@@ -212,15 +215,21 @@ namespace UI {
                 if (talk_menu.get_flow_of_selected() == FLOW_BACK) continue;
                 Entity& chosen_entity(area.get_entity(talk_menu.get_selected()));
                 show_text(Text(chosen_entity.get_what_to_say(),""));
-            }
                 break;
+            }
+            case COMMAND_PAUSE: {
+                const Menu& game_menu = area.get_game_menu();
+                present_menu(game_menu, true);
+                if (game_menu.get_flow_of_selected() == FLOW_BACK) return false;
 
+                break;
+            }
             default : //Optional
                 ;
             }
         }
     EndWhileArea:
-    ;
+    return true;
     }
 
     void battle_intro(const Battle& battle) {
@@ -249,7 +258,7 @@ namespace UI {
         flush_and_clear();
         char choice;
         Menu& current_menu = battle.get_current_menu();
-        BattleOutcome battlestate = BATTLE_OUTCOME_UNDECIDED;
+        BattleOutcome outcome = BATTLE_OUTCOME_UNDECIDED;
 
         while (true) {
             cvs.apply_battle_fight(battle);
@@ -260,7 +269,7 @@ namespace UI {
                 switch(choice){
                 case COMMAND_ENTER:
                 case COMMAND_SPACE:
-                    battlestate = battle.enemy_action();
+                    outcome = battle.enemy_action();
                     break;
                 }
             } else if (battle.turn == PARTY_TURN) {
@@ -269,19 +278,19 @@ namespace UI {
                 case COMMAND_SPACE:
                     current_menu.run_function();
                     battle.back_to_main_menu();
-                    battlestate = battle.party_action();
+                    outcome = battle.party_action();
                     break;
                 default : //Optional
                     ;
                 }
             }
             cvs.apply_battle_action(battle);
-            if (battlestate != BATTLE_OUTCOME_UNDECIDED) {
+            if (outcome != BATTLE_OUTCOME_UNDECIDED) {
                 std::string outcome_str;
                 cvs.apply_battle_fight(battle);
                 print_canvas();
                 get_char();
-                switch (battlestate) {
+                switch (outcome) {
                 case BATTLE_OUTCOME_ENEMY_WIN:
                     outcome_str = UI::TEXT_PARTY_DEFEAT;
                     break;
@@ -298,7 +307,7 @@ namespace UI {
             }
         }
         EndWhile:
-        return battlestate;
+        return outcome;
     }
 
     void print_canvas() {

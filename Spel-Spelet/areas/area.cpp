@@ -23,7 +23,7 @@ Area::Area(const std::string& resource) {
     while (ss_enti.good()) {
         std::string entity_str;
         ss_enti >> entity_str;
-        Entity* ent_ptr = static_cast<Entity*> (tools::parse_entity_from_file(CONF.get_path_resource(entity_str)));
+        Entity* ent_ptr = static_cast<Entity*> (tools::parse_entity_from_file(entity_str));
         add_entity(*ent_ptr);
     }
     debug_println(BIT5, "Area construction complete");
@@ -36,6 +36,9 @@ Area::Area(const std::string& nm, const std::string& desc) : name{nm}, descripti
 Area::~Area(){
     if (talk_menu_ptr) {
         delete talk_menu_ptr;
+    }
+    if (game_menu_ptr) {
+        delete game_menu_ptr;
     }
     for (Entity* ent_ptr : entity_vec) {
         delete ent_ptr;
@@ -72,6 +75,16 @@ const Menu& Area::get_talk_menu() {
     }
     talk_menu_ptr->add_back();
     return *talk_menu_ptr;
+}
+
+const Menu& Area::get_game_menu() {
+    if (game_menu_ptr) {
+        return *game_menu_ptr;
+    }
+    game_menu_ptr = new Menu("Game Menu");
+    game_menu_ptr->add_item("Resume game","Resume the game");
+    game_menu_ptr->add_item("End game", "End game and go back to main menu", FLOW_BACK);
+    return *game_menu_ptr;
 }
 
 void Area::set_name(const std::string& str) {

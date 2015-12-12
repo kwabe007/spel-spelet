@@ -17,6 +17,17 @@ Item::Item(std::string filename) {
     debug_println(BIT1,"Item created from file '" << filename << "' has name set to " << name << " and description set to " << description);
 }
 
+Item::Item(std::stringstream& ss) {
+    debug_println(BIT5,"Constructing item from string stream");
+    std::getline(ss, name);
+    std::getline(ss, description);
+    debug_println(BIT5,"Item construction complete");
+}
+
+Item::~Item() {
+
+}
+
 std::string Item::get_name() const{
     return name;
 }

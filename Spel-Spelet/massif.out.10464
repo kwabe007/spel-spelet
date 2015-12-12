@@ -1,0 +1,1392 @@
+desc: (none)
+cmd: ./virus.dll
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1445388
+mem_heap_B=33
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1447865
+mem_heap_B=61
+mem_heap_extra_B=35
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1448045
+mem_heap_B=92
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1448239
+mem_heap_B=120
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1448419
+mem_heap_B=150
+mem_heap_extra_B=66
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1448613
+mem_heap_B=178
+mem_heap_extra_B=78
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1448793
+mem_heap_B=209
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1453837
+mem_heap_B=233
+mem_heap_extra_B=103
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1458686
+mem_heap_B=265
+mem_heap_extra_B=111
+mem_stacks_B=0
+heap_tree=detailed
+n3: 265 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 209 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 209 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 209 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 62 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 31 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n1: 31 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 56 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 28 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n1: 28 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n1: 33 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 30 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 30 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 28 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 28 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 32 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 32 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 32 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 32 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 32 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 32 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 32 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 32 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 32 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 32 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 32 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 32 0x566FE53: (below main) (libc-start.c:246)
+ n1: 24 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 24 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 24 0x405C25: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:860)
+    n1: 24 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+     n1: 24 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+      n1: 24 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n1: 24 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+        n1: 24 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+         n1: 24 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 24 0x566FE53: (below main) (libc-start.c:246)
+#-----------
+snapshot=10
+#-----------
+time=1462211
+mem_heap_B=297
+mem_heap_extra_B=119
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1463148
+mem_heap_B=329
+mem_heap_extra_B=127
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1465624
+mem_heap_B=385
+mem_heap_extra_B=143
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1466935
+mem_heap_B=385
+mem_heap_extra_B=143
+mem_stacks_B=0
+heap_tree=detailed
+n3: 385 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 209 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 209 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 209 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 62 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 31 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n1: 31 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 56 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 28 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n1: 28 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n1: 33 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 30 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 30 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 28 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 28 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 96 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 96 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 96 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 96 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 96 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 96 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 96 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 96 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 96 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+ n1: 80 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 80 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 56 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 56 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 56 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 56 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 56 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 56 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 56 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 56 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n1: 56 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n1: 56 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+   n1: 24 0x405C25: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:860)
+    n1: 24 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+     n1: 24 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+      n1: 24 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n1: 24 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+        n1: 24 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+         n1: 24 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 24 0x566FE53: (below main) (libc-start.c:246)
+#-----------
+snapshot=14
+#-----------
+time=1466935
+mem_heap_B=361
+mem_heap_extra_B=127
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1469642
+mem_heap_B=401
+mem_heap_extra_B=143
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1472252
+mem_heap_B=441
+mem_heap_extra_B=159
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1472925
+mem_heap_B=481
+mem_heap_extra_B=175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1473596
+mem_heap_B=521
+mem_heap_extra_B=191
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1476172
+mem_heap_B=561
+mem_heap_extra_B=207
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1476904
+mem_heap_B=601
+mem_heap_extra_B=223
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1477636
+mem_heap_B=634
+mem_heap_extra_B=246
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1477839
+mem_heap_B=662
+mem_heap_extra_B=258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1478019
+mem_heap_B=693
+mem_heap_extra_B=267
+mem_stacks_B=0
+heap_tree=detailed
+n4: 693 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 301 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 301 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 301 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 93 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 62 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n1: 31 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 84 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 56 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n1: 28 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n2: 66 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 30 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 30 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 28 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 28 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 240 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 240 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 240 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 240 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 240 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 240 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 240 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 96 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 96 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 96 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 96 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 96 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 96 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 96 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 96 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 96 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+ n1: 56 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 56 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 56 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 56 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 56 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 56 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 56 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 56 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 56 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 56 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n1: 56 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n1: 56 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=24
+#-----------
+time=1478213
+mem_heap_B=721
+mem_heap_extra_B=279
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1478393
+mem_heap_B=751
+mem_heap_extra_B=289
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1478587
+mem_heap_B=779
+mem_heap_extra_B=301
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1478767
+mem_heap_B=810
+mem_heap_extra_B=310
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1479401
+mem_heap_B=834
+mem_heap_extra_B=326
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1479872
+mem_heap_B=866
+mem_heap_extra_B=334
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1480728
+mem_heap_B=898
+mem_heap_extra_B=342
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1481665
+mem_heap_B=930
+mem_heap_extra_B=350
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1482089
+mem_heap_B=986
+mem_heap_extra_B=366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1482519
+mem_heap_B=986
+mem_heap_extra_B=366
+mem_stacks_B=0
+heap_tree=detailed
+n4: 986 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 418 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 418 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 418 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 124 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 62 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n2: 62 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 112 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 56 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n2: 56 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n2: 66 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 60 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 60 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+      n1: 30 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 56 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 56 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 240 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 240 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 240 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 240 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 240 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 240 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 240 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 192 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 192 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 192 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 192 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 192 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 192 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n2: 192 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 96 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+         n1: 96 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+ n1: 136 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 136 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 112 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 112 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 112 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 112 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 112 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 112 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 112 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 112 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n2: 112 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n1: 56 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+            n1: 56 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+   n1: 24 0x405C25: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:860)
+    n1: 24 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+     n1: 24 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+      n2: 24 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n1: 24 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+        n1: 24 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+         n1: 24 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 24 0x566FE53: (below main) (libc-start.c:246)
+       n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=34
+#-----------
+time=1482519
+mem_heap_B=962
+mem_heap_extra_B=350
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1484308
+mem_heap_B=1002
+mem_heap_extra_B=366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1485144
+mem_heap_B=1042
+mem_heap_extra_B=382
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1485817
+mem_heap_B=1082
+mem_heap_extra_B=398
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1486488
+mem_heap_B=1122
+mem_heap_extra_B=414
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1487568
+mem_heap_B=1162
+mem_heap_extra_B=430
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1488300
+mem_heap_B=1202
+mem_heap_extra_B=446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1488784
+mem_heap_B=1235
+mem_heap_extra_B=469
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1488987
+mem_heap_B=1263
+mem_heap_extra_B=481
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1489167
+mem_heap_B=1294
+mem_heap_extra_B=490
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1294 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 510 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 510 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 510 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 155 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 93 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n2: 62 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 140 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 84 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n2: 56 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n3: 99 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 60 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 60 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+      n1: 30 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 56 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n2: 56 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 480 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 480 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 480 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 480 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 480 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 480 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n2: 480 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+        n1: 240 0x40ECF5: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 192 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 192 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 192 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 192 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 192 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 192 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n2: 192 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 96 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+         n1: 96 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+ n1: 112 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 112 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 112 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 112 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 112 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 112 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 112 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 112 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 112 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 112 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n2: 112 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n1: 56 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+            n1: 56 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=44
+#-----------
+time=1489361
+mem_heap_B=1322
+mem_heap_extra_B=502
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1489541
+mem_heap_B=1352
+mem_heap_extra_B=512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1489735
+mem_heap_B=1380
+mem_heap_extra_B=524
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1489915
+mem_heap_B=1411
+mem_heap_extra_B=533
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1490549
+mem_heap_B=1435
+mem_heap_extra_B=549
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1491020
+mem_heap_B=1467
+mem_heap_extra_B=557
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1491876
+mem_heap_B=1499
+mem_heap_extra_B=565
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1492813
+mem_heap_B=1531
+mem_heap_extra_B=573
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1493237
+mem_heap_B=1587
+mem_heap_extra_B=589
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1493667
+mem_heap_B=1587
+mem_heap_extra_B=589
+mem_stacks_B=0
+heap_tree=detailed
+n4: 1587 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 627 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 627 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n5: 627 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 186 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 93 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+     n3: 93 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 31 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+      n1: 31 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 31 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 31 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 31 0x566FE53: (below main) (libc-start.c:246)
+    n2: 168 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 84 0x405070: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+     n3: 84 0x4050A4: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+    n3: 99 0x405042: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n1: 33 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+     n1: 33 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+      n1: 33 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+       n1: 33 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 33 0x566FE53: (below main) (libc-start.c:246)
+    n1: 90 0x404FA0: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 90 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 30 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+      n1: 30 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+      n1: 30 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 30 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 30 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 30 0x566FE53: (below main) (libc-start.c:246)
+    n1: 84 0x404F65: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [6], void>(char const (&) [4], char const (&) [6]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n3: 84 0x40508A: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n1: 28 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+      n1: 28 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+       n1: 28 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+        n1: 28 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 28 0x566FE53: (below main) (libc-start.c:246)
+ n1: 480 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 480 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 480 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 480 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 480 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 480 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n2: 480 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+        n1: 240 0x40ECF5: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 288 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 288 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 288 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 288 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 288 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 288 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 288 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n3: 288 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n1: 96 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+         n1: 96 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+         n1: 96 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+          n1: 96 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+           n1: 96 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 96 0x566FE53: (below main) (libc-start.c:246)
+ n1: 192 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 192 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 168 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 168 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 168 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 168 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 168 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 168 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 168 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 168 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n3: 168 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n1: 56 0x404A88: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+            n1: 56 0x40EB8E: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+            n1: 56 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+             n1: 56 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+              n1: 56 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+               n0: 56 0x566FE53: (below main) (libc-start.c:246)
+   n1: 24 0x405C25: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:860)
+    n1: 24 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+     n1: 24 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+      n2: 24 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n1: 24 0x40FD3C: __static_initialization_and_destruction_0(int, int) (conf.hpp:65)
+        n1: 24 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 24 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 24 0x566FE53: (below main) (libc-start.c:246)
+       n0: 0 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=54
+#-----------
+time=1493667
+mem_heap_B=1563
+mem_heap_extra_B=573
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1499059
+mem_heap_B=1608
+mem_heap_extra_B=584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1500324
+mem_heap_B=1644
+mem_heap_extra_B=604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1500490
+mem_heap_B=1674
+mem_heap_extra_B=614
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1500658
+mem_heap_B=1703
+mem_heap_extra_B=625
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1500844
+mem_heap_B=1749
+mem_heap_extra_B=635
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1515294
+mem_heap_B=2317
+mem_heap_extra_B=651
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1517528
+mem_heap_B=10509
+mem_heap_extra_B=659
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1535164
+mem_heap_B=10537
+mem_heap_extra_B=671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1535557
+mem_heap_B=10584
+mem_heap_extra_B=680
+mem_stacks_B=0
+heap_tree=detailed
+n6: 10584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 8192 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FED7: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA8A: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FDAF: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+ n2: 888 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 768 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 768 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 414 in 7 places, all below massif's threshold (01.00%)
+    n1: 186 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 186 in 2 places, all below massif's threshold (01.00%)
+    n1: 168 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 168 in 2 places, all below massif's threshold (01.00%)
+  n1: 120 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 120 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 120 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n0: 120 in 2 places, all below massif's threshold (01.00%)
+ n1: 568 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 568 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 568 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FED7: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA8A: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FDAF: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+ n1: 480 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 480 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 480 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 480 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 480 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 480 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n2: 480 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+        n1: 240 0x40ECF5: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 288 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 288 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 288 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 288 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 288 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 288 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 288 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 288 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 288 in 3 places, all below massif's threshold (01.00%)
+ n1: 168 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 168 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 168 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 168 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 168 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 168 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 168 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 168 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 168 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 168 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n1: 168 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 168 in 3 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=64
+#-----------
+time=1537147
+mem_heap_B=10584
+mem_heap_extra_B=680
+mem_stacks_B=0
+heap_tree=peak
+n6: 10584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 8192 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FED7: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA8A: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FDAF: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+ n2: 888 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n1: 768 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 768 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 414 in 7 places, all below massif's threshold (01.00%)
+    n1: 186 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 186 in 2 places, all below massif's threshold (01.00%)
+    n1: 168 0x404E59: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 168 in 2 places, all below massif's threshold (01.00%)
+  n1: 120 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 120 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 120 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n0: 120 in 2 places, all below massif's threshold (01.00%)
+ n1: 568 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 568 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 568 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FED7: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA8A: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FDAF: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FE5C: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+ n1: 480 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 480 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 480 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 480 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 480 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 480 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n2: 480 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n1: 240 0x404BD1: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x404C2B: _GLOBAL__sub_I__ZN4AreaC2Ev (area.cpp:104)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+        n1: 240 0x40ECF5: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+         n1: 240 0x40ED4F: _GLOBAL__sub_I__ZN6EntityC2Ev (entity.cpp:158)
+          n1: 240 0x41F82B: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 240 0x566FE53: (below main) (libc-start.c:246)
+ n1: 288 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 288 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 288 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 288 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 288 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 288 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 288 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 288 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 288 in 3 places, all below massif's threshold (01.00%)
+ n1: 168 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n2: 168 0x4063D7: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (hashtable.h:779)
+   n1: 168 0x40812C: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (hashtable.h:1701)
+    n1: 168 0x407D35: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (hashtable.h:1680)
+     n1: 168 0x407871: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>*) (hashtable.h:1335)
+      n1: 168 0x40701A: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1426)
+       n1: 168 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+        n1: 168 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+         n1: 168 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+          n1: 168 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+           n1: 168 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+            n0: 168 in 3 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=65
+#-----------
+time=1537147
+mem_heap_B=10548
+mem_heap_extra_B=660
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1537508
+mem_heap_B=10584
+mem_heap_extra_B=680
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1537579
+mem_heap_B=10554
+mem_heap_extra_B=670
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1537940
+mem_heap_B=10588
+mem_heap_extra_B=692
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1538011
+mem_heap_B=10559
+mem_heap_extra_B=681
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1538634
+mem_heap_B=10586
+mem_heap_extra_B=694
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1544226
+mem_heap_B=10559
+mem_heap_extra_B=681
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1544279
+mem_heap_B=10531
+mem_heap_extra_B=669
+mem_stacks_B=0
+heap_tree=empty

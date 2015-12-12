@@ -32,6 +32,7 @@ void World::set_start_area(int x, int y) {
     start_area_is_set = true;
 }
 
+
 Area& World::current_area() {
     std::size_t index = index_map[current_area_coord];
     return *areas[index];

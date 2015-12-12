@@ -1,20 +1,20 @@
 
 #Compiler
-CC= g++
+CC:= g++
 
 #Compiler flags
 CFLAGS:= -Wall -std=c++11 -g -rdynamic
 
 #Source files
-AREAS= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/world.cpp
-MENUS= menus/menu.cpp
-ENTITIES= entities/entity.cpp entities/organic.cpp entities/human.cpp
-FUNCTIONS= funcobj/funcobj.cpp
-UNSORTED= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
-ITEMS= items/item.cpp
-TEXTS= texts/text.cpp
-TEST= test.cpp
-SOURCE= test.cpp menus/menu.cpp parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp areas/area.cpp areas/indoor.cpp areas/building.cpp entities/entity.cpp entities/organic.cpp entities/human.cpp battle.cpp conf.cpp funcobj/funcobj.cpp areas/world.cpp items/item.cpp texts/text.cpp
+AREAS:= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/world.cpp
+MENUS:= menus/menu.cpp
+ENTITIES:= entities/entity.cpp entities/organic.cpp entities/human.cpp
+FUNCTIONS:= funcobj/funcobj.cpp
+UNSORTED:= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
+ITEMS:= items/item.cpp items/weapon.cpp
+TEXTS:= texts/text.cpp
+TEST:= test.cpp
+SOURCE:= $(AREAS) $(MENUS) $(ENTITIES) $(FUNCTIONS) $(UNSORTED) $(ITEMS) $(TEXTS) $(TEST)
 
 #Object files
 AREAOBJ= $(AREAS:.cpp=.o)

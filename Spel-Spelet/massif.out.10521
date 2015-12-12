@@ -1,0 +1,1357 @@
+desc: (none)
+cmd: ./virus.dll
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1445388
+mem_heap_B=33
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1556268
+mem_heap_B=11456
+mem_heap_extra_B=1088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1666323
+mem_heap_B=27297
+mem_heap_extra_B=2871
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1728599
+mem_heap_B=36912
+mem_heap_extra_B=3152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1862897
+mem_heap_B=29973
+mem_heap_extra_B=3315
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1947091
+mem_heap_B=30895
+mem_heap_extra_B=3377
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2097208
+mem_heap_B=32173
+mem_heap_extra_B=3483
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2236916
+mem_heap_B=33302
+mem_heap_extra_B=3594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2328904
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2439705
+mem_heap_B=33260
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2573999
+mem_heap_B=33273
+mem_heap_extra_B=3671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2665780
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2811691
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2963716
+mem_heap_B=33589
+mem_heap_extra_B=3723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=3098863
+mem_heap_B=33684
+mem_heap_extra_B=3732
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=3199343
+mem_heap_B=33589
+mem_heap_extra_B=3723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=3266753
+mem_heap_B=33553
+mem_heap_extra_B=3703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=3366813
+mem_heap_B=33273
+mem_heap_extra_B=3671
+mem_stacks_B=0
+heap_tree=detailed
+n10: 33273 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 5545 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 3791 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 3737 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 3365 in 85 places, all below massif's threshold (01.00%)
+    n1: 372 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 372 in 2 places, all below massif's threshold (01.00%)
+   n0: 54 in 1 place, below massif's threshold (01.00%)
+  n1: 1715 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 1715 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1715 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 17 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 39 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n1: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 584 in 7 places, all below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=19
+#-----------
+time=3512724
+mem_heap_B=33273
+mem_heap_extra_B=3671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3601195
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3695874
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=3833391
+mem_heap_B=33666
+mem_heap_extra_B=3750
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3997089
+mem_heap_B=33775
+mem_heap_extra_B=3841
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=4144567
+mem_heap_B=33775
+mem_heap_extra_B=3841
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4246145
+mem_heap_B=33807
+mem_heap_extra_B=3849
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=4322559
+mem_heap_B=33775
+mem_heap_extra_B=3841
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4444412
+mem_heap_B=33952
+mem_heap_extra_B=3872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=4598050
+mem_heap_B=33904
+mem_heap_extra_B=3872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4686475
+mem_heap_B=43023
+mem_heap_extra_B=4049
+mem_stacks_B=0
+heap_tree=peak
+n10: 43023 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 24576 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 24576 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n2: 8192 0x4EE31CF: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 8192 0x410C29: tools::read_line(std::string const&) (parse.cpp:107)
+     n2: 8192 0x41B461: Battle::set_latest_action(Entity const&, Battle::ActionType, Entity const&, std::pair<bool, int>) (battle.cpp:65)
+      n1: 8192 0x41B9B6: Battle::party_action() (battle.cpp:77)
+       n1: 8192 0x4157E5: UI::play_battle(Battle&) (ui.cpp:281)
+        n1: 8192 0x4153D8: UI::play_area(Area&) (ui.cpp:208)
+         n1: 8192 0x415011: UI::play_world(World&) (ui.cpp:160)
+          n1: 8192 0x414E73: UI::play_scene(Scene&) (ui.cpp:89)
+           n0: 8192 0x41DF27: main (test.cpp:96)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+     n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n0: 0 in 3 places, all below massif's threshold (01.00%)
+ n3: 6239 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 4168 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 4168 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 4168 in 95 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 2005 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 2005 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1843 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n2: 1785 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 1223 in 19 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+     n0: 58 in 3 places, all below massif's threshold (01.00%)
+    n0: 162 in 1 place, below massif's threshold (01.00%)
+  n0: 66 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n2: 1704 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1704 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1704 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n2: 568 0x4EE31CF: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n2: 568 0x410C29: tools::read_line(std::string const&) (parse.cpp:107)
+      n2: 568 0x41B461: Battle::set_latest_action(Entity const&, Battle::ActionType, Entity const&, std::pair<bool, int>) (battle.cpp:65)
+       n1: 568 0x41B9B6: Battle::party_action() (battle.cpp:77)
+        n1: 568 0x4157E5: UI::play_battle(Battle&) (ui.cpp:281)
+         n1: 568 0x4153D8: UI::play_area(Area&) (ui.cpp:208)
+          n1: 568 0x415011: UI::play_world(World&) (ui.cpp:160)
+           n1: 568 0x414E73: UI::play_scene(Scene&) (ui.cpp:89)
+            n0: 568 0x41DF27: main (test.cpp:96)
+       n0: 0 in 1 place, below massif's threshold (01.00%)
+      n0: 0 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 3 places, all below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n0: 800 in 7 places, all below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 504 0x40D528: __gnu_cxx::new_allocator<Menu::MenuItem>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 504 0x40D32F: std::_Vector_base<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_allocate(unsigned long) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+   n1: 504 0x40CFAE: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_emplace_back_aux<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:404)
+    n1: 504 0x40CE3F: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::emplace_back<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:101)
+     n1: 504 0x40CC10: std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::push_back(Menu::MenuItem&&) (stl_vector.h:920)
+      n1: 504 0x40C316: Menu::add_item(std::string const&, std::string const&, MenuFlow, FunctionType, unsigned long*, unsigned long, Menu*) (menu.cpp:32)
+       n0: 504 in 6 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=30
+#-----------
+time=4781431
+mem_heap_B=33952
+mem_heap_extra_B=3872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=4935097
+mem_heap_B=33904
+mem_heap_extra_B=3872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=5081881
+mem_heap_B=34154
+mem_heap_extra_B=3934
+mem_stacks_B=0
+heap_tree=detailed
+n11: 34154 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 6130 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 3997 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 3997 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 3997 in 95 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 2057 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 2057 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1715 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 18 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 3 places, all below massif's threshold (01.00%)
+    n0: 342 in 1 place, below massif's threshold (01.00%)
+  n0: 76 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n2: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 504 0x40D528: __gnu_cxx::new_allocator<Menu::MenuItem>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 504 0x40D32F: std::_Vector_base<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_allocate(unsigned long) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+   n1: 504 0x40CFAE: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_emplace_back_aux<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:404)
+    n1: 504 0x40CE3F: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::emplace_back<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:101)
+     n1: 504 0x40CC10: std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::push_back(Menu::MenuItem&&) (stl_vector.h:920)
+      n1: 504 0x40C316: Menu::add_item(std::string const&, std::string const&, MenuFlow, FunctionType, unsigned long*, unsigned long, Menu*) (menu.cpp:32)
+       n0: 504 in 6 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+ n0: 376 in 6 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=33
+#-----------
+time=5186065
+mem_heap_B=33920
+mem_heap_extra_B=3864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5339649
+mem_heap_B=33872
+mem_heap_extra_B=3864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5455366
+mem_heap_B=33952
+mem_heap_extra_B=3872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5559529
+mem_heap_B=34030
+mem_heap_extra_B=3906
+mem_stacks_B=0
+heap_tree=detailed
+n11: 34030 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 6006 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 4118 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 4023 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 4023 in 95 places, all below massif's threshold (01.00%)
+   n0: 95 in 1 place, below massif's threshold (01.00%)
+  n1: 1849 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 1849 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1752 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 18 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 37 in 3 places, all below massif's threshold (01.00%)
+    n0: 97 in 1 place, below massif's threshold (01.00%)
+  n0: 39 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n2: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 504 0x40D528: __gnu_cxx::new_allocator<Menu::MenuItem>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 504 0x40D32F: std::_Vector_base<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_allocate(unsigned long) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+   n1: 504 0x40CFAE: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_emplace_back_aux<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:404)
+    n1: 504 0x40CE3F: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::emplace_back<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:101)
+     n1: 504 0x40CC10: std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::push_back(Menu::MenuItem&&) (stl_vector.h:920)
+      n1: 504 0x40C316: Menu::add_item(std::string const&, std::string const&, MenuFlow, FunctionType, unsigned long*, unsigned long, Menu*) (menu.cpp:32)
+       n0: 504 in 6 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+ n0: 376 in 6 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=37
+#-----------
+time=5707480
+mem_heap_B=33905
+mem_heap_extra_B=3887
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=5860802
+mem_heap_B=33260
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=5967125
+mem_heap_B=33260
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6073376
+mem_heap_B=33260
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=6146301
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6312482
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6405954
+mem_heap_B=33252
+mem_heap_extra_B=3676
+mem_stacks_B=0
+heap_tree=detailed
+n10: 33252 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 5524 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 3737 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 3737 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 3365 in 96 places, all below massif's threshold (01.00%)
+    n1: 372 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 372 in 2 places, all below massif's threshold (01.00%)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+  n1: 1715 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 1715 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1715 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 18 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 3 places, all below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 72 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n2: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 584 in 7 places, all below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=44
+#-----------
+time=6478669
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=6572141
+mem_heap_B=33252
+mem_heap_extra_B=3676
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=6645796
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=6739268
+mem_heap_B=33252
+mem_heap_extra_B=3676
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=6871053
+mem_heap_B=33372
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=6945667
+mem_heap_B=33324
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=7038824
+mem_heap_B=33273
+mem_heap_extra_B=3671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=7102375
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=7184735
+mem_heap_B=33273
+mem_heap_extra_B=3671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=7248342
+mem_heap_B=33219
+mem_heap_extra_B=3653
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=7332282
+mem_heap_B=33372
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=7405280
+mem_heap_B=33324
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=7498463
+mem_heap_B=33372
+mem_heap_extra_B=3668
+mem_stacks_B=0
+heap_tree=detailed
+n10: 33372 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 5644 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 3890 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 3737 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 3365 in 96 places, all below massif's threshold (01.00%)
+    n1: 372 0x404E94: std::pair<std::string const, std::string>::pair<char const (&) [4], char const (&) [7], void>(char const (&) [4], char const (&) [7]) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+     n0: 372 in 2 places, all below massif's threshold (01.00%)
+   n0: 153 in 1 place, below massif's threshold (01.00%)
+  n1: 1715 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 1715 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1715 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 18 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 3 places, all below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 39 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n2: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n0: 584 in 7 places, all below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=57
+#-----------
+time=7565361
+mem_heap_B=33271
+mem_heap_extra_B=3673
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=7671673
+mem_heap_B=33716
+mem_heap_extra_B=3740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=7746498
+mem_heap_B=33716
+mem_heap_extra_B=3740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=7809620
+mem_heap_B=33639
+mem_heap_extra_B=3729
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=7875225
+mem_heap_B=33668
+mem_heap_extra_B=3756
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=7973826
+mem_heap_B=33713
+mem_heap_extra_B=3743
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=8041487
+mem_heap_B=33744
+mem_heap_extra_B=3744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=8134286
+mem_heap_B=33792
+mem_heap_extra_B=3760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=8207284
+mem_heap_B=33744
+mem_heap_extra_B=3744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=8300083
+mem_heap_B=33792
+mem_heap_extra_B=3760
+mem_stacks_B=0
+heap_tree=detailed
+n11: 33792 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4EE188A: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n3: 16384 0x4EE1EA0: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 8192 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+     n1: 8192 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+      n1: 8192 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+       n1: 8192 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+        n1: 8192 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+         n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+          n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n1: 8192 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 8192 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+     n1: 8192 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+      n1: 8192 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 8192 0x566FE53: (below main) (libc-start.c:246)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n3: 5792 0x4EE8207: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+  n2: 4038 0x4EE992F: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n1: 3885 0x4EE9D46: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n0: 3885 in 98 places, all below massif's threshold (01.00%)
+   n0: 153 in 1 place, below massif's threshold (01.00%)
+  n1: 1715 0x4EE8DC9: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n2: 1715 0x4EE8E62: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n2: 1715 0x4EE90AD: std::string::append(char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n3: 1715 0x4EA3EB2: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+      n0: 696 in 18 places, all below massif's threshold (01.00%)
+      n1: 562 0x40E18F: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:46)
+       n1: 562 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 562 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 562 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 562 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 562 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 562 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 562 in 2 places, all below massif's threshold (01.00%)
+      n1: 457 0x40E161: Entity::Entity(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (entity.cpp:44)
+       n1: 457 0x40FD51: Organic::Organic(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (organic.hpp:8)
+        n1: 457 0x40F920: Human::Human(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >&) (human.cpp:9)
+         n1: 457 0x411021: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+          n1: 457 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+           n1: 457 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+            n1: 457 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+             n0: 457 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 3 places, all below massif's threshold (01.00%)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 39 in 5 places, all below massif's threshold (01.00%)
+ n1: 3160 0x41100C: tools::parse_entity_from_file(std::string const&) (parse.cpp:143)
+  n1: 3160 0x40400F: Area::Area(std::string const&) (area.cpp:26)
+   n1: 3160 0x41EA19: Indoor::Indoor(std::string const&) (indoor.hpp:6)
+    n2: 3160 0x41EAA9: Building::Building(std::string const&) (building.hpp:7)
+     n0: 1896 0x41DCB6: main (test.cpp:75)
+     n0: 1264 0x41DD17: main (test.cpp:76)
+ n1: 2080 0x568A42F: __new_exitfn (cxa_atexit.c:101)
+  n2: 2080 0x568A4D7: __cxa_atexit (cxa_atexit.c:35)
+   n1: 1040 0x415D5B: __static_initialization_and_destruction_0(int, int) (ui.hpp:39)
+    n1: 1040 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+   n1: 1040 0x41BE71: __static_initialization_and_destruction_0(int, int) (parse.hpp:50)
+    n1: 1040 0x41BEAB: _GLOBAL__sub_I__ZN6BattleC2ER6Entity (battle.cpp:141)
+     n1: 1040 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+      n0: 1040 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1944 0x4174FB: Matrix::allocate() (matrix.cpp:85)
+  n1: 1944 0x41653F: Matrix::Matrix(unsigned long, unsigned long) (matrix.cpp:11)
+   n1: 1944 0x417C0D: Canvas::Canvas(unsigned long, unsigned long) (canvas.cpp:10)
+    n1: 1944 0x4161DC: __static_initialization_and_destruction_0(int, int) (ui.cpp:21)
+     n1: 1944 0x41637F: _GLOBAL__sub_I__ZN2UI5sleepEm (ui.cpp:364)
+      n1: 1944 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+       n0: 1944 0x566FE53: (below main) (libc-start.c:246)
+ n1: 1440 0x407F1A: __gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<char const, char> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 1440 0x407A0E: std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_get_node() (stl_tree.h:370)
+   n1: 1440 0x4073D5: std::_Rb_tree_node<std::pair<char const, char> >* std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_create_node<std::pair<char const, char> const&>(std::pair<char const, char> const&) (stl_tree.h:403)
+    n1: 1440 0x406AEB: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_<std::pair<char const, char> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<char const, char> const&) (stl_tree.h:1023)
+     n1: 1440 0x405FAF: std::_Rb_tree_iterator<std::pair<char const, char> > std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique_<std::pair<char const, char> const&>(std::_Rb_tree_const_iterator<std::pair<char const, char> >, std::pair<char const, char> const&) (stl_tree.h:1482)
+      n1: 1440 0x405952: void std::_Rb_tree<char, std::pair<char const, char>, std::_Select1st<std::pair<char const, char> >, std::less<char>, std::allocator<std::pair<char const, char> > >::_M_insert_unique<std::pair<char const, char> const*>(std::pair<char const, char> const*, std::pair<char const, char> const*) (stl_tree.h:1722)
+       n1: 1440 0x405424: std::map<char, char, std::less<char>, std::allocator<std::pair<char const, char> > >::map(std::initializer_list<std::pair<char const, char> >, std::less<char> const&, std::allocator<std::pair<char const, char> > const&) (stl_map.h:210)
+        n0: 1440 in 6 places, all below massif's threshold (01.00%)
+ n2: 1136 0x56BC44B: __fopen_internal (iofopen.c:73)
+  n1: 1136 0x4EA99BE: std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+   n3: 1136 0x4EE1E88: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+    n1: 568 0x4EE42D7: std::basic_fstream<char, std::char_traits<char> >::basic_fstream(std::string const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x40DB88: Entity::Entity(std::string const&) (entity.cpp:13)
+      n1: 568 0x40FD81: Organic::Organic(std::string const&) (organic.hpp:8)
+       n1: 568 0x40FA81: Human::Human(std::string const&) (human.cpp:13)
+        n1: 568 0x40FC59: __static_initialization_and_destruction_0(int, int) (human.cpp:4)
+         n1: 568 0x40FD06: _GLOBAL__sub_I_PLAYER (human.cpp:24)
+          n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+           n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n1: 568 0x4EE3716: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19)
+     n1: 568 0x41E7F4: __static_initialization_and_destruction_0(int, int) (test.cpp:39)
+      n1: 568 0x41E997: _GLOBAL__sub_I_GLOBAL_DEBUG_LEVEL (test.cpp:108)
+       n1: 568 0x41F6DB: __libc_csu_init (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+        n0: 568 0x566FE53: (below main) (libc-start.c:246)
+    n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 576 0x407C94: __gnu_cxx::new_allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true> >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 576 0x407737: std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&) (hashtable.h:724)
+   n1: 576 0x406FFA: std::pair<std::__detail::_Node_iterator<std::pair<std::string const, std::string>, false, true>, bool> std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&, std::integral_constant<bool, true>) (hashtable.h:1425)
+    n1: 576 0x406465: std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::insert(std::pair<std::string const, std::string> const&) (hashtable_policy.h:604)
+     n1: 576 0x405C41: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*, unsigned long, std::hash<std::string> const&, std::__detail::_Mod_range_hashing const&, std::__detail::_Default_ranged_hash const&, std::equal_to<std::string> const&, std::__detail::_Select1st const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:864)
+      n1: 576 0x40571F: std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string> >, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (hashtable.h:419)
+       n1: 576 0x4052A5: std::unordered_map<std::string, std::string, std::hash<std::string>, std::equal_to<std::string>, std::allocator<std::pair<std::string const, std::string> > >::unordered_map(std::initializer_list<std::pair<std::string const, std::string> >, unsigned long, std::hash<std::string> const&, std::equal_to<std::string> const&, std::allocator<std::pair<std::string const, std::string> > const&) (unordered_map.h:189)
+        n1: 576 0x4050E8: Conf::Conf() (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+         n0: 576 in 6 places, all below massif's threshold (01.00%)
+ n1: 448 0x40D528: __gnu_cxx::new_allocator<Menu::MenuItem>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 448 0x40D32F: std::_Vector_base<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_allocate(unsigned long) (in /home/kwa/cprog/Spel-Spelet/virus.dll)
+   n1: 448 0x40CFAE: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::_M_emplace_back_aux<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:404)
+    n1: 448 0x40CE3F: void std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::emplace_back<Menu::MenuItem>(Menu::MenuItem&&) (vector.tcc:101)
+     n1: 448 0x40CC10: std::vector<Menu::MenuItem, std::allocator<Menu::MenuItem> >::push_back(Menu::MenuItem&&) (stl_vector.h:920)
+      n1: 448 0x40C316: Menu::add_item(std::string const&, std::string const&, MenuFlow, FunctionType, unsigned long*, unsigned long, Menu*) (menu.cpp:32)
+       n0: 448 in 7 places, all below massif's threshold (01.00%)
+ n1: 424 0x406E38: __gnu_cxx::new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n0: 424 in 2 places, all below massif's threshold (01.00%)
+ n0: 408 in 7 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=67
+#-----------
+time=8373087
+mem_heap_B=33744
+mem_heap_extra_B=3744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=8465886
+mem_heap_B=33792
+mem_heap_extra_B=3760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=8538254
+mem_heap_B=25447
+mem_heap_extra_B=3721
+mem_stacks_B=0
+heap_tree=empty

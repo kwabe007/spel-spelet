@@ -5,6 +5,11 @@
 #include <boost/functional/hash.hpp>
 #include "area.hpp"
 
+enum WorldFlow {
+    WORLD_FLOW_NORMAL,
+    WORLD_FLOW_END,
+};
+
 class World {
 private:
     std::string name;
@@ -12,6 +17,7 @@ private:
     std::vector<Area*> areas;
     bool start_area_is_set = false;
     std::pair<int,int> starting_area_coord;
+    std::pair<int,int> end_area_coord;
     std::pair<int,int> current_area_coord;
     std::pair<int,int> last_coord_mapped;
 
