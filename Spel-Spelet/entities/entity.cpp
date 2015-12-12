@@ -4,36 +4,65 @@
 #include <iostream>
 #include "../exceptions/fileexcept.hpp"
 #include "../debug/debugmacro.h"
+#include "../parse.hpp"
 
 
 Entity::Entity() {
 }
 
 Entity::Entity(const std::string& filename) : fs{filename} {
+    debug_print(BIT3, "Reading entity from file... " << filename);
     if (!fs.good()) {
         throw FileException("File '" + filename + "' not found or is empty");
     }
-    std::string temp;
+
+    std::string discard;
+    std::getline(fs, discard);
     std::getline(fs, name);
     std::getline(fs, description);
     std::getline(fs, trash_talk);
     std::getline(fs, what_to_say);
 
+    std::string temp;
     std::getline(fs, temp);
-    hp = std::stoi(temp);
+    hp = tools::parse_int(temp);
     std::getline(fs, temp);
-    ap = std::stoi(temp);
+    ap = tools::parse_int(temp);
     std::getline(fs, temp);
-    dp = std::stoi(temp);
+    dp = tools::parse_int(temp);
     std::getline(fs, temp);
-    mp = std::stoi(temp);
+    mp = tools::parse_int(temp);
+    debug_println(BIT3, " read complete");
+}
 
+Entity::Entity(std::stringstream& ss) {
+    debug_print(BIT3, "Reading entity from string stream... " << ss);
+    if (!ss.good()) {
+        throw FileException("String stream is empty");
+    }
+    std::getline(ss, name);
+    std::getline(ss, description);
+    std::getline(ss, trash_talk);
+    std::getline(ss, what_to_say);
+
+    std::string temp;
+    std::getline(ss, temp);
+    hp = std::stoi(temp);
+    std::getline(ss, temp);
+    ap = std::stoi(temp);
+    std::getline(ss, temp);
+    dp = std::stoi(temp);
+    std::getline(ss, temp);
+    mp = std::stoi(temp);
+    debug_println(BIT3, " read complete" << ss);
 }
 
 Entity::Entity(const std::string& nm, const std::string& desc, const std::string& trash) : name{nm}, description{desc}, trash_talk{trash} {
 }
 
-Entity::~Entity() { };
+Entity::~Entity() {
+    if (weapon_ptr) delete weapon_ptr;
+}
 
 int Entity::get_hp() const {
     return hp;

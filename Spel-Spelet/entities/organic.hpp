@@ -8,7 +8,7 @@ protected:
     using Entity::Entity;
     virtual Weapon get_unarmored_weapon() const=0;
 public:
-    virtual ~Organic()=0;
+    virtual ~Organic();
 
 };
 

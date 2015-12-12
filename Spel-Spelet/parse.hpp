@@ -33,12 +33,17 @@ namespace tools {
 		int insert_names(std::string& text)const;
 	};
 
+    std::string read_resource(const std::string& resource);
 	
     std::string read_file(const std::string& filename);
 
     std::string read_line(const std::string& filename);
 
 	std::string replace_coding(const std::string& subject);
+
+    void* parse_entity_from_file(const std::string& filename);
+
+    int parse_int(const std::string& str);
 
 	static std::map<char, char> unicode{
 			{ 133, 143 },

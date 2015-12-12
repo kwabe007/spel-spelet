@@ -1,67 +1,1580 @@
 Human created from file 'res/eng/units/player' name: Pjotr Thorsson description: Rakad Alban trash_talk: DE E DAGS' ap: 15 dp: 5 hp: 80 mp: 10
 testing1,2
-Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
-Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
-Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
-Human created from file 'res/eng/units/micke_p' name: Mikael Persbrandt description: The one and only Mikael 'Gunvald Larsson' Persbrandt trash_talk: When I'm done with you, you'll be buried neck-deep in a horse's arse.' ap: 25 dp: 20 hp: 150 mp: 20
-Human created from file 'res/eng/units/junkie' name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Constructing area from file 'spybar'...
+Reading resource 'spybar'... Reading file 'res/eng/maps/spybar'... read complete
+Reading file 'res/eng/units/junkie'... read complete
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Reading file 'res/eng/units/junkie'... read complete
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Reading file 'res/eng/units/junkie'... read complete
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Area construction complete
 deny warcrime
 
 Pushed back the scenes
 Setting buffer mode to raw... buffer mode set to raw
-Playing scene
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 Size of line: 16 Calculated middle: 31
 Pressed key: 13
 Playing scene
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
 Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
 Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 100
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
 Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
 Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 13
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
 End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
-Pressed key: 100
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
-Pressed key: 97
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'The'
-Writing line 'The legendary Soap Bar. Here, one might find the highly elusive and mythical ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'demi-god who goes by the name of Mikael Persbrandt.' to canvas matrix
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 102
-Size of line: 52 Calculated middle: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 70 Calculated middle: 4
 Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 Selected :0 flow of selected: 0 flow_back: 1
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
 Size of line: 2 Calculated middle: 38
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 16
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 16' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 4
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 4' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 15' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 14
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 14' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 2
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 1 15
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 15' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'YOU'
+End of stringstream reached, delimiter set to blank
+Writing line 'YOU DEFEATED Junkie Chan' to canvas matrix
+First word from stringstream: ''
+End of stringstream reached, delimiter set to blank
+Writing line '' to canvas matrix
+First word from stringstream: 'Press'
+End of stringstream reached, delimiter set to blank
+Writing line 'Press ENTER' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 116
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 70 Calculated middle: 4
+Pressed key: 115
+Size of line: 70 Calculated middle: 4
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'Please,'
+Writing line 'Please, spare some change. I promise it won't not go towards stuff that are not ' to canvas matrix
+End of stringstream reached, delimiter set to blank
+Writing line 'non-drug related.' to canvas matrix
+First word from stringstream: ''
+End of stringstream reached, delimiter set to blank
+Writing line '' to canvas matrix
+First word from stringstream: 'Press'
+End of stringstream reached, delimiter set to blank
+Writing line 'Press ENTER' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 100
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 100
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 102
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 70 Calculated middle: 4
+Pressed key: 115
+Size of line: 70 Calculated middle: 4
+Pressed key: 115
+Size of line: 70 Calculated middle: 4
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Selected :2 flow of selected: 0 flow_back: 1
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 2 Calculated middle: 38
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 13
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 17
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 4
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 4' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 0 13
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Stats entity attack: 0 3
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 63
+First word from stringstream: 'Junkie'
+End of stringstream reached, delimiter set to blank
+Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
+Size of line: 21 Calculated middle: 29
+Pressed key: 13
+Stats entity attack: 1 16
+Item created from file 'res/eng/weapons/fists' has name set to Fists and description set to Use your strong knuckles!
+Action size: 64
+First word from stringstream: 'Pjotr'
+End of stringstream reached, delimiter set to blank
+Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 16' to canvas matrix
+Size of line: 18 Calculated middle: 30
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'YOU'
+End of stringstream reached, delimiter set to blank
+Writing line 'YOU DEFEATED Junkie Chan' to canvas matrix
+First word from stringstream: ''
+End of stringstream reached, delimiter set to blank
+Writing line '' to canvas matrix
+First word from stringstream: 'Press'
+End of stringstream reached, delimiter set to blank
+Writing line 'Press ENTER' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 115
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 119
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
+Pressed key: 13
+Clearing matrix at row 0
+Clearing matrix at row 1
+Clearing matrix at row 2
+Clearing matrix at row 3
+Clearing matrix at row 4
+Clearing matrix at row 5
+Clearing matrix at row 6
+Clearing matrix at row 7
+Clearing matrix at row 8
+Clearing matrix at row 9
+Clearing matrix at row 10
+Clearing matrix at row 11
+Clearing matrix at row 12
+Clearing matrix at row 13
+Clearing matrix at row 14
+Clearing matrix at row 15
+Clearing matrix at row 16
+Clearing matrix at row 17
+Clearing matrix at row 18
+Clearing matrix at row 19
+Clearing matrix at row 20
+Clearing matrix at row 21
+Clearing matrix at row 22
+Clearing matrix at row 23
+First word from stringstream: 'No'
+End of stringstream reached, delimiter set to blank
+Writing line 'No 1 night club in Stockholm.' to canvas matrix
 Pressed key: 3
 Setting buffer mode to buffered... buffer mode set to buffered

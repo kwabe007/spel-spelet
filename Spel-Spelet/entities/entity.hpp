@@ -5,6 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <utility>
+#include <sstream>
 #include "../items/item.hpp"
 #include "../items/weapon.hpp"
 
@@ -29,8 +30,9 @@ protected:
 public:
     Entity();
     Entity(const std::string& nm);
+    Entity(std::stringstream& ss);
     Entity(const std::string& nm, const std::string& desc, const std::string& trash);
-    virtual ~Entity()=0;
+    virtual ~Entity();
 
     int get_hp() const;
     int get_mp() const;

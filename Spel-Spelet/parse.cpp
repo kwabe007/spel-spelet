@@ -1,15 +1,18 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <map>
+#include <stdexcept>
 #include <stdio.h>
 #include "parse.hpp"
 #include "conf.hpp"
 #include "exceptions/fileexcept.hpp"
+#include "entities/human.hpp"
+#include "debug/debugmacro.h"
+
 
 namespace tools{
-
 
     Parse::Parse(){
 		strncpy(esc_seq, "/#@", 10);
@@ -76,9 +79,16 @@ namespace tools{
 		return count;
 	}
 
+
+    std::string read_resource(const std::string& resource) {
+        debug_print(BIT4, "Reading resource '" << resource << "'... ");
+        return read_file(CONF.get_path_resource(resource));
+    }
+
     std::string read_file(const std::string& filename) {
+        debug_print(BIT4, "Reading file '" << filename << "'... ");
 		std::string text;
-        std::ifstream file(CONF.get_path_resource() + filename);
+        std::ifstream file(filename);
 
         if (!file.good()) {
             throw FileException("File '" + filename + "' not found or is empty");
@@ -88,6 +98,7 @@ namespace tools{
                 std::istreambuf_iterator<char>());
             file.close();
 		}
+        debug_println(BIT4, "read complete");
 		return text;
 	}
 
@@ -121,5 +132,32 @@ namespace tools{
 		}
 		return copy;
 	}
+
+
+    void* parse_entity_from_file(const std::string& filename) {
+        std::string contents = read_file(filename);
+        std::stringstream ss(contents);
+        std::string type;
+        std::getline(ss,type);
+        Entity* ent;
+        if (type == "HMN") {
+            ent = new Human(ss);
+        } else {
+            throw FileException("First token '" + type + "' in entity file '" + filename + "' does not correspond to a known entity type");
+        }
+        return ent;
+    }
+
+    int parse_int(const std::string& str) {
+        int result = 0;
+        try {
+            result = std::stoi(str);
+        } catch(const std::invalid_argument& e) {
+            throw std::invalid_argument("String '" + str + "' is an invalid argument for converting to int");
+        } catch(const std::out_of_range& e) {
+            throw std::out_of_range("String '" + str + "' gives a value which is out of range when converting to int");
+        }
+        return result;
+    }
 }
 

@@ -21,7 +21,9 @@
  * 0 - GENERAL
  * 1 - UI
  * 2 - CANVAS
- *
+ * 3 - ENTITIES
+ * 4 - PARSE
+ * 5 - AREAS
  */
 
 /* TODO:
@@ -32,7 +34,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 3;
+unsigned int GLOBAL_DEBUG_BITS = 55;
 ofstream ERR_FS("errlog");
 
 
@@ -61,52 +63,44 @@ signal(SIGSEGV, handler);
     UI::setup();
     debug_println(BIT0,"testing1,2");
 
-
-    Scene scene;
     Menu mainmenu("Main Menu");
     mainmenu.add_item("New Game","this is option 1");
     mainmenu.add_item("Load","this is option 2");
     mainmenu.add_item("Help","this is option 3");
-    mainmenu.add_item("Exit","this is option 4",FLOW_BACK,FUNCTION_EXIT);
-    scene.set_menu(mainmenu);
+    mainmenu.add_item("Exit","this is option 4",FLOW_BACK);
 
-    Scene scene2;
+
+    Scene scene1;
         World firstworld("Kvarnamala");
-            Building room(CONF.get_path_resource("spybar"));
-            Building secondroom(CONF.get_path_resource("soapbar"));
+            Building room("spybar");
+            //Building secondroom(CONF.get_path_resource("soapbar"));
         firstworld.add_area(room);
-        firstworld.add_area(secondroom);
+        //firstworld.add_area(secondroom);
         firstworld.set_start_area(0,0);
-    scene2.set_world(firstworld);
+    scene1.set_world(firstworld);
 
     Text text("texts/japan");
     debug_println(BIT0,text.get_text());
 
-    Scene scene3;
-    Menu secondmenu("Second Menu");
-    secondmenu.add_item("Samla kamrater", "this is option 1");
-    secondmenu.add_item("Jaga kulturberikare", "this is option 2");
-    scene3.set_menu(secondmenu);
-
     vector<Scene*> vec;
 
-    vec.push_back(&scene);
-    vec.push_back(&scene2);
-    vec.push_back(&scene3);
+    vec.push_back(&scene1);
     debug_println(BIT0,"Pushed back the scenes");
 
     UI::set_buffer_mode(0);
-    vector<Scene*>::iterator it = vec.begin();
-    while(it < vec.end()) {
-        SceneFlow flow = UI::play_scene(**it);
-        if (flow == SCENE_FLOW_STOP) {
-            it = vec.begin();
-        } else {
-            ++it;
+    while (true) {
+        UI::present_menu(mainmenu);
+        if (mainmenu.get_flow_of_selected() == FLOW_BACK) break;
+        auto it = vec.begin();
+        while(it < vec.end()) {
+            SceneFlow flow = UI::play_scene(**it);
+            if (flow == SCENE_FLOW_STOP) {
+                it = vec.begin();
+            } else {
+                ++it;
+            }
         }
     }
-
-    //UI::present_menu(mainmenu);
     UI::set_buffer_mode(1);
 
 

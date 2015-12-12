@@ -5,9 +5,6 @@
 class Building : public Indoor  {
 public:
     using Indoor::Indoor;
-    Building(const std::string& filename);
-
-
 };
 
 #endif

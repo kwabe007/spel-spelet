@@ -5,9 +5,11 @@
 
 class Human : public Organic {
 protected:
+    using Organic::Organic;
     Weapon get_unarmored_weapon() const;
 public:
     Human();
+    Human(std::stringstream& ss);
     Human(const std::string& filename);
     ~Human();
 };
