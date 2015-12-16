@@ -50,6 +50,7 @@ public:
     static std::pair<int,int> transform_coordinates(std::pair<int,int> coord, Direction dir);
 
 
+
 };
 
 #endif

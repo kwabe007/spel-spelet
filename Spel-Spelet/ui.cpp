@@ -189,7 +189,9 @@ namespace UI {
                 break; //optional
             case COMMAND_ENTER:
             case COMMAND_SPACE:
-                 goto EndWhileArea;
+                if (area.is_path_blocked(area.selected_direction))
+                    break;
+                goto EndWhileArea;
                 break; //optional
             case COMMAND_FIGHT: {
                 Menu fightmenu("Who do you want to fight?");

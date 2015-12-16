@@ -32,10 +32,10 @@ private:
     std::size_t area_controls_x_offset = 3;
     std::size_t area_controls_y_offset = 1;
     std::size_t area_name_y_offset = 1;
-    std::size_t hint_fight_x_offset = 1;
-    std::size_t hint_fight_y_offset = 1;
-    std::size_t hint_talk_x_offset = 1;
-    std::size_t hint_talk_y_offset = 3;
+    std::size_t area_hints_x_offset = 1;
+    std::size_t area_hint_fight_y_offset = 1;
+    std::size_t area_hint_talk_y_offset = 3;
+    std::size_t area_hint_game_menu_y_offset = 5;
     std::size_t player_trash_talk_x_offset = 3;
     std::size_t player_trash_talk_y_offset = 3;
     std::size_t enemy_trash_talk_x_offset = 3;
@@ -52,7 +52,6 @@ private:
     std::size_t text_y_offset = 3;
     std::size_t text_subtitle_y_offset = 3;
     std::size_t text_enter_hint_y_offset = 1;
-
     
     Matrix matrix;
 

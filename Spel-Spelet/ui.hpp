@@ -43,6 +43,7 @@ namespace UI  {
 
     static const std::string HINT_FIGHT("F = Fight");
     static const std::string HINT_TALK("T = Talk");
+    static const std::string HINT_GAME_MENU("P = Game Menu");
     static const std::string ANSI_MOVE_UP("\e[A");
     static const unsigned char MENU_DELIMITER('_');
     static const unsigned char BATTLE_DELIMITER('_');

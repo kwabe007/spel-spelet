@@ -14,14 +14,14 @@ Item::Item(std::string filename) {
     }
     std::getline(fs_item, name);
     std::getline(fs_item, description);
-    debug_println(BIT1,"Item created from file '" << filename << "' has name set to " << name << " and description set to " << description);
+    debug_println(BIT6,"Item created from file '" << filename << "' has name set to " << name << " and description set to " << description);
 }
 
 Item::Item(std::stringstream& ss) {
-    debug_println(BIT5,"Constructing item from string stream");
+    debug_println(BIT6,"Constructing item from string stream");
     std::getline(ss, name);
     std::getline(ss, description);
-    debug_println(BIT5,"Item construction complete");
+    debug_println(BIT6,"Item construction complete");
 }
 
 Item::~Item() {

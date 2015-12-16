@@ -1,4 +1,5 @@
 #include "world.hpp"
+#include "../debug/debugmacro.h"
 World::World() {
 
 }
@@ -20,6 +21,8 @@ void World::add_area(Area& ar) {
             coord = transform_coordinates(last_coord_mapped, link_direction);
         }
         map_area(coord, index);
+        last_coord_mapped = coord;
+        debug_println(BIT5,"Area " << ar.get_name() << " added to " << name << " with coordinates: [" << coord.first << "," << coord.second << "]" << " and index: " << index);
     }
 }
 
@@ -31,7 +34,6 @@ void World::set_start_area(int x, int y) {
     starting_area_coord = std::pair<int,int>(x,y);
     start_area_is_set = true;
 }
-
 
 Area& World::current_area() {
     std::size_t index = index_map[current_area_coord];

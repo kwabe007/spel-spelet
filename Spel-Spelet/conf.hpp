@@ -50,13 +50,13 @@ std::unordered_map<std::string, std::string> RES_TYPE_PATH_LOOKUP =
 const bool SHOW_SPLASH = true;
 const int splc = 3; //Amount of splash screens. Note that splash screen files from 0 to (splc-1) must exist if splc is larger than 0;
 
+public:
 const char RES_TYPE_DELIM = '-';
+const char FLAG_RES_ATTR_EMPTY = '-';
 
 const int DAMAGE_VAR_LOW = -2; //Lower bound of variation in damage dealt
 const int DAMAGE_VAR_HIGH = 2; //Higher bound of variation in damage dealt
 
-
-public:
 std::string get_path_resource(const std::string& res = "");
 int get_damage_var_low();
 int get_damage_var_high();

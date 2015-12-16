@@ -35,7 +35,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 0;
+unsigned int GLOBAL_DEBUG_BITS = 1<<5;
 ofstream ERR_FS("errlog");
 Human PLAYER(CONF.get_path_resource()+"units/player");
 
@@ -60,13 +60,14 @@ int exit() {
 }
 
 int main(int argc, char** argv) {
+
 signal(SIGSEGV, handler);
     UI::setup();
     UI::set_buffer_mode(0);
     debug_println(BIT0,"testing1,2");
     while (true) {
 
-        PLAYER = Human(CONF.get_path_resource()+"units/player");
+        //PLAYER = Human(CONF.get_path_resource()+"units/player");
         Menu mainmenu("Main Menu");
         mainmenu.add_item("New Game","this is option 1");
         mainmenu.add_item("Load","this is option 2");
@@ -75,10 +76,15 @@ signal(SIGSEGV, handler);
 
         Scene scene1;
             World firstworld("Kvarnamala");
-                Building room("map-spybar");
-                Building secondroom("map-soapbar");
-            firstworld.add_area(room);
+                //Building firstroom("map-spybar");
+                //Building secondroom("map-soapbar");
+                Building firstroom("map-cscmainhall");
+                Building secondroom("map-csccomprooms");
+                //secondroom.set_block(0,DIRECTION_NORTH);
+                Building thirdroom("map-cscthrone");
+            firstworld.add_area(firstroom);
             firstworld.add_area(secondroom);
+            firstworld.add_area(thirdroom);
             firstworld.set_start_area(0,0);
         scene1.set_world(firstworld);
 

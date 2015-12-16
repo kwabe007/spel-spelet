@@ -3,8 +3,19 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <unordered_map>
 #include "../entities/entity.hpp"
 #include "../menus/menu.hpp"
+
+class EnumClassHash
+{
+public:
+    template <typename T>
+    std::size_t operator()(T t) const
+    {
+        return static_cast<std::size_t>(t);
+    }
+};
 
 enum Direction {
     DIRECTION_NONE = -1,
@@ -19,14 +30,17 @@ enum Direction {
     DIRECTION_COUNT
 };
 
+
+
 class Area {
 protected:
     std::string name;
     std::string description;
+    std::string who_block;
     Menu* talk_menu_ptr = nullptr;
     Menu* game_menu_ptr = nullptr;
     std::fstream fs;
-
+    std::unordered_map<Direction,Entity*, EnumClassHash> blocking_map;
     std::vector<Entity*> entity_vec;
     //std::vector<Objects*> stuff;
 
@@ -49,8 +63,12 @@ public:
     void set_name(const std::string& str);
     void set_description(const std::string& str);
     void add_entity(Entity& ent);
+    bool is_path_blocked(Direction dir) const;
+    void set_block(std::size_t index, Direction dir);
 
     void reset_direction();
+
+    static Direction str_to_dir(const std::string& str);
 
     virtual ~Area();
 

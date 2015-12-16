@@ -14,11 +14,12 @@ Area::Area() :name {"none"}, description{"none"}{
 Area::Area(const std::string& resource) {
     debug_println(BIT5, "Constructing area from file '" << resource << "'...");
     std::string contents = tools::read_resource(resource);
-    std::stringstream ss_cont(contents);
-    std::getline(ss_cont, name);
-    std::getline(ss_cont, description);
+    std::stringstream ss_contents(contents);
+    std::getline(ss_contents, name);
+    std::getline(ss_contents, description);
+
     std::string entities_str;
-    std::getline(ss_cont, entities_str);
+    std::getline(ss_contents, entities_str);
     std::stringstream ss_enti(entities_str);
     while (ss_enti.good()) {
         std::string entity_str;
@@ -26,6 +27,28 @@ Area::Area(const std::string& resource) {
         Entity* ent_ptr = static_cast<Entity*> (tools::parse_entity_from_file(entity_str));
         add_entity(*ent_ptr);
     }
+
+    std::string block_str;
+    std::getline(ss_contents, block_str);
+    std::stringstream ss_block(block_str);
+    debug_println(BIT5, "Read ss_block for area " << name << ": '" << block_str << "'");
+    while (ss_block.good()) {
+        char c1 = ss_block.peek();
+        if (c1 == CONF.FLAG_RES_ATTR_EMPTY)
+            break;
+        try {
+            std::size_t index = -1;
+            ss_block >> index;
+            std::string direction_str = "BAD";
+            ss_block >> direction_str;
+            Direction dir = str_to_dir(direction_str);
+            set_block(index,dir);
+        } catch (const std::exception& e) {
+            throw FileException("invalid line for blocking characters in file");
+        }
+    }
+    std::getline(ss_contents, who_block);
+
     debug_println(BIT5, "Area construction complete");
 }
 
@@ -49,7 +72,7 @@ std::string Area::get_name() const {
     return name;
 }
 std::string Area::get_description() const {
-    return description;
+    return description + " " + who_block;
 }
 
 std::size_t Area::get_entity_size() const {
@@ -99,6 +122,36 @@ void Area::add_entity(Entity& ent) {
     entity_vec.push_back(&ent);
 }
 
+bool Area::is_path_blocked(Direction dir) const {
+    if (blocking_map.empty())
+        return false;
+    auto search = blocking_map.find(dir);
+        if(search == blocking_map.end())
+            return false;
+    if (search->second->is_alive())
+        return true;
+    return false;
+}
+
+void Area::set_block(std::size_t index, Direction dir) {
+    if(index >= entity_vec.size())
+            throw std::out_of_range("Can not set entity at index " + std::to_string(index) + " to block path, in area " + name + ": index out of range");
+    Entity* ent = entity_vec[index];
+    blocking_map[dir] = ent;
+    debug_println(BIT5, "Entity " << ent->get_name() << " is now blocking a path in dir " << dir << " in area " << name);
+}
+
 void Area::reset_direction() {
     selected_direction = default_direction;
+}
+
+Direction Area::str_to_dir(const std::string& str) {
+    std::unordered_map<std::string, Direction> str_to_direction = {
+        { "north", DIRECTION_NORTH },
+        { "east", DIRECTION_EAST },
+        { "south", DIRECTION_SOUTH },
+        { "west", DIRECTION_WEST },
+    };
+
+    return str_to_direction.at(str);
 }
