@@ -39,6 +39,7 @@ protected:
     std::string who_block;
     Menu* talk_menu_ptr = nullptr;
     Menu* game_menu_ptr = nullptr;
+    Menu* item_menu_ptr = nullptr;
     std::fstream fs;
     std::unordered_map<Direction,Entity*, EnumClassHash> blocking_map;
     std::vector<Entity*> entity_vec;

@@ -5,6 +5,7 @@
 #include <array>
 #include <vector>
 #include "../funcobj/funcobj.hpp"
+#include "../items/item.hpp"
 
 //Forward declaration of Menu for use in typedef.
 class Menu;
@@ -43,26 +44,28 @@ class Menu {
         FunctionObject functionobject;
         MenuFlow flow = FLOW_FORWARD;
         Menu* nextmenu = nullptr;
-
         friend Menu;
 
         public:
         MenuItem(){}
         MenuItem(const std::string& name, const std::string& desc, MenuFlow fl = FLOW_FORWARD,
                  FunctionType f_type = FUNCTION_NONE, std::size_t* init_val = nullptr, std::size_t set_val = 0,
-                 Menu* submenu = nullptr) {
+                 Menu* submenu = nullptr, Item* item_ptr = nullptr) {
             switch (f_type) {
             case FUNCTION_INTEGRAL:
                 functionobject = FunctionObject(init_val,set_val);
                 break;
             default:
-                functionobject = FunctionObject(f_type);
+                functionobject = FunctionObject(item_ptr);
             }
 
             repr_strings[0] = name;
             repr_strings[1] = desc;
             flow = fl;
             nextmenu = submenu;
+        }
+        ~MenuItem(){
+            //if (nextmenu) delete nextmenu;
         }
 
         std::string get_name() const {
@@ -80,6 +83,7 @@ class Menu {
     std::string name = "none";
     std::string description = "nondescript";
 
+
     public:
 
     Menu();
@@ -92,9 +96,10 @@ class Menu {
     std::string operator[](std::size_t index)const;
 
     int add_item(const std::string& name, const std::string& desc, Menu& submenu);
+    int add_item(const std::string& name, const std::string& desc, Item& item);
     int add_item(const std::string& name, const std::string& desc, MenuFlow flow = FLOW_FORWARD,
                  FunctionType f_type = FUNCTION_NONE, std::size_t* init_val = nullptr, std::size_t set_val = 0,
-                 Menu* submenu = nullptr);
+                 Menu* submenu = nullptr, Item* = nullptr);
 
     int add_back();
 
@@ -116,6 +121,7 @@ class Menu {
     bool selected_has_menu() const;
 
     void fill_matrix(std::string** matrix) const;
+    //std::vector<Menu*> submenus;
 
 };
 

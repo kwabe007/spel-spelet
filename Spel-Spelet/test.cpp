@@ -28,6 +28,7 @@
  */
 
 /* TODO:
+ * FIX ITEM SYSTEM!
  * DESTRUCTORS FOR SCENE(WORLD,MAP,TEXT), WORLD(AREA), AREA (ENTITIES,OBJECTS)
  * ADD NAMESPACE
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
@@ -35,9 +36,9 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 1<<3;
+unsigned int GLOBAL_DEBUG_BITS = 1;
 ofstream ERR_FS("errlog");
-Human PLAYER(CONF.get_path_resource()+"units/player");
+Human PLAYER("unt-pjotr");
 
 
 void handler(int sig) {
@@ -67,7 +68,6 @@ signal(SIGSEGV, handler);
     debug_println(BIT0,"testing1,2");
     while (true) {
 
-        //PLAYER = Human(CONF.get_path_resource()+"units/player");
         Menu mainmenu("Main Menu");
         mainmenu.add_item("New Game","this is option 1");
         mainmenu.add_item("Load","this is option 2");

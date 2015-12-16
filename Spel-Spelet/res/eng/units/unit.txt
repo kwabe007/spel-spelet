@@ -1,5 +1,11 @@
+#type
 #name
 #description
-#unit list
-#unit_block list
-#who_block description
+#trash_talk
+#what to say
+#hp
+#ap
+#dp
+#mp
+#weapon
+#inventory

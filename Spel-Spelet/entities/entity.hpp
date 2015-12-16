@@ -9,9 +9,12 @@
 #include "../items/item.hpp"
 #include "../items/weapon.hpp"
 
+
 class Entity {
 protected:
+
     int hp = 20; //Health Points
+    int hp_max = hp; //Max Health Points
     int ap = 5; //Attack Points
     int dp = 10; //Defense Points
     int mp = 10; //Magic Points
@@ -26,13 +29,16 @@ protected:
     std::vector<Item*> inventory;
     virtual Weapon get_unarmored_weapon() const=0;
     std::fstream fs;
+    void read_from_string_stream(std::stringstream& ss);
 
 public:
     Entity();
-    Entity(const std::string& nm);
+    Entity(const std::string& resource);
     Entity(std::stringstream& ss);
     Entity(const std::string& nm, const std::string& desc, const std::string& trash);
     virtual ~Entity();
+
+
 
     int get_hp() const;
     int get_mp() const;
@@ -43,6 +49,9 @@ public:
     std::string get_description() const;
     std::string get_trash_talk() const;
     std::string get_what_to_say() const;
+    Item& get_item_from_inventory(std::size_t index);
+    const Item& get_item_from_inventory(std::size_t index)const;
+    std::size_t get_inventory_size() const;
     Weapon get_weapon() const;
 
     bool is_alive()const;
@@ -50,7 +59,9 @@ public:
     void set_mp(int val);
     void set_ap(int val);
     void set_dp(int val);
+    void add_item_to_inventory(Item& item);
     std::pair<bool, int> take_damage(int damage);
+    std::pair<bool, int> take_health(int health);
     std::pair<bool, int> attack(Entity& other);
 
 };

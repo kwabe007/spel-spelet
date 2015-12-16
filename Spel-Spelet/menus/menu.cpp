@@ -10,7 +10,11 @@ Menu::Menu(const std::string nm) : name{nm} {
 }
 
 Menu::~Menu() {
+    /*for(Menu* submenu : submenus) {
+        delete submenu;
+    }*/
 }
+
 
 std::string Menu::operator[](std::size_t index)const {
     return items[index].repr_strings[0];
@@ -21,6 +25,11 @@ int Menu::add_back() {
     return 0;
 }
 
+int Menu::add_item(const std::string& name, const std::string& desc, Item& item) {
+    add_item(name,desc,FLOW_STAY,FUNCTION_NONE,nullptr,0,nullptr,&item);
+    return 0;
+}
+
 int Menu::add_item(const std::string& name, const std::string& desc, Menu& submenu) {
     add_item(name,desc,FLOW_FORWARD,FUNCTION_NONE,nullptr,0,&submenu);
     return 0;
@@ -28,8 +37,8 @@ int Menu::add_item(const std::string& name, const std::string& desc, Menu& subme
 
 int Menu::add_item(const std::string& name, const std::string& desc, MenuFlow flow,
                    FunctionType f_type, std::size_t* init_val, std::size_t set_val,
-                   Menu* submenu) {
-    items.push_back(MenuItem(name,desc,flow,f_type,init_val,set_val,submenu));
+                   Menu* submenu, Item* item_ptr) {
+    items.push_back(MenuItem(name,desc,flow,f_type,init_val,set_val,submenu,item_ptr));
     return 0;
 }
 

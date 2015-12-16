@@ -21,6 +21,7 @@ Area::Area(const std::string& resource) {
     std::string entities_str;
     std::getline(ss_contents, entities_str);
     std::stringstream ss_enti(entities_str);
+
     while (ss_enti.good()) {
         char c1 = ss_enti.peek();
         if (c1 == CONF.FLAG_RES_ATTR_EMPTY)
@@ -30,6 +31,7 @@ Area::Area(const std::string& resource) {
         Entity* ent_ptr = static_cast<Entity*> (tools::parse_entity_from_file(entity_str));
         add_entity(*ent_ptr);
     }
+
     std::string block_str;
     std::getline(ss_contents, block_str);
     std::stringstream ss_block(block_str);
@@ -63,6 +65,7 @@ Area::~Area(){
         delete talk_menu_ptr;
     }
     if (game_menu_ptr) {
+        delete item_menu_ptr;
         delete game_menu_ptr;
     }
     for (Entity* ent_ptr : entity_vec) {
@@ -112,8 +115,16 @@ const Menu& Area::get_game_menu() {
     if (game_menu_ptr) {
         return *game_menu_ptr;
     }
+    item_menu_ptr = new Menu("Items");
+    debug_println(BIT5,"Player inventory size: " << PLAYER.get_inventory_size());
+    for (std::size_t i = 0; i < PLAYER.get_inventory_size(); ++i) {
+        Item& item = PLAYER.get_item_from_inventory(i);
+        item_menu_ptr->add_item(item.get_name(),item.get_description(),item);
+    }
+    item_menu_ptr->add_back();
     game_menu_ptr = new Menu("Game Menu");
     game_menu_ptr->add_item("Resume game","Resume the game");
+    game_menu_ptr->add_item("Inventory","Show the items you have in your inventory",*item_menu_ptr);
     game_menu_ptr->add_item("End game", "End game and go back to main menu", FLOW_BACK);
     return *game_menu_ptr;
 }

@@ -27,3 +27,11 @@ int Weapon::get_ap() const {
     return ap;
 }
 
+std::string Weapon::get_description() const {
+    return description;
+}
+
+int Weapon::action() {
+    return 0;
+}
+

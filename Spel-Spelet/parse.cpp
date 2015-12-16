@@ -11,6 +11,7 @@
 #include "entities/human.hpp"
 #include "debug/debugmacro.h"
 #include "items/weapon.hpp"
+#include "items/consumable.hpp"
 
 
 namespace tools{
@@ -133,8 +134,8 @@ namespace tools{
 		return copy;
 	}
 
-    void* parse_entity_from_file(const std::string& filename) {
-        std::string contents = read_resource(filename);
+    void* parse_entity_from_file(const std::string& resource) {
+        std::string contents = read_resource(resource);
         std::stringstream ss(contents);
         std::string type;
         std::getline(ss,type);
@@ -142,21 +143,24 @@ namespace tools{
         if (type == "HMN") {
             ent = new Human(ss);
         } else {
-            throw FileException("First token '" + type + "' in entity file '" + filename + "' does not correspond to a known entity type");
+            throw FileException("First token '" + type + "' in entity file '" + resource + "' does not correspond to a known entity type");
         }
         return ent;
     }
 
-    void* parse_item_from_file(const std::string& filename) {
-        std::string contents = read_resource(filename);
+    void* parse_item_from_file(const std::string& resource) {
+        std::string contents = read_resource(resource);
         std::stringstream ss(contents);
         std::string type;
         std::getline(ss,type);
         Item* item_ptr;
         if (type == "WPN") {
             item_ptr = new Weapon(ss);
-        } else {
-            throw FileException("First token '" + type + "' in item file '" + filename + "' does not correspond to a known item type");
+        } else if (type == "CSM") {
+            item_ptr = new Consumable(ss);
+        }
+        else {
+            throw FileException("First token '" + type + "' in item file '" + resource + "' does not correspond to a known item type");
         }
         return item_ptr;
     }

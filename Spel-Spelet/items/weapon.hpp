@@ -11,6 +11,8 @@ public:
     Weapon(std::string filename);
     Weapon(std::stringstream& ss);
     int get_ap() const;
+    std::string get_description() const;
+    int action();
 };
 
 #endif

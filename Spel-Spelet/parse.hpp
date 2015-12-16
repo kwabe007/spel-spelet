@@ -41,9 +41,9 @@ namespace tools {
 
 	std::string replace_coding(const std::string& subject);
 
-    void* parse_entity_from_file(const std::string& filename);
+    void* parse_entity_from_file(const std::string& resource);
 
-    void* parse_item_from_file(const std::string& filename);
+    void* parse_item_from_file(const std::string& resource);
 
     int parse_int(const std::string& str);
 

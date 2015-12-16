@@ -10,8 +10,8 @@ protected:
 public:
     Human();
     Human(std::stringstream& ss);
-    Human(const std::string& filename);
-    Human& operator=(const Human& );
+    Human(const std::string& resource);
+    Human& operator=(Human& );
     ~Human();
 };
 
