@@ -44,6 +44,7 @@ std::unordered_map<std::string, std::string> RES_TYPE_PATH_LOOKUP =
         {"unt", "units/"},
         {"map", "maps/"},
         {"itm", "items/"},
+        {"txt", "texts/"},
     };
 
 /*Splash screen settings*/

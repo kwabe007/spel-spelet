@@ -1,8 +1,7 @@
 #include "scene.hpp"
 
-void Scene::set_text(std::string& txt) {
-    text = txt;
-    text_set = true;
+void Scene::set_text(Text& txt) {
+    text_ptr = &txt;
 }
 
 void Scene::set_menu(Menu& mn) {
@@ -14,7 +13,8 @@ void Scene::set_world(World& wd) {
 }
 
 bool Scene::is_set_text() const {
-    return text_set;
+    if (text_ptr) return true;
+    return false;
 }
 
 bool Scene::is_set_menu() const {
@@ -35,12 +35,8 @@ const Menu& Scene::get_menu() const {
     return *menu_ptr;
 }
 
-std::string& Scene::get_text(){
-    return text;
-}
-
-const std::string& Scene::get_text() const {
-    return text;
+Text& Scene::get_text() {
+    return *text_ptr;
 }
 
 World& Scene::get_world(){

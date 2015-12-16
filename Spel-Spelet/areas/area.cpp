@@ -12,7 +12,7 @@ Area::Area() :name {"none"}, description{"none"}{
 }
 
 Area::Area(const std::string& resource) {
-    debug_println(BIT5, "Constructing area from file '" << resource << "'...");
+    debug_println(BIT5, "Constructing area from resource '" << resource << "'...");
     std::string contents = tools::read_resource(resource);
     std::stringstream ss_contents(contents);
     std::getline(ss_contents, name);
@@ -22,12 +22,14 @@ Area::Area(const std::string& resource) {
     std::getline(ss_contents, entities_str);
     std::stringstream ss_enti(entities_str);
     while (ss_enti.good()) {
+        char c1 = ss_enti.peek();
+        if (c1 == CONF.FLAG_RES_ATTR_EMPTY)
+            break;
         std::string entity_str;
         ss_enti >> entity_str;
         Entity* ent_ptr = static_cast<Entity*> (tools::parse_entity_from_file(entity_str));
         add_entity(*ent_ptr);
     }
-
     std::string block_str;
     std::getline(ss_contents, block_str);
     std::stringstream ss_block(block_str);
@@ -72,7 +74,13 @@ std::string Area::get_name() const {
     return name;
 }
 std::string Area::get_description() const {
-    return description + " " + who_block;
+    std::string total_description = description;
+    for (auto pair : blocking_map) {
+        if (pair.second->is_alive()) {
+            total_description += (" " + who_block + " " + dir_to_str(pair.first));
+        }
+    }
+    return total_description;
 }
 
 std::size_t Area::get_entity_size() const {
@@ -154,4 +162,14 @@ Direction Area::str_to_dir(const std::string& str) {
     };
 
     return str_to_direction.at(str);
+}
+
+std::string Area::dir_to_str(Direction dir) {
+    std::unordered_map<Direction, std::string,EnumClassHash> direction_to_str = {
+        { DIRECTION_NORTH, "north" },
+        { DIRECTION_EAST, "east" },
+        { DIRECTION_SOUTH, "south" },
+        { DIRECTION_WEST, "west" },
+    };
+    return direction_to_str.at(dir);
 }

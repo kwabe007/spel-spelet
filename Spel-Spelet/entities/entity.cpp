@@ -111,7 +111,9 @@ Weapon Entity::get_weapon() const {
 }
 
 bool Entity::is_alive() const {
-    return alive;
+    if (hp > 0)
+        return true;
+    return false;
 }
 
 void Entity::set_hp(int val){

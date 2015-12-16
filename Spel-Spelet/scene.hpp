@@ -4,6 +4,7 @@
 #include <string>
 #include "menus/menu.hpp"
 #include "areas/world.hpp"
+#include "texts/text.hpp"
 
 enum SceneFlow {
     SCENE_FLOW_NORMAL,
@@ -16,11 +17,11 @@ private:
     std::string text;
     Menu* menu_ptr = nullptr;
     World* world_ptr = nullptr;
-    bool text_set = false;
+    Text* text_ptr = nullptr;
     bool world_set = false;
 
 public:
-    void set_text(std::string& txt);
+    void set_text(Text& txt);
     void set_menu(Menu& mn);
     void set_world(World& wd);
 
@@ -28,8 +29,7 @@ public:
     bool is_set_menu()const;
     bool is_set_world()const;
 
-    std::string& get_text();
-    const std::string& get_text()const;
+    Text& get_text();
     Menu& get_menu();
     const Menu& get_menu()const;
     World& get_world();

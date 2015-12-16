@@ -35,7 +35,7 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 1<<5;
+unsigned int GLOBAL_DEBUG_BITS = 1<<3;
 ofstream ERR_FS("errlog");
 Human PLAYER(CONF.get_path_resource()+"units/player");
 
@@ -73,27 +73,34 @@ signal(SIGSEGV, handler);
         mainmenu.add_item("Load","this is option 2");
         mainmenu.add_item("Help","this is option 3");
         mainmenu.add_item("Exit","this is option 4",FLOW_BACK);
+        /*Scene scene1;
+        World firstworld("Kvarnamala");
+        Building room1("map-forest1");
+        Building room1("map-forest2");*/
 
-        Scene scene1;
+
+        Scene scene2;
+            Text intro("txt-intro");
+        scene2.set_text(intro);
             World firstworld("Kvarnamala");
                 //Building firstroom("map-spybar");
                 //Building secondroom("map-soapbar");
-                Building firstroom("map-cscmainhall");
-                Building secondroom("map-csccomprooms");
-                //secondroom.set_block(0,DIRECTION_NORTH);
-                Building thirdroom("map-cscthrone");
+                Building firstroom("map-forest1");
+                Building secondroom("map-forest2");
+                Building thirdroom("map-cscmainhall");
+                Building fourthroom("map-csccomprooms");
+                Building fifthroom("map-cscthrone");
             firstworld.add_area(firstroom);
             firstworld.add_area(secondroom);
             firstworld.add_area(thirdroom);
+            firstworld.add_area(fourthroom);
+            firstworld.add_area(fifthroom);
             firstworld.set_start_area(0,0);
-        scene1.set_world(firstworld);
 
-        Text text("texts/japan");
-        debug_println(BIT0,text.get_text());
-
+        scene2.set_world(firstworld);
         vector<Scene*> vec;
 
-        vec.push_back(&scene1);
+        vec.push_back(&scene2);
         debug_println(BIT0,"Pushed back the scenes");
 
         UI::present_menu(mainmenu);
@@ -108,6 +115,7 @@ signal(SIGSEGV, handler);
             }
         }
     }
+
     UI::set_buffer_mode(1);
 
 
