@@ -111,11 +111,54 @@ namespace UI {
         ;
     }
 
-    void present_menu(const Menu& menu, bool sub) {
-        flush_screen();
-        cvs.clear_canvas();
+    void entity_status(const Entity& ent) {
+        flush_and_clear();
         char choice;
         while (true) {
+            cvs.apply_entity_status(ent);
+            print_canvas();
+            choice = get_char();
+            switch(choice){
+            case COMMAND_ENTER:
+            case COMMAND_SPACE:
+                goto EndWhile;
+            default:
+                ;
+            }
+        }
+        EndWhile:
+        ;
+    }
+
+    MenuFlow setup_game_menu() {
+        MenuFlow fl = FLOW_BACK;
+        while (true) {
+            Menu item_menu("Items");
+            debug_println(BIT5,"Player inventory size: " << PLAYER.get_inventory_size());
+            for (std::size_t i = 0; i < PLAYER.get_inventory_size(); ++i) {
+                Item& item = PLAYER.get_item_from_inventory(i);
+                item_menu.add_item(item.get_name(),item.get_description(),item);
+            }
+            item_menu.add_back();
+            Menu game_menu ("Game Menu");
+            game_menu.add_item("Resume game","Resume the game",FLOW_BACK);
+            game_menu.add_item("Status","Status",FLOW_FORWARD);
+            game_menu.add_item("Inventory","Show the items you have in your inventory",FLOW_BACK,FUNCTION_NONE,nullptr,0,&item_menu);
+            game_menu.add_item("End game", "End game and go back to main menu", FLOW_END);
+            present_menu(game_menu);
+            fl = game_menu.get_flow_of_selected();
+            if (fl == FLOW_FORWARD)
+                entity_status(PLAYER);
+            else
+                break;
+        }
+        return fl;
+    }
+
+    void present_menu(const Menu& menu, bool sub) {
+        char choice;
+        while (true) {
+            flush_and_clear();
             cvs.apply_menu(menu);
             print_canvas();
             choice = get_char();
@@ -137,6 +180,9 @@ namespace UI {
                     if (menu.selected_has_menu()) {
                         const Menu& next_menu = menu.get_menu_of_selected();
                         present_menu(next_menu);
+                        if (next_menu.get_flow_of_selected() == FLOW_END)
+                            goto EndWhile;
+                        break;
                     }
                     goto EndWhile;
                 }
@@ -220,10 +266,8 @@ namespace UI {
                 break;
             }
             case COMMAND_PAUSE: {
-                const Menu& game_menu = area.get_game_menu();
-                present_menu(game_menu, true);
-                if (game_menu.get_flow_of_selected() == FLOW_BACK) return false;
-
+                //const Menu& game_menu = area.get_game_menu();
+                if (setup_game_menu() == FLOW_END) return false;
                 break;
             }
             default : //Optional

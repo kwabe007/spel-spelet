@@ -78,6 +78,8 @@ namespace UI  {
 
     SceneFlow play_scene(Scene& scene);
     void show_text(const Text& text);
+    void entity_status(const Entity& ent);
+    MenuFlow setup_game_menu();
     void present_menu(const Menu& menu, bool sub = false);
     bool play_world(World& area);
     bool play_area(Area& area);

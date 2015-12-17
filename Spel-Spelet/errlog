@@ -1,554 +1,123 @@
-Setting buffer mode to raw... buffer mode set to raw
-testing1,2
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-Constructing text from resource 'txt-intro'...
-Text successfully constructed from resource 'txt-intro
-Pushed back the scenes
-Size of line: 16 Calculated middle: 31
-Pressed key: 13
-Playing scene
-First word from stringstream: 'You'
-Writing line 'You are some random guy who decided, for whatever reasons, to leave your ' to canvas matrix
-Writing line 'beloved home of Kvarnamåla to seek new adventures in the city of Stockholm. ' to canvas matrix
-Writing line 'When you arrive at Stockholm you realize it's kind of shit but you can't return ' to canvas matrix
-Writing line 'yet because your train back departs next month. So what now? You decide to go ' to canvas matrix
-Writing line 'into the forest because you are not very bright but it doesn't matter, the ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'forest could be fun.' to canvas matrix
-First word from stringstream: 'Developer's'
-End of stringstream reached, delimiter set to blank
-Writing line 'Developer's Note: This is the best story I could come up with' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 112
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 15 Calculated middle: 32
-Pressed key: 115
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-doing item action
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 112
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 115
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 70 Calculated middle: 4
-Pressed key: 13
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 13
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 6
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 6' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 14
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 14' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 5
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 5' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 15' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 4
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 4' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 1 14
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 14' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEFEATED Junkie Chan' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 112
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-doing item action
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 112
-Size of line: 41 Calculated middle: 19
-Pressed key: 119
-Size of line: 15 Calculated middle: 32
-Pressed key: 115
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 119
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 56 Calculated middle: 11
-Pressed key: 13
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 13
-Action size: 63
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Biggo Mann with Fists Dealing damage: 13' to canvas matrix
-Size of line: 17 Calculated middle: 31
-Pressed key: 13
-Stats entity attack: 0 18
-Action size: 63
-First word from stringstream: 'Biggo'
-End of stringstream reached, delimiter set to blank
-Writing line 'Biggo Mann attacks Pjotr Thorsson with Fists Dealing damage: 18' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Action size: 63
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Biggo Mann with Fists Dealing damage: 15' to canvas matrix
-Size of line: 17 Calculated middle: 31
-Pressed key: 13
-Stats entity attack: 0 19
-Action size: 63
-First word from stringstream: 'Biggo'
-End of stringstream reached, delimiter set to blank
-Writing line 'Biggo Mann attacks Pjotr Thorsson with Fists Dealing damage: 19' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Action size: 63
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Biggo Mann with Fists Dealing damage: 15' to canvas matrix
-Size of line: 17 Calculated middle: 31
-Pressed key: 13
-Stats entity attack: 0 19
-Action size: 63
-First word from stringstream: 'Biggo'
-End of stringstream reached, delimiter set to blank
-Writing line 'Biggo Mann attacks Pjotr Thorsson with Fists Dealing damage: 19' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 16
-Action size: 63
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Biggo Mann with Fists Dealing damage: 16' to canvas matrix
-Size of line: 17 Calculated middle: 31
-Pressed key: 13
-Stats entity attack: 0 19
-Action size: 63
-First word from stringstream: 'Biggo'
-End of stringstream reached, delimiter set to blank
-Writing line 'Biggo Mann attacks Pjotr Thorsson with Fists Dealing damage: 19' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 16
-Action size: 63
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Biggo Mann with Fists Dealing damage: 16' to canvas matrix
-Size of line: 17 Calculated middle: 31
-Pressed key: 13
-Stats entity attack: 1 19
-Action size: 63
-First word from stringstream: 'Biggo'
-End of stringstream reached, delimiter set to blank
-Writing line 'Biggo Mann attacks Pjotr Thorsson with Fists Dealing damage: 19' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEAD' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-Constructing text from resource 'txt-intro'...
-Text successfully constructed from resource 'txt-intro
-Pushed back the scenes
-Size of line: 16 Calculated middle: 31
-Pressed key: 115
-Size of line: 16 Calculated middle: 31
-Pressed key: 119
-Size of line: 16 Calculated middle: 31
-Pressed key: 13
-Playing scene
-First word from stringstream: 'You'
-Writing line 'You are some random guy who decided, for whatever reasons, to leave your ' to canvas matrix
-Writing line 'beloved home of Kvarnamåla to seek new adventures in the city of Stockholm. ' to canvas matrix
-Writing line 'When you arrive at Stockholm you realize it's kind of shit but you can't return ' to canvas matrix
-Writing line 'yet because your train back departs next month. So what now? You decide to go ' to canvas matrix
-Writing line 'into the forest because you are not very bright but it doesn't matter, the ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'forest could be fun.' to canvas matrix
-First word from stringstream: 'Developer's'
-End of stringstream reached, delimiter set to blank
-Writing line 'Developer's Note: This is the best story I could come up with' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 56 Calculated middle: 11
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 56 Calculated middle: 11
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 115
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 70 Calculated middle: 4
-Pressed key: 13
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 13
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 13' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 1 3
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEAD' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-Constructing text from resource 'txt-intro'...
-Text successfully constructed from resource 'txt-intro
-Pushed back the scenes
-Size of line: 16 Calculated middle: 31
-Pressed key: 13
-Playing scene
-First word from stringstream: 'You'
-Writing line 'You are some random guy who decided, for whatever reasons, to leave your ' to canvas matrix
-Writing line 'beloved home of Kvarnamåla to seek new adventures in the city of Stockholm. ' to canvas matrix
-Writing line 'When you arrive at Stockholm you realize it's kind of shit but you can't return ' to canvas matrix
-Writing line 'yet because your train back departs next month. So what now? You decide to go ' to canvas matrix
-Writing line 'into the forest because you are not very bright but it doesn't matter, the ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'forest could be fun.' to canvas matrix
-First word from stringstream: 'Developer's'
-End of stringstream reached, delimiter set to blank
-Writing line 'Developer's Note: This is the best story I could come up with' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 115
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 112
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 15 Calculated middle: 32
-Pressed key: 115
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-doing item action
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 119
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 112
-Size of line: 41 Calculated middle: 19
-Pressed key: 13
-Size of line: 6 Calculated middle: 36
-Pressed key: 119
-Size of line: 41 Calculated middle: 19
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 56 Calculated middle: 11
-Pressed key: 115
-Size of line: 6 Calculated middle: 36
-Pressed key: 13
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 115
-First word from stringstream: 'There'
-Writing line 'There is still a lot of nature around you. You might be stuck here for life. ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'But wait there is a man over there who might help you out.' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 102
-item ptr set to funcobj
-item ptr set to funcobj
-Size of line: 70 Calculated middle: 4
-Pressed key: 13
-Size of line: 2 Calculated middle: 38
-Pressed key: 13
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 17
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 17' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 3
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 3' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 15' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 5
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 5' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 0 15
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 15' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-Stats entity attack: 0 2
-Action size: 63
-First word from stringstream: 'Junkie'
-End of stringstream reached, delimiter set to blank
-Writing line 'Junkie Chan attacks Pjotr Thorsson with Fists Dealing damage: 2' to canvas matrix
-Size of line: 21 Calculated middle: 29
-Pressed key: 13
-Stats entity attack: 1 14
-Action size: 64
-First word from stringstream: 'Pjotr'
-End of stringstream reached, delimiter set to blank
-Writing line 'Pjotr Thorsson attacks Junkie Chan with Fists Dealing damage: 14' to canvas matrix
-Size of line: 18 Calculated middle: 30
-Pressed key: 13
-First word from stringstream: 'YOU'
-End of stringstream reached, delimiter set to blank
-Writing line 'YOU DEFEATED Junkie Chan' to canvas matrix
-First word from stringstream: ''
-End of stringstream reached, delimiter set to blank
-Writing line '' to canvas matrix
-First word from stringstream: 'Press'
-End of stringstream reached, delimiter set to blank
-Writing line 'Press ENTER' to canvas matrix
-Pressed key: 13
-First word from stringstream: 'You'
-Writing line 'You are deep in a forest. There might be some animals here and there and other ' to canvas matrix
-End of stringstream reached, delimiter set to blank
-Writing line 'wierd stuff. If you're really lucky you might even come across a junkie.' to canvas matrix
-Pressed key: 3
-Setting buffer mode to buffered... buffer mode set to buffered
+Constructing entity from string stream... 
+string stream good
+ got name: Pjotr Thorsson got description: Pjotr Thorsson got trash talk: DE E DAGS got what_to_say: BRAH got hp: 80 got ap: 15 got dp: 5 got mp: 10char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Pjotr Thorsson: 'itm-adk itm-bodyarmor'
+Items added to inventory of Pjotr Thorsson: ADK Body Armor
+Entity construction complete0x7ffef7bff5f8
+Human created from resource 'unt-pjotr' name: Pjotr Thorsson description: Shaved Albanian trash_talk: DE E DAGS' ap: 15 dp: 5 hp: 80 mp: 10
+Constructing entity from string stream... 
+string stream good
+ got name: Junkie Chan got description: Junkie Chan got trash talk: bruh got what_to_say: Please, spare some change. I promise it won't not go towards stuff that are not non-drug related. got hp: 50 got ap: 4 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Junkie Chan: '-'
+Items added to inventory of Junkie Chan:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Biggo Mann got description: Biggo Mann got trash talk: I am not the enemy you fool! got what_to_say: You seem trustworthy, stranger, so I will tell you my story. I am Biggo Mann, ruler of house TCS in the kingdom of CSC. The kingdom has four ruling houses governing our vast realm: TCS, CVAP, MID and CAS. Not until long ago all factions coexisted in balance. That was before [insert super badass nickname or sum shit here] appeared. He started out as a lecturer in house MID and rose to power by his insatiable hunger for CSC-wide dominance. He and his followers took over the houses of CVAP and CAS without much resistance. House TCS is now the last standing faction to oppose [insert badass name again here] and his legion. You must aid us or the kingdom of CSC will be no more. got hp: 100 got ap: 20 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Biggo Mann: '-'
+Items added to inventory of Biggo Mann:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Biggo Mann description: He seems super-intelligent, but also seem quite worried. trash_talk: I am not the enemy you fool!' ap: 20 dp: 2 hp: 100 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Junkie Chan got description: Junkie Chan got trash talk: bruh got what_to_say: Please, spare some change. I promise it won't not go towards stuff that are not non-drug related. got hp: 50 got ap: 4 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Junkie Chan: '-'
+Items added to inventory of Junkie Chan:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Filip Roseen got description: Filip Roseen got trash talk: You will never succeed, the Master can not be stopped! got what_to_say: The Master's plan is going well as expected. I can not let anyone interfere. got hp: 10 got ap: 1 got dp: 20 got mp: 20char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Filip Roseen: '-'
+Items added to inventory of Filip Roseen:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Filip Roseen description: He's just standing there and refusing anyone passage. trash_talk: You will never succeed, the Master can not be stopped!' ap: 1 dp: 20 hp: 10 mp: 20
+Constructing entity from string stream... 
+string stream good
+ got name: Malexander Daltatzis got description: Malexander Daltatzis got trash talk: No one will stand in the way of my supreme rule over the Kingdom CSC! got what_to_say: Join me and I will spare your life. got hp: 200 got ap: 50 got dp: 20 got mp: 20char is i
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Malexander Daltatzis: '-'
+Items added to inventory of Malexander Daltatzis:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Malexander Daltatzis description: This is THE feared Malexander, he is not to be underestimated. trash_talk: No one will stand in the way of my supreme rule over the Kingdom CSC!' ap: 50 dp: 20 hp: 200 mp: 20
+equipping armor Body Armor for entity Pjotr Thorsson
+armor to replace: Regular Clothes for entity Pjotr Thorsson
+Entity Pjotr Thorsson is now equipping Body Armor
+Item pointer in Pjotr Thorsson erased from pos 1
+Item ADK
+Item Regular Clothes
+Current armor Body Armor at mem 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+getting armor Body Armor mem: 0x1188b40
+Constructing entity from string stream... 
+string stream good
+ got name: Junkie Chan got description: Junkie Chan got trash talk: bruh got what_to_say: Please, spare some change. I promise it won't not go towards stuff that are not non-drug related. got hp: 50 got ap: 4 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Junkie Chan: '-'
+Items added to inventory of Junkie Chan:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Biggo Mann got description: Biggo Mann got trash talk: I am not the enemy you fool! got what_to_say: You seem trustworthy, stranger, so I will tell you my story. I am Biggo Mann, ruler of house TCS in the kingdom of CSC. The kingdom has four ruling houses governing our vast realm: TCS, CVAP, MID and CAS. Not until long ago all factions coexisted in balance. That was before [insert super badass nickname or sum shit here] appeared. He started out as a lecturer in house MID and rose to power by his insatiable hunger for CSC-wide dominance. He and his followers took over the houses of CVAP and CAS without much resistance. House TCS is now the last standing faction to oppose [insert badass name again here] and his legion. You must aid us or the kingdom of CSC will be no more. got hp: 100 got ap: 20 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Biggo Mann: '-'
+Items added to inventory of Biggo Mann:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Biggo Mann description: He seems super-intelligent, but also seem quite worried. trash_talk: I am not the enemy you fool!' ap: 20 dp: 2 hp: 100 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Junkie Chan got description: Junkie Chan got trash talk: bruh got what_to_say: Please, spare some change. I promise it won't not go towards stuff that are not non-drug related. got hp: 50 got ap: 4 got dp: 2 got mp: 0char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Junkie Chan: '-'
+Items added to inventory of Junkie Chan:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Junkie Chan description: He looks very frail and kind of shady. He's definitely seen some shit. trash_talk: bruh' ap: 4 dp: 2 hp: 50 mp: 0
+Constructing entity from string stream... 
+string stream good
+ got name: Filip Roseen got description: Filip Roseen got trash talk: You will never succeed, the Master can not be stopped! got what_to_say: The Master's plan is going well as expected. I can not let anyone interfere. got hp: 10 got ap: 1 got dp: 20 got mp: 20char is -
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Filip Roseen: '-'
+Items added to inventory of Filip Roseen:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Filip Roseen description: He's just standing there and refusing anyone passage. trash_talk: You will never succeed, the Master can not be stopped!' ap: 1 dp: 20 hp: 10 mp: 20
+Constructing entity from string stream... 
+string stream good
+ got name: Malexander Daltatzis got description: Malexander Daltatzis got trash talk: No one will stand in the way of my supreme rule over the Kingdom CSC! got what_to_say: Join me and I will spare your life. got hp: 200 got ap: 50 got dp: 20 got mp: 20char is i
+conf char is -
+char is -
+conf char is -
+Read stringstream(item) for entity Malexander Daltatzis: '-'
+Items added to inventory of Malexander Daltatzis:
+Entity construction complete0x7ffef7bfe288
+Human created from file, name: Malexander Daltatzis description: This is THE feared Malexander, he is not to be underestimated. trash_talk: No one will stand in the way of my supreme rule over the Kingdom CSC!' ap: 50 dp: 20 hp: 200 mp: 20

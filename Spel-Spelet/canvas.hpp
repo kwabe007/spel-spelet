@@ -52,6 +52,11 @@ private:
     std::size_t text_y_offset = 3;
     std::size_t text_subtitle_y_offset = 3;
     std::size_t text_enter_hint_y_offset = 1;
+    std::size_t entity_status_name_y_offset = 1;
+    std::size_t entity_status_description_y_offset = 2;
+    std::size_t entity_status_description_y_span = 2;
+    std::size_t entity_status_weapon_y_offset = 5;
+    std::size_t entity_status_armor_y_offset = 9;
     
     Matrix matrix;
 
@@ -59,7 +64,7 @@ private:
     std::size_t calculate_y_middle(std::size_t len = 0);
     void fill_row(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
                   char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
-    void fill_rowspan_withfill_ww(std::size_t rw, const std::string& str,std::size_t rw_span, std::size_t x_offset = 0);
+    void fill_rowspan_withfill_ww(std::size_t rw, const std::string& str,std::size_t rw_span, std::size_t x_offset = 0,bool centered = false);
     void fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset = 0, bool centered = false, bool prefill = true,
                                 char prefill_char = ' ', bool postfill = true, char postfill_char = ' ', std::size_t rw_span = 1);
     bool add_if_fit(const std::string& word, std::string& line, std::size_t line_max_size, const std::string& delim);
@@ -77,6 +82,7 @@ public:
 
     //void apply_text(const Text& text);
     void apply_text (const Text& text);
+    void apply_entity_status (const Entity& ent);
     void apply_menu(const Menu& ref);
     void apply_partial_menu(const Menu& ref, std::size_t x_pos, std::size_t y_pos, std::size_t x_span=0, std::size_t y_span=0);
     void apply_area(const Area& ref);

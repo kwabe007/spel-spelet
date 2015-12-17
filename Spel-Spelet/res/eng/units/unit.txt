@@ -8,4 +8,5 @@
 #dp
 #mp
 #weapon
+#armor
 #inventory

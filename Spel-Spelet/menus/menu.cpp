@@ -26,7 +26,7 @@ int Menu::add_back() {
 }
 
 int Menu::add_item(const std::string& name, const std::string& desc, Item& item) {
-    add_item(name,desc,FLOW_STAY,FUNCTION_NONE,nullptr,0,nullptr,&item);
+    add_item(name,desc,FLOW_END,FUNCTION_NONE,nullptr,0,nullptr,&item);
     return 0;
 }
 

@@ -64,6 +64,23 @@ void Entity::read_from_string_stream(std::stringstream& ss) {
     } else {
         std::getline(ss, temp);
     }
+
+    c1 = ss.peek();
+    debug_println(BIT3, "char is " << c1);
+    debug_println(BIT3, "conf char is " << CONF.FLAG_RES_ATTR_EMPTY);
+    if (c1 != CONF.FLAG_RES_ATTR_EMPTY) {
+        std::getline(ss, temp);
+        Item* itm_ptr = static_cast<Item*> (tools::parse_item_from_file(temp));
+        armor_ptr = dynamic_cast<Armor*> (itm_ptr);
+        itm_ptr->set_owner(this);
+    } else {
+        Item* itm_ptr = static_cast<Item*> (tools::parse_item_from_file("itm-regularclothes"));
+        armor_ptr = dynamic_cast<Armor*> (itm_ptr);
+        std::getline(ss, temp);
+        itm_ptr->set_owner(this);
+    }
+
+
     std::string items_str;
     std::getline(ss, items_str);
     std::stringstream ss_items(items_str);
@@ -87,6 +104,7 @@ void Entity::read_from_string_stream(std::stringstream& ss) {
 
 Entity::~Entity() {
     if (weapon_ptr) delete weapon_ptr;
+    if (armor_ptr) delete armor_ptr;
     for (Item* item_ptr : inventory) {
         delete item_ptr;
     }
@@ -138,7 +156,14 @@ std::size_t Entity::get_inventory_size() const {
 
 Weapon Entity::get_weapon() const {
     if (weapon_ptr) return *weapon_ptr;
-    return get_unarmored_weapon();
+    return get_unarmed_weapon();
+}
+
+Armor Entity::get_armor() const {
+    debug_println(BIT3, "getting armor " << armor_ptr->get_name() << " mem: " << armor_ptr);
+    if (!armor_ptr)
+        throw std::invalid_argument("Trying to get armor from entity " + name + " but is null");
+    return *armor_ptr;
 }
 
 bool Entity::is_alive() const {
@@ -161,6 +186,56 @@ void Entity::set_ap(int val){
 
 void Entity::set_dp(int val){
     dp = val;
+}
+
+void Entity::equip_armor(Armor& armor) {
+    debug_println(BIT3, "equipping armor " << armor.get_name() << " for entity " << name);
+    debug_println(BIT3, "armor to replace: " << armor_ptr->get_name() << " for entity " << name);
+
+    if (!armor_ptr) {
+        armor_ptr = &armor;
+        return;
+    }
+    if (armor_ptr == &armor) {
+        debug_println(BIT3, "The very same armor instance with name " << armor_ptr->get_name() << " is already equipped by entity " << name);
+        return;
+    }
+    add_item_to_inventory(*armor_ptr);
+    armor_ptr = &armor;
+    debug_println(BIT3, "Entity " << name << " is now equipping " << armor_ptr->get_name());
+    //Item* itm_ptr = static_cast<Item*>(&armor);
+    //std::size_t index_to_delete = (std::size_t)-1;
+    bool found = false;
+    /*for (std::size_t i = 0; i < inventory.size(); ++i) {
+        if (inventory[i] == itm_ptr) {
+            index_to_delete = i;
+            found = true;
+            debug_println(BIT3, "Found armor " << armor_ptr->get_name() << " to remove from inventory in entity " << name);
+
+        }
+    }*/
+    for (auto it = inventory.begin(); it != inventory.end(); ) {
+       if( (*it) == &armor) {
+          found = true;
+          //delete &armor;
+          it = inventory.erase(it);
+          debug_println(BIT3, "Item pointer in " << name << " erased from pos " << it - inventory.begin());
+       }
+       else {
+          ++it;
+       }
+    }
+    if (!found) {
+        debug_println(BIT3, "Entity " << name << "equiped armor " << armor_ptr->get_name() << " but could not find it in inventory");
+        return;
+    }
+    for (Item* ptr : inventory) {
+        debug_println(BIT3, "Item " << ptr->get_name());
+    }
+    debug_println(BIT3, "Current armor " << armor_ptr->get_name() << " at mem " << armor_ptr);
+    //inventory.erase(inventory.begin()+index_to_delete);
+    //debug_println(BIT3, "Item pointer in " << name << " erased from pos " << index_to_delete);
+
 }
 
 void Entity::add_item_to_inventory(Item& item) {

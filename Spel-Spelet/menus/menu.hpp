@@ -27,6 +27,7 @@ static const int ITEM_REPR_STR_COUNT = 2;
 enum MenuFlow {
     FLOW_FORWARD,
     FLOW_BACK,
+    FLOW_END,
     FLOW_STAY
 };
 

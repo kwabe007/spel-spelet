@@ -36,10 +36,9 @@
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 1;
+unsigned int GLOBAL_DEBUG_BITS = 1<<3;
 ofstream ERR_FS("errlog");
 Human PLAYER("unt-pjotr");
-
 
 void handler(int sig) {
   void *array[10];
@@ -62,7 +61,7 @@ int exit() {
 
 int main(int argc, char** argv) {
 
-signal(SIGSEGV, handler);
+//signal(SIGSEGV, handler);
     UI::setup();
     UI::set_buffer_mode(0);
     debug_println(BIT0,"testing1,2");

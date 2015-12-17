@@ -12,6 +12,7 @@
 #include "debug/debugmacro.h"
 #include "items/weapon.hpp"
 #include "items/consumable.hpp"
+#include "items/armor.hpp"
 
 
 namespace tools{
@@ -158,6 +159,9 @@ namespace tools{
             item_ptr = new Weapon(ss);
         } else if (type == "CSM") {
             item_ptr = new Consumable(ss);
+        }
+        else if (type == "AMR") {
+            item_ptr = new Armor(ss);
         }
         else {
             throw FileException("First token '" + type + "' in item file '" + resource + "' does not correspond to a known item type");

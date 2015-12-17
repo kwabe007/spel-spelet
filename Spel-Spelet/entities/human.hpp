@@ -6,7 +6,7 @@
 class Human : public Organic {
 protected:
     using Organic::Organic;
-    Weapon get_unarmored_weapon() const;
+    Weapon get_unarmed_weapon() const;
 public:
     Human();
     Human(std::stringstream& ss);

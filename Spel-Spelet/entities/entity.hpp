@@ -8,6 +8,7 @@
 #include <sstream>
 #include "../items/item.hpp"
 #include "../items/weapon.hpp"
+#include "../items/armor.hpp"
 
 
 class Entity {
@@ -23,11 +24,12 @@ protected:
     std::string trash_talk = "????";
     std::string what_to_say = "I have nothing to say";
     Weapon* weapon_ptr = nullptr;
-    Weapon* unarmored_weapon_ptr = nullptr;
+
+    Weapon* unarmed_weapon_ptr = nullptr;
 
     bool alive = true;
     std::vector<Item*> inventory;
-    virtual Weapon get_unarmored_weapon() const=0;
+    virtual Weapon get_unarmed_weapon() const=0;
     std::fstream fs;
     void read_from_string_stream(std::stringstream& ss);
 
@@ -37,6 +39,7 @@ public:
     Entity(std::stringstream& ss);
     Entity(const std::string& nm, const std::string& desc, const std::string& trash);
     virtual ~Entity();
+    Armor* armor_ptr = nullptr;
 
 
 
@@ -53,12 +56,14 @@ public:
     const Item& get_item_from_inventory(std::size_t index)const;
     std::size_t get_inventory_size() const;
     Weapon get_weapon() const;
+    Armor get_armor() const;
 
     bool is_alive()const;
     void set_hp(int val);
     void set_mp(int val);
     void set_ap(int val);
     void set_dp(int val);
+    void equip_armor(Armor& armor);
     void add_item_to_inventory(Item& item);
     std::pair<bool, int> take_damage(int damage);
     std::pair<bool, int> take_health(int health);

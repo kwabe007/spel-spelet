@@ -58,16 +58,16 @@ void Canvas::fill_row(std::size_t rw, const std::string& str, std::size_t offset
 
 }
 
-void Canvas::fill_rowspan_withfill_ww(std::size_t rw, const std::string& str, std::size_t rw_span, std::size_t x_offset) {
-    fill_row_word_wrapping(rw,str,0,false,true,' ',true,' ',rw_span);
+void Canvas::fill_rowspan_withfill_ww(std::size_t rw, const std::string& str, std::size_t rw_span, std::size_t x_offset, bool centered) {
+    fill_row_word_wrapping(rw,str,x_offset,centered,true,' ',true,' ',rw_span);
 }
 
-void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t offset, bool centered,
+void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std::size_t x_offset, bool centered,
                                     bool prefill, char prefill_char, bool postfill, char postfill_char, std::size_t rw_span) {
     std::stringstream ss_str(str);
     std::string word;
     std::string delim(" ");
-    std::size_t line_max_size = cols-offset;
+    std::size_t line_max_size = cols-x_offset;
 
     if (ss_str.good()) {
         ss_str >> word;
@@ -80,16 +80,16 @@ void Canvas::fill_row_word_wrapping(std::size_t rw, const std::string& str, std:
                     debug_println(BIT0,"End of stringstream reached, delimiter set to blank");
                 }
                 if (!add_if_fit(word,line,line_max_size,delim)) {
-                    if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
+                    if (centered) x_offset = calculate_x_middle(line.size()) + x_offset; //Adjust x_offset for line centration
                     debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
-                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char,postfill,postfill_char);
+                    matrix.fill_row(rw+i,line,x_offset,prefill,prefill_char,postfill,postfill_char);
                     break;
                 }
                 if (ss_str.good()) {
                     ss_str >> word;
                 } else {
-                    if (centered) offset = calculate_x_middle(line.size()) + offset; //Adjust offset for line centration
-                    matrix.fill_row(rw+i,line,offset,prefill,prefill_char,postfill,postfill_char);
+                    if (centered) x_offset = calculate_x_middle(line.size()) + x_offset; //Adjust x_offset for line centration
+                    matrix.fill_row(rw+i,line,x_offset,prefill,prefill_char,postfill,postfill_char);
                     debug_println(BIT0,"Writing line '" << line << "' to canvas matrix");
                     goto endwhile;
                 }
@@ -106,6 +106,16 @@ void Canvas::apply_text(const Text& text) {
     fill_rowspan_withfill_ww(text_y_offset,str,rows);
     fill_row_word_wrapping(rows-text_subtitle_y_offset,text.get_subtitle(),0,true);
     fill_row_word_wrapping(rows-text_enter_hint_y_offset,UI::TEXT_ENTER_HINT,0,true);
+}
+
+void Canvas::apply_entity_status (const Entity& ent) {
+    fill_row(entity_status_name_y_offset,ent.get_name(),0,true);
+    fill_rowspan_withfill_ww(entity_status_description_y_offset,ent.get_description(),entity_status_description_y_span,0,true);
+    fill_row(entity_status_weapon_y_offset,"Weapon: "+ent.get_weapon().get_name(),0,true);
+    fill_rowspan_withfill_ww(entity_status_weapon_y_offset+1,ent.get_weapon().get_description(),entity_status_description_y_span,0,true);
+    fill_row(entity_status_armor_y_offset,"Armor: "+ent.get_armor().get_name(),0,true);
+    fill_rowspan_withfill_ww(entity_status_armor_y_offset+1,ent.get_armor().get_description(),entity_status_description_y_span,0,true);
+
 }
 
 void Canvas::apply_menu(const Menu& ref) {

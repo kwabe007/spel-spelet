@@ -25,14 +25,14 @@ Human& Human::operator=(Human& ref) {
     trash_talk = ref.trash_talk;
     what_to_say = ref.what_to_say;
     weapon_ptr = ref.weapon_ptr;
-    unarmored_weapon_ptr = ref.unarmored_weapon_ptr;
+    unarmed_weapon_ptr = ref.unarmed_weapon_ptr;
     alive = ref.alive;
     return *this;
 }
 
-Weapon Human::get_unarmored_weapon() const {
-        Weapon unarmored_weapon = Weapon(CONF.get_path_resource("itm-fists"));
-        return unarmored_weapon;
+Weapon Human::get_unarmed_weapon() const {
+        Weapon unarmed_weapon = Weapon(CONF.get_path_resource("itm-fists"));
+        return unarmed_weapon;
 }
 
 Human::~Human() {
