@@ -7,7 +7,6 @@ class Forest : public Outdoor {
 
 public:
     using Outdoor::Outdoor;
-    Forest(const std::string& str);
     std::string get_type() const;
     ~Forest(){}
 };

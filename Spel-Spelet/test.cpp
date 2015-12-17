@@ -87,9 +87,9 @@ int main(int argc, char** argv) {
             World firstworld("Kvarnamala");
                 //Building firstroom("map-spybar");
                 //Building secondroom("map-soapbar");
-                Building forest1("map-forest1");
-                Building forest2("map-forest2");
-                Building forest3("map-forest3");
+                Forest forest1("map-forest1");
+                Forest forest2("map-forest2");
+                Forest forest3("map-forest3");
                 Building csc_main_hall("map-cscmainhall");
                 Building csc_comp_rooms("map-csccomprooms");
                 Building csc_throne("map-cscthrone");

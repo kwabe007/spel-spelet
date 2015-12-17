@@ -1,0 +1,59 @@
+Constructing area from resource 'map-forest1'...
+Read ss_block for area Wilderness: '-'
+Area construction complete
+Constructing area from resource 'map-forest2'...
+Read ss_block for area More Wilderness: '-'
+Area construction complete
+Constructing area from resource 'map-forest3'...
+Read ss_block for area Even More Wilderness and a Cabin: '0 west'
+Entity Wolf is now blocking a path in dir 6 in area Even More Wilderness and a Cabin
+Area construction complete
+Constructing area from resource 'map-cscmainhall'...
+Read ss_block for area Main Hall of CSC: '0 north'
+Entity Barcus Micander is now blocking a path in dir 0 in area Main Hall of CSC
+Area construction complete
+Constructing area from resource 'map-csccomprooms'...
+Read ss_block for area CSC Computer Rooms: '0 north'
+Entity Filip Roseen is now blocking a path in dir 0 in area CSC Computer Rooms
+Area construction complete
+Constructing area from resource 'map-cscthrone'...
+Read ss_block for area CSC Throne Room: '0 south'
+Entity Malexander Daltatzis is now blocking a path in dir 4 in area CSC Throne Room
+Area construction complete
+Area at index 0 added to coordinates: [0,0]
+Area at index 1 added to coordinates: [0,1]
+Area at index 2 added to coordinates: [1,1]
+Area at index 3 added to coordinates: [0,2]
+Area at index 4 added to coordinates: [0,3]
+Area at index 5 added to coordinates: [0,4]
+Player inventory size: 2
+Player inventory size: 2
+Player inventory size: 2
+Constructing area from resource 'map-forest1'...
+Read ss_block for area Wilderness: '-'
+Area construction complete
+Constructing area from resource 'map-forest2'...
+Read ss_block for area More Wilderness: '-'
+Area construction complete
+Constructing area from resource 'map-forest3'...
+Read ss_block for area Even More Wilderness and a Cabin: '0 west'
+Entity Wolf is now blocking a path in dir 6 in area Even More Wilderness and a Cabin
+Area construction complete
+Constructing area from resource 'map-cscmainhall'...
+Read ss_block for area Main Hall of CSC: '0 north'
+Entity Barcus Micander is now blocking a path in dir 0 in area Main Hall of CSC
+Area construction complete
+Constructing area from resource 'map-csccomprooms'...
+Read ss_block for area CSC Computer Rooms: '0 north'
+Entity Filip Roseen is now blocking a path in dir 0 in area CSC Computer Rooms
+Area construction complete
+Constructing area from resource 'map-cscthrone'...
+Read ss_block for area CSC Throne Room: '0 south'
+Entity Malexander Daltatzis is now blocking a path in dir 4 in area CSC Throne Room
+Area construction complete
+Area at index 0 added to coordinates: [0,0]
+Area at index 1 added to coordinates: [0,1]
+Area at index 2 added to coordinates: [1,1]
+Area at index 3 added to coordinates: [0,2]
+Area at index 4 added to coordinates: [0,3]
+Area at index 5 added to coordinates: [0,4]

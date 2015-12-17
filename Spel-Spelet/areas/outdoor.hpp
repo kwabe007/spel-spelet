@@ -6,7 +6,6 @@
 class Outdoor : public Area {
 public:
     using Area::Area;
-    Outdoor(const std::string& ref);
     virtual std::string get_type() const=0;
     virtual ~Outdoor(){};
 };
