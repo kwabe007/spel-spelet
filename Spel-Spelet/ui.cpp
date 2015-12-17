@@ -242,8 +242,11 @@ namespace UI {
             case COMMAND_FIGHT: {
                 Menu fightmenu("Who do you want to fight?");
                 for (std::size_t i = 0; i < area.get_entity_size(); ++i) {
+                    MenuFlow flow = FLOW_FORWARD;
                     Entity& entity(area.get_entity(i));
-                    fightmenu.add_item(entity.get_name(), entity.get_description());
+                    if (!entity.is_alive())
+                        flow = FLOW_STAY;
+                    fightmenu.add_item(entity.get_name(), entity.get_description(),flow);
                 }
                 fightmenu.add_back();
                 present_menu(fightmenu, true);

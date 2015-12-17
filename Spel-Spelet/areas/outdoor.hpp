@@ -4,9 +4,11 @@
 #include "area.hpp"
 
 class Outdoor : public Area {
-    using Area::Area;
 public:
-    virtual std::string get_type()=0;
+    using Area::Area;
+    Outdoor(const std::string& ref);
+    virtual std::string get_type() const=0;
+    virtual ~Outdoor(){};
 };
 
 #endif

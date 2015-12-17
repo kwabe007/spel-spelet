@@ -10,6 +10,7 @@
 #include "matrix.hpp"
 #include "scene.hpp"
 #include "areas/building.hpp"
+#include "areas/forest.hpp"
 #include "entities/human.hpp"
 #include "areas/world.hpp"
 #include "debug/debugmacro.h"
@@ -29,16 +30,15 @@
 
 /* TODO:
  * FIX ITEM SYSTEM!
- * DESTRUCTORS FOR SCENE(WORLD,MAP,TEXT), WORLD(AREA), AREA (ENTITIES,OBJECTS)
  * ADD NAMESPACE
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
  */
 
 using namespace std;
 int GLOBAL_DEBUG_LEVEL = 0; //Will be set from the command-line in main source file
-unsigned int GLOBAL_DEBUG_BITS = 1<<3;
+unsigned int GLOBAL_DEBUG_BITS = 1<<5;
 ofstream ERR_FS("errlog");
-Human PLAYER("unt-pjotr");
+Human PLAYER;
 
 void handler(int sig) {
   void *array[10];
@@ -64,9 +64,12 @@ int main(int argc, char** argv) {
 //signal(SIGSEGV, handler);
     UI::setup();
     UI::set_buffer_mode(0);
+    Text intro("txt-disc");
+    UI::show_text(intro);
     debug_println(BIT0,"testing1,2");
+    //Human* human_ptr = dynamic_cast<Human*> (tools::parse_entity_from_file("unt-pjotr"))
     while (true) {
-
+        PLAYER.reset("unt-pjotr");
         Menu mainmenu("Main Menu");
         mainmenu.add_item("New Game","this is option 1");
         mainmenu.add_item("Load","this is option 2");
@@ -84,16 +87,18 @@ int main(int argc, char** argv) {
             World firstworld("Kvarnamala");
                 //Building firstroom("map-spybar");
                 //Building secondroom("map-soapbar");
-                Building firstroom("map-forest1");
-                Building secondroom("map-forest2");
-                Building thirdroom("map-cscmainhall");
-                Building fourthroom("map-csccomprooms");
-                Building fifthroom("map-cscthrone");
-            firstworld.add_area(firstroom);
-            firstworld.add_area(secondroom);
-            firstworld.add_area(thirdroom);
-            firstworld.add_area(fourthroom);
-            firstworld.add_area(fifthroom);
+                Building forest1("map-forest1");
+                Building forest2("map-forest2");
+                Building forest3("map-forest3");
+                Building csc_main_hall("map-cscmainhall");
+                Building csc_comp_rooms("map-csccomprooms");
+                Building csc_throne("map-cscthrone");
+            firstworld.add_and_map_area(forest1,0,0);
+            firstworld.add_and_map_area(forest2,0,1);
+            firstworld.add_and_map_area(forest3,1,1);
+            firstworld.add_and_map_area(csc_main_hall,0,2);
+            firstworld.add_and_map_area(csc_comp_rooms,0,3);
+            firstworld.add_and_map_area(csc_throne,0,4);
             firstworld.set_start_area(0,0);
 
         scene2.set_world(firstworld);

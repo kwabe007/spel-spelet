@@ -14,7 +14,7 @@ Human::Human(const std::string& resource) : Organic(resource) {
     debug_println(BIT3,"Human created from resource '" << resource << "' name: " << name << " description: " << description << " trash_talk: " << trash_talk << "' ap: " << ap << " dp: " << dp << " hp: " << hp << " mp: " << mp);
 }
 
-Human& Human::operator=(Human& ref) {
+Human& Human::operator=(const Human& ref) {
     hp = ref.hp;
     ap = ref.ap;
     dp = ref.dp;

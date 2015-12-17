@@ -3,9 +3,11 @@
 #include "area.hpp"
 
 class Indoor : public Area  {
+protected:
     using Area::Area;
 public:
-    virtual std::string get_type()=0;
+    virtual std::string get_type()const =0;
+    virtual ~Indoor(){}
 };
 
 #endif

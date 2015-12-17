@@ -73,7 +73,7 @@ public:
 
     static std::string dir_to_str(Direction dir);
     virtual ~Area();
-    virtual std::string get_type()=0;
+    virtual std::string get_type() const=0;
 
 };
 

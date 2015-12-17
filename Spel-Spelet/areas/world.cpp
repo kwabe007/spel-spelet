@@ -12,7 +12,12 @@ World::~World() {
 
 }
 
-void World::add_area(Area& ar) {
+void World::add_and_map_area(Area& ar, int x, int y) {
+    std::size_t index = add_area(ar,false);
+    map_area(std::pair<int,int>(x,y),index);
+}
+
+std::size_t World::add_area(Area& ar, bool auto_setup) {
     std::size_t index = areas.size();
     areas.push_back(&ar);
     if (auto_setup) {
@@ -24,10 +29,12 @@ void World::add_area(Area& ar) {
         last_coord_mapped = coord;
         debug_println(BIT5,"Area " << ar.get_name() << " added to " << name << " with coordinates: [" << coord.first << "," << coord.second << "]" << " and index: " << index);
     }
+    return index;
 }
 
 void World::map_area(std::pair<int,int> coord, std::size_t index) {
     index_map[coord] = index;
+    debug_println(BIT5,"Area at index " << index << " added to coordinates: [" << coord.first << "," << coord.second << "]");
 }
 
 void World::set_start_area(int x, int y) {
@@ -89,12 +96,16 @@ std::pair<int,int> World::transform_coordinates(std::pair<int,int> coord, Direct
         new_val.second = coord.second + 1;
         break;
     case DIRECTION_EAST:
+        new_val.first = coord.first + 1;
+        new_val.second = coord.second;
         break;
     case DIRECTION_SOUTH:
         new_val.first = coord.first;
         new_val.second = coord.second - 1;
         break;
     case DIRECTION_WEST:
+        new_val.first = coord.first - 1;
+        new_val.second = coord.second;
         break;
     default:
         break;

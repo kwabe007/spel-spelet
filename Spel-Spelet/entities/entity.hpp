@@ -32,6 +32,7 @@ protected:
     virtual Weapon get_unarmed_weapon() const=0;
     std::fstream fs;
     void read_from_string_stream(std::stringstream& ss);
+    void cleanup();
 
 public:
     Entity();
@@ -68,6 +69,7 @@ public:
     std::pair<bool, int> take_damage(int damage);
     std::pair<bool, int> take_health(int health);
     std::pair<bool, int> attack(Entity& other);
+    void reset(const std::string& resource);
 
 };
 

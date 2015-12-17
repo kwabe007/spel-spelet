@@ -21,7 +21,7 @@ private:
     std::pair<int,int> current_area_coord;
     std::pair<int,int> last_coord_mapped;
 
-    bool auto_setup = true;
+    //bool auto_setup = true;
     Direction link_direction = DIRECTION_NORTH;
 
 
@@ -33,7 +33,8 @@ public:
 
     World& operator=(const World& ref) = delete;
 
-    void add_area(Area& ar);
+    void add_and_map_area(Area& ar, int x, int y);
+    std::size_t add_area(Area& ar, bool auto_setup = true);
     void map_area(std::pair<int,int> coordinates, std::size_t index);
     void set_start_area(int x, int y);
 

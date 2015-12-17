@@ -1,4 +1,4 @@
-#include <random>
+﻿#include <random>
 #include "entity.hpp"
 #include "../conf.hpp"
 #include <iostream>
@@ -103,11 +103,21 @@ void Entity::read_from_string_stream(std::stringstream& ss) {
 }
 
 Entity::~Entity() {
-    if (weapon_ptr) delete weapon_ptr;
-    if (armor_ptr) delete armor_ptr;
+    cleanup();
+}
+void Entity::cleanup() {
+    if (weapon_ptr) {
+        delete weapon_ptr;
+        weapon_ptr = nullptr;
+    }
+    if (armor_ptr) {
+        delete armor_ptr;
+        armor_ptr = nullptr;
+    }
     for (Item* item_ptr : inventory) {
         delete item_ptr;
     }
+    inventory.clear();
 }
 
 int Entity::get_hp() const {
@@ -131,7 +141,9 @@ std::string Entity::get_name() const {
 }
 
 std::string Entity::get_description() const {
-    return description;
+    if (is_alive())
+        return description;
+    return "Totally dead. R.I.P in peace, sweet prince";
 }
 
 std::string Entity::get_trash_talk() const {
@@ -139,7 +151,9 @@ std::string Entity::get_trash_talk() const {
 }
 
 std::string Entity::get_what_to_say() const {
-    return what_to_say;
+    if (is_alive())
+        return what_to_say;
+    return "Due to an unfortunate turn of events, " + name + " is dead.";
 }
 
 Item& Entity::get_item_from_inventory(std::size_t index) {
@@ -243,6 +257,11 @@ void Entity::add_item_to_inventory(Item& item) {
 }
 
 std::pair<bool, int> Entity::take_damage(int damage) {
+    Armor arm = get_armor();
+    int total_dp = dp + arm.get_dp();
+    if (total_dp >= damage)
+        damage = 1;
+    else damage -= total_dp;
     if (hp > damage) {
         hp -= damage;
         return std::pair<bool, int>(false, damage);
@@ -279,6 +298,16 @@ std::pair<bool, int> Entity::attack (Entity& other) {
     std::pair<bool, int> stats = other.take_damage(damage);
     debug_println(BIT0,"Stats entity attack: " << stats.first << " " << stats.second);
     return stats;
+}
+
+void Entity::reset(const std::string& resource) {
+    cleanup();
+
+    std::string contents = tools::read_resource(resource);
+    std::stringstream ss(contents);
+    std::string discard;
+    std::getline(ss,discard);
+    read_from_string_stream(ss);
 }
 
 

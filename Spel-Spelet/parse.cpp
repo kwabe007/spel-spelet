@@ -9,6 +9,7 @@
 #include "conf.hpp"
 #include "exceptions/fileexcept.hpp"
 #include "entities/human.hpp"
+#include "entities/animal.hpp"
 #include "debug/debugmacro.h"
 #include "items/weapon.hpp"
 #include "items/consumable.hpp"
@@ -143,7 +144,9 @@ namespace tools{
         Entity* ent;
         if (type == "HMN") {
             ent = new Human(ss);
-        } else {
+        } else if (type == "AML") {
+            ent = new Animal(ss);
+        }  else {
             throw FileException("First token '" + type + "' in entity file '" + resource + "' does not correspond to a known entity type");
         }
         return ent;

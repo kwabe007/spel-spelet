@@ -6,9 +6,9 @@ CC:= g++
 CFLAGS:= -Wall -std=c++11 -g -rdynamic
 
 #Source files
-AREAS:= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/world.cpp
+AREAS:= areas/area.cpp areas/indoor.cpp areas/building.cpp areas/forest.cpp areas/world.cpp
 MENUS:= menus/menu.cpp
-ENTITIES:= entities/entity.cpp entities/organic.cpp entities/human.cpp
+ENTITIES:= entities/entity.cpp entities/organic.cpp entities/human.cpp entities/animal.cpp
 FUNCTIONS:= funcobj/funcobj.cpp
 UNSORTED:= parse.cpp ui.cpp matrix.cpp canvas.cpp scene.cpp battle.cpp conf.cpp
 ITEMS:= items/item.cpp items/weapon.cpp items/consumable.cpp items/armor.cpp

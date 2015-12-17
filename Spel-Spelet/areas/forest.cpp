@@ -1,5 +1,9 @@
 #include "forest.hpp"
 
-virtual std::string get_type() {
+Forest::Forest(const std::string& str) : Outdoor(str) {
+
+}
+
+std::string Forest::get_type() const {
     return "Forest";
 }

@@ -4,10 +4,12 @@
 #include "outdoor.hpp"
 
 class Forest : public Outdoor {
-private:
-    using Outdoor::Outdoor;
+
 public:
-    std::sting get_type();
+    using Outdoor::Outdoor;
+    Forest(const std::string& str);
+    std::string get_type() const;
+    ~Forest(){}
 };
 
 #endif

@@ -5,7 +5,7 @@
 class Building : public Indoor  {
 public:
     using Indoor::Indoor;
-    std::string get_type();
+    std::string get_type() const;
 };
 
 #endif
