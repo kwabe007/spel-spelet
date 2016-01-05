@@ -6,6 +6,7 @@ class Building : public Indoor  {
 public:
     using Indoor::Indoor;
     std::string get_type() const;
+    ~Building();
 };
 
 #endif

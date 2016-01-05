@@ -80,7 +80,6 @@ int main(int argc, char** argv) {
         Building room1("map-forest1");
         Building room1("map-forest2");*/
 
-
         Scene scene2;
             Text intro("txt-intro");
         scene2.set_text(intro);
@@ -121,7 +120,6 @@ int main(int argc, char** argv) {
     }
 
     UI::set_buffer_mode(1);
-
 
     return 0;
 }
