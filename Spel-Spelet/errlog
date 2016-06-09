@@ -17,8 +17,12 @@ Read ss_block for area CSC Computer Rooms: '0 north'
 Entity Filip Roseen is now blocking a path in dir 0 in area CSC Computer Rooms
 Area construction complete
 Constructing area from resource 'map-cscthrone'...
-Read ss_block for area CSC Throne Room: '0 south'
+Read ss_block for area CSC Throne Room: '0 south 0 north'
 Entity Malexander Daltatzis is now blocking a path in dir 4 in area CSC Throne Room
+Entity Malexander Daltatzis is now blocking a path in dir 0 in area CSC Throne Room
+Area construction complete
+Constructing area from resource 'map-cscexit'...
+Read ss_block for area THE END: '-'
 Area construction complete
 Area at index 0 added to coordinates: [0,0]
 Area at index 1 added to coordinates: [0,1]
@@ -26,10 +30,7 @@ Area at index 2 added to coordinates: [1,1]
 Area at index 3 added to coordinates: [0,2]
 Area at index 4 added to coordinates: [0,3]
 Area at index 5 added to coordinates: [0,4]
-Player inventory size: 2
-Player inventory size: 2
-Player inventory size: 2
-Player inventory size: 2
+Area at index 6 added to coordinates: [0,5]
 Player inventory size: 2
 Constructing area from resource 'map-forest1'...
 Read ss_block for area Wilderness: '-'
@@ -50,8 +51,12 @@ Read ss_block for area CSC Computer Rooms: '0 north'
 Entity Filip Roseen is now blocking a path in dir 0 in area CSC Computer Rooms
 Area construction complete
 Constructing area from resource 'map-cscthrone'...
-Read ss_block for area CSC Throne Room: '0 south'
+Read ss_block for area CSC Throne Room: '0 south 0 north'
 Entity Malexander Daltatzis is now blocking a path in dir 4 in area CSC Throne Room
+Entity Malexander Daltatzis is now blocking a path in dir 0 in area CSC Throne Room
+Area construction complete
+Constructing area from resource 'map-cscexit'...
+Read ss_block for area THE END: '-'
 Area construction complete
 Area at index 0 added to coordinates: [0,0]
 Area at index 1 added to coordinates: [0,1]
@@ -59,3 +64,5 @@ Area at index 2 added to coordinates: [1,1]
 Area at index 3 added to coordinates: [0,2]
 Area at index 4 added to coordinates: [0,3]
 Area at index 5 added to coordinates: [0,4]
+Area at index 6 added to coordinates: [0,5]
+Player inventory size: 2

@@ -214,9 +214,15 @@ namespace UI {
     }
 
     bool play_area(Area& area) {
+
         char choice;
         while (true) {
             flush_and_clear();
+            if(area.is_end()) {
+                Text text("txt-won");
+                show_text(text);
+                return false;
+            }
             cvs.apply_area(area);
             print_canvas();
             choice = get_char();

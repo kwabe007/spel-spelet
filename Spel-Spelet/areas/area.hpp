@@ -40,6 +40,7 @@ protected:
     Menu* talk_menu_ptr = nullptr;
     Menu* game_menu_ptr = nullptr;
     Menu* item_menu_ptr = nullptr;
+    bool end = false;
     std::fstream fs;
     std::unordered_map<Direction,Entity*, EnumClassHash> blocking_map;
     std::vector<Entity*> entity_vec;
@@ -66,6 +67,8 @@ public:
     void add_entity(Entity& ent);
     bool is_path_blocked(Direction dir) const;
     void set_block(std::size_t index, Direction dir);
+    void set_end(bool b);
+    bool is_end();
 
     void reset_direction();
 

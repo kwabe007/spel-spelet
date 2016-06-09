@@ -29,6 +29,7 @@
  */
 
 /* TODO:
+ * REDO MENU TO VIRTUAL CLASS WITH SUBCLASSES
  * FIX ITEM SYSTEM!
  * ADD NAMESPACE
  * Check EXIT CODE AFTER SYSTEM CALL TO STTY
@@ -92,12 +93,16 @@ int main(int argc, char** argv) {
                 Building csc_main_hall("map-cscmainhall");
                 Building csc_comp_rooms("map-csccomprooms");
                 Building csc_throne("map-cscthrone");
+                Building csc_end("map-cscexit");
+                    csc_end.set_end(true);
             firstworld.add_and_map_area(forest1,0,0);
             firstworld.add_and_map_area(forest2,0,1);
             firstworld.add_and_map_area(forest3,1,1);
             firstworld.add_and_map_area(csc_main_hall,0,2);
             firstworld.add_and_map_area(csc_comp_rooms,0,3);
             firstworld.add_and_map_area(csc_throne,0,4);
+
+            firstworld.add_and_map_area(csc_end,0,5);
             firstworld.set_start_area(0,0);
 
         scene2.set_world(firstworld);

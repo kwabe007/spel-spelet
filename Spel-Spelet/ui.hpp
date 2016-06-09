@@ -53,6 +53,7 @@ namespace UI  {
     static const std::string TEXT_PARTY_DEFEAT ("YOU DEAD");
     static const std::string TEXT_ENEMY_DEFEAT("YOU DEFEATED");
     static const std::string TEXT_NONE_DEFEAT("BATTLE ENDED UNDECIDED");
+    static const std::string TEXT_WIN_GAME("YOU FINISHED THE GAME!");
     static const std::string WHOSTURN("'s turn");
     static const std::string ENEMYSTURN("Enemy's turn");
 

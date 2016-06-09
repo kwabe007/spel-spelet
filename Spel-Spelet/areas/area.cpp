@@ -160,6 +160,14 @@ void Area::set_block(std::size_t index, Direction dir) {
     debug_println(BIT5, "Entity " << ent->get_name() << " is now blocking a path in dir " << dir << " in area " << name);
 }
 
+void Area::set_end(bool b) {
+    end = b;
+}
+
+bool Area::is_end() {
+    return end;
+}
+
 void Area::reset_direction() {
     selected_direction = default_direction;
 }
